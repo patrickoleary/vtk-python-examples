@@ -1,0 +1,18 @@
+### Description
+
+This example highlights a picked actor with a silhouette outline. Left-click on a sphere to draw a colored silhouette around it; clicking another sphere moves the silhouette to the new selection. Ten randomly positioned and colored spheres are generated procedurally. A custom interactor style subclasses vtkInteractorStyleTrackballCamera to override left-button press handling with vtkPropPicker.
+
+**vtkSphereSource → vtkPolyDataMapper → Actor + vtkPropPicker → vtkPolyDataSilhouette → silhouette actor**
+
+- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.
+- [vtkInteractorStyleTrackballCamera](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleTrackballCamera.html) base class for the custom interactor.
+- [vtkMinimalStandardRandomSequence](https://www.vtk.org/doc/nightly/html/classvtkMinimalStandardRandomSequence.html) generates reproducible random positions and colors.
+- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides named colors.
+- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps polydata to graphics primitives.
+- [vtkPolyDataSilhouette](https://www.vtk.org/doc/nightly/html/classvtkPolyDataSilhouette.html) generates the silhouette outline of the picked actor.
+- [vtkPropPicker](https://www.vtk.org/doc/nightly/html/classvtkPropPicker.html) performs hardware-accelerated prop picking.
+- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) generates sphere geometry.
+- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.
+- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.
+- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.
+- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.

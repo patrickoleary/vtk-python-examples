@@ -1,0 +1,88 @@
+#!/usr/bin/env python
+
+# Render a pentagonal prism — a prism with two pentagonal faces and five
+# rectangular sides, defined by 10 explicit point coordinates.
+
+# Factory overrides: importing these modules registers the OpenGL rendering
+# and interaction style implementations.
+import vtkmodules.vtkInteractionStyle  # noqa: F401
+import vtkmodules.vtkRenderingOpenGL2  # noqa: F401
+# VTK pipeline classes used in this example
+from vtkmodules.vtkCommonCore import vtkPoints
+from vtkmodules.vtkCommonDataModel import (
+    vtkPentagonalPrism,
+    vtkUnstructuredGrid,
+)
+from vtkmodules.vtkRenderingCore import (
+    vtkActor,
+    vtkDataSetMapper,
+    vtkRenderWindow,
+    vtkRenderWindowInteractor,
+    vtkRenderer,
+)
+
+# Colors (normalized RGB)
+peach_puff_rgb = (1.0, 0.855, 0.725)
+dark_blue_background_rgb = (0.2, 0.302, 0.4)
+
+# Points: 10 vertices — bottom pentagonal face then top pentagonal face
+points = vtkPoints()
+points.InsertNextPoint(-0.375, -0.75, -0.75)
+points.InsertNextPoint(0.375, -0.75, -0.75)
+points.InsertNextPoint(0.75, 0.0, -0.75)
+points.InsertNextPoint(0.0, 0.75, -0.75)
+points.InsertNextPoint(-0.75, 0.0, -0.75)
+points.InsertNextPoint(-0.375, -0.75, 0.75)
+points.InsertNextPoint(0.375, -0.75, 0.75)
+points.InsertNextPoint(0.75, 0.0, 0.75)
+points.InsertNextPoint(0.0, 0.75, 0.75)
+points.InsertNextPoint(-0.75, 0.0, 0.75)
+
+# Cell: pentagonal prism with 10 point IDs
+pentagonal_prism = vtkPentagonalPrism()
+pentagonal_prism.GetPointIds().SetId(0, 0)
+pentagonal_prism.GetPointIds().SetId(1, 1)
+pentagonal_prism.GetPointIds().SetId(2, 2)
+pentagonal_prism.GetPointIds().SetId(3, 3)
+pentagonal_prism.GetPointIds().SetId(4, 4)
+pentagonal_prism.GetPointIds().SetId(5, 5)
+pentagonal_prism.GetPointIds().SetId(6, 6)
+pentagonal_prism.GetPointIds().SetId(7, 7)
+pentagonal_prism.GetPointIds().SetId(8, 8)
+pentagonal_prism.GetPointIds().SetId(9, 9)
+
+# Unstructured grid: holds the single cell
+grid = vtkUnstructuredGrid()
+grid.SetPoints(points)
+grid.InsertNextCell(pentagonal_prism.GetCellType(), pentagonal_prism.GetPointIds())
+
+# Mapper: map the grid to graphics primitives
+mapper = vtkDataSetMapper()
+mapper.SetInputData(grid)
+
+# Actor: position, orient, and color the cell
+actor = vtkActor()
+actor.SetMapper(mapper)
+actor.GetProperty().SetColor(peach_puff_rgb)
+actor.RotateX(20.0)
+actor.RotateY(-20.0)
+
+# Renderer: assemble the scene
+renderer = vtkRenderer()
+renderer.AddActor(actor)
+renderer.SetBackground(dark_blue_background_rgb)
+renderer.ResetCamera()
+
+# Window: display the rendered scene
+render_window = vtkRenderWindow()
+render_window.AddRenderer(renderer)
+render_window.SetSize(300, 300)
+render_window.SetWindowName("Cell3DPentagonalPrism")
+
+# Interactor: handle mouse and keyboard events
+render_window_interactor = vtkRenderWindowInteractor()
+render_window_interactor.SetRenderWindow(render_window)
+
+# Launch the interactive visualization
+render_window_interactor.Initialize()
+render_window_interactor.Start()

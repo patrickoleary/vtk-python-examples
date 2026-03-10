@@ -1,0 +1,14 @@
+### Description
+
+This example renders a single vtkParametricHenneberg surface, centered and normalized to fit the viewport. It follows the VTK pipeline structure:
+
+**Source → Mapper → Actor → Renderer → Window → Interactor**
+
+- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) renders the surface in navajo white, scaled and centered at the origin.
+- [vtkParametricFunctionSource](https://www.vtk.org/doc/nightly/html/classvtkParametricFunctionSource.html) samples the parametric function to produce polygonal output.
+- [vtkParametricHenneberg](https://www.vtk.org/doc/nightly/html/classvtkParametricHenneberg.html) defines the Henneberg minimal surface parametric equation.
+- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the surface geometry to graphics primitives.
+- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene with a midnight blue background.
+- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.
+- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.
+- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.

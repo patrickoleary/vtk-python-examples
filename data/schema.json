@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VTK Python Example",
+  "description": "Schema for a single record in vtk-python-examples.jsonl",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "URL identifier for the example"
+    },
+    "source_type": {
+      "type": "string",
+      "description": "Type of the source (e.g. \"example\")"
+    },
+    "language": {
+      "type": "string",
+      "description": "Programming language of the example"
+    },
+    "category": {
+      "type": ["string", "null"],
+      "description": "Category grouping for the example"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the example"
+    },
+    "explanation": {
+      "type": ["string", "null"],
+      "description": "Markdown explanation of what the example does"
+    },
+    "code": {
+      "type": "string",
+      "description": "Full source code of the example"
+    },
+    "image_url": {
+      "type": ["string", "null"],
+      "description": "URL to an image showing the example output"
+    },
+    "uses_symbols": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "List of VTK symbols used in the example"
+    },
+    "data_files": {
+      "type": ["array", "null"],
+      "items": {
+        "type": "string"
+      },
+      "description": "URLs to input data files required by the example, or null if none"
+    }
+  },
+  "required": [
+    "id",
+    "source_type",
+    "language",
+    "category",
+    "title",
+    "explanation",
+    "code",
+    "image_url",
+    "uses_symbols",
+    "data_files"
+  ],
+  "additionalProperties": false
+}

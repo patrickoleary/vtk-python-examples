@@ -1,0 +1,6274 @@
+[
+  {
+    "category": "Arrays",
+    "title": "ArrayCalculator",
+    "script_path": "src/Python/Arrays/ArrayCalculator.py",
+    "render_window_var": "render_window",
+    "output_image": "ArrayCalculator.png",
+    "skip": false
+  },
+  {
+    "category": "Arrays",
+    "title": "CreateArray",
+    "script_path": "src/Python/Arrays/CreateArray.py",
+    "render_window_var": "render_window",
+    "output_image": "CreateArray.png",
+    "skip": false
+  },
+  {
+    "category": "Arrays",
+    "title": "NormalsVisualization",
+    "script_path": "src/Python/Arrays/NormalsVisualization.py",
+    "render_window_var": "render_window",
+    "output_image": "NormalsVisualization.png",
+    "skip": false
+  },
+  {
+    "category": "CompositeData",
+    "title": "CompositePolyDataMapper",
+    "script_path": "src/Python/CompositeData/CompositePolyDataMapper.py",
+    "render_window_var": "render_window",
+    "output_image": "CompositePolyDataMapper.png",
+    "skip": false
+  },
+  {
+    "category": "CompositeData",
+    "title": "ExtractBlock",
+    "script_path": "src/Python/CompositeData/ExtractBlock.py",
+    "render_window_var": "render_window",
+    "output_image": "ExtractBlock.png",
+    "skip": false
+  },
+  {
+    "category": "CompositeData",
+    "title": "MultiBlockDataSet",
+    "script_path": "src/Python/CompositeData/MultiBlockDataSet.py",
+    "render_window_var": "render_window",
+    "output_image": "MultiBlockDataSet.png",
+    "skip": false
+  },
+  {
+    "category": "CompositeData",
+    "title": "OverlappingAMR",
+    "script_path": "src/Python/CompositeData/OverlappingAMR.py",
+    "render_window_var": "render_window",
+    "output_image": "OverlappingAMR.png",
+    "skip": false
+  },
+  {
+    "category": "CompositeData",
+    "title": "PartitionedDataSet",
+    "script_path": "src/Python/CompositeData/PartitionedDataSet.py",
+    "render_window_var": "render_window",
+    "output_image": "PartitionedDataSet.png",
+    "skip": false
+  },
+  {
+    "category": "CompositeData",
+    "title": "PartitionedDataSetCollection",
+    "script_path": "src/Python/CompositeData/PartitionedDataSetCollection.py",
+    "render_window_var": "render_window",
+    "output_image": "PartitionedDataSetCollection.png",
+    "skip": false
+  },
+  {
+    "category": "DataManipulation",
+    "title": "LineOnMesh",
+    "script_path": "src/Python/DataManipulation/LineOnMesh.py",
+    "render_window_var": "render_window",
+    "output_image": "LineOnMesh.png",
+    "skip": false
+  },
+  {
+    "category": "DataManipulation",
+    "title": "MeshLabelImageColor",
+    "script_path": "src/Python/DataManipulation/MeshLabelImageColor.py",
+    "render_window_var": "render_window",
+    "output_image": "MeshLabelImageColor.png",
+    "data_files": [
+      "labels.mhd",
+      "labels.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ExplicitStructuredGrid",
+    "title": "CreateESGrid",
+    "script_path": "src/Python/ExplicitStructuredGrid/CreateESGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "CreateESGrid.png",
+    "skip": false
+  },
+  {
+    "category": "ExplicitStructuredGrid",
+    "title": "LoadESGrid",
+    "script_path": "src/Python/ExplicitStructuredGrid/LoadESGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "LoadESGrid.png",
+    "data_files": [
+      "UNISIM-II-D.vtu"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "CellCenters",
+    "script_path": "src/Python/Filtering/CellCenters.py",
+    "render_window_var": "render_window",
+    "output_image": "CellCenters.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "CellDerivatives",
+    "script_path": "src/Python/Filtering/CellDerivatives.py",
+    "render_window_var": "render_window",
+    "output_image": "CellDerivatives.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "CellQuality",
+    "script_path": "src/Python/Filtering/CellQuality.py",
+    "render_window_var": "render_window",
+    "output_image": "CellQuality.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "CellGridToUnstructuredGrid",
+    "script_path": "src/Python/Filtering/CellGridToUnstructuredGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "CellGridToUnstructuredGrid.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "AppendFilter",
+    "script_path": "src/Python/Filtering/AppendFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "AppendFilter.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "CombinePolyData",
+    "script_path": "src/Python/Filtering/CombinePolyData.py",
+    "render_window_var": "render_window",
+    "output_image": "CombinePolyData.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "ConnectivityOverlapping",
+    "script_path": "src/Python/Filtering/ConnectivityOverlapping.py",
+    "render_window_var": "render_window",
+    "output_image": "ConnectivityOverlapping.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "ConstrainedDelaunay2D",
+    "script_path": "src/Python/Filtering/ConstrainedDelaunay2D.py",
+    "render_window_var": "render_window",
+    "output_image": "ConstrainedDelaunay2D.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "Delaunay2D",
+    "script_path": "src/Python/Filtering/Delaunay2D.py",
+    "render_window_var": "render_window",
+    "output_image": "Delaunay2D.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "GaussianSplat",
+    "script_path": "src/Python/Filtering/GaussianSplat.py",
+    "render_window_var": "render_window",
+    "output_image": "GaussianSplat.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "Glyph2D",
+    "script_path": "src/Python/Filtering/Glyph2D.py",
+    "render_window_var": "render_window",
+    "output_image": "Glyph2D.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "Glyph3D",
+    "script_path": "src/Python/Filtering/Glyph3D.py",
+    "render_window_var": "render_window",
+    "output_image": "Glyph3D.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "IterativeClosestPoints",
+    "script_path": "src/Python/Filtering/IterativeClosestPoints.py",
+    "render_window_var": "render_window",
+    "output_image": "IterativeClosestPoints.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "PerlinNoise",
+    "script_path": "src/Python/Filtering/PerlinNoise.py",
+    "render_window_var": "render_window",
+    "output_image": "PerlinNoise.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "TransformPolyData",
+    "script_path": "src/Python/Filtering/TransformPolyData.py",
+    "render_window_var": "render_window",
+    "output_image": "TransformPolyData.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "TriangulateTerrainMap",
+    "script_path": "src/Python/Filtering/TriangulateTerrainMap.py",
+    "render_window_var": "render_window",
+    "output_image": "TriangulateTerrainMap.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "VertexGlyphFilter",
+    "script_path": "src/Python/Filtering/VertexGlyphFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "VertexGlyphFilter.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "WarpTo",
+    "script_path": "src/Python/Filtering/WarpTo.py",
+    "render_window_var": "render_window",
+    "output_image": "WarpTo.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "WarpLens",
+    "script_path": "src/Python/Filtering/WarpLens.py",
+    "render_window_var": "render_window",
+    "output_image": "WarpLens.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "ClipPolyData",
+    "script_path": "src/Python/Filtering/ClipPolyData.py",
+    "render_window_var": "render_window",
+    "output_image": "ClipPolyData.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "ContourFilter",
+    "script_path": "src/Python/Filtering/ContourFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "ContourFilter.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "Decimate",
+    "script_path": "src/Python/Filtering/Decimate.py",
+    "render_window_var": "render_window",
+    "output_image": "Decimate.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "ExtractCells",
+    "script_path": "src/Python/Filtering/ExtractCells.py",
+    "render_window_var": "render_window",
+    "output_image": "ExtractCells.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "ExtractEdges",
+    "script_path": "src/Python/Filtering/ExtractEdges.py",
+    "render_window_var": "render_window",
+    "output_image": "ExtractEdges.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "ExtractPolyDataGeometry",
+    "script_path": "src/Python/Filtering/ExtractPolyDataGeometry.py",
+    "render_window_var": "render_window",
+    "output_image": "ExtractPolyDataGeometry.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "GradientFilter",
+    "script_path": "src/Python/Filtering/GradientFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "GradientFilter.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "OutlineCornerFilter",
+    "script_path": "src/Python/Filtering/OutlineCornerFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "OutlineCornerFilter.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "PlaneCutter",
+    "script_path": "src/Python/Filtering/PlaneCutter.py",
+    "render_window_var": "render_window",
+    "output_image": "PlaneCutter.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "ProgrammableFilter",
+    "script_path": "src/Python/Filtering/ProgrammableFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "ProgrammableFilter.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "QuadricClustering",
+    "script_path": "src/Python/Filtering/QuadricClustering.py",
+    "render_window_var": "render_window",
+    "output_image": "QuadricClustering.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "ShrinkFilter",
+    "script_path": "src/Python/Filtering/ShrinkFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "ShrinkFilter.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "SmoothPolyData",
+    "script_path": "src/Python/Filtering/SmoothPolyData.py",
+    "render_window_var": "render_window",
+    "output_image": "SmoothPolyData.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "ThresholdFilter",
+    "script_path": "src/Python/Filtering/ThresholdFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "ThresholdFilter.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "TriangleFilter",
+    "script_path": "src/Python/Filtering/TriangleFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "TriangleFilter.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "TubeFilter",
+    "script_path": "src/Python/Filtering/TubeFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "TubeFilter.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "SurfaceNets3D",
+    "script_path": "src/Python/Filtering/SurfaceNets3D.py",
+    "render_window_var": "render_window",
+    "output_image": "SurfaceNets3D.png",
+    "skip": false
+  },
+  {
+    "category": "Filtering",
+    "title": "TubeBender",
+    "script_path": "src/Python/Filtering/TubeBender.py",
+    "render_window_var": "render_window",
+    "output_image": "TubeBender.png",
+    "skip": false
+  },
+  {
+    "category": "Annotation",
+    "title": "CaptionActor2D",
+    "script_path": "src/Python/Annotation/CaptionActor2D.py",
+    "render_window_var": "render_window",
+    "output_image": "CaptionActor2D.png",
+    "skip": false
+  },
+  {
+    "category": "Annotation",
+    "title": "CornerAnnotation",
+    "script_path": "src/Python/Annotation/CornerAnnotation.py",
+    "render_window_var": "render_window",
+    "output_image": "CornerAnnotation.png",
+    "skip": false
+  },
+  {
+    "category": "Annotation",
+    "title": "LegendBoxActor",
+    "script_path": "src/Python/Annotation/LegendBoxActor.py",
+    "render_window_var": "render_window",
+    "output_image": "LegendBoxActor.png",
+    "skip": false
+  },
+  {
+    "category": "Annotation",
+    "title": "MultiLineText",
+    "script_path": "src/Python/Annotation/MultiLineText.py",
+    "render_window_var": "render_window",
+    "output_image": "MultiLineText.png",
+    "skip": false
+  },
+  {
+    "category": "Annotation",
+    "title": "ScalarBarActor",
+    "script_path": "src/Python/Annotation/ScalarBarActor.py",
+    "render_window_var": "render_window",
+    "output_image": "ScalarBarActor.png",
+    "skip": false
+  },
+  {
+    "category": "Annotation",
+    "title": "TextOrigin",
+    "script_path": "src/Python/Annotation/TextOrigin.py",
+    "render_window_var": "render_window",
+    "output_image": "TextOrigin.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CylinderExample",
+    "script_path": "src/Python/GeometricObjects/CylinderExample.py",
+    "render_window_var": "render_window",
+    "output_image": "CylinderExample.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Arrow",
+    "script_path": "src/Python/GeometricObjects/Arrow.py",
+    "render_window_var": "render_window",
+    "output_image": "Arrow.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Axes",
+    "script_path": "src/Python/GeometricObjects/Axes.py",
+    "render_window_var": "render_window",
+    "output_image": "Axes.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Cells3DDemo",
+    "script_path": "src/Python/GeometricObjects/Cells3DDemo.py",
+    "render_window_var": "render_window",
+    "output_image": "Cells3DDemo.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeDemo",
+    "script_path": "src/Python/GeometricObjects/CellTypeDemo.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeDemo.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeCubicLine",
+    "script_path": "src/Python/GeometricObjects/CellTypeCubicLine.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeCubicLine.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeHexahedron",
+    "script_path": "src/Python/GeometricObjects/CellTypeHexahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeHexahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeLine",
+    "script_path": "src/Python/GeometricObjects/CellTypeLine.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeLine.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypePyramid",
+    "script_path": "src/Python/GeometricObjects/CellTypePyramid.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypePyramid.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeQuad",
+    "script_path": "src/Python/GeometricObjects/CellTypeQuad.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeQuad.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeQuadraticEdge",
+    "script_path": "src/Python/GeometricObjects/CellTypeQuadraticEdge.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeQuadraticEdge.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeQuadraticHexahedron",
+    "script_path": "src/Python/GeometricObjects/CellTypeQuadraticHexahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeQuadraticHexahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeQuadraticPyramid",
+    "script_path": "src/Python/GeometricObjects/CellTypeQuadraticPyramid.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeQuadraticPyramid.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeQuadraticQuad",
+    "script_path": "src/Python/GeometricObjects/CellTypeQuadraticQuad.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeQuadraticQuad.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeQuadraticTetra",
+    "script_path": "src/Python/GeometricObjects/CellTypeQuadraticTetra.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeQuadraticTetra.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeQuadraticTriangle",
+    "script_path": "src/Python/GeometricObjects/CellTypeQuadraticTriangle.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeQuadraticTriangle.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeQuadraticWedge",
+    "script_path": "src/Python/GeometricObjects/CellTypeQuadraticWedge.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeQuadraticWedge.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeTetra",
+    "script_path": "src/Python/GeometricObjects/CellTypeTetra.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeTetra.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeTriangle",
+    "script_path": "src/Python/GeometricObjects/CellTypeTriangle.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeTriangle.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "CellTypeWedge",
+    "script_path": "src/Python/GeometricObjects/CellTypeWedge.py",
+    "render_window_var": "render_window",
+    "output_image": "CellTypeWedge.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Circle",
+    "script_path": "src/Python/GeometricObjects/Circle.py",
+    "render_window_var": "render_window",
+    "output_image": "Circle.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ColoredLines",
+    "script_path": "src/Python/GeometricObjects/ColoredLines.py",
+    "render_window_var": "render_window",
+    "output_image": "ColoredLines.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Cone",
+    "script_path": "src/Python/GeometricObjects/Cone.py",
+    "render_window_var": "render_window",
+    "output_image": "Cone.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ConvexPointSet",
+    "script_path": "src/Python/GeometricObjects/ConvexPointSet.py",
+    "render_window_var": "render_window",
+    "output_image": "ConvexPointSet.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Cube",
+    "script_path": "src/Python/GeometricObjects/Cube.py",
+    "render_window_var": "render_window",
+    "output_image": "Cube.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Cube1",
+    "script_path": "src/Python/GeometricObjects/Cube1.py",
+    "render_window_var": "render_window",
+    "output_image": "Cube1.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Cylinder",
+    "script_path": "src/Python/GeometricObjects/Cylinder.py",
+    "render_window_var": "render_window",
+    "output_image": "Cylinder.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Disk",
+    "script_path": "src/Python/GeometricObjects/Disk.py",
+    "render_window_var": "render_window",
+    "output_image": "Disk.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Dodecahedron",
+    "script_path": "src/Python/GeometricObjects/Dodecahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "Dodecahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "EarthSource",
+    "script_path": "src/Python/GeometricObjects/EarthSource.py",
+    "render_window_var": "render_window",
+    "output_image": "EarthSource.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "EllipticalCylinder",
+    "script_path": "src/Python/GeometricObjects/EllipticalCylinder.py",
+    "render_window_var": "render_window",
+    "output_image": "EllipticalCylinder.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "EllipticalCylinderApp",
+    "script_path": "src/Python/GeometricObjects/EllipticalCylinderApp.py",
+    "render_window_var": "render_window",
+    "output_image": "EllipticalCylinderApp.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Frustum",
+    "script_path": "src/Python/GeometricObjects/Frustum.py",
+    "render_window_var": "render_window",
+    "output_image": "Frustum.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Cell3DHexagonalPrism",
+    "script_path": "src/Python/GeometricObjects/Cell3DHexagonalPrism.py",
+    "render_window_var": "render_window",
+    "output_image": "Cell3DHexagonalPrism.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Hexahedron",
+    "script_path": "src/Python/GeometricObjects/Hexahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "Hexahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Cell3DHexahedron",
+    "script_path": "src/Python/GeometricObjects/Cell3DHexahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "Cell3DHexahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Line",
+    "script_path": "src/Python/GeometricObjects/Line.py",
+    "render_window_var": "render_window",
+    "output_image": "Line.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LongLine",
+    "script_path": "src/Python/GeometricObjects/LongLine.py",
+    "render_window_var": "render_window",
+    "output_image": "LongLine.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Cell3DPentagonalPrism",
+    "script_path": "src/Python/GeometricObjects/Cell3DPentagonalPrism.py",
+    "render_window_var": "render_window",
+    "output_image": "Cell3DPentagonalPrism.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Plane",
+    "script_path": "src/Python/GeometricObjects/Plane.py",
+    "render_window_var": "render_window",
+    "output_image": "Plane.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Point",
+    "script_path": "src/Python/GeometricObjects/Point.py",
+    "render_window_var": "render_window",
+    "output_image": "Point.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "PolyLine",
+    "script_path": "src/Python/GeometricObjects/PolyLine.py",
+    "render_window_var": "render_window",
+    "output_image": "PolyLine.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Polygon",
+    "script_path": "src/Python/GeometricObjects/Polygon.py",
+    "render_window_var": "render_window",
+    "output_image": "Polygon.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Cell3DPolyhedron",
+    "script_path": "src/Python/GeometricObjects/Cell3DPolyhedron.py",
+    "render_window_var": "render_window",
+    "output_image": "Cell3DPolyhedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Pyramid",
+    "script_path": "src/Python/GeometricObjects/Pyramid.py",
+    "render_window_var": "render_window",
+    "output_image": "Pyramid.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Cell3DPyramid",
+    "script_path": "src/Python/GeometricObjects/Cell3DPyramid.py",
+    "render_window_var": "render_window",
+    "output_image": "Cell3DPyramid.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Quad",
+    "script_path": "src/Python/GeometricObjects/Quad.py",
+    "render_window_var": "render_window",
+    "output_image": "Quad.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "PolyLine1",
+    "script_path": "src/Python/GeometricObjects/PolyLine1.py",
+    "render_window_var": "render_window",
+    "output_image": "PolyLine1.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "OrientedArrow",
+    "script_path": "src/Python/GeometricObjects/OrientedArrow.py",
+    "render_window_var": "render_window",
+    "output_image": "OrientedArrow.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "OrientedCylinder",
+    "script_path": "src/Python/GeometricObjects/OrientedCylinder.py",
+    "render_window_var": "render_window",
+    "output_image": "OrientedCylinder.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "RegularPolygonSource",
+    "script_path": "src/Python/GeometricObjects/RegularPolygonSource.py",
+    "render_window_var": "render_window",
+    "output_image": "RegularPolygonSource.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ShrinkCube",
+    "script_path": "src/Python/GeometricObjects/ShrinkCube.py",
+    "render_window_var": "render_window",
+    "output_image": "ShrinkCube.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Tetrahedron",
+    "script_path": "src/Python/GeometricObjects/Tetrahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "Tetrahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Cell3DTetrahedron",
+    "script_path": "src/Python/GeometricObjects/Cell3DTetrahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "Cell3DTetrahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Triangle",
+    "script_path": "src/Python/GeometricObjects/Triangle.py",
+    "render_window_var": "render_window",
+    "output_image": "Triangle.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "TriangleStrip",
+    "script_path": "src/Python/GeometricObjects/TriangleStrip.py",
+    "render_window_var": "render_window",
+    "output_image": "TriangleStrip.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Vertex",
+    "script_path": "src/Python/GeometricObjects/Vertex.py",
+    "render_window_var": "render_window",
+    "output_image": "Vertex.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Cell3DVoxel",
+    "script_path": "src/Python/GeometricObjects/Cell3DVoxel.py",
+    "render_window_var": "render_window",
+    "output_image": "Cell3DVoxel.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Cell3DWedge",
+    "script_path": "src/Python/GeometricObjects/Cell3DWedge.py",
+    "render_window_var": "render_window",
+    "output_image": "Cell3DWedge.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Sphere",
+    "script_path": "src/Python/GeometricObjects/Sphere.py",
+    "render_window_var": "render_window",
+    "output_image": "Sphere.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "TextActor",
+    "script_path": "src/Python/GeometricObjects/TextActor.py",
+    "render_window_var": "render_window",
+    "output_image": "TextActor.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "TessellatedBoxSource",
+    "script_path": "src/Python/GeometricObjects/TessellatedBoxSource.py",
+    "render_window_var": "render_window",
+    "output_image": "TessellatedBoxSource.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "QuadraticHexahedron",
+    "script_path": "src/Python/GeometricObjects/QuadraticHexahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "QuadraticHexahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "QuadraticTetra",
+    "script_path": "src/Python/GeometricObjects/QuadraticTetra.py",
+    "render_window_var": "render_window",
+    "output_image": "QuadraticTetra.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Polyhedron",
+    "script_path": "src/Python/GeometricObjects/Polyhedron.py",
+    "render_window_var": "render_window",
+    "output_image": "Polyhedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "PolygonIntersection",
+    "script_path": "src/Python/GeometricObjects/PolygonIntersection.py",
+    "render_window_var": "render_window",
+    "output_image": "PolygonIntersection.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "PlanesIntersection",
+    "script_path": "src/Python/GeometricObjects/PlanesIntersection.py",
+    "render_window_var": "render_window",
+    "output_image": "PlanesIntersection.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "PolyhedronAndHexahedron",
+    "script_path": "src/Python/GeometricObjects/PolyhedronAndHexahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "PolyhedronAndHexahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "QuadraticHexahedronApp",
+    "script_path": "src/Python/GeometricObjects/QuadraticHexahedronApp.py",
+    "render_window_var": "render_window",
+    "output_image": "QuadraticHexahedronApp.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "QuadraticTetraApp",
+    "script_path": "src/Python/GeometricObjects/QuadraticTetraApp.py",
+    "render_window_var": "render_window",
+    "output_image": "QuadraticTetraApp.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "Planes",
+    "script_path": "src/Python/GeometricObjects/Planes.py",
+    "render_window_var": "render_window",
+    "output_image": "Planes.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "PlatonicSolidsDemo",
+    "script_path": "src/Python/GeometricObjects/PlatonicSolidsDemo.py",
+    "render_window_var": "render_window",
+    "output_image": "PlatonicSolidsDemo.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "PlatonicSolidTetrahedron",
+    "script_path": "src/Python/GeometricObjects/PlatonicSolidTetrahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "PlatonicSolidTetrahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "PlatonicSolidCube",
+    "script_path": "src/Python/GeometricObjects/PlatonicSolidCube.py",
+    "render_window_var": "render_window",
+    "output_image": "PlatonicSolidCube.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "PlatonicSolidOctahedron",
+    "script_path": "src/Python/GeometricObjects/PlatonicSolidOctahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "PlatonicSolidOctahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "PlatonicSolidIcosahedron",
+    "script_path": "src/Python/GeometricObjects/PlatonicSolidIcosahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "PlatonicSolidIcosahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "PlatonicSolidDodecahedron",
+    "script_path": "src/Python/GeometricObjects/PlatonicSolidDodecahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "PlatonicSolidDodecahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricKuenApp",
+    "script_path": "src/Python/GeometricObjects/ParametricKuenApp.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricKuenApp.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricSuperEllipsoidApp",
+    "script_path": "src/Python/GeometricObjects/ParametricSuperEllipsoidApp.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricSuperEllipsoidApp.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricSuperToroidApp",
+    "script_path": "src/Python/GeometricObjects/ParametricSuperToroidApp.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricSuperToroidApp.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectsDemo",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectsDemo.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectsDemo.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectBohemianDome",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectBohemianDome.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectBohemianDome.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectBour",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectBour.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectBour.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectBoy",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectBoy.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectBoy.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectCatalanMinimal",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectCatalanMinimal.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectCatalanMinimal.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectConicSpiral",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectConicSpiral.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectConicSpiral.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectCrossCap",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectCrossCap.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectCrossCap.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectDini",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectDini.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectDini.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectEllipsoid",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectEllipsoid.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectEllipsoid.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectEnneper",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectEnneper.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectEnneper.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectFigure8Klein",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectFigure8Klein.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectFigure8Klein.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectHenneberg",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectHenneberg.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectHenneberg.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectKlein",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectKlein.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectKlein.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectKuen",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectKuen.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectKuen.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectMobius",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectMobius.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectMobius.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectPluckerConoid",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectPluckerConoid.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectPluckerConoid.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectPseudosphere",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectPseudosphere.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectPseudosphere.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectRandomHills",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectRandomHills.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectRandomHills.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectRoman",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectRoman.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectRoman.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectSpline",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectSpline.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectSpline.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectSuperEllipsoid",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectSuperEllipsoid.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectSuperEllipsoid.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectSuperToroid",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectSuperToroid.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectSuperToroid.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "ParametricObjectTorus",
+    "script_path": "src/Python/GeometricObjects/ParametricObjectTorus.py",
+    "render_window_var": "render_window",
+    "output_image": "ParametricObjectTorus.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "GeometricObjectsDemo",
+    "script_path": "src/Python/GeometricObjects/GeometricObjectsDemo.py",
+    "render_window_var": "render_window",
+    "output_image": "GeometricObjectsDemo.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "GeometricObjectArrow",
+    "script_path": "src/Python/GeometricObjects/GeometricObjectArrow.py",
+    "render_window_var": "render_window",
+    "output_image": "GeometricObjectArrow.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "GeometricObjectCone",
+    "script_path": "src/Python/GeometricObjects/GeometricObjectCone.py",
+    "render_window_var": "render_window",
+    "output_image": "GeometricObjectCone.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "GeometricObjectCube",
+    "script_path": "src/Python/GeometricObjects/GeometricObjectCube.py",
+    "render_window_var": "render_window",
+    "output_image": "GeometricObjectCube.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "GeometricObjectCylinder",
+    "script_path": "src/Python/GeometricObjects/GeometricObjectCylinder.py",
+    "render_window_var": "render_window",
+    "output_image": "GeometricObjectCylinder.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "GeometricObjectDisk",
+    "script_path": "src/Python/GeometricObjects/GeometricObjectDisk.py",
+    "render_window_var": "render_window",
+    "output_image": "GeometricObjectDisk.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "GeometricObjectLine",
+    "script_path": "src/Python/GeometricObjects/GeometricObjectLine.py",
+    "render_window_var": "render_window",
+    "output_image": "GeometricObjectLine.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "GeometricObjectRegularPolygon",
+    "script_path": "src/Python/GeometricObjects/GeometricObjectRegularPolygon.py",
+    "render_window_var": "render_window",
+    "output_image": "GeometricObjectRegularPolygon.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "GeometricObjectSphere",
+    "script_path": "src/Python/GeometricObjects/GeometricObjectSphere.py",
+    "render_window_var": "render_window",
+    "output_image": "GeometricObjectSphere.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "SourceObjectsDemo",
+    "script_path": "src/Python/GeometricObjects/SourceObjectsDemo.py",
+    "render_window_var": "render_window",
+    "output_image": "SourceObjectsDemo.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoparametricCellsDemo",
+    "script_path": "src/Python/GeometricObjects/IsoparametricCellsDemo.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoparametricCellsDemo.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellQuadraticEdge",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellQuadraticEdge.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellQuadraticEdge.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellQuadraticTriangle",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellQuadraticTriangle.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellQuadraticTriangle.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellQuadraticQuad",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellQuadraticQuad.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellQuadraticQuad.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellQuadraticPolygon",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellQuadraticPolygon.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellQuadraticPolygon.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellQuadraticTetra",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellQuadraticTetra.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellQuadraticTetra.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellQuadraticHexahedron",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellQuadraticHexahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellQuadraticHexahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellQuadraticWedge",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellQuadraticWedge.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellQuadraticWedge.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellQuadraticPyramid",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellQuadraticPyramid.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellQuadraticPyramid.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellBiQuadraticQuad",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellBiQuadraticQuad.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellBiQuadraticQuad.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellTriQuadraticHexahedron",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellTriQuadraticHexahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellTriQuadraticHexahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellQuadraticLinearQuad",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellQuadraticLinearQuad.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellQuadraticLinearQuad.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellQuadraticLinearWedge",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellQuadraticLinearWedge.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellQuadraticLinearWedge.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellBiQuadraticQuadraticWedge",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellBiQuadraticQuadraticWedge.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellBiQuadraticQuadraticWedge.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellBiQuadraticQuadraticHexahedron",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellBiQuadraticQuadraticHexahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellBiQuadraticQuadraticHexahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellBiQuadraticTriangle",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellBiQuadraticTriangle.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellBiQuadraticTriangle.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "IsoParametricCellCubicLine",
+    "script_path": "src/Python/GeometricObjects/IsoParametricCellCubicLine.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoParametricCellCubicLine.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellsDemo",
+    "script_path": "src/Python/GeometricObjects/LinearCellsDemo.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellsDemo.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellVertex",
+    "script_path": "src/Python/GeometricObjects/LinearCellVertex.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellVertex.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellPolyVertex",
+    "script_path": "src/Python/GeometricObjects/LinearCellPolyVertex.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellPolyVertex.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellLine",
+    "script_path": "src/Python/GeometricObjects/LinearCellLine.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellLine.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellPolyLine",
+    "script_path": "src/Python/GeometricObjects/LinearCellPolyLine.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellPolyLine.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellTriangle",
+    "script_path": "src/Python/GeometricObjects/LinearCellTriangle.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellTriangle.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellTriangleStrip",
+    "script_path": "src/Python/GeometricObjects/LinearCellTriangleStrip.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellTriangleStrip.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellPolygon",
+    "script_path": "src/Python/GeometricObjects/LinearCellPolygon.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellPolygon.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellPixel",
+    "script_path": "src/Python/GeometricObjects/LinearCellPixel.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellPixel.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellQuad",
+    "script_path": "src/Python/GeometricObjects/LinearCellQuad.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellQuad.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellTetra",
+    "script_path": "src/Python/GeometricObjects/LinearCellTetra.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellTetra.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellVoxel",
+    "script_path": "src/Python/GeometricObjects/LinearCellVoxel.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellVoxel.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellHexahedron",
+    "script_path": "src/Python/GeometricObjects/LinearCellHexahedron.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellHexahedron.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellWedge",
+    "script_path": "src/Python/GeometricObjects/LinearCellWedge.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellWedge.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellPyramid",
+    "script_path": "src/Python/GeometricObjects/LinearCellPyramid.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellPyramid.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellPentagonalPrism",
+    "script_path": "src/Python/GeometricObjects/LinearCellPentagonalPrism.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellPentagonalPrism.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "LinearCellHexagonalPrism",
+    "script_path": "src/Python/GeometricObjects/LinearCellHexagonalPrism.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearCellHexagonalPrism.png",
+    "skip": false
+  },
+  {
+    "category": "Importers",
+    "title": "3DSImporter",
+    "script_path": "src/Python/Importers/3DSImporter.py",
+    "render_window_var": "render_window",
+    "output_image": "3DSImporter.png",
+    "data_files": [
+      "iflamingo.3ds"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Importers",
+    "title": "GLTFImporter",
+    "script_path": "src/Python/Importers/GLTFImporter.py",
+    "render_window_var": "render_window",
+    "output_image": "GLTFImporter.png",
+    "data_files": [
+      "headMesh.gltf"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "ColorEdges",
+    "script_path": "src/Python/Graphs/ColorEdges.py",
+    "render_window_var": "render_window",
+    "output_image": "ColorEdges.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "ColorVertexLabels",
+    "script_path": "src/Python/Graphs/ColorVertexLabels.py",
+    "render_window_var": "render_window",
+    "output_image": "ColorVertexLabels.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "ColorVerticesLookupTable",
+    "script_path": "src/Python/Graphs/ColorVerticesLookupTable.py",
+    "render_window_var": "render_window",
+    "output_image": "ColorVerticesLookupTable.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "ConstructGraph",
+    "script_path": "src/Python/Graphs/ConstructGraph.py",
+    "render_window_var": "render_window",
+    "output_image": "ConstructGraph.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "ConstructTree",
+    "script_path": "src/Python/Graphs/ConstructTree.py",
+    "render_window_var": "render_window",
+    "output_image": "ConstructTree.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "CreateTree",
+    "script_path": "src/Python/Graphs/CreateTree.py",
+    "render_window_var": "render_window",
+    "output_image": "CreateTree.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "EdgeWeights",
+    "script_path": "src/Python/Graphs/EdgeWeights.py",
+    "render_window_var": "render_window",
+    "output_image": "EdgeWeights.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "GraphToPolyData",
+    "script_path": "src/Python/Graphs/GraphToPolyData.py",
+    "render_window_var": "render_window",
+    "output_image": "GraphToPolyData.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "LabelVerticesAndEdges",
+    "script_path": "src/Python/Graphs/LabelVerticesAndEdges.py",
+    "render_window_var": "render_window",
+    "output_image": "LabelVerticesAndEdges.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "NOVCAGraph",
+    "script_path": "src/Python/Graphs/NOVCAGraph.py",
+    "render_window_var": "render_window",
+    "output_image": "NOVCAGraph.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "RandomGraphSource",
+    "script_path": "src/Python/Graphs/RandomGraphSource.py",
+    "render_window_var": "render_window",
+    "output_image": "RandomGraphSource.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "ScaleVertices",
+    "script_path": "src/Python/Graphs/ScaleVertices.py",
+    "render_window_var": "render_window",
+    "output_image": "ScaleVertices.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "SelectedVerticesAndEdges",
+    "script_path": "src/Python/Graphs/SelectedVerticesAndEdges.py",
+    "render_window_var": "render_window",
+    "output_image": "SelectedVerticesAndEdges.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "SideBySideGraphs",
+    "script_path": "src/Python/Graphs/SideBySideGraphs.py",
+    "render_window_var": "render_window",
+    "output_image": "SideBySideGraphs.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "VisualizeDirectedGraph",
+    "script_path": "src/Python/Graphs/VisualizeDirectedGraph.py",
+    "render_window_var": "render_window",
+    "output_image": "VisualizeDirectedGraph.png",
+    "skip": false
+  },
+  {
+    "category": "Graphs",
+    "title": "VisualizeGraph",
+    "script_path": "src/Python/Graphs/VisualizeGraph.py",
+    "render_window_var": "render_window",
+    "output_image": "VisualizeGraph.png",
+    "skip": false
+  },
+  {
+    "category": "Grids",
+    "title": "BlankPoint",
+    "script_path": "src/Python/Grids/BlankPoint.py",
+    "render_window_var": "render_window",
+    "output_image": "BlankPoint.png",
+    "skip": false
+  },
+  {
+    "category": "Grids",
+    "title": "ClipUnstructuredGridWithPlane",
+    "script_path": "src/Python/Grids/ClipUnstructuredGridWithPlane.py",
+    "render_window_var": "render_window",
+    "output_image": "ClipUnstructuredGridWithPlane.png",
+    "data_files": ["src/Python/Grids/treemesh.vtk"],
+    "skip": false
+  },
+  {
+    "category": "Grids",
+    "title": "ClipUnstructuredGridWithPlane2",
+    "script_path": "src/Python/Grids/ClipUnstructuredGridWithPlane2.py",
+    "render_window_var": "render_window",
+    "output_image": "ClipUnstructuredGridWithPlane2.png",
+    "data_files": ["src/Python/Grids/treemesh.vtk"],
+    "skip": false
+  },
+  {
+    "category": "Grids",
+    "title": "RGrid",
+    "script_path": "src/Python/Grids/RGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "RGrid.png",
+    "skip": false
+  },
+  {
+    "category": "Grids",
+    "title": "RectilinearGrid",
+    "script_path": "src/Python/Grids/RectilinearGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "RectilinearGrid.png",
+    "skip": false
+  },
+  {
+    "category": "Grids",
+    "title": "SGrid",
+    "script_path": "src/Python/Grids/SGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "SGrid.png",
+    "skip": false
+  },
+  {
+    "category": "Grids",
+    "title": "UGrid",
+    "script_path": "src/Python/Grids/UGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "UGrid.png",
+    "skip": false
+  },
+  {
+    "category": "Grids",
+    "title": "VisualizeRectilinearGrid",
+    "script_path": "src/Python/Grids/VisualizeRectilinearGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "VisualizeRectilinearGrid.png",
+    "skip": false
+  },
+  {
+    "category": "Grids",
+    "title": "Vol",
+    "script_path": "src/Python/Grids/Vol.py",
+    "render_window_var": "render_window",
+    "output_image": "Vol.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "HyperTreeGridSource",
+    "script_path": "src/Python/HyperTreeGrid/HyperTreeGridSource.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperTreeGridSource.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "HyperTreeGridContour",
+    "script_path": "src/Python/HyperTreeGrid/HyperTreeGridContour.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperTreeGridContour.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "HyperTreeGridDepthLimiter",
+    "script_path": "src/Python/HyperTreeGrid/HyperTreeGridDepthLimiter.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperTreeGridDepthLimiter.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "HyperTreeGridPlaneCutter",
+    "script_path": "src/Python/HyperTreeGrid/HyperTreeGridPlaneCutter.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperTreeGridPlaneCutter.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "HyperTreeGridAxisReflection",
+    "script_path": "src/Python/HyperTreeGrid/HyperTreeGridAxisReflection.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperTreeGridAxisReflection.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "HyperTreeGridCellCenters",
+    "script_path": "src/Python/HyperTreeGrid/HyperTreeGridCellCenters.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperTreeGridCellCenters.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "HyperTreeGridOutlineFilter",
+    "script_path": "src/Python/HyperTreeGrid/HyperTreeGridOutlineFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperTreeGridOutlineFilter.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "HyperTreeGridThreshold",
+    "script_path": "src/Python/HyperTreeGrid/HyperTreeGridThreshold.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperTreeGridThreshold.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "HyperTreeGridGradient",
+    "script_path": "src/Python/HyperTreeGrid/HyperTreeGridGradient.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperTreeGridGradient.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "HyperTreeGridAxisClip",
+    "script_path": "src/Python/HyperTreeGrid/HyperTreeGridAxisClip.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperTreeGridAxisClip.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "HyperTreeGridAxisCut",
+    "script_path": "src/Python/HyperTreeGrid/HyperTreeGridAxisCut.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperTreeGridAxisCut.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "HyperTreeGridFeatureEdges",
+    "script_path": "src/Python/HyperTreeGrid/HyperTreeGridFeatureEdges.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperTreeGridFeatureEdges.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "HyperTreeGridToUnstructuredGrid",
+    "script_path": "src/Python/HyperTreeGrid/HyperTreeGridToUnstructuredGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperTreeGridToUnstructuredGrid.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "HyperTreeGridVisibleLeavesSize",
+    "script_path": "src/Python/HyperTreeGrid/HyperTreeGridVisibleLeavesSize.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperTreeGridVisibleLeavesSize.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "AMRGaussianPulse",
+    "script_path": "src/Python/HyperTreeGrid/AMRGaussianPulse.py",
+    "render_window_var": "render_window",
+    "output_image": "AMRGaussianPulse.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "AMRSlice",
+    "script_path": "src/Python/HyperTreeGrid/AMRSlice.py",
+    "render_window_var": "render_window",
+    "output_image": "AMRSlice.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "AMRCutPlane",
+    "script_path": "src/Python/HyperTreeGrid/AMRCutPlane.py",
+    "render_window_var": "render_window",
+    "output_image": "AMRCutPlane.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "AMRToMultiBlock",
+    "script_path": "src/Python/HyperTreeGrid/AMRToMultiBlock.py",
+    "render_window_var": "render_window",
+    "output_image": "AMRToMultiBlock.png",
+    "skip": false
+  },
+  {
+    "category": "HyperTreeGrid",
+    "title": "AMRResample",
+    "script_path": "src/Python/HyperTreeGrid/AMRResample.py",
+    "render_window_var": "render_window",
+    "output_image": "AMRResample.png",
+    "skip": false
+  },
+  {
+    "category": "ImplicitFunctions",
+    "title": "ImplicitPlane",
+    "script_path": "src/Python/ImplicitFunctions/ImplicitPlane.py",
+    "render_window_var": "render_window",
+    "output_image": "ImplicitPlane.png",
+    "skip": false
+  },
+  {
+    "category": "ImplicitFunctions",
+    "title": "ImplicitSphere",
+    "script_path": "src/Python/ImplicitFunctions/ImplicitSphere.py",
+    "render_window_var": "render_window",
+    "output_image": "ImplicitSphere.png",
+    "skip": false
+  },
+  {
+    "category": "ImplicitFunctions",
+    "title": "ImplicitSphere1",
+    "script_path": "src/Python/ImplicitFunctions/ImplicitSphere1.py",
+    "render_window_var": "render_window",
+    "output_image": "ImplicitSphere1.png",
+    "skip": false
+  },
+  {
+    "category": "ImplicitFunctions",
+    "title": "ImplicitQuadric",
+    "script_path": "src/Python/ImplicitFunctions/ImplicitQuadric.py",
+    "render_window_var": "render_window",
+    "output_image": "ImplicitQuadric.png",
+    "skip": false
+  },
+  {
+    "category": "ImplicitFunctions",
+    "title": "BooleanOperationImplicitFunctions",
+    "script_path": "src/Python/ImplicitFunctions/BooleanOperationImplicitFunctions.py",
+    "render_window_var": "render_window",
+    "output_image": "BooleanOperationImplicitFunctions.png",
+    "skip": false
+  },
+  {
+    "category": "ImplicitFunctions",
+    "title": "SampleFunction",
+    "script_path": "src/Python/ImplicitFunctions/SampleFunction.py",
+    "render_window_var": "render_window",
+    "output_image": "SampleFunction.png",
+    "skip": false
+  },
+  {
+    "category": "ImplicitFunctions",
+    "title": "ImplicitCylinder",
+    "script_path": "src/Python/ImplicitFunctions/ImplicitCylinder.py",
+    "render_window_var": "render_window",
+    "output_image": "ImplicitCylinder.png",
+    "skip": false
+  },
+  {
+    "category": "ImplicitFunctions",
+    "title": "ImplicitDataSet",
+    "script_path": "src/Python/ImplicitFunctions/ImplicitDataSet.py",
+    "render_window_var": "render_window",
+    "output_image": "ImplicitDataSet.png",
+    "skip": false
+  },
+  {
+    "category": "ImplicitFunctions",
+    "title": "ImplicitBox",
+    "script_path": "src/Python/ImplicitFunctions/ImplicitBox.py",
+    "render_window_var": "render_window",
+    "output_image": "ImplicitBox.png",
+    "skip": false
+  },
+  {
+    "category": "ImplicitFunctions",
+    "title": "ImplicitCone",
+    "script_path": "src/Python/ImplicitFunctions/ImplicitCone.py",
+    "render_window_var": "render_window",
+    "output_image": "ImplicitCone.png",
+    "skip": false
+  },
+  {
+    "category": "ImplicitFunctions",
+    "title": "ImplicitSuperquadric",
+    "script_path": "src/Python/ImplicitFunctions/ImplicitSuperquadric.py",
+    "render_window_var": "render_window",
+    "output_image": "ImplicitSuperquadric.png",
+    "skip": false
+  },
+  {
+    "category": "ImplicitFunctions",
+    "title": "ClipWithImplicitFunction",
+    "script_path": "src/Python/ImplicitFunctions/ClipWithImplicitFunction.py",
+    "render_window_var": "render_window",
+    "output_image": "ClipWithImplicitFunction.png",
+    "skip": false
+  },
+  {
+    "category": "ImplicitFunctions",
+    "title": "CutWithImplicitFunction",
+    "script_path": "src/Python/ImplicitFunctions/CutWithImplicitFunction.py",
+    "render_window_var": "render_window",
+    "output_image": "CutWithImplicitFunction.png",
+    "skip": false
+  },
+  {
+    "category": "ImplicitFunctions",
+    "title": "ImplicitModeller",
+    "script_path": "src/Python/ImplicitFunctions/ImplicitModeller.py",
+    "render_window_var": "render_window",
+    "output_image": "ImplicitModeller.png",
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "BooleanOperation",
+    "script_path": "src/Python/Modeling/BooleanOperation.py",
+    "render_window_var": "render_window",
+    "output_image": "BooleanOperation.png",
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "Bottle",
+    "script_path": "src/Python/Modeling/Bottle.py",
+    "render_window_var": "render_window",
+    "output_image": "Bottle.png",
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "CappedSphere",
+    "script_path": "src/Python/Modeling/CappedSphere.py",
+    "render_window_var": "render_window",
+    "output_image": "CappedSphere.png",
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "ContourTriangulator",
+    "script_path": "src/Python/Modeling/ContourTriangulator.py",
+    "render_window_var": "render_window",
+    "output_image": "ContourTriangulator.png",
+    "data_files": [
+      "fullhead15.png"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "DelaunayMesh",
+    "script_path": "src/Python/Modeling/DelaunayMesh.py",
+    "render_window_var": "render_window",
+    "output_image": "DelaunayMesh.png",
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "DiscreteMarchingCubes",
+    "script_path": "src/Python/Modeling/DiscreteMarchingCubes.py",
+    "render_window_var": "render_window",
+    "output_image": "DiscreteMarchingCubes.png",
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "ExtractLargestIsosurface",
+    "script_path": "src/Python/Modeling/ExtractLargestIsosurface.py",
+    "render_window_var": "render_window",
+    "output_image": "ExtractLargestIsosurface.png",
+    "data_files": [
+      "brain.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "Finance",
+    "script_path": "src/Python/Modeling/Finance.py",
+    "render_window_var": "render_window",
+    "output_image": "Finance.png",
+    "data_files": [
+      "financial.txt"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "LoopBooleanPolyDataFilter",
+    "script_path": "src/Python/Modeling/LoopBooleanPolyDataFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "LoopBooleanPolyDataFilter.png",
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "LinearExtrusion",
+    "script_path": "src/Python/Modeling/LinearExtrusion.py",
+    "render_window_var": "render_window",
+    "output_image": "LinearExtrusion.png",
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "MarchingCubes",
+    "script_path": "src/Python/Modeling/MarchingCubes.py",
+    "render_window_var": "render_window",
+    "output_image": "MarchingCubes.png",
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "RibbonFilter",
+    "script_path": "src/Python/Modeling/RibbonFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "RibbonFilter.png",
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "SmoothDiscreteMarchingCubes",
+    "script_path": "src/Python/Modeling/SmoothDiscreteMarchingCubes.py",
+    "render_window_var": "render_window",
+    "output_image": "SmoothDiscreteMarchingCubes.png",
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "Spring",
+    "script_path": "src/Python/Modeling/Spring.py",
+    "render_window_var": "render_window",
+    "output_image": "Spring.png",
+    "skip": false
+  },
+  {
+    "category": "Modeling",
+    "title": "VolumeOfRevolutionFilter",
+    "script_path": "src/Python/Modeling/VolumeOfRevolutionFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "VolumeOfRevolutionFilter.png",
+    "skip": false
+  },
+  {
+    "category": "Points",
+    "title": "ConnectedPointsFilter",
+    "script_path": "src/Python/Points/ConnectedPointsFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "ConnectedPointsFilter.png",
+    "skip": false
+  },
+  {
+    "category": "Points",
+    "title": "ConvertToPointCloud",
+    "script_path": "src/Python/Points/ConvertToPointCloud.py",
+    "render_window_var": "render_window",
+    "output_image": "ConvertToPointCloud.png",
+    "skip": false
+  },
+  {
+    "category": "Points",
+    "title": "DensifyPointCloud",
+    "script_path": "src/Python/Points/DensifyPointCloud.py",
+    "render_window_var": "render_window",
+    "output_image": "DensifyPointCloud.png",
+    "skip": false
+  },
+  {
+    "category": "Points",
+    "title": "GaussianKernelSmoothing",
+    "script_path": "src/Python/Points/GaussianKernelSmoothing.py",
+    "render_window_var": "render_window",
+    "output_image": "GaussianKernelSmoothing.png",
+    "skip": false
+  },
+  {
+    "category": "Points",
+    "title": "PCANormalEstimation",
+    "script_path": "src/Python/Points/PCANormalEstimation.py",
+    "render_window_var": "render_window",
+    "output_image": "PCANormalEstimation.png",
+    "skip": false
+  },
+  {
+    "category": "Points",
+    "title": "PointDensity",
+    "script_path": "src/Python/Points/PointDensity.py",
+    "render_window_var": "render_window",
+    "output_image": "PointDensity.png",
+    "skip": false
+  },
+  {
+    "category": "Points",
+    "title": "PointOccupancy",
+    "script_path": "src/Python/Points/PointOccupancy.py",
+    "render_window_var": "render_window",
+    "output_image": "PointOccupancy.png",
+    "skip": false
+  },
+  {
+    "category": "Points",
+    "title": "PointSmoothing",
+    "script_path": "src/Python/Points/PointSmoothing.py",
+    "render_window_var": "render_window",
+    "output_image": "PointSmoothing.png",
+    "skip": false
+  },
+  {
+    "category": "Points",
+    "title": "RadiusOutlierRemoval",
+    "script_path": "src/Python/Points/RadiusOutlierRemoval.py",
+    "render_window_var": "render_window",
+    "output_image": "RadiusOutlierRemoval.png",
+    "skip": false
+  },
+  {
+    "category": "Points",
+    "title": "StatisticalOutlierRemoval",
+    "script_path": "src/Python/Points/StatisticalOutlierRemoval.py",
+    "render_window_var": "render_window",
+    "output_image": "StatisticalOutlierRemoval.png",
+    "skip": false
+  },
+  {
+    "category": "Points",
+    "title": "VoxelGrid",
+    "script_path": "src/Python/Points/VoxelGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "VoxelGrid.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "AreaPlot",
+    "script_path": "src/Python/Plotting/AreaPlot.py",
+    "render_window_var": "render_window",
+    "output_image": "AreaPlot.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "BagPlot",
+    "script_path": "src/Python/Plotting/BagPlot.py",
+    "render_window_var": "render_window",
+    "output_image": "BagPlot.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "BarChart",
+    "script_path": "src/Python/Plotting/BarChart.py",
+    "render_window_var": "render_window",
+    "output_image": "BarChart.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "BoxPlot",
+    "script_path": "src/Python/Plotting/BoxPlot.py",
+    "render_window_var": "render_window",
+    "output_image": "BoxPlot.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "DescriptiveStatistics",
+    "script_path": "src/Python/Plotting/DescriptiveStatistics.py",
+    "render_window_var": "render_window",
+    "output_image": "DescriptiveStatistics.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "ChartMatrix",
+    "script_path": "src/Python/Plotting/ChartMatrix.py",
+    "render_window_var": "render_window",
+    "output_image": "ChartMatrix.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "Histogram2D",
+    "script_path": "src/Python/Plotting/Histogram2D.py",
+    "render_window_var": "render_window",
+    "output_image": "Histogram2D.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "KMeansStatistics",
+    "script_path": "src/Python/Plotting/KMeansStatistics.py",
+    "render_window_var": "render_window",
+    "output_image": "KMeansStatistics.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "LinePlot",
+    "script_path": "src/Python/Plotting/LinePlot.py",
+    "render_window_var": "render_window",
+    "output_image": "LinePlot.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "LinePlot3D",
+    "script_path": "src/Python/Plotting/LinePlot3D.py",
+    "render_window_var": "render_window",
+    "output_image": "LinePlot3D.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "MultiplePlots",
+    "script_path": "src/Python/Plotting/MultiplePlots.py",
+    "render_window_var": "render_window",
+    "output_image": "MultiplePlots.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "ParallelCoordinates",
+    "script_path": "src/Python/Plotting/ParallelCoordinates.py",
+    "render_window_var": "render_window",
+    "output_image": "ParallelCoordinates.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "ParallelCoordinatesExtraction",
+    "script_path": "src/Python/Plotting/ParallelCoordinatesExtraction.py",
+    "render_window_var": "render_window",
+    "output_image": "ParallelCoordinatesExtraction.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "ParallelCoordinatesView",
+    "script_path": "src/Python/Plotting/ParallelCoordinatesView.py",
+    "render_window_var": "render_window",
+    "output_image": "ParallelCoordinatesView.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "PCAStatistics",
+    "script_path": "src/Python/Plotting/PCAStatistics.py",
+    "render_window_var": "render_window",
+    "output_image": "PCAStatistics.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "PieChart",
+    "script_path": "src/Python/Plotting/PieChart.py",
+    "render_window_var": "render_window",
+    "output_image": "PieChart.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "ScatterPlot",
+    "script_path": "src/Python/Plotting/ScatterPlot.py",
+    "render_window_var": "render_window",
+    "output_image": "ScatterPlot.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "ScatterPlotMatrix",
+    "script_path": "src/Python/Plotting/ScatterPlotMatrix.py",
+    "render_window_var": "render_window",
+    "output_image": "ScatterPlotMatrix.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "SelectedGraphIDs",
+    "script_path": "src/Python/Plotting/SelectedGraphIDs.py",
+    "render_window_var": "render_window",
+    "output_image": "SelectedGraphIDs.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "SpiderPlot",
+    "script_path": "src/Python/Plotting/SpiderPlot.py",
+    "render_window_var": "render_window",
+    "output_image": "SpiderPlot.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "StackedPlot",
+    "script_path": "src/Python/Plotting/StackedPlot.py",
+    "render_window_var": "render_window",
+    "output_image": "StackedPlot.png",
+    "skip": false
+  },
+  {
+    "category": "Plotting",
+    "title": "SurfacePlot",
+    "script_path": "src/Python/Plotting/SurfacePlot.py",
+    "render_window_var": "render_window",
+    "output_image": "SurfacePlot.png",
+    "skip": false
+  },
+  {
+    "category": "Picking",
+    "title": "AreaPicking",
+    "script_path": "src/Python/Picking/AreaPicking.py",
+    "render_window_var": "render_window",
+    "output_image": "AreaPicking.png",
+    "skip": false
+  },
+  {
+    "category": "Picking",
+    "title": "CellPicking",
+    "script_path": "src/Python/Picking/CellPicking.py",
+    "render_window_var": "render_window",
+    "output_image": "CellPicking.png",
+    "skip": false
+  },
+  {
+    "category": "Picking",
+    "title": "HighlightPickedActor",
+    "script_path": "src/Python/Picking/HighlightPickedActor.py",
+    "render_window_var": "render_window",
+    "output_image": "HighlightPickedActor.png",
+    "skip": false
+  },
+  {
+    "category": "Picking",
+    "title": "HighlightWithSilhouette",
+    "script_path": "src/Python/Picking/HighlightWithSilhouette.py",
+    "render_window_var": "render_window",
+    "output_image": "HighlightWithSilhouette.png",
+    "skip": false
+  },
+  {
+    "category": "Picking",
+    "title": "PointPicking",
+    "script_path": "src/Python/Picking/PointPicking.py",
+    "render_window_var": "render_window",
+    "output_image": "PointPicking.png",
+    "skip": false
+  },
+  {
+    "category": "Picking",
+    "title": "WorldPointPicking",
+    "script_path": "src/Python/Picking/WorldPointPicking.py",
+    "render_window_var": "render_window",
+    "output_image": "WorldPointPicking.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "AlignTwoPolyDatas",
+    "script_path": "src/Python/PolyData/AlignTwoPolyDatas.py",
+    "render_window_var": "render_window",
+    "output_image": "AlignTwoPolyDatas.png",
+    "data_files": [
+      "cow.vtp",
+      "cowHead.vtp"
+    ],
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "CellsInsideObject",
+    "script_path": "src/Python/PolyData/CellsInsideObject.py",
+    "render_window_var": "render_window",
+    "output_image": "CellsInsideObject.png",
+    "data_files": [
+      "cow.vtp"
+    ],
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "ClosedSurface",
+    "script_path": "src/Python/PolyData/ClosedSurface.py",
+    "render_window_var": "render_window",
+    "output_image": "ClosedSurface.png",
+    "data_files": [
+      "cow.vtp"
+    ],
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "ColoredTriangle",
+    "script_path": "src/Python/PolyData/ColoredTriangle.py",
+    "render_window_var": "render_window",
+    "output_image": "ColoredTriangle.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "Curvatures",
+    "script_path": "src/Python/PolyData/Curvatures.py",
+    "render_window_var": "render_window",
+    "output_image": "Curvatures.png",
+    "data_files": [
+      "cowHead.vtp"
+    ],
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "CurvaturesAdjustEdges",
+    "script_path": "src/Python/PolyData/CurvaturesAdjustEdges.py",
+    "render_window_var": "render_window",
+    "output_image": "CurvaturesAdjustEdges.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "CurvaturesApp",
+    "script_path": "src/Python/PolyData/CurvaturesApp.py",
+    "render_window_var": "render_window",
+    "output_image": "CurvaturesApp.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "ExtractPolyLinesFromPolyData",
+    "script_path": "src/Python/PolyData/ExtractPolyLinesFromPolyData.py",
+    "render_window_var": "render_window",
+    "output_image": "ExtractPolyLinesFromPolyData.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "ExtractSelection",
+    "script_path": "src/Python/PolyData/ExtractSelection.py",
+    "render_window_var": "render_window",
+    "output_image": "ExtractSelection.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "ExtractSelectionUsingCells",
+    "script_path": "src/Python/PolyData/ExtractSelectionUsingCells.py",
+    "render_window_var": "render_window",
+    "output_image": "ExtractSelectionUsingCells.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "FilledPolygon",
+    "script_path": "src/Python/PolyData/FilledPolygon.py",
+    "render_window_var": "render_window",
+    "output_image": "FilledPolygon.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "ImplicitPolyDataDistance",
+    "script_path": "src/Python/PolyData/ImplicitPolyDataDistance.py",
+    "render_window_var": "render_window",
+    "output_image": "ImplicitPolyDataDistance.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "IterateOverLines",
+    "script_path": "src/Python/PolyData/IterateOverLines.py",
+    "render_window_var": "render_window",
+    "output_image": "IterateOverLines.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "Outline",
+    "script_path": "src/Python/PolyData/Outline.py",
+    "render_window_var": "render_window",
+    "output_image": "Outline.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "PointSource",
+    "script_path": "src/Python/PolyData/PointSource.py",
+    "render_window_var": "render_window",
+    "output_image": "PointSource.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "PolyDataContourToImageData",
+    "script_path": "src/Python/PolyData/PolyDataContourToImageData.py",
+    "render_window_var": "render_window",
+    "output_image": "PolyDataContourToImageData.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "PolyDataToImageDataStencil",
+    "script_path": "src/Python/PolyData/PolyDataToImageDataStencil.py",
+    "render_window_var": "render_window",
+    "output_image": "PolyDataToImageDataStencil.png",
+    "data_files": [
+      "VTKLogo.png"
+    ],
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "RotationAroundLine",
+    "script_path": "src/Python/PolyData/RotationAroundLine.py",
+    "render_window_var": "render_window",
+    "output_image": "RotationAroundLine.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "RuledSurfaceFilter",
+    "script_path": "src/Python/PolyData/RuledSurfaceFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "RuledSurfaceFilter.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "SmoothMeshGrid",
+    "script_path": "src/Python/PolyData/SmoothMeshGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "SmoothMeshGrid.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "SolidColoredTriangle",
+    "script_path": "src/Python/PolyData/SolidColoredTriangle.py",
+    "render_window_var": "render_window",
+    "output_image": "SolidColoredTriangle.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "TriangleColoredPoints",
+    "script_path": "src/Python/PolyData/TriangleColoredPoints.py",
+    "render_window_var": "render_window",
+    "output_image": "TriangleColoredPoints.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "TriangleCornerVertices",
+    "script_path": "src/Python/PolyData/TriangleCornerVertices.py",
+    "render_window_var": "render_window",
+    "output_image": "TriangleCornerVertices.png",
+    "skip": false
+  },
+  {
+    "category": "PolyData",
+    "title": "TriangleCorners",
+    "script_path": "src/Python/PolyData/TriangleCorners.py",
+    "render_window_var": "render_window",
+    "output_image": "TriangleCorners.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "AmbientSpheres",
+    "script_path": "src/Python/Rendering/AmbientSpheres.py",
+    "render_window_var": "render_window",
+    "output_image": "AmbientSpheres.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "CameraBlur",
+    "script_path": "src/Python/Rendering/CameraBlur.py",
+    "render_window_var": "render_window",
+    "output_image": "CameraBlur.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "ColoredSphere",
+    "script_path": "src/Python/Rendering/ColoredSphere.py",
+    "render_window_var": "render_window",
+    "output_image": "ColoredSphere.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "Cone3",
+    "script_path": "src/Python/Rendering/Cone3.py",
+    "render_window_var": "render_window",
+    "output_image": "Cone3.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "Cone4",
+    "script_path": "src/Python/Rendering/Cone4.py",
+    "render_window_var": "render_window",
+    "output_image": "Cone4.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "DiffuseSpheres",
+    "script_path": "src/Python/Rendering/DiffuseSpheres.py",
+    "render_window_var": "render_window",
+    "output_image": "DiffuseSpheres.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "FlatVersusGouraud",
+    "script_path": "src/Python/Rendering/FlatVersusGouraud.py",
+    "render_window_var": "render_window",
+    "output_image": "FlatVersusGouraud.png",
+    "data_files": [
+      "cow.obj"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "GradientBackground",
+    "script_path": "src/Python/Rendering/GradientBackground.py",
+    "render_window_var": "render_window",
+    "output_image": "GradientBackground.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "LayeredActors",
+    "script_path": "src/Python/Rendering/LayeredActors.py",
+    "render_window_var": "render_window",
+    "output_image": "LayeredActors.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "Mace",
+    "script_path": "src/Python/Rendering/Mace.py",
+    "render_window_var": "render_window",
+    "output_image": "Mace.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "Model",
+    "script_path": "src/Python/Rendering/Model.py",
+    "render_window_var": "render_window",
+    "output_image": "Model.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "MotionBlur",
+    "script_path": "src/Python/Rendering/MotionBlur.py",
+    "render_window_var": "render_window",
+    "output_image": "MotionBlur.png",
+    "data_files": [
+      "Armadillo.ply"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "OutlineGlowPass",
+    "script_path": "src/Python/Rendering/OutlineGlowPass.py",
+    "render_window_var": "render_window",
+    "output_image": "OutlineGlowPass.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "PBR_Anisotropy",
+    "script_path": "src/Python/Rendering/PBR_Anisotropy.py",
+    "render_window_var": "render_window",
+    "output_image": "PBR_Anisotropy.png",
+    "data_files": [
+      "Skyboxes"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "PBR_Clear_Coat",
+    "script_path": "src/Python/Rendering/PBR_Clear_Coat.py",
+    "render_window_var": "render_window",
+    "output_image": "PBR_Clear_Coat.png",
+    "data_files": [
+      "Skyboxes",
+      "Textures"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "PBR_Edge_Tint",
+    "script_path": "src/Python/Rendering/PBR_Edge_Tint.py",
+    "render_window_var": "render_window",
+    "output_image": "PBR_Edge_Tint.png",
+    "data_files": [
+      "Skyboxes"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "PBR_HDR_Environment",
+    "script_path": "src/Python/Rendering/PBR_HDR_Environment.py",
+    "render_window_var": "render_window",
+    "output_image": "PBR_HDR_Environment.png",
+    "data_files": [
+      "Skyboxes"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "PBR_Mapping",
+    "script_path": "src/Python/Rendering/PBR_Mapping.py",
+    "render_window_var": "render_window",
+    "output_image": "PBR_Mapping.png",
+    "data_files": [
+      "Skyboxes",
+      "Textures"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "PBR_Materials",
+    "script_path": "src/Python/Rendering/PBR_Materials.py",
+    "render_window_var": "render_window",
+    "output_image": "PBR_Materials.png",
+    "data_files": [
+      "Skyboxes"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "PBR_Materials_Coat",
+    "script_path": "src/Python/Rendering/PBR_Materials_Coat.py",
+    "render_window_var": "render_window",
+    "output_image": "PBR_Materials_Coat.png",
+    "data_files": [
+      "Skyboxes"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "PBR_Skybox",
+    "script_path": "src/Python/Rendering/PBR_Skybox.py",
+    "render_window_var": "render_window",
+    "output_image": "PBR_Skybox.png",
+    "data_files": [
+      "Skyboxes"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "PBR_Skybox_Anisotropy",
+    "script_path": "src/Python/Rendering/PBR_Skybox_Anisotropy.py",
+    "render_window_var": "render_window",
+    "output_image": "PBR_Skybox_Anisotropy.png",
+    "data_files": [
+      "Skyboxes",
+      "Textures"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "PBR_Skybox_Texturing",
+    "script_path": "src/Python/Rendering/PBR_Skybox_Texturing.py",
+    "render_window_var": "render_window",
+    "output_image": "PBR_Skybox_Texturing.png",
+    "data_files": [
+      "Skyboxes",
+      "Textures"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "Shadows",
+    "script_path": "src/Python/Rendering/Shadows.py",
+    "render_window_var": "render_window",
+    "output_image": "Shadows.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "SpecularSpheres",
+    "script_path": "src/Python/Rendering/SpecularSpheres.py",
+    "render_window_var": "render_window",
+    "output_image": "SpecularSpheres.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "StippledLine",
+    "script_path": "src/Python/Rendering/StippledLine.py",
+    "render_window_var": "render_window",
+    "output_image": "StippledLine.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "StripFran",
+    "script_path": "src/Python/Rendering/StripFran.py",
+    "render_window_var": "render_window",
+    "output_image": "StripFran.png",
+    "data_files": [
+      "fran_cut.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "TransformSphere",
+    "script_path": "src/Python/Rendering/TransformSphere.py",
+    "render_window_var": "render_window",
+    "output_image": "TransformSphere.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "TransparentBackground",
+    "script_path": "src/Python/Rendering/TransparentBackground.py",
+    "render_window_var": "render_window",
+    "output_image": "TransparentBackground.png",
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "Rainbow",
+    "script_path": "src/Python/Rendering/Rainbow.py",
+    "render_window_var": "render_window",
+    "output_image": "Rainbow.png",
+    "data_files": [
+      "combxyz.bin",
+      "combq.bin"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "Rotations",
+    "script_path": "src/Python/Rendering/Rotations.py",
+    "render_window_var": "render_window",
+    "output_image": "Rotations.png",
+    "data_files": [
+      "cow.g"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "RotationsA",
+    "script_path": "src/Python/Rendering/RotationsA.py",
+    "render_window_var": "render_window",
+    "output_image": "RotationsA.png",
+    "data_files": [
+      "cow.g"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "RotationsB",
+    "script_path": "src/Python/Rendering/RotationsB.py",
+    "render_window_var": "render_window",
+    "output_image": "RotationsB.png",
+    "data_files": [
+      "cow.g"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "RotationsC",
+    "script_path": "src/Python/Rendering/RotationsC.py",
+    "render_window_var": "render_window",
+    "output_image": "RotationsC.png",
+    "data_files": [
+      "cow.g"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "RotationsD",
+    "script_path": "src/Python/Rendering/RotationsD.py",
+    "render_window_var": "render_window",
+    "output_image": "RotationsD.png",
+    "data_files": [
+      "cow.g"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "WalkCow",
+    "script_path": "src/Python/Rendering/WalkCow.py",
+    "render_window_var": "render_window",
+    "output_image": "WalkCow.png",
+    "data_files": [
+      "cow.g"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "WalkCowA",
+    "script_path": "src/Python/Rendering/WalkCowA.py",
+    "render_window_var": "render_window",
+    "output_image": "WalkCowA.png",
+    "data_files": [
+      "cow.g"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Rendering",
+    "title": "WalkCowB",
+    "script_path": "src/Python/Rendering/WalkCowB.py",
+    "render_window_var": "render_window",
+    "output_image": "WalkCowB.png",
+    "data_files": [
+      "cow.g"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "BoundaryEdges",
+    "script_path": "src/Python/Meshes/BoundaryEdges.py",
+    "render_window_var": "render_window",
+    "output_image": "BoundaryEdges.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "CapClip",
+    "script_path": "src/Python/Meshes/CapClip.py",
+    "render_window_var": "render_window",
+    "output_image": "CapClip.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "ClipDataSetWithPolyData",
+    "script_path": "src/Python/Meshes/ClipDataSetWithPolyData.py",
+    "render_window_var": "render_window",
+    "output_image": "ClipDataSetWithPolyData.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "ClipDataSetWithPolyData1",
+    "script_path": "src/Python/Meshes/ClipDataSetWithPolyData1.py",
+    "render_window_var": "render_window",
+    "output_image": "ClipDataSetWithPolyData1.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "ColoredElevationMap",
+    "script_path": "src/Python/Meshes/ColoredElevationMap.py",
+    "render_window_var": "render_window",
+    "output_image": "ColoredElevationMap.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "Decimation",
+    "script_path": "src/Python/Meshes/Decimation.py",
+    "render_window_var": "render_window",
+    "output_image": "Decimation.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "DeformPointSet",
+    "script_path": "src/Python/Meshes/DeformPointSet.py",
+    "render_window_var": "render_window",
+    "output_image": "DeformPointSet.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "PointInterpolator",
+    "script_path": "src/Python/Meshes/PointInterpolator.py",
+    "render_window_var": "render_window",
+    "output_image": "PointInterpolator.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "SolidClip",
+    "script_path": "src/Python/Meshes/SolidClip.py",
+    "render_window_var": "render_window",
+    "output_image": "SolidClip.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "Subdivision",
+    "script_path": "src/Python/Meshes/Subdivision.py",
+    "render_window_var": "render_window",
+    "output_image": "Subdivision.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "AdaptiveSubdivision",
+    "script_path": "src/Python/Meshes/AdaptiveSubdivision.py",
+    "render_window_var": "render_window",
+    "output_image": "AdaptiveSubdivision.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "SubdivideTetra",
+    "script_path": "src/Python/Meshes/SubdivideTetra.py",
+    "render_window_var": "render_window",
+    "output_image": "SubdivideTetra.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "SmoothMesh",
+    "script_path": "src/Python/Meshes/SmoothMesh.py",
+    "render_window_var": "render_window",
+    "output_image": "SmoothMesh.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "WindowedSincSmoothing",
+    "script_path": "src/Python/Meshes/WindowedSincSmoothing.py",
+    "render_window_var": "render_window",
+    "output_image": "WindowedSincSmoothing.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "FillHoles",
+    "script_path": "src/Python/Meshes/FillHoles.py",
+    "render_window_var": "render_window",
+    "output_image": "FillHoles.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "Triangulation",
+    "script_path": "src/Python/Meshes/Triangulation.py",
+    "render_window_var": "render_window",
+    "output_image": "Triangulation.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "Delaunay3D",
+    "script_path": "src/Python/Meshes/Delaunay3D.py",
+    "render_window_var": "render_window",
+    "output_image": "Delaunay3D.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "QuadricDecimation",
+    "script_path": "src/Python/Meshes/QuadricDecimation.py",
+    "render_window_var": "render_window",
+    "output_image": "QuadricDecimation.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "Normals",
+    "script_path": "src/Python/Meshes/Normals.py",
+    "render_window_var": "render_window",
+    "output_image": "Normals.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "OBBDicer",
+    "script_path": "src/Python/Meshes/OBBDicer.py",
+    "render_window_var": "render_window",
+    "output_image": "OBBDicer.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "ConnectivityExtractRegions",
+    "script_path": "src/Python/Meshes/ConnectivityExtractRegions.py",
+    "render_window_var": "render_window",
+    "output_image": "ConnectivityExtractRegions.png",
+    "skip": false
+  },
+  {
+    "category": "Meshes",
+    "title": "CleanPolyData",
+    "script_path": "src/Python/Meshes/CleanPolyData.py",
+    "render_window_var": "render_window",
+    "output_image": "CleanPolyData.png",
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageDataGeometryFilter",
+    "script_path": "src/Python/ImageData/ImageDataGeometryFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageDataGeometryFilter.png",
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageNormalize",
+    "script_path": "src/Python/ImageData/ImageNormalize.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageNormalize.png",
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageWeightedSum",
+    "script_path": "src/Python/ImageData/ImageWeightedSum.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageWeightedSum.png",
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "SumVTKImages",
+    "script_path": "src/Python/ImageData/SumVTKImages.py",
+    "render_window_var": "render_window",
+    "output_image": "SumVTKImages.png",
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageMarchingCubes",
+    "script_path": "src/Python/ImageData/ImageMarchingCubes.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageMarchingCubes.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageExtractVOI",
+    "script_path": "src/Python/ImageData/ImageExtractVOI.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageExtractVOI.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageThreshold",
+    "script_path": "src/Python/ImageData/ImageThreshold.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageThreshold.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageSliceViewer",
+    "script_path": "src/Python/ImageData/ImageSliceViewer.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageSliceViewer.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageReslice",
+    "script_path": "src/Python/ImageData/ImageReslice.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageReslice.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageHistogram",
+    "script_path": "src/Python/ImageData/ImageHistogram.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageHistogram.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageGradientMagnitude",
+    "script_path": "src/Python/ImageData/ImageGradientMagnitude.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageGradientMagnitude.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageMath",
+    "script_path": "src/Python/ImageData/ImageMath.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageMath.png",
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageFlip",
+    "script_path": "src/Python/ImageData/ImageFlip.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageFlip.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageChangeInformation",
+    "script_path": "src/Python/ImageData/ImageChangeInformation.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageChangeInformation.png",
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageIterator",
+    "script_path": "src/Python/ImageData/ImageIterator.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageIterator.png",
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageStencil",
+    "script_path": "src/Python/ImageData/ImageStencil.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageStencil.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageAnisotropicDiffusion",
+    "script_path": "src/Python/ImageProcessing/ImageAnisotropicDiffusion.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageAnisotropicDiffusion.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageSobel",
+    "script_path": "src/Python/ImageProcessing/ImageSobel.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageSobel.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageLaplacian",
+    "script_path": "src/Python/ImageProcessing/ImageLaplacian.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageLaplacian.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageLogic",
+    "script_path": "src/Python/ImageProcessing/ImageLogic.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageLogic.png",
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageButterworthLowPass",
+    "script_path": "src/Python/ImageProcessing/ImageButterworthLowPass.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageButterworthLowPass.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageBlend",
+    "script_path": "src/Python/ImageProcessing/ImageBlend.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageBlend.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageCheckerboard",
+    "script_path": "src/Python/ImageProcessing/ImageCheckerboard.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageCheckerboard.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageConnectivity",
+    "script_path": "src/Python/ImageProcessing/ImageConnectivity.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageConnectivity.png",
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageEuclideanDistance",
+    "script_path": "src/Python/ImageProcessing/ImageEuclideanDistance.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageEuclideanDistance.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageResize",
+    "script_path": "src/Python/ImageData/ImageResize.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageResize.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImagePermute",
+    "script_path": "src/Python/ImageData/ImagePermute.py",
+    "render_window_var": "render_window",
+    "output_image": "ImagePermute.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageShrink",
+    "script_path": "src/Python/ImageData/ImageShrink.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageShrink.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageData",
+    "title": "ImageLuminance",
+    "script_path": "src/Python/ImageData/ImageLuminance.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageLuminance.png",
+    "data_files": [
+      "Gourds.png"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageNoiseSource",
+    "script_path": "src/Python/ImageProcessing/ImageNoiseSource.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageNoiseSource.png",
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageSkeleton",
+    "script_path": "src/Python/ImageProcessing/ImageSkeleton.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageSkeleton.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "Attenuation",
+    "script_path": "src/Python/ImageProcessing/Attenuation.py",
+    "render_window_var": "render_window",
+    "output_image": "Attenuation.png",
+    "data_files": [
+      "AttenuationArtifact.pgm"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "EnhanceEdges",
+    "script_path": "src/Python/ImageProcessing/EnhanceEdges.py",
+    "render_window_var": "render_window",
+    "output_image": "EnhanceEdges.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "GaussianSmooth",
+    "script_path": "src/Python/ImageProcessing/GaussianSmooth.py",
+    "render_window_var": "render_window",
+    "output_image": "GaussianSmooth.png",
+    "data_files": [
+      "Gourds.png"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "HybridMedianComparison",
+    "script_path": "src/Python/ImageProcessing/HybridMedianComparison.py",
+    "render_window_var": "render_window",
+    "output_image": "HybridMedianComparison.png",
+    "data_files": [
+      "TestPattern.png"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "IdealHighPass",
+    "script_path": "src/Python/ImageProcessing/IdealHighPass.py",
+    "render_window_var": "render_window",
+    "output_image": "IdealHighPass.png",
+    "data_files": [
+      "fullhead15.png"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "IsoSubsample",
+    "script_path": "src/Python/ImageProcessing/IsoSubsample.py",
+    "render_window_var": "render_window",
+    "output_image": "IsoSubsample.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "MedianComparison",
+    "script_path": "src/Python/ImageProcessing/MedianComparison.py",
+    "render_window_var": "render_window",
+    "output_image": "MedianComparison.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "MorphologyComparison",
+    "script_path": "src/Python/ImageProcessing/MorphologyComparison.py",
+    "render_window_var": "render_window",
+    "output_image": "MorphologyComparison.png",
+    "data_files": [
+      "binary.pgm"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "Pad",
+    "script_path": "src/Python/ImageProcessing/Pad.py",
+    "render_window_var": "render_window",
+    "output_image": "Pad.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "VTKSpectrum",
+    "script_path": "src/Python/ImageProcessing/VTKSpectrum.py",
+    "render_window_var": "render_window",
+    "output_image": "VTKSpectrum.png",
+    "data_files": [
+      "vtks.pgm"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageButterworthHighPass",
+    "script_path": "src/Python/ImageProcessing/ImageButterworthHighPass.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageButterworthHighPass.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageCityBlockDistance",
+    "script_path": "src/Python/ImageProcessing/ImageCityBlockDistance.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageCityBlockDistance.png",
+    "data_files": [
+      "binary.pgm"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageConvolve",
+    "script_path": "src/Python/ImageProcessing/ImageConvolve.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageConvolve.png",
+    "data_files": [
+      "Gourds.png"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageCorrelation",
+    "script_path": "src/Python/ImageProcessing/ImageCorrelation.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageCorrelation.png",
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageDilateErode3D",
+    "script_path": "src/Python/ImageProcessing/ImageDilateErode3D.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageDilateErode3D.png",
+    "data_files": [
+      "binary.pgm"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageDotProduct",
+    "script_path": "src/Python/ImageProcessing/ImageDotProduct.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageDotProduct.png",
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageIdealLowPass",
+    "script_path": "src/Python/ImageProcessing/ImageIdealLowPass.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageIdealLowPass.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageOpenClose3D",
+    "script_path": "src/Python/ImageProcessing/ImageOpenClose3D.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageOpenClose3D.png",
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageRange3D",
+    "script_path": "src/Python/ImageProcessing/ImageRange3D.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageRange3D.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ImageProcessing",
+    "title": "ImageVariance3D",
+    "script_path": "src/Python/ImageProcessing/ImageVariance3D.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageVariance3D.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Images",
+    "title": "Actor2D",
+    "script_path": "src/Python/Images/Actor2D.py",
+    "render_window_var": "render_window",
+    "output_image": "Actor2D.png",
+    "skip": false
+  },
+  {
+    "category": "Images",
+    "title": "BackgroundImage",
+    "script_path": "src/Python/Images/BackgroundImage.py",
+    "render_window_var": "render_window",
+    "output_image": "BackgroundImage.png",
+    "data_files": [
+      "Gourds2.jpg"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Images",
+    "title": "Cast",
+    "script_path": "src/Python/Images/Cast.py",
+    "render_window_var": "render_window",
+    "output_image": "Cast.png",
+    "skip": false
+  },
+  {
+    "category": "Images",
+    "title": "ImageAppend",
+    "script_path": "src/Python/Images/ImageAppend.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageAppend.png",
+    "skip": false
+  },
+  {
+    "category": "Images",
+    "title": "ImageCanvasSource2D",
+    "script_path": "src/Python/Images/ImageCanvasSource2D.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageCanvasSource2D.png",
+    "skip": false
+  },
+  {
+    "category": "Images",
+    "title": "ImageExtractComponents",
+    "script_path": "src/Python/Images/ImageExtractComponents.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageExtractComponents.png",
+    "data_files": [
+      "Gourds2.jpg"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Images",
+    "title": "ImageGridSource",
+    "script_path": "src/Python/Images/ImageGridSource.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageGridSource.png",
+    "skip": false
+  },
+  {
+    "category": "Images",
+    "title": "ImageMandelbrotSource",
+    "script_path": "src/Python/Images/ImageMandelbrotSource.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageMandelbrotSource.png",
+    "skip": false
+  },
+  {
+    "category": "Images",
+    "title": "ImageMapToColors",
+    "script_path": "src/Python/Images/ImageMapToColors.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageMapToColors.png",
+    "data_files": [
+      "Gourds2.jpg"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Images",
+    "title": "ImageMapToWindowLevelColors",
+    "script_path": "src/Python/Images/ImageMapToWindowLevelColors.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageMapToWindowLevelColors.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Images",
+    "title": "ImageSinusoidSource",
+    "script_path": "src/Python/Images/ImageSinusoidSource.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageSinusoidSource.png",
+    "skip": false
+  },
+  {
+    "category": "Images",
+    "title": "ImageTranslateExtent",
+    "script_path": "src/Python/Images/ImageTranslateExtent.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageTranslateExtent.png",
+    "skip": false
+  },
+  {
+    "category": "Images",
+    "title": "ImageWarp",
+    "script_path": "src/Python/Images/ImageWarp.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageWarp.png",
+    "data_files": [
+      "masonry.bmp"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadCSVPython",
+    "script_path": "src/Python/IO/ReadCSVPython.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadCSVPython.png",
+    "data_files": [
+      "LakeGininderra.csv"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadCSVVTK",
+    "script_path": "src/Python/IO/ReadCSVVTK.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadCSVVTK.png",
+    "data_files": [
+      "LakeGininderra.csv"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadSTLWriteMHA",
+    "script_path": "src/Python/IO/ReadSTLWriteMHA.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadSTLWriteMHA.png",
+    "data_files": [
+      "headMesh.stl"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadSTLWriteGLTF",
+    "script_path": "src/Python/IO/ReadSTLWriteGLTF.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadSTLWriteGLTF.png",
+    "data_files": [
+      "headMesh.stl"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadSTLWriteOBJ",
+    "script_path": "src/Python/IO/ReadSTLWriteOBJ.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadSTLWriteOBJ.png",
+    "data_files": [
+      "headMesh.stl"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadSTLWriteXMLImageData",
+    "script_path": "src/Python/IO/ReadSTLWriteXMLImageData.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadSTLWriteXMLImageData.png",
+    "data_files": [
+      "headMesh.stl"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadCSVPandas",
+    "script_path": "src/Python/IO/ReadCSVPandas.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadCSVPandas.png",
+    "data_files": [
+      "LakeGininderra.csv"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "HDRReader",
+    "script_path": "src/Python/IO/HDRReader.py",
+    "render_window_var": "render_window",
+    "output_image": "HDRReader.png",
+    "data_files": [
+      "spiaggia_di_mondello_1k.hdr"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadDICOM",
+    "script_path": "src/Python/IO/ReadDICOM.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadDICOM.png",
+    "data_files": [
+      "prostate.img"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadExodusData",
+    "script_path": "src/Python/IO/ReadExodusData.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadExodusData.png",
+    "data_files": [
+      "mug.e"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadImageData",
+    "script_path": "src/Python/IO/ReadImageData.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadImageData.png",
+    "data_files": [
+      "vase.vti"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadLegacyUnstructuredGrid",
+    "script_path": "src/Python/IO/ReadLegacyUnstructuredGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadLegacyUnstructuredGrid.png",
+    "data_files": [
+      "VTKCellTypes.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadPLOT3D",
+    "script_path": "src/Python/IO/ReadPLOT3D.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadPLOT3D.png",
+    "data_files": [
+      "combxyz.bin",
+      "combq.bin"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadSLC",
+    "script_path": "src/Python/IO/ReadSLC.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadSLC.png",
+    "data_files": [
+      "vw_knee.slc"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadSTL",
+    "script_path": "src/Python/IO/ReadSTL.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadSTL.png",
+    "data_files": [
+      "42400-IDGH.stl"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadUnstructuredGrid",
+    "script_path": "src/Python/IO/ReadUnstructuredGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadUnstructuredGrid.png",
+    "data_files": [
+      "tetra.vtu"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadVTP",
+    "script_path": "src/Python/IO/ReadVTP.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadVTP.png",
+    "data_files": [
+      "horse.vtp"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WritePLY",
+    "script_path": "src/Python/IO/WritePLY.py",
+    "render_window_var": "render_window",
+    "output_image": "WritePLY.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WriteSTL",
+    "script_path": "src/Python/IO/WriteSTL.py",
+    "render_window_var": "render_window",
+    "output_image": "WriteSTL.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WriteLegacyUnstructuredGrid",
+    "script_path": "src/Python/IO/WriteLegacyUnstructuredGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "WriteLegacyUnstructuredGrid.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WriteXMLUnstructuredGrid",
+    "script_path": "src/Python/IO/WriteXMLUnstructuredGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "WriteXMLUnstructuredGrid.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WriteImagePNG",
+    "script_path": "src/Python/IO/WriteImagePNG.py",
+    "render_window_var": "render_window",
+    "output_image": "WriteImagePNG.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WriteImageJPEG",
+    "script_path": "src/Python/IO/WriteImageJPEG.py",
+    "render_window_var": "render_window",
+    "output_image": "WriteImageJPEG.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WriteImageBMP",
+    "script_path": "src/Python/IO/WriteImageBMP.py",
+    "render_window_var": "render_window",
+    "output_image": "WriteImageBMP.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WriteImageTIFF",
+    "script_path": "src/Python/IO/WriteImageTIFF.py",
+    "render_window_var": "render_window",
+    "output_image": "WriteImageTIFF.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WriteImagePNM",
+    "script_path": "src/Python/IO/WriteImagePNM.py",
+    "render_window_var": "render_window",
+    "output_image": "WriteImagePNM.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WriteImagePostScript",
+    "script_path": "src/Python/IO/WriteImagePostScript.py",
+    "render_window_var": "render_window",
+    "output_image": "WriteImagePostScript.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WriteCSV",
+    "script_path": "src/Python/IO/WriteCSV.py",
+    "render_window_var": "render_window",
+    "output_image": "WriteCSV.png",
+    "data_files": [
+      "LakeGininderra.csv"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WriteVTP",
+    "script_path": "src/Python/IO/WriteVTP.py",
+    "render_window_var": "render_window",
+    "output_image": "WriteVTP.png",
+    "data_files": [
+      "LakeGininderra.csv"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadDICOMSeriesApp",
+    "script_path": "src/Python/IO/ReadDICOMSeriesApp.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadDICOMSeriesApp.png",
+    "data_files": [
+      "brain"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "TransientHDFReaderApp",
+    "script_path": "src/Python/IO/TransientHDFReaderApp.py",
+    "render_window_var": "render_window",
+    "output_image": "TransientHDFReaderApp.png",
+    "data_files": [
+      "warping_spheres.vtkhdf"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WriteVTKHDF",
+    "script_path": "src/Python/IO/WriteVTKHDF.py",
+    "render_window_var": "render_window",
+    "output_image": "WriteVTKHDF.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WriteAMRVTKHDF",
+    "script_path": "src/Python/IO/WriteAMRVTKHDF.py",
+    "render_window_var": "render_window",
+    "output_image": "WriteAMRVTKHDF.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "WriteReadVtkImageData",
+    "script_path": "src/Python/IO/WriteReadVtkImageData.py",
+    "render_window_var": "render_window",
+    "output_image": "WriteReadVtkImageData.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadEnSight",
+    "script_path": "src/Python/IO/ReadEnSight.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadEnSight.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadGLTF",
+    "script_path": "src/Python/IO/ReadGLTF.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadGLTF.png",
+    "data_files": [
+      "ReadSTLWriteGLTF.gltf"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadNIFTI",
+    "script_path": "src/Python/IO/ReadNIFTI.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadNIFTI.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadOBJ",
+    "script_path": "src/Python/IO/ReadOBJ.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadOBJ.png",
+    "data_files": [
+      "ReadSTLWriteOBJ.obj"
+    ],
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadPDB",
+    "script_path": "src/Python/IO/ReadPDB.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadPDB.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadPLY",
+    "script_path": "src/Python/IO/ReadPLY.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadPLY.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadXMLMultiBlockData",
+    "script_path": "src/Python/IO/ReadXMLMultiBlockData.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadXMLMultiBlockData.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadXMLRectilinearGrid",
+    "script_path": "src/Python/IO/ReadXMLRectilinearGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadXMLRectilinearGrid.png",
+    "skip": false
+  },
+  {
+    "category": "IO",
+    "title": "ReadXMLStructuredGrid",
+    "script_path": "src/Python/IO/ReadXMLStructuredGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "ReadXMLStructuredGrid.png",
+    "skip": false
+  },
+  {
+    "category": "Interaction",
+    "title": "CallBack",
+    "script_path": "src/Python/Interaction/CallBack.py",
+    "render_window_var": "render_window",
+    "output_image": "CallBack.png",
+    "skip": false
+  },
+  {
+    "category": "Interaction",
+    "title": "HighlightPickedActor",
+    "script_path": "src/Python/Interaction/HighlightPickedActor.py",
+    "render_window_var": "render_window",
+    "output_image": "HighlightPickedActor.png",
+    "skip": false
+  },
+  {
+    "category": "Interaction",
+    "title": "InteractorStyleTrackballActor",
+    "script_path": "src/Python/Interaction/InteractorStyleTrackballActor.py",
+    "render_window_var": "render_window",
+    "output_image": "InteractorStyleTrackballActor.png",
+    "skip": false
+  },
+  {
+    "category": "Interaction",
+    "title": "InteractorStyleTrackballCamera",
+    "script_path": "src/Python/Interaction/InteractorStyleTrackballCamera.py",
+    "render_window_var": "render_window",
+    "output_image": "InteractorStyleTrackballCamera.png",
+    "skip": false
+  },
+  {
+    "category": "Interaction",
+    "title": "KeypressEvents",
+    "script_path": "src/Python/Interaction/KeypressEvents.py",
+    "render_window_var": "render_window",
+    "output_image": "KeypressEvents.png",
+    "skip": false
+  },
+  {
+    "category": "Interaction",
+    "title": "MouseEvents",
+    "script_path": "src/Python/Interaction/MouseEvents.py",
+    "render_window_var": "render_window",
+    "output_image": "MouseEvents.png",
+    "skip": false
+  },
+  {
+    "category": "Interaction",
+    "title": "MouseEventsObserver",
+    "script_path": "src/Python/Interaction/MouseEventsObserver.py",
+    "render_window_var": "render_window",
+    "output_image": "MouseEventsObserver.png",
+    "skip": false
+  },
+  {
+    "category": "Interaction",
+    "title": "RubberBandZoom",
+    "script_path": "src/Python/Interaction/RubberBandZoom.py",
+    "render_window_var": "render_window",
+    "output_image": "RubberBandZoom.png",
+    "skip": false
+  },
+  {
+    "category": "Medical",
+    "title": "BoneIsosurface",
+    "script_path": "src/Python/Medical/BoneIsosurface.py",
+    "render_window_var": "render_window",
+    "output_image": "BoneIsosurface.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Medical",
+    "title": "GenerateCubesFromLabels",
+    "script_path": "src/Python/Medical/GenerateCubesFromLabels.py",
+    "render_window_var": "render_window",
+    "output_image": "GenerateCubesFromLabels.png",
+    "data_files": [
+      "Frog/frogtissue.mhd",
+      "Frog/frogtissue.zraw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Medical",
+    "title": "GenerateModelsFromLabels",
+    "script_path": "src/Python/Medical/GenerateModelsFromLabels.py",
+    "render_window_var": "render_window",
+    "output_image": "GenerateModelsFromLabels.png",
+    "data_files": [
+      "Frog/frogtissue.mhd",
+      "Frog/frogtissue.zraw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Medical",
+    "title": "MarchingCubesComparison",
+    "script_path": "src/Python/Medical/MarchingCubesComparison.py",
+    "render_window_var": "render_window",
+    "output_image": "MarchingCubesComparison.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Medical",
+    "title": "MedicalGradientMagnitude",
+    "script_path": "src/Python/Medical/MedicalGradientMagnitude.py",
+    "render_window_var": "render_window",
+    "output_image": "MedicalGradientMagnitude.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Medical",
+    "title": "MedicalReslice",
+    "script_path": "src/Python/Medical/MedicalReslice.py",
+    "render_window_var": "render_window",
+    "output_image": "MedicalReslice.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Medical",
+    "title": "MedicalSliceViewer",
+    "script_path": "src/Python/Medical/MedicalSliceViewer.py",
+    "render_window_var": "render_window",
+    "output_image": "MedicalSliceViewer.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Medical",
+    "title": "OrthogonalSlicesWithIsosurfaces",
+    "script_path": "src/Python/Medical/OrthogonalSlicesWithIsosurfaces.py",
+    "render_window_var": "render_window",
+    "output_image": "OrthogonalSlicesWithIsosurfaces.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Medical",
+    "title": "SkinAndBoneIsosurface",
+    "script_path": "src/Python/Medical/SkinAndBoneIsosurface.py",
+    "render_window_var": "render_window",
+    "output_image": "SkinAndBoneIsosurface.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Medical",
+    "title": "SkinIsosurface",
+    "script_path": "src/Python/Medical/SkinIsosurface.py",
+    "render_window_var": "render_window",
+    "output_image": "SkinIsosurface.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Medical",
+    "title": "TissueLens",
+    "script_path": "src/Python/Medical/TissueLens.py",
+    "render_window_var": "render_window",
+    "output_image": "TissueLens.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "SourceObjectSphere",
+    "script_path": "src/Python/GeometricObjects/SourceObjectSphere.py",
+    "render_window_var": "render_window",
+    "output_image": "SourceObjectSphere.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "SourceObjectCone",
+    "script_path": "src/Python/GeometricObjects/SourceObjectCone.py",
+    "render_window_var": "render_window",
+    "output_image": "SourceObjectCone.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "SourceObjectCylinder",
+    "script_path": "src/Python/GeometricObjects/SourceObjectCylinder.py",
+    "render_window_var": "render_window",
+    "output_image": "SourceObjectCylinder.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "SourceObjectCube",
+    "script_path": "src/Python/GeometricObjects/SourceObjectCube.py",
+    "render_window_var": "render_window",
+    "output_image": "SourceObjectCube.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "SourceObjectPlane",
+    "script_path": "src/Python/GeometricObjects/SourceObjectPlane.py",
+    "render_window_var": "render_window",
+    "output_image": "SourceObjectPlane.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "SourceObjectText",
+    "script_path": "src/Python/GeometricObjects/SourceObjectText.py",
+    "render_window_var": "render_window",
+    "output_image": "SourceObjectText.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "SourceObjectPointSource",
+    "script_path": "src/Python/GeometricObjects/SourceObjectPointSource.py",
+    "render_window_var": "render_window",
+    "output_image": "SourceObjectPointSource.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "SourceObjectDisk",
+    "script_path": "src/Python/GeometricObjects/SourceObjectDisk.py",
+    "render_window_var": "render_window",
+    "output_image": "SourceObjectDisk.png",
+    "skip": false
+  },
+  {
+    "category": "GeometricObjects",
+    "title": "SourceObjectLine",
+    "script_path": "src/Python/GeometricObjects/SourceObjectLine.py",
+    "render_window_var": "render_window",
+    "output_image": "SourceObjectLine.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "ClipSphereCylinder",
+    "script_path": "src/Python/ScalarVisualization/ClipSphereCylinder.py",
+    "render_window_var": "render_window",
+    "output_image": "ClipSphereCylinder.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "CombustorIsosurface",
+    "script_path": "src/Python/ScalarVisualization/CombustorIsosurface.py",
+    "render_window_var": "render_window",
+    "output_image": "CombustorIsosurface.png",
+    "data_files": [
+      "combxyz.bin",
+      "combq.bin"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "ContourQuadric",
+    "script_path": "src/Python/ScalarVisualization/ContourQuadric.py",
+    "render_window_var": "render_window",
+    "output_image": "ContourQuadric.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "CreateBFont",
+    "script_path": "src/Python/ScalarVisualization/CreateBFont.py",
+    "render_window_var": "render_window",
+    "output_image": "CreateBFont.png",
+    "data_files": [
+      "B.pgm"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "CutStructuredGrid",
+    "script_path": "src/Python/ScalarVisualization/CutStructuredGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "CutStructuredGrid.png",
+    "data_files": [
+      "combxyz.bin",
+      "combq.bin"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "CutWithCutFunction",
+    "script_path": "src/Python/ScalarVisualization/CutWithCutFunction.py",
+    "render_window_var": "render_window",
+    "output_image": "CutWithCutFunction.png",
+    "data_files": [
+      "Torso.vtp"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "CutWithScalars",
+    "script_path": "src/Python/ScalarVisualization/CutWithScalars.py",
+    "render_window_var": "render_window",
+    "output_image": "CutWithScalars.png",
+    "data_files": [
+      "Torso.vtp"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "Cutter",
+    "script_path": "src/Python/ScalarVisualization/Cutter.py",
+    "render_window_var": "render_window",
+    "output_image": "Cutter.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "DataSetSurface",
+    "script_path": "src/Python/ScalarVisualization/DataSetSurface.py",
+    "render_window_var": "render_window",
+    "output_image": "DataSetSurface.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "DecimateHawaii",
+    "script_path": "src/Python/ScalarVisualization/DecimateHawaii.py",
+    "render_window_var": "render_window",
+    "output_image": "DecimateHawaii.png",
+    "data_files": [
+      "honolulu.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "DisplayQuadricSurfaces",
+    "script_path": "src/Python/ScalarVisualization/DisplayQuadricSurfaces.py",
+    "render_window_var": "render_window",
+    "output_image": "DisplayQuadricSurfaces.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "ExponentialCosine",
+    "script_path": "src/Python/ScalarVisualization/ExponentialCosine.py",
+    "render_window_var": "render_window",
+    "output_image": "ExponentialCosine.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "ExtractData",
+    "script_path": "src/Python/ScalarVisualization/ExtractData.py",
+    "render_window_var": "render_window",
+    "output_image": "ExtractData.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "FlyingHeadSlice",
+    "script_path": "src/Python/ScalarVisualization/FlyingHeadSlice.py",
+    "render_window_var": "render_window",
+    "output_image": "FlyingHeadSlice.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "Hawaii",
+    "script_path": "src/Python/ScalarVisualization/Hawaii.py",
+    "render_window_var": "render_window",
+    "output_image": "Hawaii.png",
+    "data_files": [
+      "honolulu.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "HeadBone",
+    "script_path": "src/Python/ScalarVisualization/HeadBone.py",
+    "render_window_var": "render_window",
+    "output_image": "HeadBone.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "HeadSlice",
+    "script_path": "src/Python/ScalarVisualization/HeadSlice.py",
+    "render_window_var": "render_window",
+    "output_image": "HeadSlice.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "Hello",
+    "script_path": "src/Python/ScalarVisualization/Hello.py",
+    "render_window_var": "render_window",
+    "output_image": "Hello.png",
+    "data_files": [
+      "hello.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "IceCream",
+    "script_path": "src/Python/ScalarVisualization/IceCream.py",
+    "render_window_var": "render_window",
+    "output_image": "IceCream.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "ImageGradient",
+    "script_path": "src/Python/ScalarVisualization/ImageGradient.py",
+    "render_window_var": "render_window",
+    "output_image": "ImageGradient.png",
+    "data_files": [
+      "FullHead.mhd",
+      "FullHead.raw"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "IronIsoSurface",
+    "script_path": "src/Python/ScalarVisualization/IronIsoSurface.py",
+    "render_window_var": "render_window",
+    "output_image": "IronIsoSurface.png",
+    "data_files": [
+      "ironProt.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "IsosurfaceSampling",
+    "script_path": "src/Python/ScalarVisualization/IsosurfaceSampling.py",
+    "render_window_var": "render_window",
+    "output_image": "IsosurfaceSampling.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "MarchingCases",
+    "script_path": "src/Python/ScalarVisualization/MarchingCases.py",
+    "render_window_var": "render_window",
+    "output_image": "MarchingCases.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "MarchingCasesA",
+    "script_path": "src/Python/ScalarVisualization/MarchingCasesA.py",
+    "render_window_var": "render_window",
+    "output_image": "MarchingCasesA.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "MarchingCasesB",
+    "script_path": "src/Python/ScalarVisualization/MarchingCasesB.py",
+    "render_window_var": "render_window",
+    "output_image": "MarchingCasesB.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "MarchingCasesC",
+    "script_path": "src/Python/ScalarVisualization/MarchingCasesC.py",
+    "render_window_var": "render_window",
+    "output_image": "MarchingCasesC.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "MarchingCasesD",
+    "script_path": "src/Python/ScalarVisualization/MarchingCasesD.py",
+    "render_window_var": "render_window",
+    "output_image": "MarchingCasesD.png",
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "Motor",
+    "script_path": "src/Python/ScalarVisualization/Motor.py",
+    "render_window_var": "render_window",
+    "output_image": "Motor.png",
+    "data_files": [
+      "texThres2.vtk",
+      "motor.g"
+    ],
+    "skip": false
+  },
+  {
+    "category": "ScalarVisualization",
+    "title": "QuadricVisualization",
+    "script_path": "src/Python/ScalarVisualization/QuadricVisualization.py",
+    "render_window_var": "render_window",
+    "output_image": "QuadricVisualization.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "Animation",
+    "script_path": "src/Python/Utilities/Animation.py",
+    "render_window_var": "render_window",
+    "output_image": "Animation.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "ColorMapToLUT",
+    "script_path": "src/Python/Utilities/ColorMapToLUT.py",
+    "render_window_var": "render_window",
+    "output_image": "ColorMapToLUT.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "ColorNamePatches",
+    "script_path": "src/Python/Utilities/ColorNamePatches.py",
+    "render_window_var": "render_window",
+    "output_image": "ColorNamePatches.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "ColorSeriesPatches",
+    "script_path": "src/Python/Utilities/ColorSeriesPatches.py",
+    "render_window_var": "render_window",
+    "output_image": "ColorSeriesPatches.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "JSONColorMapToLUT",
+    "script_path": "src/Python/Utilities/JSONColorMapToLUT.py",
+    "render_window_var": "render_window",
+    "output_image": "JSONColorMapToLUT.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "JSONColorMapToLUT_Coolwarm",
+    "script_path": "src/Python/Utilities/JSONColorMapToLUT_Coolwarm.py",
+    "render_window_var": "render_window",
+    "output_image": "JSONColorMapToLUT_Coolwarm.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "JSONColorMapToLUT_Spectral",
+    "script_path": "src/Python/Utilities/JSONColorMapToLUT_Spectral.py",
+    "render_window_var": "render_window",
+    "output_image": "JSONColorMapToLUT_Spectral.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "JSONColorMapToLUT_Viridis",
+    "script_path": "src/Python/Utilities/JSONColorMapToLUT_Viridis.py",
+    "render_window_var": "render_window",
+    "output_image": "JSONColorMapToLUT_Viridis.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "RescaleReverseLUT",
+    "script_path": "src/Python/Utilities/RescaleReverseLUT.py",
+    "render_window_var": "render_window",
+    "output_image": "RescaleReverseLUT.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "ResetCameraOrientation",
+    "script_path": "src/Python/Utilities/ResetCameraOrientation.py",
+    "render_window_var": "render_window",
+    "output_image": "ResetCameraOrientation.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "SaveSceneToFieldData",
+    "script_path": "src/Python/Utilities/SaveSceneToFieldData.py",
+    "render_window_var": "render_window",
+    "output_image": "SaveSceneToFieldData.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "SaveSceneToFile",
+    "script_path": "src/Python/Utilities/SaveSceneToFile.py",
+    "render_window_var": "render_window",
+    "output_image": "SaveSceneToFile.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "Screenshot",
+    "script_path": "src/Python/Utilities/Screenshot.py",
+    "render_window_var": "render_window",
+    "output_image": "Screenshot.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "ShareCamera",
+    "script_path": "src/Python/Utilities/ShareCamera.py",
+    "render_window_var": "render_window",
+    "output_image": "ShareCamera.png",
+    "skip": false
+  },
+  {
+    "category": "Utilities",
+    "title": "VTKWithNumpy",
+    "script_path": "src/Python/Utilities/VTKWithNumpy.py",
+    "render_window_var": "render_window",
+    "output_image": "VTKWithNumpy.png",
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "ArrowGlyphs",
+    "script_path": "src/Python/VectorVisualization/ArrowGlyphs.py",
+    "render_window_var": "render_window",
+    "output_image": "ArrowGlyphs.png",
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "BluntStreamlines",
+    "script_path": "src/Python/VectorVisualization/BluntStreamlines.py",
+    "render_window_var": "render_window",
+    "output_image": "BluntStreamlines.png",
+    "data_files": [
+      "bluntfinxyz.bin",
+      "bluntfinq.bin"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "CarotidFlow",
+    "script_path": "src/Python/VectorVisualization/CarotidFlow.py",
+    "render_window_var": "render_window",
+    "output_image": "CarotidFlow.png",
+    "data_files": [
+      "carotid.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "CarotidFlowGlyphs",
+    "script_path": "src/Python/VectorVisualization/CarotidFlowGlyphs.py",
+    "render_window_var": "render_window",
+    "output_image": "CarotidFlowGlyphs.png",
+    "data_files": [
+      "carotid.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "ClampGlyphSizes",
+    "script_path": "src/Python/VectorVisualization/ClampGlyphSizes.py",
+    "render_window_var": "render_window",
+    "output_image": "ClampGlyphSizes.png",
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "ComplexV",
+    "script_path": "src/Python/VectorVisualization/ComplexV.py",
+    "render_window_var": "render_window",
+    "output_image": "ComplexV.png",
+    "data_files": [
+      "carotid.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "EvenlySpacedStreamlines2D",
+    "script_path": "src/Python/VectorVisualization/EvenlySpacedStreamlines2D.py",
+    "render_window_var": "render_window",
+    "output_image": "EvenlySpacedStreamlines2D.png",
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "GlyphTable",
+    "script_path": "src/Python/VectorVisualization/GlyphTable.py",
+    "render_window_var": "render_window",
+    "output_image": "GlyphTable.png",
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "Hedgehog",
+    "script_path": "src/Python/VectorVisualization/Hedgehog.py",
+    "render_window_var": "render_window",
+    "output_image": "Hedgehog.png",
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "HyperStreamline",
+    "script_path": "src/Python/VectorVisualization/HyperStreamline.py",
+    "render_window_var": "render_window",
+    "output_image": "HyperStreamline.png",
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "Kitchen",
+    "script_path": "src/Python/VectorVisualization/Kitchen.py",
+    "render_window_var": "render_window",
+    "output_image": "Kitchen.png",
+    "data_files": [
+      "kitchen.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "LOx",
+    "script_path": "src/Python/VectorVisualization/LOx.py",
+    "render_window_var": "render_window",
+    "output_image": "LOx.png",
+    "data_files": [
+      "postxyz.bin",
+      "postq.bin"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "LOxGrid",
+    "script_path": "src/Python/VectorVisualization/LOxGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "LOxGrid.png",
+    "data_files": [
+      "postxyz.bin",
+      "postq.bin"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "LOxSeeds",
+    "script_path": "src/Python/VectorVisualization/LOxSeeds.py",
+    "render_window_var": "render_window",
+    "output_image": "LOxSeeds.png",
+    "data_files": [
+      "postxyz.bin",
+      "postq.bin"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "Office",
+    "script_path": "src/Python/VectorVisualization/Office.py",
+    "render_window_var": "render_window",
+    "output_image": "Office.png",
+    "data_files": [
+      "office.binary.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "OfficeA",
+    "script_path": "src/Python/VectorVisualization/OfficeA.py",
+    "render_window_var": "render_window",
+    "output_image": "OfficeA.png",
+    "data_files": [
+      "office.binary.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "OfficeB",
+    "script_path": "src/Python/VectorVisualization/OfficeB.py",
+    "render_window_var": "render_window",
+    "output_image": "OfficeB.png",
+    "data_files": [
+      "office.binary.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "OfficeC",
+    "script_path": "src/Python/VectorVisualization/OfficeC.py",
+    "render_window_var": "render_window",
+    "output_image": "OfficeC.png",
+    "data_files": [
+      "office.binary.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "OfficeTube",
+    "script_path": "src/Python/VectorVisualization/OfficeTube.py",
+    "render_window_var": "render_window",
+    "output_image": "OfficeTube.png",
+    "data_files": [
+      "office.binary.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "OrientedGlyphs",
+    "script_path": "src/Python/VectorVisualization/OrientedGlyphs.py",
+    "render_window_var": "render_window",
+    "output_image": "OrientedGlyphs.png",
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "ProbeCombustor",
+    "script_path": "src/Python/VectorVisualization/ProbeCombustor.py",
+    "render_window_var": "render_window",
+    "output_image": "ProbeCombustor.png",
+    "data_files": [
+      "combxyz.bin",
+      "combq.bin"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "ProgrammableGlyphFilter",
+    "script_path": "src/Python/VectorVisualization/ProgrammableGlyphFilter.py",
+    "render_window_var": "render_window",
+    "output_image": "ProgrammableGlyphFilter.png",
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "ProgrammableGlyphs",
+    "script_path": "src/Python/VectorVisualization/ProgrammableGlyphs.py",
+    "render_window_var": "render_window",
+    "output_image": "ProgrammableGlyphs.png",
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "StreamLines",
+    "script_path": "src/Python/VectorVisualization/StreamLines.py",
+    "render_window_var": "render_window",
+    "output_image": "StreamLines.png",
+    "data_files": [
+      "combxyz.bin",
+      "combq.bin"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "StreamSurface",
+    "script_path": "src/Python/VectorVisualization/StreamSurface.py",
+    "render_window_var": "render_window",
+    "output_image": "StreamSurface.png",
+    "data_files": [
+      "combxyz.bin",
+      "combq.bin"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "StreamlinesWithLineWidget",
+    "script_path": "src/Python/VectorVisualization/StreamlinesWithLineWidget.py",
+    "render_window_var": "render_window",
+    "output_image": "StreamlinesWithLineWidget.png",
+    "data_files": [
+      "combxyz.bin",
+      "combq.bin"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "TensorAxes",
+    "script_path": "src/Python/VectorVisualization/TensorAxes.py",
+    "render_window_var": "render_window",
+    "output_image": "TensorAxes.png",
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "TensorEllipsoids",
+    "script_path": "src/Python/VectorVisualization/TensorEllipsoids.py",
+    "render_window_var": "render_window",
+    "output_image": "TensorEllipsoids.png",
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "VelocityProfile",
+    "script_path": "src/Python/VectorVisualization/VelocityProfile.py",
+    "render_window_var": "render_window",
+    "output_image": "VelocityProfile.png",
+    "data_files": [
+      "combxyz.bin",
+      "combq.bin"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "VectorFieldTopology",
+    "script_path": "src/Python/VectorVisualization/VectorFieldTopology.py",
+    "render_window_var": "render_window",
+    "output_image": "VectorFieldTopology.png",
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "WarpCombustor",
+    "script_path": "src/Python/VectorVisualization/WarpCombustor.py",
+    "render_window_var": "render_window",
+    "output_image": "WarpCombustor.png",
+    "data_files": [
+      "combxyz.bin",
+      "combq.bin"
+    ],
+    "skip": false
+  },
+  {
+    "category": "VectorVisualization",
+    "title": "WarpVector",
+    "script_path": "src/Python/VectorVisualization/WarpVector.py",
+    "render_window_var": "render_window",
+    "output_image": "WarpVector.png",
+    "skip": false
+  },
+  {
+    "category": "SimpleOperations",
+    "title": "ClosestPointOnLine",
+    "script_path": "src/Python/SimpleOperations/ClosestPointOnLine.py",
+    "render_window_var": "render_window",
+    "output_image": "ClosestPointOnLine.png",
+    "skip": false
+  },
+  {
+    "category": "SimpleOperations",
+    "title": "DistanceBetweenPoints",
+    "script_path": "src/Python/SimpleOperations/DistanceBetweenPoints.py",
+    "render_window_var": "render_window",
+    "output_image": "DistanceBetweenPoints.png",
+    "skip": false
+  },
+  {
+    "category": "SimpleOperations",
+    "title": "ProjectPointToPlane",
+    "script_path": "src/Python/SimpleOperations/ProjectPointToPlane.py",
+    "render_window_var": "render_window",
+    "output_image": "ProjectPointToPlane.png",
+    "skip": false
+  },
+  {
+    "category": "SimpleOperations",
+    "title": "RandomPointCloud",
+    "script_path": "src/Python/SimpleOperations/RandomPointCloud.py",
+    "render_window_var": "render_window",
+    "output_image": "RandomPointCloud.png",
+    "skip": false
+  },
+  {
+    "category": "SpecialTopics",
+    "title": "CollisionDetection",
+    "script_path": "src/Python/SpecialTopics/CollisionDetection.py",
+    "render_window_var": "render_window",
+    "output_image": "CollisionDetection.png",
+    "skip": false
+  },
+  {
+    "category": "SpecialTopics",
+    "title": "FrogBrain",
+    "script_path": "src/Python/SpecialTopics/FrogBrain.py",
+    "render_window_var": "render_window",
+    "output_image": "FrogBrain.png",
+    "data_files": ["Frog/frogtissue.mhd", "Frog/frogtissue.zraw"],
+    "skip": false
+  },
+  {
+    "category": "SpecialTopics",
+    "title": "FrogSlice",
+    "script_path": "src/Python/SpecialTopics/FrogSlice.py",
+    "render_window_var": "render_window",
+    "output_image": "FrogSlice.png",
+    "data_files": ["Frog/frog.mhd", "Frog/frog.zraw", "Frog/frogtissue.mhd", "Frog/frogtissue.zraw"],
+    "skip": false
+  },
+  {
+    "category": "SpecialTopics",
+    "title": "FroggieSurface",
+    "script_path": "src/Python/SpecialTopics/FroggieSurface.py",
+    "render_window_var": "render_window",
+    "output_image": "FroggieSurface.png",
+    "data_files": ["Frog_mhd.json", "Frog/frog.mhd", "Frog/frog.zraw", "Frog/frogtissue.mhd", "Frog/frogtissue.zraw"],
+    "skip": false
+  },
+  {
+    "category": "SpecialTopics",
+    "title": "FroggieView",
+    "script_path": "src/Python/SpecialTopics/FroggieView.py",
+    "render_window_var": "render_window",
+    "output_image": "FroggieView.png",
+    "data_files": ["Frog_vtk.json", "Frog/blood.vtk", "Frog/brain.vtk", "Frog/brainbin.vtk", "Frog/duodenum.vtk", "Frog/eye_retna.vtk", "Frog/eye_white.vtk", "Frog/heart.vtk", "Frog/ileum.vtk", "Frog/kidney.vtk", "Frog/l_intestine.vtk", "Frog/liver.vtk", "Frog/lung.vtk", "Frog/nerve.vtk", "Frog/skeleton.vtk", "Frog/skin.vtk", "Frog/spleen.vtk", "Frog/stomach.vtk"],
+    "skip": false
+  },
+  {
+    "category": "SpecialTopics",
+    "title": "Hanoi",
+    "script_path": "src/Python/SpecialTopics/Hanoi.py",
+    "render_window_var": "render_window",
+    "output_image": "Hanoi.png",
+    "skip": false
+  },
+  {
+    "category": "SpecialTopics",
+    "title": "HanoiInitial",
+    "script_path": "src/Python/SpecialTopics/HanoiInitial.py",
+    "render_window_var": "render_window",
+    "output_image": "HanoiInitial.png",
+    "skip": false
+  },
+  {
+    "category": "SpecialTopics",
+    "title": "HanoiIntermediate",
+    "script_path": "src/Python/SpecialTopics/HanoiIntermediate.py",
+    "render_window_var": "render_window",
+    "output_image": "HanoiIntermediate.png",
+    "skip": false
+  },
+  {
+    "category": "SpecialTopics",
+    "title": "KochSnowflake",
+    "script_path": "src/Python/SpecialTopics/KochSnowflake.py",
+    "render_window_var": "render_window",
+    "output_image": "KochSnowflake.png",
+    "skip": false
+  },
+  {
+    "category": "SpecialTopics",
+    "title": "LoopShrink",
+    "script_path": "src/Python/SpecialTopics/LoopShrink.py",
+    "render_window_var": "render_window",
+    "output_image": "LoopShrink.png",
+    "skip": false
+  },
+  {
+    "category": "SpecialTopics",
+    "title": "Lorenz",
+    "script_path": "src/Python/SpecialTopics/Lorenz.py",
+    "render_window_var": "render_window",
+    "output_image": "Lorenz.png",
+    "skip": false
+  },
+  {
+    "category": "SpecialTopics",
+    "title": "ShadowsLightsDemo",
+    "script_path": "src/Python/SpecialTopics/ShadowsLightsDemo.py",
+    "render_window_var": "render_window",
+    "output_image": "ShadowsLightsDemo.png",
+    "skip": false
+  },
+  {
+    "category": "SpecialTopics",
+    "title": "SphereTexture",
+    "script_path": "src/Python/SpecialTopics/SphereTexture.py",
+    "render_window_var": "render_window",
+    "output_image": "SphereTexture.png",
+    "data_files": ["masonry-wide.jpg"],
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "BlobbyLogo",
+    "script_path": "src/Python/SurfaceOperations/BlobbyLogo.py",
+    "render_window_var": "render_window",
+    "output_image": "BlobbyLogo.png",
+    "data_files": [
+      "v.vtk",
+      "t.vtk",
+      "k.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "Blow",
+    "script_path": "src/Python/SurfaceOperations/Blow.py",
+    "render_window_var": "render_window",
+    "output_image": "Blow.png",
+    "data_files": [
+      "blow.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "CurvatureBandsWithGlyphs",
+    "script_path": "src/Python/SurfaceOperations/CurvatureBandsWithGlyphs.py",
+    "render_window_var": "render_window",
+    "output_image": "CurvatureBandsWithGlyphs.png",
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "DecimateFran",
+    "script_path": "src/Python/SurfaceOperations/DecimateFran.py",
+    "render_window_var": "render_window",
+    "output_image": "DecimateFran.png",
+    "data_files": [
+      "fran_cut.vtk",
+      "fran_cut.png"
+    ],
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "DisplacementPlot",
+    "script_path": "src/Python/SurfaceOperations/DisplacementPlot.py",
+    "render_window_var": "render_window",
+    "output_image": "DisplacementPlot.png",
+    "data_files": [
+      "plate.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "ElevationBandsWithGlyphs",
+    "script_path": "src/Python/SurfaceOperations/ElevationBandsWithGlyphs.py",
+    "render_window_var": "render_window",
+    "output_image": "ElevationBandsWithGlyphs.png",
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "NormalsDemo",
+    "script_path": "src/Python/SurfaceOperations/NormalsDemo.py",
+    "render_window_var": "render_window",
+    "output_image": "NormalsDemo.png",
+    "data_files": [
+      "42400-IDGH.stl"
+    ],
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "PineRootConnectivity",
+    "script_path": "src/Python/SurfaceOperations/PineRootConnectivity.py",
+    "render_window_var": "render_window",
+    "output_image": "PineRootConnectivity.png",
+    "data_files": [
+      "pine_root.tri"
+    ],
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "PineRootConnectivityA",
+    "script_path": "src/Python/SurfaceOperations/PineRootConnectivityA.py",
+    "render_window_var": "render_window",
+    "output_image": "PineRootConnectivityA.png",
+    "data_files": [
+      "pine_root.tri"
+    ],
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "PineRootDecimation",
+    "script_path": "src/Python/SurfaceOperations/PineRootDecimation.py",
+    "render_window_var": "render_window",
+    "output_image": "PineRootDecimation.png",
+    "data_files": [
+      "pine_root.tri"
+    ],
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "PlateVibration",
+    "script_path": "src/Python/SurfaceOperations/PlateVibration.py",
+    "render_window_var": "render_window",
+    "output_image": "PlateVibration.png",
+    "data_files": [
+      "plate.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "PointDataSubdivision",
+    "script_path": "src/Python/SurfaceOperations/PointDataSubdivision.py",
+    "render_window_var": "render_window",
+    "output_image": "PointDataSubdivision.png",
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "SingleSplat",
+    "script_path": "src/Python/SurfaceOperations/SingleSplat.py",
+    "render_window_var": "render_window",
+    "output_image": "SingleSplat.png",
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "SpikeFran",
+    "script_path": "src/Python/SurfaceOperations/SpikeFran.py",
+    "render_window_var": "render_window",
+    "output_image": "SpikeFran.png",
+    "data_files": [
+      "fran_cut.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "SplatFace",
+    "script_path": "src/Python/SurfaceOperations/SplatFace.py",
+    "render_window_var": "render_window",
+    "output_image": "SplatFace.png",
+    "data_files": [
+      "fran_cut.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "SurfaceOperations",
+    "title": "Stocks",
+    "script_path": "src/Python/SurfaceOperations/Stocks.py",
+    "render_window_var": "render_window",
+    "output_image": "Stocks.png",
+    "data_files": [
+      "GE.vtk",
+      "GM.vtk",
+      "IBM.vtk",
+      "DEC.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Texture",
+    "title": "AnimateVectors",
+    "script_path": "src/Python/Texture/AnimateVectors.py",
+    "render_window_var": "render_window",
+    "output_image": "AnimateVectors.png",
+    "data_files": [
+      "carotid.vtk",
+      "VectorAnimation/vecAnim2.vtk",
+      "VectorAnimation/vecAnim3.vtk",
+      "VectorAnimation/vecAnim4.vtk",
+      "VectorAnimation/vecAnim5.vtk",
+      "VectorAnimation/vecAnim6.vtk",
+      "VectorAnimation/vecAnim7.vtk",
+      "VectorAnimation/vecAnim8.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Texture",
+    "title": "TextureCutQuadric",
+    "script_path": "src/Python/Texture/TextureCutQuadric.py",
+    "render_window_var": "render_window",
+    "output_image": "TextureCutQuadric.png",
+    "skip": false
+  },
+  {
+    "category": "Texture",
+    "title": "TextureCutSphere",
+    "script_path": "src/Python/Texture/TextureCutSphere.py",
+    "render_window_var": "render_window",
+    "output_image": "TextureCutSphere.png",
+    "data_files": [
+      "texThres.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Texture",
+    "title": "TexturePlane",
+    "script_path": "src/Python/Texture/TexturePlane.py",
+    "render_window_var": "render_window",
+    "output_image": "TexturePlane.png",
+    "data_files": [
+      "masonry.bmp"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Texture",
+    "title": "TextureThreshold",
+    "script_path": "src/Python/Texture/TextureThreshold.py",
+    "render_window_var": "render_window",
+    "output_image": "TextureThreshold.png",
+    "data_files": [
+      "bluntfinxyz.bin",
+      "bluntfinq.bin",
+      "texThres2.vtk"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Texture",
+    "title": "TexturedSphere",
+    "script_path": "src/Python/Texture/TexturedSphere.py",
+    "render_window_var": "render_window",
+    "output_image": "TexturedSphere.png",
+    "data_files": [
+      "earth.ppm"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Texture",
+    "title": "TextureMapToCylinder",
+    "script_path": "src/Python/Texture/TextureMapToCylinder.py",
+    "render_window_var": "render_window",
+    "output_image": "TextureMapToCylinder.png",
+    "skip": false
+  },
+  {
+    "category": "Texture",
+    "title": "TextureMapToPlane",
+    "script_path": "src/Python/Texture/TextureMapToPlane.py",
+    "render_window_var": "render_window",
+    "output_image": "TextureMapToPlane.png",
+    "skip": false
+  },
+  {
+    "category": "Texture",
+    "title": "TransformTextureCoords",
+    "script_path": "src/Python/Texture/TransformTextureCoords.py",
+    "render_window_var": "render_window",
+    "output_image": "TransformTextureCoords.png",
+    "skip": false
+  },
+  {
+    "category": "Tutorial",
+    "title": "Tutorial_Step1",
+    "script_path": "src/Python/Tutorial/Tutorial_Step1.py",
+    "render_window_var": "render_window",
+    "output_image": "Tutorial_Step1.png",
+    "skip": false
+  },
+  {
+    "category": "Tutorial",
+    "title": "Tutorial_Step2",
+    "script_path": "src/Python/Tutorial/Tutorial_Step2.py",
+    "render_window_var": "render_window",
+    "output_image": "Tutorial_Step2.png",
+    "skip": false
+  },
+  {
+    "category": "Tutorial",
+    "title": "Tutorial_Step3",
+    "script_path": "src/Python/Tutorial/Tutorial_Step3.py",
+    "render_window_var": "render_window",
+    "output_image": "Tutorial_Step3.png",
+    "skip": false
+  },
+  {
+    "category": "Tutorial",
+    "title": "Tutorial_Step4",
+    "script_path": "src/Python/Tutorial/Tutorial_Step4.py",
+    "render_window_var": "render_window",
+    "output_image": "Tutorial_Step4.png",
+    "skip": false
+  },
+  {
+    "category": "Tutorial",
+    "title": "Tutorial_Step5",
+    "script_path": "src/Python/Tutorial/Tutorial_Step5.py",
+    "render_window_var": "render_window",
+    "output_image": "Tutorial_Step5.png",
+    "skip": false
+  },
+  {
+    "category": "Tutorial",
+    "title": "Tutorial_Step6",
+    "script_path": "src/Python/Tutorial/Tutorial_Step6.py",
+    "render_window_var": "render_window",
+    "output_image": "Tutorial_Step6.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "AlphaFrequency",
+    "script_path": "src/Python/Visualization/AlphaFrequency.py",
+    "render_window_var": "render_window",
+    "output_image": "AlphaFrequency.png",
+    "data_files": [
+      "Gettysburg.txt"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "AnatomicalOrientation",
+    "script_path": "src/Python/Visualization/AnatomicalOrientation.py",
+    "render_window_var": "render_window",
+    "output_image": "AnatomicalOrientation.png",
+    "data_files": [
+      "Human.vtp"
+    ],
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "AnnotatedCubeActor",
+    "script_path": "src/Python/Visualization/AnnotatedCubeActor.py",
+    "render_window_var": "render_window",
+    "output_image": "AnnotatedCubeActor.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "AssignCellColorsFromLUT",
+    "script_path": "src/Python/Visualization/AssignCellColorsFromLUT.py",
+    "render_window_var": "render_window",
+    "output_image": "AssignCellColorsFromLUT.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "BillboardTextActor3D",
+    "script_path": "src/Python/Visualization/BillboardTextActor3D.py",
+    "render_window_var": "render_window",
+    "output_image": "BillboardTextActor3D.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "Camera",
+    "script_path": "src/Python/Visualization/Camera.py",
+    "render_window_var": "render_window",
+    "output_image": "Camera.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "CameraModel1",
+    "script_path": "src/Python/Visualization/CameraModel1.py",
+    "render_window_var": "render_window",
+    "output_image": "CameraModel1.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "CameraModel2",
+    "script_path": "src/Python/Visualization/CameraModel2.py",
+    "render_window_var": "render_window",
+    "output_image": "CameraModel2.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "ColorAnActor",
+    "script_path": "src/Python/Visualization/ColorAnActor.py",
+    "render_window_var": "render_window",
+    "output_image": "ColorAnActor.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "ColoredAnnotatedCube",
+    "script_path": "src/Python/Visualization/ColoredAnnotatedCube.py",
+    "render_window_var": "render_window",
+    "output_image": "ColoredAnnotatedCube.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "CreateColorSeriesDemo",
+    "script_path": "src/Python/Visualization/CreateColorSeriesDemo.py",
+    "render_window_var": "render_window",
+    "output_image": "CreateColorSeriesDemo.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "CreateColorSeriesDemoA",
+    "script_path": "src/Python/Visualization/CreateColorSeriesDemoA.py",
+    "render_window_var": "render_window",
+    "output_image": "CreateColorSeriesDemoA.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "CreateColorSeriesDemoB",
+    "script_path": "src/Python/Visualization/CreateColorSeriesDemoB.py",
+    "render_window_var": "render_window",
+    "output_image": "CreateColorSeriesDemoB.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "CreateColorSeriesDemoC",
+    "script_path": "src/Python/Visualization/CreateColorSeriesDemoC.py",
+    "render_window_var": "render_window",
+    "output_image": "CreateColorSeriesDemoC.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "CreateColorSeriesDemoD",
+    "script_path": "src/Python/Visualization/CreateColorSeriesDemoD.py",
+    "render_window_var": "render_window",
+    "output_image": "CreateColorSeriesDemoD.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "CreateColorSeriesDemoE",
+    "script_path": "src/Python/Visualization/CreateColorSeriesDemoE.py",
+    "render_window_var": "render_window",
+    "output_image": "CreateColorSeriesDemoE.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "CreateColorSeriesDemoF",
+    "script_path": "src/Python/Visualization/CreateColorSeriesDemoF.py",
+    "render_window_var": "render_window",
+    "output_image": "CreateColorSeriesDemoF.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "CreateColorSeriesDemoG",
+    "script_path": "src/Python/Visualization/CreateColorSeriesDemoG.py",
+    "render_window_var": "render_window",
+    "output_image": "CreateColorSeriesDemoG.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "CreateColorSeriesDemoH",
+    "script_path": "src/Python/Visualization/CreateColorSeriesDemoH.py",
+    "render_window_var": "render_window",
+    "output_image": "CreateColorSeriesDemoH.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "CreateColorSeriesDemoI",
+    "script_path": "src/Python/Visualization/CreateColorSeriesDemoI.py",
+    "render_window_var": "render_window",
+    "output_image": "CreateColorSeriesDemoI.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "CubeAxesActor",
+    "script_path": "src/Python/Visualization/CubeAxesActor.py",
+    "render_window_var": "render_window",
+    "output_image": "CubeAxesActor.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "DisplayCoordinateAxes",
+    "script_path": "src/Python/Visualization/DisplayCoordinateAxes.py",
+    "render_window_var": "render_window",
+    "output_image": "DisplayCoordinateAxes.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "HardwareSelector",
+    "script_path": "src/Python/Visualization/HardwareSelector.py",
+    "render_window_var": "render_window",
+    "output_image": "HardwareSelector.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "MultipleRenderWindows",
+    "script_path": "src/Python/Visualization/MultipleRenderWindows.py",
+    "render_window_var": "render_window",
+    "output_image": "MultipleRenderWindows.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "MultipleViewports",
+    "script_path": "src/Python/Visualization/MultipleViewports.py",
+    "render_window_var": "render_window",
+    "output_image": "MultipleViewports.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "NamedColors",
+    "script_path": "src/Python/Visualization/NamedColors.py",
+    "render_window_var": "render_window",
+    "output_image": "NamedColors.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "PointSize",
+    "script_path": "src/Python/Visualization/PointSize.py",
+    "render_window_var": "render_window",
+    "output_image": "PointSize.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "TextSource",
+    "script_path": "src/Python/Visualization/TextSource.py",
+    "render_window_var": "render_window",
+    "output_image": "TextSource.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "VectorText",
+    "script_path": "src/Python/Visualization/VectorText.py",
+    "render_window_var": "render_window",
+    "output_image": "VectorText.png",
+    "skip": false
+  },
+  {
+    "category": "Visualization",
+    "title": "WindowTitle",
+    "script_path": "src/Python/Visualization/WindowTitle.py",
+    "render_window_var": "render_window",
+    "output_image": "WindowTitle.png",
+    "skip": false
+  },
+  {
+    "category": "VolumeRendering",
+    "title": "IntermixedUnstructuredGrid",
+    "script_path": "src/Python/VolumeRendering/IntermixedUnstructuredGrid.py",
+    "render_window_var": "render_window",
+    "output_image": "IntermixedUnstructuredGrid.png",
+    "data_files": ["src/Python/VolumeRendering/ironProt.vtk", "src/Python/VolumeRendering/neghip.slc"],
+    "skip": false
+  },
+  {
+    "category": "VolumeRendering",
+    "title": "MinIntensityRendering",
+    "script_path": "src/Python/VolumeRendering/MinIntensityRendering.py",
+    "render_window_var": "render_window",
+    "output_image": "MinIntensityRendering.png",
+    "data_files": ["src/Python/VolumeRendering/ironProt.vtk"],
+    "skip": false
+  },
+  {
+    "category": "VolumeRendering",
+    "title": "MultiBlockVolumeMapper",
+    "script_path": "src/Python/VolumeRendering/MultiBlockVolumeMapper.py",
+    "render_window_var": "render_window",
+    "output_image": "MultiBlockVolumeMapper.png",
+    "skip": false
+  },
+  {
+    "category": "VolumeRendering",
+    "title": "PseudoVolumeRendering",
+    "script_path": "src/Python/VolumeRendering/PseudoVolumeRendering.py",
+    "render_window_var": "render_window",
+    "output_image": "PseudoVolumeRendering.png",
+    "data_files": ["src/Python/VolumeRendering/combxyz.bin", "src/Python/VolumeRendering/combq.bin"],
+    "skip": false
+  },
+  {
+    "category": "VolumeRendering",
+    "title": "RayCastIsosurface",
+    "script_path": "src/Python/VolumeRendering/RayCastIsosurface.py",
+    "render_window_var": "render_window",
+    "output_image": "RayCastIsosurface.png",
+    "data_files": ["src/Python/VolumeRendering/FullHead.mhd", "src/Python/VolumeRendering/FullHead.raw.gz"],
+    "skip": false
+  },
+  {
+    "category": "VolumeRendering",
+    "title": "SimpleRayCast",
+    "script_path": "src/Python/VolumeRendering/SimpleRayCast.py",
+    "render_window_var": "render_window",
+    "output_image": "SimpleRayCast.png",
+    "data_files": ["src/Python/VolumeRendering/ironProt.vtk"],
+    "skip": false
+  },
+  {
+    "category": "VolumeRendering",
+    "title": "UnstructuredTransientVolumeRendering",
+    "script_path": "src/Python/VolumeRendering/UnstructuredTransientVolumeRendering.py",
+    "render_window_var": "render_window",
+    "output_image": "UnstructuredTransientVolumeRendering.png",
+    "skip": false
+  },
+  {
+    "category": "Widgets",
+    "title": "BalloonWidget",
+    "script_path": "src/Python/Widgets/BalloonWidget.py",
+    "render_window_var": "render_window",
+    "output_image": "BalloonWidget.png",
+    "skip": false
+  },
+  {
+    "category": "Widgets",
+    "title": "BoxWidget",
+    "script_path": "src/Python/Widgets/BoxWidget.py",
+    "render_window_var": "render_window",
+    "output_image": "BoxWidget.png",
+    "skip": false
+  },
+  {
+    "category": "Widgets",
+    "title": "CameraOrientationWidget",
+    "script_path": "src/Python/Widgets/CameraOrientationWidget.py",
+    "render_window_var": "render_window",
+    "output_image": "CameraOrientationWidget.png",
+    "data_files": ["cow.vtp"],
+    "skip": false
+  },
+  {
+    "category": "Widgets",
+    "title": "CompassWidget",
+    "script_path": "src/Python/Widgets/CompassWidget.py",
+    "render_window_var": "render_window",
+    "output_image": "CompassWidget.png",
+    "skip": false
+  },
+  {
+    "category": "Widgets",
+    "title": "ContourWidget",
+    "script_path": "src/Python/Widgets/ContourWidget.py",
+    "render_window_var": "render_window",
+    "output_image": "ContourWidget.png",
+    "skip": false
+  },
+  {
+    "category": "Widgets",
+    "title": "ImplicitPlaneWidget2",
+    "script_path": "src/Python/Widgets/ImplicitPlaneWidget2.py",
+    "render_window_var": "render_window",
+    "output_image": "ImplicitPlaneWidget2.png",
+    "skip": false
+  },
+  {
+    "category": "Widgets",
+    "title": "OrientationMarkerWidget",
+    "script_path": "src/Python/Widgets/OrientationMarkerWidget.py",
+    "render_window_var": "render_window",
+    "output_image": "OrientationMarkerWidget.png",
+    "skip": false
+  },
+  {
+    "category": "Widgets",
+    "title": "OrientationMarkerWidget1",
+    "script_path": "src/Python/Widgets/OrientationMarkerWidget1.py",
+    "render_window_var": "render_window",
+    "output_image": "OrientationMarkerWidget1.png",
+    "data_files": ["Bunny.vtp"],
+    "skip": false
+  },
+  {
+    "category": "Widgets",
+    "title": "ScalarBarWidget",
+    "script_path": "src/Python/Widgets/ScalarBarWidget.py",
+    "render_window_var": "render_window",
+    "output_image": "ScalarBarWidget.png",
+    "data_files": ["uGridEx.vtk"],
+    "skip": false
+  },
+  {
+    "category": "Widgets",
+    "title": "SphereWidget",
+    "script_path": "src/Python/Widgets/SphereWidget.py",
+    "render_window_var": "render_window",
+    "output_image": "SphereWidget.png",
+    "skip": false
+  },
+  {
+    "category": "Widgets",
+    "title": "SplineWidget",
+    "script_path": "src/Python/Widgets/SplineWidget.py",
+    "render_window_var": "render_window",
+    "output_image": "SplineWidget.png",
+    "skip": false
+  },
+  {
+    "category": "Widgets",
+    "title": "TextWidget",
+    "script_path": "src/Python/Widgets/TextWidget.py",
+    "render_window_var": "render_window",
+    "output_image": "TextWidget.png",
+    "skip": false
+  },
+  {
+    "category": "Qt",
+    "title": "EmbedInPyQt",
+    "script_path": "src/Python/Qt/EmbedInPyQt.py",
+    "render_window_var": "render_window",
+    "output_image": "EmbedInPyQt.png",
+    "skip": true
+  },
+  {
+    "category": "Qt",
+    "title": "EmbedInPyQt2",
+    "script_path": "src/Python/Qt/EmbedInPyQt2.py",
+    "render_window_var": "render_window",
+    "output_image": "EmbedInPyQt2.png",
+    "skip": true
+  }
+]
