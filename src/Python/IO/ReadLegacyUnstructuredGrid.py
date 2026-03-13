@@ -2,7 +2,7 @@
 
 # Read a legacy VTK unstructured grid file containing eleven linear cell
 # types, visualize the cells with shrunk geometry, tubed edges, sphere
-# glyphs at vertices, point labels, and a category legend.
+# glyphs at vertices, point labels, and a legend box.
 
 import os
 from pathlib import Path
@@ -10,14 +10,9 @@ from pathlib import Path
 # Factory overrides: importing these modules registers the OpenGL rendering
 # and interaction style implementations for vtkRenderingCore factory classes.
 import vtkmodules.vtkInteractionStyle  # noqa: F401
-import vtkmodules.vtkRenderingContextOpenGL2  # noqa: F401
 import vtkmodules.vtkRenderingOpenGL2  # noqa: F401
 # VTK pipeline classes used in this example
-from vtkmodules.vtkChartsCore import vtkCategoryLegend
-from vtkmodules.vtkCommonCore import (
-    vtkLookupTable,
-    vtkVariantArray,
-)
+from vtkmodules.vtkCommonCore import vtkLookupTable
 from vtkmodules.vtkCommonDataModel import (
     vtkCellTypeUtilities,
     vtkGenericCell,
@@ -26,7 +21,7 @@ from vtkmodules.vtkFiltersCore import vtkExtractEdges, vtkTubeFilter
 from vtkmodules.vtkFiltersGeneral import vtkShrinkFilter
 from vtkmodules.vtkFiltersSources import vtkSphereSource
 from vtkmodules.vtkIOLegacy import vtkUnstructuredGridReader
-from vtkmodules.vtkRenderingContext2D import vtkContextTransform
+from vtkmodules.vtkRenderingAnnotation import vtkLegendBoxActor
 from vtkmodules.vtkRenderingCore import (
     vtkActor,
     vtkActor2D,
@@ -34,10 +29,11 @@ from vtkmodules.vtkRenderingCore import (
     vtkDataSetMapper,
     vtkGlyph3DMapper,
     vtkPolyDataMapper,
+    vtkRenderWindow,
     vtkRenderWindowInteractor,
+    vtkRenderer,
 )
 from vtkmodules.vtkRenderingLabel import vtkLabeledDataMapper
-from vtkmodules.vtkViewsContext2D import vtkContextView
 
 # Colors (normalized RGB)
 banana_rgb = (0.890, 0.812, 0.341)
@@ -51,15 +47,15 @@ reader = vtkUnstructuredGridReader()
 reader.SetFileName(str(data_dir / "VTKCellTypes.vtk"))
 reader.Update()
 
-# Build a legend array from the cell types in the file
-legend_values = vtkVariantArray()
+# Collect cell type names and their scalar values for the legend
+cell_type_names = []
 it = reader.GetOutput().NewCellIterator()
 it.InitTraversal()
 while not it.IsDoneWithTraversal():
     cell = vtkGenericCell()
     it.GetCell(cell)
     cell_name = vtkCellTypeUtilities.GetClassNameFromTypeId(cell.GetCellType())
-    legend_values.InsertNextValue(cell_name)
+    cell_type_names.append(cell_name)
     it.GoToNextCell()
 
 # Edge extraction: extract edges and tube them for visibility
@@ -102,6 +98,8 @@ point_actor.GetProperty().SetSpecularPower(100)
 # Point labels: numeric IDs at each vertex
 label_mapper = vtkLabeledDataMapper()
 label_mapper.SetInputConnection(reader.GetOutputPort())
+label_mapper.SetLabelModeToLabelIds()
+label_mapper.SetLabelFormat("%d")
 label_actor = vtkActor2D()
 label_actor.SetMapper(label_mapper)
 
@@ -110,11 +108,10 @@ geometry_shrink = vtkShrinkFilter()
 geometry_shrink.SetInputConnection(reader.GetOutputPort())
 geometry_shrink.SetShrinkFactor(0.8)
 
-# Copy the original lookup table for categorical legend use
-categorical_lut = vtkLookupTable()
+# Lookup table: copy the original for legend color retrieval
 original_lut = reader.GetOutput().GetCellData().GetScalars().GetLookupTable()
-categorical_lut.DeepCopy(original_lut)
-categorical_lut.IndexedLookupOn()
+legend_lut = vtkLookupTable()
+legend_lut.DeepCopy(original_lut)
 
 geometry_mapper = vtkDataSetMapper()
 geometry_mapper.SetInputConnection(geometry_shrink.GetOutputPort())
@@ -127,37 +124,43 @@ geometry_actor.GetProperty().SetLineWidth(3)
 geometry_actor.GetProperty().EdgeVisibilityOn()
 geometry_actor.GetProperty().SetEdgeColor(0, 0, 0)
 
-# Category legend: annotate cell types in the corner
-for v in range(legend_values.GetNumberOfTuples()):
-    categorical_lut.SetAnnotation(
-        legend_values.GetValue(v), legend_values.GetValue(v).ToString()
+# Legend box: annotate cell types in the corner
+legend_symbol = vtkSphereSource()
+legend_symbol.SetRadius(0.5)
+legend_symbol.SetPhiResolution(12)
+legend_symbol.SetThetaResolution(12)
+legend_symbol.Update()
+
+num_cells = len(cell_type_names)
+legend_box = vtkLegendBoxActor()
+legend_box.SetNumberOfEntries(num_cells)
+for i in range(num_cells):
+    rgba = legend_lut.GetTableValue(i)
+    legend_box.SetEntry(
+        i, legend_symbol.GetOutput(), cell_type_names[i],
+        (rgba[0], rgba[1], rgba[2]),
     )
-legend = vtkCategoryLegend()
-legend.SetScalarsToColors(categorical_lut)
-legend.SetValues(legend_values)
-legend.SetTitle("Cell Type")
-legend.GetBrush().SetColor(192, 192, 192, 255)
+legend_box.UseBackgroundOn()
+legend_box.SetBackgroundColor(0.75, 0.75, 0.75)
+legend_box.SetBackgroundOpacity(0.8)
+legend_box.GetEntryTextProperty().SetFontSize(10)
+legend_box.GetPositionCoordinate().SetCoordinateSystemToNormalizedViewport()
+legend_box.GetPositionCoordinate().SetValue(0.025, 0.025)
+legend_box.GetPosition2Coordinate().SetCoordinateSystemToNormalizedViewport()
+legend_box.GetPosition2Coordinate().SetValue(0.35, 0.95)
 
-place_legend = vtkContextTransform()
-place_legend.AddItem(legend)
-place_legend.Translate(640 - 20, 480 - 12 * 16)
-
-# Context view: hosts the 2D legend overlay alongside the 3D scene
-context_view = vtkContextView()
-context_view.GetScene().AddItem(place_legend)
-
-renderer = context_view.GetRenderer()
-render_window = context_view.GetRenderWindow()
-
-# Interactor: handle mouse and keyboard events
-render_window_interactor = vtkRenderWindowInteractor()
-render_window_interactor.SetRenderWindow(render_window)
-
+# Renderer: assemble the scene and configure the camera
+renderer = vtkRenderer()
 renderer.AddActor(geometry_actor)
 renderer.AddActor(label_actor)
 renderer.AddActor(edge_actor)
 renderer.AddActor(point_actor)
+renderer.AddActor(legend_box)
 renderer.SetBackground(background_rgb)
+
+# Window: display the rendered scene
+render_window = vtkRenderWindow()
+render_window.AddRenderer(renderer)
 
 camera = vtkCamera()
 camera.Azimuth(-40.0)
@@ -165,9 +168,12 @@ camera.Elevation(50.0)
 renderer.SetActiveCamera(camera)
 renderer.ResetCamera()
 
-# Window: display the rendered scene
 render_window.SetSize(640, 480)
 render_window.SetWindowName("ReadLegacyUnstructuredGrid")
+
+# Interactor: handle mouse and keyboard events
+render_window_interactor = vtkRenderWindowInteractor()
+render_window_interactor.SetRenderWindow(render_window)
 
 # Launch the interactive visualization
 render_window_interactor.Initialize()

@@ -40,6 +40,7 @@ PAGES_DIR = DOCS / "examples"
 
 BASE_URL = "https://github.com/Kitware/vtk-python-examples"
 PAGES_URL = "https://kitware.github.io/vtk-python-examples"
+SITE_BASE = "/vtk-python-examples"
 
 CATEGORY_LABELS = {
     "Annotation": "Annotation",
@@ -173,10 +174,10 @@ def main():
                 src = script_dir.parent / f
                 if src.is_dir():
                     data_files_abs.append(f"{PAGES_URL}/data/{f}.zip")
-                    data_files_rel.append(f"/data/{f}.zip")
+                    data_files_rel.append(f"{SITE_BASE}/data/{f}.zip")
                 else:
                     data_files_abs.append(f"{PAGES_URL}/data/{f}")
-                    data_files_rel.append(f"/data/{f}")
+                    data_files_rel.append(f"{SITE_BASE}/data/{f}")
 
         # ------------------------------------------------------------------
         # 1. JSONL record
@@ -244,6 +245,7 @@ def main():
             "text": title,
             "link": f"/examples/{category}/{title}",
             "description": short_desc,
+            "image": image_site_path,
         })
 
         # ------------------------------------------------------------------
@@ -269,7 +271,7 @@ def main():
             md_lines.append("")
             for url in data_files_rel:
                 fname = url.rsplit("/", 1)[-1]
-                md_lines.append(f"- [{fname}]({url})")
+                md_lines.append(f'- <a href="{url}" download>{fname}</a>')
             md_lines.append("")
 
         if code:
@@ -319,16 +321,48 @@ def main():
     total_sidebar = sum(len(g["items"]) for g in sidebar)
     print(f"  .vitepress/generated/sidebar.mjs  ({total_sidebar} items)")
 
-    # Examples index page (docs/examples/index.md) — table with name and description
-    index_lines = ["# Examples", ""]
+    # Examples index page (docs/examples/index.md) — card list with image + name + description
+    index_lines = [
+        "# Examples",
+        "",
+        "<style>",
+        ".example-row { display:flex; gap:1rem; align-items:flex-start;"
+        " padding:0.75rem 0; border-bottom:1px solid var(--vp-c-divider); }",
+        ".example-row img { width:80px; height:80px; object-fit:cover;"
+        " border-radius:6px; flex-shrink:0; background:#1a1a2e; }",
+        ".example-row .example-info { min-width:0; }",
+        ".example-row .example-name { font-weight:600; font-size:1rem;"
+        " margin:0 0 0.25rem; }",
+        ".example-row .example-name a { color:var(--vp-c-brand-1);"
+        " text-decoration:none; }",
+        ".example-row .example-name a:hover { text-decoration:underline; }",
+        ".example-row .example-desc { font-size:0.85rem;"
+        " color:var(--vp-c-text-2); margin:0; }",
+        ".example-noimg { width:80px; height:80px; border-radius:6px;"
+        " background:var(--vp-c-bg-soft); flex-shrink:0; }",
+        "</style>",
+        "",
+    ]
     for group in sidebar:
         index_lines.append(f"## {group['text']}")
         index_lines.append("")
-        index_lines.append("| Example | Description |")
-        index_lines.append("|---------|-------------|")
         for item in group["items"]:
             desc = item.get("description", "")
-            index_lines.append(f"| [{item['text']}]({item['link']}) | {desc} |")
+            img = item.get("image", "")
+            link = f"{SITE_BASE}{item['link']}"
+            if img:
+                img_html = f'<img src="{SITE_BASE}{img}" alt="{item["text"]}" />'
+            else:
+                img_html = '<div class="example-noimg"></div>'
+            index_lines.append(f'<div class="example-row">')
+            index_lines.append(f'  {img_html}')
+            index_lines.append(f'  <div class="example-info">')
+            index_lines.append(f'    <p class="example-name"><a href="{link}">{item["text"]}</a></p>')
+            if desc:
+                index_lines.append(f'    <p class="example-desc">{desc}</p>')
+            index_lines.append(f'  </div>')
+            index_lines.append(f'</div>')
+            index_lines.append("")
         index_lines.append("")
     (PAGES_DIR / "index.md").write_text("\n".join(index_lines))
 

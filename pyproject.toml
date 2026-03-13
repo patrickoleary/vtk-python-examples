@@ -1,0 +1,19 @@
+[project]
+name = "vtk-python-examples"
+version = "0.1.0"
+description = "A curated collection of VTK examples in Python with screenshots and documentation"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.4.2",
+    "pandas>=3.0.1",
+    "vtk",
+]
+
+[project.optional-dependencies]
+qt = ["pyqt6>=6.10.2"]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-xdist",
+]
