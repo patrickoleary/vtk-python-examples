@@ -17,6 +17,8 @@ data/examples.jsonl
 # Generated docs — ignore contents but keep select files
 docs/*
 !docs/navigation.md
+!docs/package.json
+!docs/package-lock.json
 !docs/.vitepress/
 docs/.vitepress/*
 !docs/.vitepress/generated/

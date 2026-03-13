@@ -1,0 +1,16 @@
+{
+  "name": "vtk-python-examples-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "cd .. && uv run python scripts/generate_examples_jsonl.py",
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview",
+    "publish": "npm run generate && vitepress build && vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "vue": "^3.5.13"
+  }
+}
