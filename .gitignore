@@ -14,9 +14,26 @@ data/images/testing/
 # Large training data
 data/examples.jsonl
 
-# Generated docs
-docs/
-
+# Generated docs — ignore contents but keep select files
+docs/*
+!docs/navigation.md
+!docs/.vitepress/
+docs/.vitepress/*
+!docs/.vitepress/generated/
+!docs/public/
+docs/public/*
+!docs/public/example-data.png
+!docs/public/example-description.png
+!docs/public/example-footer.png
+!docs/public/example-header.png
+!docs/public/example-python-code.png
+!docs/public/examples.png
+!docs/public/gallery.png
+!docs/public/home.png
+!docs/public/images/
+docs/public/images/*
+!docs/public/images/EmbedInPyQt.png
+!docs/public/images/EmbedInPyQt2.png
 # macOS
 .DS_Store
 
