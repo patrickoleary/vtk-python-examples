@@ -6,7 +6,7 @@ requires-python = ">=3.12"
 dependencies = [
     "numpy>=2.4.2",
     "pandas>=3.0.1",
-    "vtk",
+    "vtk>=9.6",
 ]
 
 [project.optional-dependencies]

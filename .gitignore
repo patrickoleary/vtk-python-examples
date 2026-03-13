@@ -20,8 +20,8 @@ docs/*
 !docs/package.json
 !docs/package-lock.json
 !docs/.vitepress/
-docs/.vitepress/*
-!docs/.vitepress/generated/
+docs/.vitepress/dist/
+docs/.vitepress/cache/
 !docs/public/
 docs/public/*
 !docs/public/example-data.png
