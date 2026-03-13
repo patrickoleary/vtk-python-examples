@@ -16,6 +16,8 @@ data/examples.jsonl
 
 # Generated docs — ignore contents but keep select files
 docs/*
+!docs/gallery.md
+!docs/index.md
 !docs/navigation.md
 !docs/package.json
 !docs/package-lock.json
