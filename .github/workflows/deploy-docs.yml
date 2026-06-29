@@ -66,6 +66,10 @@ jobs:
 
       - name: Build site
         working-directory: docs
+        # The full site is large (~2,200 pages); raise Node's heap so the
+        # production bundle doesn't OOM (default ~4 GB; runners have ~16 GB).
+        env:
+          NODE_OPTIONS: --max-old-space-size=8192
         run: npm run docs:build
 
       - name: Configure Pages
