@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import time
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -35,8 +36,21 @@ VITEPRESS_DIR = DOCS_DIR / ".vitepress"
 PUBLIC_EXAMPLES_DIR = DOCS_DIR / "public" / "examples"
 DEFAULT_EXPERIMENTS = _ROOT / "vendor" / "experiments.jsonl"
 
+# Deployment base path (e.g. "/vtk-python-examples/" for a GitHub project site).
+# VitePress auto-prefixes Markdown links/images and sidebar/nav entries with the
+# configured base, but it does NOT rewrite raw HTML (<a href>, <img src>) that we
+# emit below — so we prefix those root-absolute paths manually with this base.
+BASE = "/" + os.environ.get("DOCS_BASE", "/").strip("/")
+if BASE != "/":
+    BASE += "/"
+
 
 # ── Helpers ──────────────────────────────────────────────────────────
+
+def _with_base(path: str) -> str:
+    """Prefix a root-absolute path with the deployment base (for raw HTML only)."""
+    return BASE.rstrip("/") + path
+
 
 def _image_path(tag: str, image: str) -> str:
     return f"/examples/{tag}/{image}"
@@ -117,7 +131,7 @@ def build_listing_md(section_label: str, results: list[dict]) -> str:
             link = f"./{r['tag']}/{r['base']}"
             if _image_exists(r["tag"], r.get("image")):
                 thumb = (
-                    f'<a href="{link}"><img src="{_image_path(r["tag"], r["image"])}" '
+                    f'<a href="{link}"><img src="{_with_base(_image_path(r["tag"], r["image"]))}" '
                     f'alt="{r["title"]}" '
                     'style="width:44px;height:44px;min-width:44px;object-fit:cover;'
                     'border-radius:4px;vertical-align:middle;display:inline-block" /></a>'
@@ -165,12 +179,12 @@ def build_detail_md(r: dict) -> str:
         lines += ["### Data files", ""]
         for df in data_files:
             name = df.rstrip("/").split("/")[-1]
-            lines.append(f'- <a href="/examples/{df}" target="_blank">{name}</a>')
+            lines.append(f'- <a href="{_with_base(f"/examples/{df}")}" target="_blank">{name}</a>')
         lines.append("")
 
     py = r.get("py_filename")
     if py:
-        lines += [f'**Source:** <a href="/examples/{tag}/{py}" target="_blank">{py}</a>', ""]
+        lines += [f'**Source:** <a href="{_with_base(f"/examples/{tag}/{py}")}" target="_blank">{py}</a>', ""]
 
     # DSL (collapsible)
     phrases = r.get("phrases", [])
@@ -271,50 +285,35 @@ def build_landing_md(results: list[dict]) -> str:
     n = len(results)
     by_cat: dict[str, int] = Counter(r["tag"] for r in results)
     n_tags = len(by_cat)
-    n_phrases = sum(r["n_phrases"] for r in results)
-    featured = [r for r in results if _image_exists(r["tag"], r.get("image"))][:6]
+
+    tagline = (
+        f"A browsable gallery of VTK Python examples. {n:,} examples across "
+        f"{n_tags} categories, mapped to a visualization DSL."
+    )
 
     lines = [
         "---",
-        "layout: home",
+        "layout: page",
         "title: VTK Python Examples",
-        "hero:",
-        "  name: VTK Python Examples",
-        "  text: A browsable gallery of VTK Python examples",
-        f"  tagline: {n:,} examples across {n_tags} categories, mapped to a visualization DSL",
-        "  actions:",
-        "    - theme: brand",
-        "      text: Browse the Gallery",
-        "      link: /gallery",
-        "    - theme: alt",
-        "      text: All examples",
-        "      link: /examples/",
-        "features:",
-        f"  - title: {n:,} examples",
-        "    details: Real VTK Python scripts with rendered output, organized by category.",
-        f"  - title: {n_tags} categories",
-        "    details: From annotation and filtering to rendering, modelling, and IO.",
-        f"  - title: {n_phrases:,} DSL phrases",
-        "    details: Each example is parsed into declarative DSL phrases and pipeline events.",
         "---",
         "",
+        "<script setup>",
+        "import gallery from './.vitepress/generated/gallery.mjs'",
+        "</script>",
+        "",
+        '<div class="trapezoid-hero">',
+        '  <div class="trapezoid-hero-text">',
+        '    <h1 class="trapezoid-hero-title">VTK Python Examples</h1>',
+        f'    <p class="trapezoid-hero-tagline">{tagline}</p>',
+        '    <div class="trapezoid-hero-actions">',
+        f'      <a href="{_with_base("/gallery")}" class="trapezoid-btn trapezoid-btn-brand">Browse the Gallery</a>',
+        f'      <a href="{_with_base("/examples/")}" class="trapezoid-btn trapezoid-btn-alt">All examples</a>',
+        "    </div>",
+        "  </div>",
+        '  <TrapezoidGallery :examples="gallery" />',
+        "</div>",
+        "",
     ]
-
-    if featured:
-        lines += ["", "## Featured", "", '<div class="gallery-grid">']
-        for r in featured:
-            link = f"/examples/{r['tag']}/{r['base']}"
-            img = _image_path(r["tag"], r["image"])
-            lines += [
-                '<div class="gallery-card">',
-                f'<a href="{link}">',
-                f'<img src="{img}" alt="{r["title"]}" loading="lazy" />',
-                '<div class="card-body">',
-                f'<p class="card-title">{r["title"]}</p>',
-                f'<p class="card-category">{r["tag"]}</p>',
-                "</div></a></div>",
-            ]
-        lines += ["</div>", ""]
 
     return "\n".join(lines)
 

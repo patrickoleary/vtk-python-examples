@@ -16,7 +16,10 @@ docs/examples/
 docs/index.md
 
 # Cross-repo artifacts fetched from vtk-ontology releases
-vendor/
+vendor/*
+# experiments.jsonl is vendored temporarily until vtk-ontology is published to
+# GitHub; CI uses this committed copy instead of the fetch step.
+!vendor/experiments.jsonl
 
 # OS
 .DS_Store

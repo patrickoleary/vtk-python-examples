@@ -62,6 +62,11 @@ const dslThemeDark = {
 export default defineConfig({
   title: 'VTK Python Examples',
   description: 'A browsable gallery of VTK Python examples with DSL mappings',
+  // Base path for deployment. For a GitHub project site this is "/<repo>/".
+  // CI sets DOCS_BASE; defaults to "/" for local dev.
+  base: process.env.DOCS_BASE
+    ? '/' + process.env.DOCS_BASE.replace(/^\/+|\/+$/g, '') + '/'
+    : '/',
   cleanUrls: true,
   markdown: {
     languages: [dslLang as any],
