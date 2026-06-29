@@ -77,8 +77,24 @@ def _load_code(tag: str, base: str) -> str:
     return ""
 
 
+def _esc_html(s: str) -> str:
+    """Escape characters that VitePress/Vue would otherwise interpret, so that
+    parser-derived text renders literally. This covers:
+      - HTML tags/directives: ``<image>`` -> ``&lt;image&gt;``
+      - attribute blocks (markdown IAL): a trailing ``{:6.1f}`` would become a
+        ``<td :6.1f="">`` directive, so curly braces are escaped too."""
+    return (
+        str(s)
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace("{", "&#123;")
+        .replace("}", "&#125;")
+    )
+
+
 def _esc_pipe(s: str) -> str:
-    return str(s).replace("|", "\\|").replace("\n", " ")
+    return _esc_html(s).replace("|", "\\|").replace("\n", " ")
 
 
 _NO_BREAK_AFTER = {
@@ -212,22 +228,22 @@ def build_detail_md(r: dict) -> str:
         label = ev.get("label", "")
         dsl = ev.get("dsl_phrase", "")
         props = ev.get("properties", {})
-        label_str = f' "{label}"' if label else ""
+        label_str = f' "{_esc_html(label)}"' if label else ""
         lines.append("<details>")
-        lines.append(f"<summary>#{i} · {phase} · <b>{class_name}</b>{label_str}</summary>")
+        lines.append(f"<summary>#{i} · {_esc_html(phase)} · <b>{_esc_html(class_name)}</b>{label_str}</summary>")
         lines.append("")
         if dsl:
             lines += ["```vtk-dsl", dsl, "```", ""]
         if ev.get("line") not in (None, ""):
             lines.append(f"- **line:** {ev['line']}")
         if ev.get("vtk_objects"):
-            lines.append(f"- **vtk class:** {', '.join(ev['vtk_objects'])}")
-        lines.append(f"- **verb:** {ev.get('verb', '')}")
-        lines.append(f"- **noun:** {ev.get('noun', '')}")
+            lines.append(f"- **vtk class:** {_esc_html(', '.join(ev['vtk_objects']))}")
+        lines.append(f"- **verb:** {_esc_html(ev.get('verb', ''))}")
+        lines.append(f"- **noun:** {_esc_html(ev.get('noun', ''))}")
         if ev.get("sources"):
-            lines.append(f"- **source:** {', '.join(ev['sources'])}")
+            lines.append(f"- **source:** {_esc_html(', '.join(ev['sources']))}")
         if label:
-            lines.append(f"- **label:** {label}")
+            lines.append(f"- **label:** {_esc_html(label)}")
         lines.append("")
         if props:
             lines += ["| Property | Value |", "| --- | --- |"]

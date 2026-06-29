@@ -68,6 +68,9 @@ export default defineConfig({
     ? '/' + process.env.DOCS_BASE.replace(/^\/+|\/+$/g, '') + '/'
     : '/',
   cleanUrls: true,
+  // Generated example pages embed corpus explanation prose that may reference
+  // other examples by name; those are not guaranteed to resolve to pages.
+  ignoreDeadLinks: true,
   markdown: {
     languages: [dslLang as any],
     theme: {
