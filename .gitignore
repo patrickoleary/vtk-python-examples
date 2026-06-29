@@ -13,6 +13,7 @@ data/data.jsonl
 docs/.vitepress/generated/
 docs/.vitepress/sidebar.json
 docs/examples/
+docs/index.md
 
 # Cross-repo artifacts fetched from vtk-ontology releases
 vendor/

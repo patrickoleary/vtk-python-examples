@@ -1,0 +1,12 @@
+{
+  "_comment": "Cross-repo artifacts consumed by this repo. Edit `source` to point at a local path (now) or a GitHub release asset URL (later), e.g. https://github.com/Kitware/vtk-ontology/releases/download/data-latest/experiments.jsonl",
+  "artifacts": [
+    {
+      "name": "experiments.jsonl",
+      "source": "/Users/patrick.oleary/code/AI Experiments/vtk-ontology/data/experiments.jsonl",
+      "source_remote_example": "https://github.com/Kitware/vtk-ontology/releases/download/data-latest/experiments.jsonl",
+      "dest": "vendor/experiments.jsonl",
+      "sha256": "30437a0c4bbeb7d6aa7f01bfc5335bc09288751492ce0a122554b2aea2514747"
+    }
+  ]
+}
