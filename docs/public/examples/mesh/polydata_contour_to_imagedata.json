@@ -1,0 +1,25 @@
+{
+  "title": "polydata contour to imagedata",
+  "source_type": "examples",
+  "tag": "mesh",
+  "explanation": "### Description\n\nThis example cuts a sphere to obtain a circle contour, extrude it, and use the extruded surface as a stencil to stamp a binary image, then display the result.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkCutter](https://www.vtk.org/doc/nightly/html/classvtkCutter.html) cuts the sphere to produce a circular contour.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays the resulting binary image.\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) holds the blank binary image that receives the stencil stamp.\n- [vtkImageStencil](https://www.vtk.org/doc/nightly/html/classvtkImageStencil.html) applies the stencil to blank the image outside the contour.\n- [vtkLinearExtrusionFilter](https://www.vtk.org/doc/nightly/html/classvtkLinearExtrusionFilter.html) extrudes the contour into a 3-D surface for stencil conversion.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) defines the implicit cutting plane through the sphere.\n- [vtkPolyDataToImageStencil](https://www.vtk.org/doc/nightly/html/classvtkPolyDataToImageStencil.html) converts the extruded polydata into a stencil.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) generates the input sphere polydata.\n- [vtkStripper](https://www.vtk.org/doc/nightly/html/classvtkStripper.html) joins contour segments into a continuous polyline.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkCutter",
+    "vtkImageActor",
+    "vtkImageData",
+    "vtkImageStencil",
+    "vtkLinearExtrusionFilter",
+    "vtkPlane",
+    "vtkPolyDataToImageStencil",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkStripper"
+  ],
+  "data_files": null,
+  "py_filename": "polydata_contour_to_imagedata.py",
+  "image": "polydata_contour_to_imagedata.png",
+  "metadata_filename": "polydata_contour_to_imagedata.json",
+  "topology": "standard"
+}

@@ -1,0 +1,19 @@
+{
+  "title": "image actor stressed",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nStress test vtkImageActor with various image extents and texture sizes.\n\n**input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageEllipsoidSource](https://www.vtk.org/doc/nightly/html/classvtkImageEllipsoidSource.html) — image ellipsoid source.\n- [vtkImageShiftScale](https://www.vtk.org/doc/nightly/html/classvtkImageShiftScale.html) — image shift scale.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageEllipsoidSource",
+    "vtkImageShiftScale",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "image_actor_stressed.py",
+  "image": "image_actor_stressed.png",
+  "metadata_filename": "image_actor_stressed.json",
+  "topology": "standard"
+}

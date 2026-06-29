@@ -1,0 +1,17 @@
+{
+  "title": "sphere widget zoom in out",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkSphereWidget zoom in/out interaction.\n\n**renderer → infrastructure → scene → output**\n\n- [vtkSphereWidget](https://www.vtk.org/doc/nightly/html/classvtkSphereWidget.html) — sphere widget.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereWidget"
+  ],
+  "data_files": null,
+  "py_filename": "sphere_widget_zoom_in_out.py",
+  "image": "sphere_widget_zoom_in_out.png",
+  "metadata_filename": "sphere_widget_zoom_in_out.json",
+  "topology": "standard"
+}

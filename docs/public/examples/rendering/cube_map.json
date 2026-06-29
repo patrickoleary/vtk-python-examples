@@ -1,0 +1,31 @@
+{
+  "title": "cube map",
+  "source_type": "examples",
+  "tag": "rendering",
+  "explanation": "### Description\n\nDemonstrate cubemap reflection on a bunny model using shader replacements.\n\n**dataset → input → filter → dataset → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkImageFlip](https://www.vtk.org/doc/nightly/html/classvtkImageFlip.html) — image flip.\n- [vtkJPEGReader](https://www.vtk.org/doc/nightly/html/classvtkJPEGReader.html) — jpeg reader.\n- [vtkPLYReader](https://www.vtk.org/doc/nightly/html/classvtkPLYReader.html) — ply reader.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkPolyDataNormals](https://www.vtk.org/doc/nightly/html/classvtkPolyDataNormals.html) — computes surface normals for smooth shading.\n- [vtkTexture](https://www.vtk.org/doc/nightly/html/classvtkTexture.html) — applies a texture image to geometry.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkImageFlip",
+    "vtkJPEGReader",
+    "vtkPLYReader",
+    "vtkPolyDataMapper",
+    "vtkPolyDataNormals",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTexture"
+  ],
+  "data_files": [
+    "data/bunny.ply",
+    "data/skybox-nx.jpg",
+    "data/skybox-ny.jpg",
+    "data/skybox-nz.jpg",
+    "data/skybox-px.jpg",
+    "data/skybox-py.jpg",
+    "data/skybox-pz.jpg"
+  ],
+  "py_filename": "cube_map.py",
+  "image": "cube_map.png",
+  "metadata_filename": "cube_map.json",
+  "topology": "standard"
+}

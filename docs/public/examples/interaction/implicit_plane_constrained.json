@@ -1,0 +1,26 @@
+{
+  "title": "implicit plane constrained",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkImplicitPlaneWidget2 with constraint and bounds testing.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkAppendPolyData](https://www.vtk.org/doc/nightly/html/classvtkAppendPolyData.html) — append poly data.\n- [vtkClipPolyData](https://www.vtk.org/doc/nightly/html/classvtkClipPolyData.html) — clips polygonal data with an implicit function.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) — generates a polygonal cone.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) — places oriented, scaled glyphs at each point.\n- [vtkImplicitPlaneRepresentation](https://www.vtk.org/doc/nightly/html/classvtkImplicitPlaneRepresentation.html) — implicit plane representation.\n- [vtkImplicitPlaneWidget2](https://www.vtk.org/doc/nightly/html/classvtkImplicitPlaneWidget2.html) — implicit plane widget2.\n- [vtkLODActor](https://www.vtk.org/doc/nightly/html/classvtkLODActor.html) — lod actor.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) — defines an implicit plane function.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAppendPolyData",
+    "vtkClipPolyData",
+    "vtkConeSource",
+    "vtkGlyph3D",
+    "vtkImplicitPlaneRepresentation",
+    "vtkImplicitPlaneWidget2",
+    "vtkLODActor",
+    "vtkPlane",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource"
+  ],
+  "data_files": null,
+  "py_filename": "implicit_plane_constrained.py",
+  "image": "implicit_plane_constrained.png",
+  "metadata_filename": "implicit_plane_constrained.json",
+  "topology": "standard"
+}

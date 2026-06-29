@@ -1,0 +1,24 @@
+{
+  "title": "visualize directed graph",
+  "source_type": "examples",
+  "tag": "graphs",
+  "explanation": "### Description\n\nThis example visualizes a directed graph with edge arrows. The graph is laid out with a Simple2D strategy via vtkGraphLayout, then arrow glyphs are placed near each edge endpoint using vtkGlyph3D on the edge glyph output of vtkGraphToPolyData.\n\n**dataset → input → filter → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) repeats the arrow glyph on all edges.\n- [vtkGlyphSource2D](https://www.vtk.org/doc/nightly/html/classvtkGlyphSource2D.html) creates the arrow glyph shape.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) computes vertex positions.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) converts graph edges to polydata with edge glyph output.\n- [vtkMutableDirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableDirectedGraph.html) builds the directed graph.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps edge and arrow polydata to graphics primitives.\n- [vtkSimple2DLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkSimple2DLayoutStrategy.html) provides the layout algorithm.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkGlyph3D",
+    "vtkGlyphSource2D",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkMutableDirectedGraph",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSimple2DLayoutStrategy"
+  ],
+  "data_files": null,
+  "py_filename": "visualize_directed_graph.py",
+  "image": "visualize_directed_graph.png",
+  "metadata_filename": "visualize_directed_graph.json",
+  "topology": "graph"
+}

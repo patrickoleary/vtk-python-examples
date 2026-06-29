@@ -1,0 +1,30 @@
+{
+  "title": "tissue lens",
+  "source_type": "examples",
+  "tag": "medical",
+  "explanation": "### Description\n\nThis example creates a \"tissue lens\" effect on a CT head dataset. The skin isosurface is clipped by a sphere, and a probe filter samples the volume inside the sphere to reveal internal tissue intensities on the spherical surface. A grayscale lookup table maps the probed scalar values.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkCamera](https://www.vtk.org/doc/nightly/html/classvtkCamera.html) defines the viewpoint and projection.\n- [vtkClipDataSet](https://www.vtk.org/doc/nightly/html/classvtkClipDataSet.html) clips the skin surface and the probed sphere.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) maps unstructured clip output to graphics primitives.\n- [vtkFlyingEdges3D](https://www.vtk.org/doc/nightly/html/classvtkFlyingEdges3D.html) extracts the skin isosurface at contour value 500.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) defines a grayscale mapping for tissue intensities.\n- [vtkMetaImageReader](https://www.vtk.org/doc/nightly/html/classvtkMetaImageReader.html) reads the MetaImage (.mhd/.raw) CT volume.\n- [vtkProbeFilter](https://www.vtk.org/doc/nightly/html/classvtkProbeFilter.html) samples the volume onto the sphere surface.\n- [vtkProperty](https://www.vtk.org/doc/nightly/html/classvtkProperty.html) defines surface appearance (color, lighting, representation).\n- [vtkSphere](https://www.vtk.org/doc/nightly/html/classvtkSphere.html) defines the implicit spherical clip function.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) generates the lens sphere geometry.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCamera",
+    "vtkClipDataSet",
+    "vtkDataSetMapper",
+    "vtkFlyingEdges3D",
+    "vtkLookupTable",
+    "vtkMetaImageReader",
+    "vtkProbeFilter",
+    "vtkProperty",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphere",
+    "vtkSphereSource"
+  ],
+  "data_files": [
+    "data/FullHead.mhd",
+    "data/FullHead.raw"
+  ],
+  "py_filename": "tissue_lens.py",
+  "image": "tissue_lens.png",
+  "metadata_filename": "tissue_lens.json",
+  "topology": "standard"
+}

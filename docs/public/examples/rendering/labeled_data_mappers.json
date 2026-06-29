@@ -1,0 +1,25 @@
+{
+  "title": "labeled data mappers",
+  "source_type": "examples",
+  "tag": "rendering",
+  "explanation": "### Description\n\nDemonstrate vtkFastLabeledDataMapper with multiple text properties and styles.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkFastLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkFastLabeledDataMapper.html) — fast labeled data mapper.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkGenerateIds](https://www.vtk.org/doc/nightly/html/classvtkGenerateIds.html) — generates point and/or cell ID arrays.\n- [vtkIntArray](https://www.vtk.org/doc/nightly/html/classvtkIntArray.html) — int array.\n- [vtkPlaneSource](https://www.vtk.org/doc/nightly/html/classvtkPlaneSource.html) — generates a rectangular plane.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkStringArray](https://www.vtk.org/doc/nightly/html/classvtkStringArray.html) — string array.\n- [vtkTextProperty](https://www.vtk.org/doc/nightly/html/classvtkTextProperty.html) — text property.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkFastLabeledDataMapper",
+    "vtkFloatArray",
+    "vtkGenerateIds",
+    "vtkIntArray",
+    "vtkPlaneSource",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStringArray",
+    "vtkTextProperty"
+  ],
+  "data_files": null,
+  "py_filename": "labeled_data_mappers.py",
+  "image": "labeled_data_mappers.png",
+  "metadata_filename": "labeled_data_mappers.json",
+  "topology": "standard"
+}

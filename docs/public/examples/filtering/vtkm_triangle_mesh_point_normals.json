@@ -1,0 +1,26 @@
+{
+  "title": "vtkm triangle mesh point normals",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkmTriangleMeshPointNormals with arrow glyphs on a cow mesh.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkArrowSource](https://www.vtk.org/doc/nightly/html/classvtkArrowSource.html) — generates a 3D arrow.\n- [vtkCleanPolyData](https://www.vtk.org/doc/nightly/html/classvtkCleanPolyData.html) — merges duplicate points and removes degenerate cells.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) — places oriented, scaled glyphs at each point.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkTriangleFilter](https://www.vtk.org/doc/nightly/html/classvtkTriangleFilter.html) — converts polygons into triangles.\n- [vtkXMLPolyDataReader](https://www.vtk.org/doc/nightly/html/classvtkXMLPolyDataReader.html) — xml poly data reader.\n- [vtkmTriangleMeshPointNormals](https://www.vtk.org/doc/nightly/html/classvtkmTriangleMeshPointNormals.html) — m triangle mesh point normals.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkArrowSource",
+    "vtkCleanPolyData",
+    "vtkGlyph3D",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTriangleFilter",
+    "vtkXMLPolyDataReader",
+    "vtkmTriangleMeshPointNormals"
+  ],
+  "data_files": [
+    "data/cow.vtp"
+  ],
+  "py_filename": "vtkm_triangle_mesh_point_normals.py",
+  "image": "vtkm_triangle_mesh_point_normals.png",
+  "metadata_filename": "vtkm_triangle_mesh_point_normals.json",
+  "topology": "standard"
+}

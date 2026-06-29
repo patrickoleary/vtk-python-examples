@@ -1,0 +1,20 @@
+{
+  "title": "png reader read from memory",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nRead a PNG file from memory buffer and display with vtkImageActor.\n\n**input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/vtk.png"
+  ],
+  "py_filename": "png_reader_read_from_memory.py",
+  "image": "png_reader_read_from_memory.png",
+  "metadata_filename": "png_reader_read_from_memory.json",
+  "topology": "standard"
+}

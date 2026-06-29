@@ -1,0 +1,21 @@
+{
+  "title": "normalize",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nNormalize a 3D gradient field from a sinusoidal source.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageGradient](https://www.vtk.org/doc/nightly/html/classvtkImageGradient.html) — computes the gradient vector of an image.\n- [vtkImageNormalize](https://www.vtk.org/doc/nightly/html/classvtkImageNormalize.html) — image normalize.\n- [vtkImageShiftScale](https://www.vtk.org/doc/nightly/html/classvtkImageShiftScale.html) — image shift scale.\n- [vtkImageSinusoidSource](https://www.vtk.org/doc/nightly/html/classvtkImageSinusoidSource.html) — image sinusoid source.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageGradient",
+    "vtkImageNormalize",
+    "vtkImageShiftScale",
+    "vtkImageSinusoidSource",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "normalize.py",
+  "image": "normalize.png",
+  "metadata_filename": "normalize.json",
+  "topology": "standard"
+}

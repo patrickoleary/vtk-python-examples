@@ -1,0 +1,30 @@
+{
+  "title": "dijkstra image geodesic path",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkContourWidget with Dijkstra image geodesic path on a medical image.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkContourWidget](https://www.vtk.org/doc/nightly/html/classvtkContourWidget.html) — contour widget.\n- [vtkDijkstraImageContourLineInterpolator](https://www.vtk.org/doc/nightly/html/classvtkDijkstraImageContourLineInterpolator.html) — dijkstra image contour line interpolator.\n- [vtkDijkstraImageGeodesicPath](https://www.vtk.org/doc/nightly/html/classvtkDijkstraImageGeodesicPath.html) — dijkstra image geodesic path.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageActorPointPlacer](https://www.vtk.org/doc/nightly/html/classvtkImageActorPointPlacer.html) — image actor point placer.\n- [vtkImageAnisotropicDiffusion2D](https://www.vtk.org/doc/nightly/html/classvtkImageAnisotropicDiffusion2D.html) — image anisotropic diffusion2d.\n- [vtkImageGradientMagnitude](https://www.vtk.org/doc/nightly/html/classvtkImageGradientMagnitude.html) — image gradient magnitude.\n- [vtkImageMapToWindowLevelColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToWindowLevelColors.html) — image map to window level colors.\n- [vtkImageShiftScale](https://www.vtk.org/doc/nightly/html/classvtkImageShiftScale.html) — image shift scale.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) — interactor style image.\n- [vtkOrientedGlyphContourRepresentation](https://www.vtk.org/doc/nightly/html/classvtkOrientedGlyphContourRepresentation.html) — oriented glyph contour representation.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkContourWidget",
+    "vtkDijkstraImageContourLineInterpolator",
+    "vtkDijkstraImageGeodesicPath",
+    "vtkImageActor",
+    "vtkImageActorPointPlacer",
+    "vtkImageAnisotropicDiffusion2D",
+    "vtkImageGradientMagnitude",
+    "vtkImageMapToWindowLevelColors",
+    "vtkImageShiftScale",
+    "vtkInteractorStyleImage",
+    "vtkOrientedGlyphContourRepresentation",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/fullhead15.png"
+  ],
+  "py_filename": "dijkstra_image_geodesic_path.py",
+  "image": "dijkstra_image_geodesic_path.png",
+  "metadata_filename": "dijkstra_image_geodesic_path.json",
+  "topology": "standard"
+}

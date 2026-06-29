@@ -1,0 +1,22 @@
+{
+  "title": "extract components",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example extracts individual R, G, B channels from a color JPEG image and displays them in a 2×2 grid alongside the original using vtkImageExtractComponents. Top-left shows the original color image; top-right the red channel; bottom-left the green channel; bottom-right the blue channel. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D images.\n- [vtkImageExtractComponents](https://www.vtk.org/doc/nightly/html/classvtkImageExtractComponents.html) extracts a single scalar component (R=0, G=1, B=2) from the multi-component image.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkJPEGReader](https://www.vtk.org/doc/nightly/html/classvtkJPEGReader.html) reads the `Gourds2.jpg` color image.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — four renderers with `SetViewport()` create a 2×2 grid layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageExtractComponents",
+    "vtkInteractorStyleImage",
+    "vtkJPEGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/Gourds2.jpg"
+  ],
+  "py_filename": "extract_components.py",
+  "image": "extract_components.png",
+  "metadata_filename": "extract_components.json",
+  "topology": "standard"
+}

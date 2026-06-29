@@ -1,0 +1,27 @@
+{
+  "title": "create tree",
+  "source_type": "examples",
+  "tag": "graphs",
+  "explanation": "### Description\n\nThis example creates a labelled tree with vertex and edge labels displayed using a hierarchical tree layout. The tree is built from a directed graph using AddChild and converted to a vtkTree. Labels are rendered using vtkLabeledDataMapper.\n\n**dataset → input → filter → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) applies the tree layout strategy.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) converts graph edges to polydata lines.\n- [vtkLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkLabeledDataMapper.html) renders text labels at point positions.\n- [vtkMutableDirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableDirectedGraph.html) builds the directed graph using AddChild.\n- [vtkStringArray](https://www.vtk.org/doc/nightly/html/classvtkStringArray.html) stores vertex and edge label strings.\n- [vtkTree](https://www.vtk.org/doc/nightly/html/classvtkTree.html) represents the validated tree structure.\n- [vtkTreeLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkTreeLayoutStrategy.html) arranges tree nodes hierarchically.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkActor2D",
+    "vtkCellCenters",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkLabeledDataMapper",
+    "vtkMutableDirectedGraph",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStringArray",
+    "vtkTree",
+    "vtkTreeLayoutStrategy"
+  ],
+  "data_files": null,
+  "py_filename": "create_tree.py",
+  "image": "create_tree.png",
+  "metadata_filename": "create_tree.json",
+  "topology": "graph"
+}

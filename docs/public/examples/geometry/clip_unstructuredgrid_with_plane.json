@@ -1,0 +1,24 @@
+{
+  "title": "clip unstructuredgrid with plane",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nThis example clips an unstructured grid with a vertical plane (x-axis normal) using vtkTableBasedClipDataSet. The retained and clipped portions are displayed in gold and steel blue, separated along the x-axis. Unlike other clipping filters, vtkTableBasedClipDataSet retains original cells if they are not clipped.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) maps any dataset type to graphics primitives.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) defines the implicit clipping plane.\n- [vtkTableBasedClipDataSet](https://www.vtk.org/doc/nightly/html/classvtkTableBasedClipDataSet.html) clips the unstructured grid, retaining original unclipped cells.\n- [vtkTransform](https://www.vtk.org/doc/nightly/html/classvtkTransform.html) rotates each output half apart for visualization.\n- [vtkUnstructuredGridReader](https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGridReader.html) reads the treemesh unstructured grid dataset.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDataSetMapper",
+    "vtkPlane",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTableBasedClipDataSet",
+    "vtkTransform",
+    "vtkUnstructuredGridReader"
+  ],
+  "data_files": [
+    "data/treemesh.vtk"
+  ],
+  "py_filename": "clip_unstructuredgrid_with_plane.py",
+  "image": "clip_unstructuredgrid_with_plane.png",
+  "metadata_filename": "clip_unstructuredgrid_with_plane.json",
+  "topology": "standard"
+}

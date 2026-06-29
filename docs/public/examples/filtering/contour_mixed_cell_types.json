@@ -1,0 +1,31 @@
+{
+  "title": "contour mixed cell types",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nContour a manually-built unstructured grid containing mixed cell types (quad, voxel, hex, triangle, pixel, pyramid, wedge) with vtkContour3DLinearGrid.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkContour3DLinearGrid](https://www.vtk.org/doc/nightly/html/classvtkContour3DLinearGrid.html) — contour3d linear grid.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) — maps any dataset type to graphics primitives.\n- [vtkHexahedron](https://www.vtk.org/doc/nightly/html/classvtkHexahedron.html) — hexahedron.\n- [vtkIdList](https://www.vtk.org/doc/nightly/html/classvtkIdList.html) — stores a list of point or cell IDs.\n- [vtkPixel](https://www.vtk.org/doc/nightly/html/classvtkPixel.html) — pixel.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkPyramid](https://www.vtk.org/doc/nightly/html/classvtkPyramid.html) — pyramid.\n- [vtkQuad](https://www.vtk.org/doc/nightly/html/classvtkQuad.html) — quad.\n- [vtkSimpleElevationFilter](https://www.vtk.org/doc/nightly/html/classvtkSimpleElevationFilter.html) — simple elevation filter.\n- [vtkTriangle](https://www.vtk.org/doc/nightly/html/classvtkTriangle.html) — triangle.\n- [vtkUnstructuredGrid](https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGrid.html) — unstructured grid.\n- [vtkVoxel](https://www.vtk.org/doc/nightly/html/classvtkVoxel.html) — voxel.\n- [vtkWedge](https://www.vtk.org/doc/nightly/html/classvtkWedge.html) — wedge.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkContour3DLinearGrid",
+    "vtkDataSetMapper",
+    "vtkHexahedron",
+    "vtkIdList",
+    "vtkPixel",
+    "vtkPoints",
+    "vtkPolyDataMapper",
+    "vtkPyramid",
+    "vtkQuad",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSimpleElevationFilter",
+    "vtkTriangle",
+    "vtkUnstructuredGrid",
+    "vtkVoxel",
+    "vtkWedge"
+  ],
+  "data_files": null,
+  "py_filename": "contour_mixed_cell_types.py",
+  "image": "contour_mixed_cell_types.png",
+  "metadata_filename": "contour_mixed_cell_types.json",
+  "topology": "standard"
+}

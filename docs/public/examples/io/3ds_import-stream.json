@@ -1,0 +1,20 @@
+{
+  "title": "3ds import-stream",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nImport a 3DS file via vtkFileResourceStream and render.\n\n**input → renderer → infrastructure → scene → output**\n\n- [vtk3DSImporter](https://www.vtk.org/doc/nightly/html/classvtk3DSImporter.html) — 3ds importer.\n- [vtkFileResourceStream](https://www.vtk.org/doc/nightly/html/classvtkFileResourceStream.html) — file resource stream.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtk3DSImporter",
+    "vtkFileResourceStream",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/iflamigm.3ds"
+  ],
+  "py_filename": "3ds_import-stream.py",
+  "image": "3ds_import-stream.png",
+  "metadata_filename": "3ds_import-stream.json",
+  "topology": "standard"
+}

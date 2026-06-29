@@ -1,0 +1,20 @@
+{
+  "title": "slice mapper large image",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nTest that large images do not cause integer overflow in texture allocation.\n\n**input → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) — represents a regular grid of points (image/volume).\n- [vtkImageSlice](https://www.vtk.org/doc/nightly/html/classvtkImageSlice.html) — image slice.\n- [vtkImageSliceMapper](https://www.vtk.org/doc/nightly/html/classvtkImageSliceMapper.html) — image slice mapper.\n- [vtkInteractorStyleTrackballCamera](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleTrackballCamera.html) — interactor style trackball camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageData",
+    "vtkImageSlice",
+    "vtkImageSliceMapper",
+    "vtkInteractorStyleTrackballCamera",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "slice_mapper_large_image.py",
+  "image": "slice_mapper_large_image.png",
+  "metadata_filename": "slice_mapper_large_image.json",
+  "topology": "standard"
+}

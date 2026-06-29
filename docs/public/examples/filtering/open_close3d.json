@@ -1,0 +1,22 @@
+{
+  "title": "open close3d",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nApply morphological open-close operation to a thresholded medical image.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageOpenClose3D](https://www.vtk.org/doc/nightly/html/classvtkImageOpenClose3D.html) — image open close3d.\n- [vtkImageThreshold](https://www.vtk.org/doc/nightly/html/classvtkImageThreshold.html) — thresholds an image, replacing values inside/outside a range.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageOpenClose3D",
+    "vtkImageThreshold",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/fullhead15.png"
+  ],
+  "py_filename": "open_close3d.py",
+  "image": "open_close3d.png",
+  "metadata_filename": "open_close3d.json",
+  "topology": "standard"
+}

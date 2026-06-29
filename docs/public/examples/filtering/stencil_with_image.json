@@ -1,0 +1,25 @@
+{
+  "title": "stencil with image",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nUse one image to stencil another using vtkImageToImageStencil.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkBMPReader](https://www.vtk.org/doc/nightly/html/classvtkBMPReader.html) — bmp reader.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageStencil](https://www.vtk.org/doc/nightly/html/classvtkImageStencil.html) — image stencil.\n- [vtkImageToImageStencil](https://www.vtk.org/doc/nightly/html/classvtkImageToImageStencil.html) — image to image stencil.\n- [vtkImageTranslateExtent](https://www.vtk.org/doc/nightly/html/classvtkImageTranslateExtent.html) — image translate extent.\n- [vtkPNMReader](https://www.vtk.org/doc/nightly/html/classvtkPNMReader.html) — pnm reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkBMPReader",
+    "vtkImageActor",
+    "vtkImageStencil",
+    "vtkImageToImageStencil",
+    "vtkImageTranslateExtent",
+    "vtkPNMReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/B.pgm",
+    "data/masonry.bmp"
+  ],
+  "py_filename": "stencil_with_image.py",
+  "image": "stencil_with_image.png",
+  "metadata_filename": "stencil_with_image.json",
+  "topology": "standard"
+}

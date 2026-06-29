@@ -1,0 +1,27 @@
+{
+  "title": "cow hair",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nTest vtkHedgeHog glyph on cow normals with OBJ reader.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCleanPolyData](https://www.vtk.org/doc/nightly/html/classvtkCleanPolyData.html) — merges duplicate points and removes degenerate cells.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) — generates a polygonal cone.\n- [vtkHedgeHog](https://www.vtk.org/doc/nightly/html/classvtkHedgeHog.html) — hedge hog.\n- [vtkOBJReader](https://www.vtk.org/doc/nightly/html/classvtkOBJReader.html) — obj reader.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkTransform](https://www.vtk.org/doc/nightly/html/classvtkTransform.html) — defines a 4x4 geometric transformation.\n- [vtkTransformPolyDataFilter](https://www.vtk.org/doc/nightly/html/classvtkTransformPolyDataFilter.html) — transform poly data filter.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCleanPolyData",
+    "vtkConeSource",
+    "vtkHedgeHog",
+    "vtkOBJReader",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTransform",
+    "vtkTransformPolyDataFilter"
+  ],
+  "data_files": [
+    "data/Viewpoint/cow.obj",
+    "data/cow.obj"
+  ],
+  "py_filename": "cow_hair.py",
+  "image": "cow_hair.png",
+  "metadata_filename": "cow_hair.json",
+  "topology": "standard"
+}

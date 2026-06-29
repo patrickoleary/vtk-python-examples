@@ -1,0 +1,28 @@
+{
+  "title": "office tube",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nThis example visualizes office airflow with a single streamtube whose radius varies by velocity magnitude.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkCamera](https://www.vtk.org/doc/nightly/html/classvtkCamera.html) defines the viewpoint and projection.\n- [vtkDataObject](https://www.vtk.org/doc/nightly/html/classvtkDataObject.html) provides data object functionality.\n- [vtkDataSetReader](https://www.vtk.org/doc/nightly/html/classvtkDataSetReader.html) reads the office CFD structured grid.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps polygon data to graphics primitives.\n- [vtkRungeKutta4](https://www.vtk.org/doc/nightly/html/classvtkRungeKutta4.html) provides fourth-order Runge-Kutta integration.\n- [vtkStreamTracer](https://www.vtk.org/doc/nightly/html/classvtkStreamTracer.html) traces a single streamline in both directions.\n- [vtkStructuredGridGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridGeometryFilter.html) extracts furniture surfaces for context.\n- [vtkStructuredGridOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridOutlineFilter.html) generates a bounding outline.\n- [vtkTubeFilter](https://www.vtk.org/doc/nightly/html/classvtkTubeFilter.html) wraps the streamline in a tube with radius proportional to velocity.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCamera",
+    "vtkDataObject",
+    "vtkDataSetReader",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkRungeKutta4",
+    "vtkStreamTracer",
+    "vtkStructuredGridGeometryFilter",
+    "vtkStructuredGridOutlineFilter",
+    "vtkTubeFilter"
+  ],
+  "data_files": [
+    "data/office.binary.vtk"
+  ],
+  "py_filename": "office_tube.py",
+  "image": "office_tube.png",
+  "metadata_filename": "office_tube.json",
+  "topology": "standard"
+}

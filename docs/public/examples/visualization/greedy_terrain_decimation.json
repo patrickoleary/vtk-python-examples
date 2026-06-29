@@ -1,0 +1,24 @@
+{
+  "title": "greedy terrain decimation",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nDemonstrate vtkGreedyTerrainDecimation on DEM terrain data with a lookup table for elevation coloring.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkDEMReader](https://www.vtk.org/doc/nightly/html/classvtkDEMReader.html) — dem reader.\n- [vtkGreedyTerrainDecimation](https://www.vtk.org/doc/nightly/html/classvtkGreedyTerrainDecimation.html) — greedy terrain decimation.\n- [vtkLODActor](https://www.vtk.org/doc/nightly/html/classvtkLODActor.html) — lod actor.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkPolyDataNormals](https://www.vtk.org/doc/nightly/html/classvtkPolyDataNormals.html) — computes surface normals for smooth shading.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkDEMReader",
+    "vtkGreedyTerrainDecimation",
+    "vtkLODActor",
+    "vtkLookupTable",
+    "vtkPolyDataMapper",
+    "vtkPolyDataNormals",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/SainteHelens.dem"
+  ],
+  "py_filename": "greedy_terrain_decimation.py",
+  "image": "greedy_terrain_decimation.png",
+  "metadata_filename": "greedy_terrain_decimation.json",
+  "topology": "standard"
+}

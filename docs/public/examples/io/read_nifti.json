@@ -1,0 +1,24 @@
+{
+  "title": "read nifti",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nThis example reads a NIfTI neuroimaging volume (.nii) using vtkNIFTIImageReader and display an axial slice with grayscale coloring. A small synthetic sinusoidal NIfTI volume is generated if the file does not already exist.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays a 2D image slice.\n- [vtkImageMapToColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToColors.html) maps scalars through a lookup table.\n- [vtkImageSinusoidSource](https://www.vtk.org/doc/nightly/html/classvtkImageSinusoidSource.html) generates a procedural sinusoidal image.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) maps scalar values to grayscale colors.\n- [vtkNIFTIImageReader](https://www.vtk.org/doc/nightly/html/classvtkNIFTIImageReader.html) reads NIfTI-1 and NIfTI-2 image files used in neuroimaging.\n- [vtkNIFTIImageWriter](https://www.vtk.org/doc/nightly/html/classvtkNIFTIImageWriter.html) writes NIfTI files (used to generate sample data).\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageMapToColors",
+    "vtkImageSinusoidSource",
+    "vtkLookupTable",
+    "vtkNIFTIImageReader",
+    "vtkNIFTIImageWriter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/synthetic.nii"
+  ],
+  "py_filename": "read_nifti.py",
+  "image": "read_nifti.png",
+  "metadata_filename": "read_nifti.json",
+  "topology": "standard"
+}

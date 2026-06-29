@@ -1,0 +1,27 @@
+{
+  "title": "pca",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nDemonstrate vtkPCAAnalysisFilter visualizing shape variation from a set of aligned objects using Procrustes alignment and PCA modes.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkMultiBlockDataGroupFilter](https://www.vtk.org/doc/nightly/html/classvtkMultiBlockDataGroupFilter.html) — multi block data group filter.\n- [vtkPCAAnalysisFilter](https://www.vtk.org/doc/nightly/html/classvtkPCAAnalysisFilter.html) — pca analysis filter.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) — represents polygonal geometry.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkPolyDataNormals](https://www.vtk.org/doc/nightly/html/classvtkPolyDataNormals.html) — computes surface normals for smooth shading.\n- [vtkProcrustesAlignmentFilter](https://www.vtk.org/doc/nightly/html/classvtkProcrustesAlignmentFilter.html) — procrustes alignment filter.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkTransform](https://www.vtk.org/doc/nightly/html/classvtkTransform.html) — defines a 4x4 geometric transformation.\n- [vtkTransformPolyDataFilter](https://www.vtk.org/doc/nightly/html/classvtkTransformPolyDataFilter.html) — transform poly data filter.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkFloatArray",
+    "vtkMultiBlockDataGroupFilter",
+    "vtkPCAAnalysisFilter",
+    "vtkPolyData",
+    "vtkPolyDataMapper",
+    "vtkPolyDataNormals",
+    "vtkProcrustesAlignmentFilter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkTransform",
+    "vtkTransformPolyDataFilter"
+  ],
+  "data_files": null,
+  "py_filename": "pca.py",
+  "image": "pca.png",
+  "metadata_filename": "pca.json",
+  "topology": "standard"
+}

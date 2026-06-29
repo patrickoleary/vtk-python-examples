@@ -1,0 +1,20 @@
+{
+  "title": "style rubber band zoom",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkInteractorStyleRubberBandZoom on an image actor.\n\n**input → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkTIFFReader](https://www.vtk.org/doc/nightly/html/classvtkTIFFReader.html) — reads TIFF image files.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTIFFReader"
+  ],
+  "data_files": [
+    "data/beach.tif"
+  ],
+  "py_filename": "style_rubber_band_zoom.py",
+  "image": "style_rubber_band_zoom.png",
+  "metadata_filename": "style_rubber_band_zoom.json",
+  "topology": "standard"
+}

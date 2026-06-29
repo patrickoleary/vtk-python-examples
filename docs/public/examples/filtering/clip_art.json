@@ -1,0 +1,38 @@
+{
+  "title": "clip art",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nCreate extruded clip art from a beach photograph by thresholding, seed connectivity, smoothing, clipping, decimating, and extruding the resulting geometry with texture mapping.\n\n**dataset → input → filter → dataset → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCastToConcrete](https://www.vtk.org/doc/nightly/html/classvtkCastToConcrete.html) — casts abstract data objects to their concrete types.\n- [vtkClipPolyData](https://www.vtk.org/doc/nightly/html/classvtkClipPolyData.html) — clips polygonal data with an implicit function.\n- [vtkDecimatePro](https://www.vtk.org/doc/nightly/html/classvtkDecimatePro.html) — reduces the number of triangles in a mesh.\n- [vtkImageConstantPad](https://www.vtk.org/doc/nightly/html/classvtkImageConstantPad.html) — pads an image with a constant value.\n- [vtkImageDataGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkImageDataGeometryFilter.html) — converts image data to polygonal geometry.\n- [vtkImageExtractComponents](https://www.vtk.org/doc/nightly/html/classvtkImageExtractComponents.html) — extracts selected components from multi-component image data.\n- [vtkImageGaussianSmooth](https://www.vtk.org/doc/nightly/html/classvtkImageGaussianSmooth.html) — smooths an image with a Gaussian kernel.\n- [vtkImageRGBToHSV](https://www.vtk.org/doc/nightly/html/classvtkImageRGBToHSV.html) — converts RGB image data to HSV color space.\n- [vtkImageSeedConnectivity](https://www.vtk.org/doc/nightly/html/classvtkImageSeedConnectivity.html) — identifies connected regions in a binary image from seed points.\n- [vtkImageShrink3D](https://www.vtk.org/doc/nightly/html/classvtkImageShrink3D.html) — subsamples an image by averaging neighboring voxels.\n- [vtkImageThreshold](https://www.vtk.org/doc/nightly/html/classvtkImageThreshold.html) — thresholds an image, replacing values inside/outside a range.\n- [vtkLinearExtrusionFilter](https://www.vtk.org/doc/nightly/html/classvtkLinearExtrusionFilter.html) — extrudes polygonal data along a direction.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkPolyDataNormals](https://www.vtk.org/doc/nightly/html/classvtkPolyDataNormals.html) — computes surface normals for smooth shading.\n- [vtkStripper](https://www.vtk.org/doc/nightly/html/classvtkStripper.html) — creates triangle strips and/or polylines from polygonal data.\n- [vtkTIFFReader](https://www.vtk.org/doc/nightly/html/classvtkTIFFReader.html) — reads TIFF image files.\n- [vtkTexture](https://www.vtk.org/doc/nightly/html/classvtkTexture.html) — applies a texture image to geometry.\n- [vtkTextureMapToPlane](https://www.vtk.org/doc/nightly/html/classvtkTextureMapToPlane.html) — generates texture coordinates by projecting onto a plane.\n- [vtkTriangleFilter](https://www.vtk.org/doc/nightly/html/classvtkTriangleFilter.html) — converts polygons into triangles.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCastToConcrete",
+    "vtkClipPolyData",
+    "vtkDecimatePro",
+    "vtkImageConstantPad",
+    "vtkImageDataGeometryFilter",
+    "vtkImageExtractComponents",
+    "vtkImageGaussianSmooth",
+    "vtkImageRGBToHSV",
+    "vtkImageSeedConnectivity",
+    "vtkImageShrink3D",
+    "vtkImageThreshold",
+    "vtkLinearExtrusionFilter",
+    "vtkPolyDataMapper",
+    "vtkPolyDataNormals",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStripper",
+    "vtkTIFFReader",
+    "vtkTexture",
+    "vtkTextureMapToPlane",
+    "vtkTriangleFilter"
+  ],
+  "data_files": [
+    "data/beach.tif"
+  ],
+  "py_filename": "clip_art.py",
+  "image": "clip_art.png",
+  "metadata_filename": "clip_art.json",
+  "topology": "standard"
+}

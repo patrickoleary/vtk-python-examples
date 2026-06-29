@@ -1,0 +1,24 @@
+{
+  "title": "implicit polydata distance",
+  "source_type": "examples",
+  "tag": "mesh",
+  "explanation": "### Description\n\nThis example evaluates the signed distance from a sphere surface on a regular 3-D grid using vtkImplicitPolyDataDistance and colour the grid points accordingly.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) stores the signed distance values for each sample point.\n- [vtkImplicitPolyDataDistance](https://www.vtk.org/doc/nightly/html/classvtkImplicitPolyDataDistance.html) computes signed distance from sample points to the sphere surface.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) defines the regular grid of sample points.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) holds the sample point geometry and distance scalars.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the distance-coloured points to graphics primitives.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) generates the reference sphere polydata.\n- [vtkVertexGlyphFilter](https://www.vtk.org/doc/nightly/html/classvtkVertexGlyphFilter.html) converts the sample points into renderable vertex cells.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkFloatArray",
+    "vtkImplicitPolyDataDistance",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkVertexGlyphFilter"
+  ],
+  "data_files": null,
+  "py_filename": "implicit_polydata_distance.py",
+  "image": "implicit_polydata_distance.png",
+  "metadata_filename": "implicit_polydata_distance.json",
+  "topology": "standard"
+}

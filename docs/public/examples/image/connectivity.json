@@ -1,0 +1,20 @@
+{
+  "title": "connectivity",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example extracts a connected region from a binary image using vtkImageSeedConnectivity. The left viewport shows the full binary input — six disconnected white rectangles on a black background. The right viewport shows only the single rectangle connected to the seed point at (30, 30) — all other shapes are removed. This demonstrates seed-based flood-fill connectivity extraction. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D images.\n- [vtkImageCanvasSource2D](https://www.vtk.org/doc/nightly/html/classvtkImageCanvasSource2D.html) creates a 256×256 binary canvas with six disconnected white rectangles.\n- [vtkImageSeedConnectivity](https://www.vtk.org/doc/nightly/html/classvtkImageSeedConnectivity.html) performs seed-based flood fill. `AddSeed()` specifies the starting pixel. `SetInputConnectValue()` defines which pixel value to flood through. Only the region connected to the seed is kept; all other pixels are set to `OutputUnconnectedValue`.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCanvasSource2D",
+    "vtkImageSeedConnectivity",
+    "vtkInteractorStyleImage",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "connectivity.py",
+  "image": "connectivity.png",
+  "metadata_filename": "connectivity.json",
+  "topology": "standard"
+}

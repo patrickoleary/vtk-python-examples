@@ -1,0 +1,25 @@
+{
+  "title": "chart matrix colored",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate a 4x4 chart matrix with colored plots using vtkNamedColors.\n\n**dataset → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChartMatrix](https://www.vtk.org/doc/nightly/html/classvtkChartMatrix.html) — chart matrix.\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) — chart xy.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) — named colors.\n- [vtkPlotPoints](https://www.vtk.org/doc/nightly/html/classvtkPlotPoints.html) — plot points.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) — table.\n- [vtkVector2f](https://www.vtk.org/doc/nightly/html/classvtkVector2f.html) — vector2f.\n- [vtkVector2i](https://www.vtk.org/doc/nightly/html/classvtkVector2i.html) — vector2i.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartMatrix",
+    "vtkChartXY",
+    "vtkContextActor",
+    "vtkFloatArray",
+    "vtkNamedColors",
+    "vtkPlotPoints",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable",
+    "vtkVector2f",
+    "vtkVector2i"
+  ],
+  "data_files": null,
+  "py_filename": "chart_matrix_colored.py",
+  "image": "chart_matrix_colored.png",
+  "metadata_filename": "chart_matrix_colored.json",
+  "topology": "chart"
+}

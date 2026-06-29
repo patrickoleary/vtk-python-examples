@@ -1,0 +1,27 @@
+{
+  "title": "clean polyhedra grid",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nClean a polyhedra grid converted from PLOT3D data using vtkStaticCleanUnstructuredGrid with various tolerance settings.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkConvertToPolyhedra](https://www.vtk.org/doc/nightly/html/classvtkConvertToPolyhedra.html) — convert to polyhedra.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) — maps any dataset type to graphics primitives.\n- [vtkExtractGeometry](https://www.vtk.org/doc/nightly/html/classvtkExtractGeometry.html) — extracts cells that lie inside an implicit function.\n- [vtkMultiBlockPLOT3DReader](https://www.vtk.org/doc/nightly/html/classvtkMultiBlockPLOT3DReader.html) — reads PLOT3D structured grid files.\n- [vtkShrinkFilter](https://www.vtk.org/doc/nightly/html/classvtkShrinkFilter.html) — shrinks cells in any dataset toward their centroid.\n- [vtkSphere](https://www.vtk.org/doc/nightly/html/classvtkSphere.html) — defines an implicit sphere function.\n- [vtkStaticCleanUnstructuredGrid](https://www.vtk.org/doc/nightly/html/classvtkStaticCleanUnstructuredGrid.html) — static clean unstructured grid.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkConvertToPolyhedra",
+    "vtkDataSetMapper",
+    "vtkExtractGeometry",
+    "vtkMultiBlockPLOT3DReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkShrinkFilter",
+    "vtkSphere",
+    "vtkStaticCleanUnstructuredGrid"
+  ],
+  "data_files": [
+    "data/combq.bin",
+    "data/combxyz.bin"
+  ],
+  "py_filename": "clean_polyhedra_grid.py",
+  "image": "clean_polyhedra_grid.png",
+  "metadata_filename": "clean_polyhedra_grid.json",
+  "topology": "standard"
+}

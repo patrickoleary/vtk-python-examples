@@ -1,0 +1,17 @@
+{
+  "title": "sphere widget center cursor",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkSphereWidget2 with center cursor visibility.\n\n**dataset → renderer → infrastructure → scene → output**\n\n- [vtkSphereWidget2](https://www.vtk.org/doc/nightly/html/classvtkSphereWidget2.html) — sphere widget2.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereWidget2"
+  ],
+  "data_files": null,
+  "py_filename": "sphere_widget_center_cursor.py",
+  "image": "sphere_widget_center_cursor.png",
+  "metadata_filename": "sphere_widget_center_cursor.json",
+  "topology": "standard"
+}

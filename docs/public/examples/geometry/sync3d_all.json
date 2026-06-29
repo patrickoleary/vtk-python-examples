@@ -1,0 +1,26 @@
+{
+  "title": "sync3d all",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nDemonstrate vtkSynchronizedTemplates3D on clips of a structured points dataset (ironProt.vtk), casting each clip to different scalar types and generating isosurfaces at value 30, colored with named colors.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) — image cast.\n- [vtkImageClip](https://www.vtk.org/doc/nightly/html/classvtkImageClip.html) — image clip.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) — named colors.\n- [vtkOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkOutlineFilter.html) — generates a bounding box outline of the input data.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkStructuredPointsReader](https://www.vtk.org/doc/nightly/html/classvtkStructuredPointsReader.html) — structured points reader.\n- [vtkSynchronizedTemplates3D](https://www.vtk.org/doc/nightly/html/classvtkSynchronizedTemplates3D.html) — synchronized templates3d.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkImageCast",
+    "vtkImageClip",
+    "vtkNamedColors",
+    "vtkOutlineFilter",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStructuredPointsReader",
+    "vtkSynchronizedTemplates3D"
+  ],
+  "data_files": [
+    "data/ironProt.vtk"
+  ],
+  "py_filename": "sync3d_all.py",
+  "image": "sync3d_all.png",
+  "metadata_filename": "sync3d_all.json",
+  "topology": "standard"
+}

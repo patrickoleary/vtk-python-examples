@@ -1,0 +1,19 @@
+{
+  "title": "pie chart actor",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkPieChartActor with random data and colored slices.\n\n**dataset → visual_asset → renderer → infrastructure → output**\n\n- [vtkDataObject](https://www.vtk.org/doc/nightly/html/classvtkDataObject.html) — provides field association constants for array processing.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkPieChartActor](https://www.vtk.org/doc/nightly/html/classvtkPieChartActor.html) — pie chart actor.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkDataObject",
+    "vtkFloatArray",
+    "vtkPieChartActor",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "pie_chart_actor.py",
+  "image": "pie_chart_actor.png",
+  "metadata_filename": "pie_chart_actor.json",
+  "topology": "standard"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "caption actor2d overlay",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkCaptionActor2D with an arrow leader glyph.\n\n**input → visual_asset → renderer → infrastructure → output**\n\n- [vtkArrowSource](https://www.vtk.org/doc/nightly/html/classvtkArrowSource.html) — generates a 3D arrow.\n- [vtkCaptionActor2D](https://www.vtk.org/doc/nightly/html/classvtkCaptionActor2D.html) — caption actor2d.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkArrowSource",
+    "vtkCaptionActor2D",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "caption_actor2d_overlay.py",
+  "image": "caption_actor2d_overlay.png",
+  "metadata_filename": "caption_actor2d_overlay.json",
+  "topology": "standard"
+}

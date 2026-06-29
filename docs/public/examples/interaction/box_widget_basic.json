@@ -1,0 +1,25 @@
+{
+  "title": "box widget basic",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkBoxWidget to define a clipping box on a mace geometry.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkAppendPolyData](https://www.vtk.org/doc/nightly/html/classvtkAppendPolyData.html) — append poly data.\n- [vtkBoxWidget](https://www.vtk.org/doc/nightly/html/classvtkBoxWidget.html) — box widget.\n- [vtkClipPolyData](https://www.vtk.org/doc/nightly/html/classvtkClipPolyData.html) — clips polygonal data with an implicit function.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) — generates a polygonal cone.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) — places oriented, scaled glyphs at each point.\n- [vtkLODActor](https://www.vtk.org/doc/nightly/html/classvtkLODActor.html) — lod actor.\n- [vtkPlanes](https://www.vtk.org/doc/nightly/html/classvtkPlanes.html) — planes.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAppendPolyData",
+    "vtkBoxWidget",
+    "vtkClipPolyData",
+    "vtkConeSource",
+    "vtkGlyph3D",
+    "vtkLODActor",
+    "vtkPlanes",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource"
+  ],
+  "data_files": null,
+  "py_filename": "box_widget_basic.py",
+  "image": "box_widget_basic.png",
+  "metadata_filename": "box_widget_basic.json",
+  "topology": "standard"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "hypertreegrid ternary3d adaptive dataset surface filter material",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nDemonstrate vtkAdaptiveDataSetSurfaceFilter on a 3D ternary HyperTreeGrid with material mask.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkAdaptiveDataSetSurfaceFilter](https://www.vtk.org/doc/nightly/html/classvtkAdaptiveDataSetSurfaceFilter.html) — adaptive data set surface filter.\n- [vtkCamera](https://www.vtk.org/doc/nightly/html/classvtkCamera.html) — camera.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) — maps any dataset type to graphics primitives.\n- [vtkHyperTreeGrid](https://www.vtk.org/doc/nightly/html/classvtkHyperTreeGrid.html) — hyper tree grid.\n- [vtkHyperTreeGridSource](https://www.vtk.org/doc/nightly/html/classvtkHyperTreeGridSource.html) — hyper tree grid source.\n- [vtkMapper](https://www.vtk.org/doc/nightly/html/classvtkMapper.html) — mapper.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkAdaptiveDataSetSurfaceFilter",
+    "vtkCamera",
+    "vtkDataSetMapper",
+    "vtkHyperTreeGrid",
+    "vtkHyperTreeGridSource",
+    "vtkMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "hypertreegrid_ternary3d_adaptive_dataset_surface_filter_material.py",
+  "image": "hypertreegrid_ternary3d_adaptive_dataset_surface_filter_material.png",
+  "metadata_filename": "hypertreegrid_ternary3d_adaptive_dataset_surface_filter_material.json",
+  "topology": "standard"
+}

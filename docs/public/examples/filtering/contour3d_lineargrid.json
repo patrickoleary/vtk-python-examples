@@ -1,0 +1,26 @@
+{
+  "title": "contour3d lineargrid",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nCompare vtkContour3DLinearGrid on tetra, voxel, and hex meshes against standard vtkContourFilter in four viewports.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkClipVolume](https://www.vtk.org/doc/nightly/html/classvtkClipVolume.html) — clip volume.\n- [vtkContour3DLinearGrid](https://www.vtk.org/doc/nightly/html/classvtkContour3DLinearGrid.html) — contour3d linear grid.\n- [vtkContourFilter](https://www.vtk.org/doc/nightly/html/classvtkContourFilter.html) — extracts iso-surfaces at specified scalar values.\n- [vtkExtractCells](https://www.vtk.org/doc/nightly/html/classvtkExtractCells.html) — extract cells.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkQuadric](https://www.vtk.org/doc/nightly/html/classvtkQuadric.html) — quadric.\n- [vtkSampleFunction](https://www.vtk.org/doc/nightly/html/classvtkSampleFunction.html) — evaluates an implicit function on a regular grid.\n- [vtkStructuredGrid](https://www.vtk.org/doc/nightly/html/classvtkStructuredGrid.html) — structured grid.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkClipVolume",
+    "vtkContour3DLinearGrid",
+    "vtkContourFilter",
+    "vtkExtractCells",
+    "vtkPoints",
+    "vtkPolyDataMapper",
+    "vtkQuadric",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSampleFunction",
+    "vtkStructuredGrid"
+  ],
+  "data_files": null,
+  "py_filename": "contour3d_lineargrid.py",
+  "image": "contour3d_lineargrid.png",
+  "metadata_filename": "contour3d_lineargrid.json",
+  "topology": "standard"
+}

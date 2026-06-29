@@ -1,0 +1,23 @@
+{
+  "title": "imagedata non identity orientation",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nDemonstrate oriented image data with non-identity direction matrix and point extraction.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) — places oriented, scaled glyphs at each point.\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) — represents a regular grid of points (image/volume).\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkSelectEnclosedPoints](https://www.vtk.org/doc/nightly/html/classvtkSelectEnclosedPoints.html) — select enclosed points.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkThresholdPoints](https://www.vtk.org/doc/nightly/html/classvtkThresholdPoints.html) — threshold points.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkGlyph3D",
+    "vtkImageData",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSelectEnclosedPoints",
+    "vtkSphereSource",
+    "vtkThresholdPoints"
+  ],
+  "data_files": null,
+  "py_filename": "imagedata_non_identity_orientation.py",
+  "image": "imagedata_non_identity_orientation.png",
+  "metadata_filename": "imagedata_non_identity_orientation.json",
+  "topology": "standard"
+}

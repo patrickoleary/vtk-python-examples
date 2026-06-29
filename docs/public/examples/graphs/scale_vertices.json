@@ -1,0 +1,27 @@
+{
+  "title": "scale vertices",
+  "source_type": "examples",
+  "tag": "graphs",
+  "explanation": "### Description\n\nThis example scales vertex glyphs by a data array. Two vertices are drawn as circles whose size reflects a \"Scales\" array, and whose color is driven by a lookup table with yellow and green entries. vtkGlyph3D places scaled circle glyphs at each vertex position.\n\n**dataset → input → filter → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) stores the per-vertex scale values.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) places scaled circle glyphs at vertex positions.\n- [vtkGlyphSource2D](https://www.vtk.org/doc/nightly/html/classvtkGlyphSource2D.html) creates the circle glyph shape.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) applies the force-directed layout strategy.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) converts graph to polydata.\n- [vtkIntArray](https://www.vtk.org/doc/nightly/html/classvtkIntArray.html) stores per-vertex color indices.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) maps integer indices to colors.\n- [vtkMutableUndirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableUndirectedGraph.html) builds the undirected graph.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkFloatArray",
+    "vtkForceDirectedLayoutStrategy",
+    "vtkGlyph3D",
+    "vtkGlyphSource2D",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkIntArray",
+    "vtkLookupTable",
+    "vtkMutableUndirectedGraph",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "scale_vertices.py",
+  "image": "scale_vertices.png",
+  "metadata_filename": "scale_vertices.json",
+  "topology": "graph"
+}

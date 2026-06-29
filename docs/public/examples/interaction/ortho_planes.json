@@ -1,0 +1,27 @@
+{
+  "title": "ortho planes",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkImageOrthoPlanes with three vtkImagePlaneWidgets on medical volume data.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → filter → selection → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCellPicker](https://www.vtk.org/doc/nightly/html/classvtkCellPicker.html) — cell picker.\n- [vtkCommand](https://www.vtk.org/doc/nightly/html/classvtkCommand.html) — command.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageMapToColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToColors.html) — image map to colors.\n- [vtkImageOrthoPlanes](https://www.vtk.org/doc/nightly/html/classvtkImageOrthoPlanes.html) — image ortho planes.\n- [vtkImagePlaneWidget](https://www.vtk.org/doc/nightly/html/classvtkImagePlaneWidget.html) — image plane widget.\n- [vtkOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkOutlineFilter.html) — generates a bounding box outline of the input data.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkProperty](https://www.vtk.org/doc/nightly/html/classvtkProperty.html) — property.\n- [vtkVolume16Reader](https://www.vtk.org/doc/nightly/html/classvtkVolume16Reader.html) — volume16reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCellPicker",
+    "vtkCommand",
+    "vtkImageActor",
+    "vtkImageMapToColors",
+    "vtkImageOrthoPlanes",
+    "vtkImagePlaneWidget",
+    "vtkOutlineFilter",
+    "vtkPolyDataMapper",
+    "vtkProperty",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkVolume16Reader"
+  ],
+  "data_files": null,
+  "py_filename": "ortho_planes.py",
+  "image": "ortho_planes.png",
+  "metadata_filename": "ortho_planes.json",
+  "topology": "standard"
+}

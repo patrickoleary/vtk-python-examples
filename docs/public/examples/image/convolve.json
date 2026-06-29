@@ -1,0 +1,22 @@
+{
+  "title": "convolve",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example applies a custom 3×3 sharpening convolution kernel to a grayscale image using vtkImageConvolve and displays the original and filtered images side by side. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D images.\n- [vtkImageConvolve](https://www.vtk.org/doc/nightly/html/classvtkImageConvolve.html) applies a user-defined 3×3 convolution kernel. The sharpening kernel (center=5, neighbors=-1) enhances edges while preserving brightness.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) reads the `Gourds.png` image.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageConvolve",
+    "vtkInteractorStyleImage",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/Gourds.png"
+  ],
+  "py_filename": "convolve.py",
+  "image": "convolve.png",
+  "metadata_filename": "convolve.json",
+  "topology": "standard"
+}

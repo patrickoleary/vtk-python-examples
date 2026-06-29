@@ -1,0 +1,26 @@
+{
+  "title": "plot sph kernels",
+  "source_type": "examples",
+  "tag": "points",
+  "explanation": "### Description\n\nPlot SPH kernel functions and derivatives (Cubic, Quartic, Quintic, Wendland) using vtkChartXY.\n\n**dataset → plot → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChart](https://www.vtk.org/doc/nightly/html/classvtkChart.html) — chart.\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) — chart xy.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkContextScene](https://www.vtk.org/doc/nightly/html/classvtkContextScene.html) — context scene.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkSPHCubicKernel](https://www.vtk.org/doc/nightly/html/classvtkSPHCubicKernel.html) — sph cubic kernel.\n- [vtkSPHQuarticKernel](https://www.vtk.org/doc/nightly/html/classvtkSPHQuarticKernel.html) — sph quartic kernel.\n- [vtkSPHQuinticKernel](https://www.vtk.org/doc/nightly/html/classvtkSPHQuinticKernel.html) — sph quintic kernel.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) — table.\n- [vtkWendlandQuinticKernel](https://www.vtk.org/doc/nightly/html/classvtkWendlandQuinticKernel.html) — wendland quintic kernel.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChart",
+    "vtkChartXY",
+    "vtkContextActor",
+    "vtkContextScene",
+    "vtkFloatArray",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSPHCubicKernel",
+    "vtkSPHQuarticKernel",
+    "vtkSPHQuinticKernel",
+    "vtkTable",
+    "vtkWendlandQuinticKernel"
+  ],
+  "data_files": null,
+  "py_filename": "plot_sph_kernels.py",
+  "image": "plot_sph_kernels.png",
+  "metadata_filename": "plot_sph_kernels.json",
+  "topology": "chart"
+}

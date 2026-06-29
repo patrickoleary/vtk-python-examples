@@ -1,0 +1,27 @@
+{
+  "title": "density filter",
+  "source_type": "examples",
+  "tag": "points",
+  "explanation": "### Description\n\nDemonstrate vtkPointDensityFilter with four density estimation modes: fixed radius volume-normalized, relative radius number-of-points, weighted fixed radius, and weighted relative radius, displayed as image slices in a 2x2 grid.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkBoundedPointSource](https://www.vtk.org/doc/nightly/html/classvtkBoundedPointSource.html) — bounded point source.\n- [vtkClipPolyData](https://www.vtk.org/doc/nightly/html/classvtkClipPolyData.html) — clips polygonal data with an implicit function.\n- [vtkFitImplicitFunction](https://www.vtk.org/doc/nightly/html/classvtkFitImplicitFunction.html) — fit implicit function.\n- [vtkImageSlice](https://www.vtk.org/doc/nightly/html/classvtkImageSlice.html) — image slice.\n- [vtkImageSliceMapper](https://www.vtk.org/doc/nightly/html/classvtkImageSliceMapper.html) — image slice mapper.\n- [vtkMath](https://www.vtk.org/doc/nightly/html/classvtkMath.html) — provides mathematical utility functions.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) — defines an implicit plane function.\n- [vtkPointDensityFilter](https://www.vtk.org/doc/nightly/html/classvtkPointDensityFilter.html) — point density filter.\n- [vtkRandomAttributeGenerator](https://www.vtk.org/doc/nightly/html/classvtkRandomAttributeGenerator.html) — generates random point and cell data arrays for testing.\n- [vtkSphere](https://www.vtk.org/doc/nightly/html/classvtkSphere.html) — defines an implicit sphere function.\n- [vtkTimerLog](https://www.vtk.org/doc/nightly/html/classvtkTimerLog.html) — timer log.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkBoundedPointSource",
+    "vtkClipPolyData",
+    "vtkFitImplicitFunction",
+    "vtkImageSlice",
+    "vtkImageSliceMapper",
+    "vtkMath",
+    "vtkPlane",
+    "vtkPointDensityFilter",
+    "vtkRandomAttributeGenerator",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphere",
+    "vtkTimerLog"
+  ],
+  "data_files": null,
+  "py_filename": "density_filter.py",
+  "image": "density_filter.png",
+  "metadata_filename": "density_filter.json",
+  "topology": "standard"
+}

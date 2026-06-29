@@ -1,0 +1,25 @@
+{
+  "title": "chartmatrix",
+  "source_type": "examples",
+  "tag": "charting",
+  "explanation": "### Description\n\nThis example grids of four sub-charts arranged in a 2×2 layout using vtkChartMatrix. Each sub-chart shows a different trig function: sin(x), cos(x), sin(2x), and cos(2x). The top row uses line plots while the bottom row uses scatter plots, demonstrating how vtkChartMatrix arranges multiple independent charts in a single context scene.\n\n**dataset → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChart](https://www.vtk.org/doc/nightly/html/classvtkChart.html) provides chart functionality.\n- [vtkChartMatrix](https://www.vtk.org/doc/nightly/html/classvtkChartMatrix.html) arranges multiple charts in a grid layout.\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) creates each sub-chart with axes.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) overlays the chart matrix on the VTK rendering pipeline.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) stores each data column.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides named colors.\n- [vtkPlotPoints](https://www.vtk.org/doc/nightly/html/classvtkPlotPoints.html) renders scatter series in the bottom row.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) stores the shared data.\n- [vtkVector2f](https://www.vtk.org/doc/nightly/html/classvtkVector2f.html) provides vector2f functionality.\n- [vtkVector2i](https://www.vtk.org/doc/nightly/html/classvtkVector2i.html) provides vector2i functionality.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChart",
+    "vtkChartMatrix",
+    "vtkChartXY",
+    "vtkContextActor",
+    "vtkFloatArray",
+    "vtkPlotPoints",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable",
+    "vtkVector2f",
+    "vtkVector2i"
+  ],
+  "data_files": null,
+  "py_filename": "chartmatrix.py",
+  "image": "chartmatrix.png",
+  "metadata_filename": "chartmatrix.json",
+  "topology": "chart"
+}

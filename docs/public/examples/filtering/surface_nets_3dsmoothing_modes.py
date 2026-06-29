@@ -1,0 +1,478 @@
+#!/usr/bin/env python
+
+# Extract 3D label boundaries from random blob spheres using vtkSurfaceNets3D,
+# comparing no smoothing, constrained smoothing, and windowed sinc smoothing
+# in three viewports.
+
+from math import cos, sin, pi
+
+# Factory overrides
+import vtkmodules.vtkInteractionStyle  # noqa: F401
+import vtkmodules.vtkRenderingOpenGL2  # noqa: F401
+
+from vtkmodules.vtkCommonCore import (
+    vtkLookupTable,
+    vtkMath,
+)
+from vtkmodules.vtkCommonDataModel import (
+    vtkImageData,
+    vtkSphere,
+)
+from vtkmodules.vtkFiltersCore import (
+    vtkSurfaceNets3D,
+    vtkWindowedSincPolyDataFilter,
+)
+from vtkmodules.vtkFiltersModeling import vtkImageDataOutlineFilter
+from vtkmodules.vtkImagingCore import vtkImageThreshold
+from vtkmodules.vtkImagingHybrid import vtkSampleFunction
+from vtkmodules.vtkImagingMath import vtkImageMathematics
+from vtkmodules.vtkRenderingCore import (
+    vtkActor,
+    vtkPolyDataMapper,
+    vtkRenderWindow,
+    vtkRenderWindowInteractor,
+    vtkRenderer,
+)
+
+vtk_math = vtkMath()
+
+dim = 128
+num_blobs = 12
+radius = 10
+
+# Generate random colors for lookup table
+lookup_table = vtkLookupTable()
+lookup_table.SetNumberOfColors(num_blobs + 1)
+lookup_table.SetTableRange(0, num_blobs)
+lookup_table.SetScaleToLinear()
+lookup_table.Build()
+lookup_table.SetTableValue(0, 0, 0, 0, 1)
+vtk_math.RandomSeed(5071)
+for i in range(1, num_blobs + 1):
+    lookup_table.SetTableValue(i, vtk_math.Random(0.2, 1),
+                      vtk_math.Random(0.2, 1), vtk_math.Random(0.2, 1), 1)
+
+# Build composite blob image from random spheres
+blob_image = vtkImageData()
+
+sphere_0 = vtkSphere()
+sphere_0.SetRadius(radius)
+sphere_0.SetCenter(10, 18, 1)
+sampler_0 = vtkSampleFunction()
+sampler_0.SetImplicitFunction(sphere_0)
+sampler_0.SetOutputScalarTypeToFloat()
+sampler_0.SetSampleDimensions(dim, dim, dim)
+sampler_0.SetModelBounds(-50, 50, -50, 50, -50, 50)
+threshold_0 = vtkImageThreshold()
+threshold_0.SetInputConnection(sampler_0.GetOutputPort())
+threshold_0.ThresholdByLower(radius * radius)
+threshold_0.ReplaceInOn()
+threshold_0.ReplaceOutOn()
+threshold_0.SetInValue(1)
+threshold_0.SetOutValue(0)
+threshold_0.Update()
+blob_image.DeepCopy(threshold_0.GetOutput())
+max_value_0 = vtkImageMathematics()
+max_value_0.SetInputData(0, blob_image)
+max_value_0.SetInputData(1, threshold_0.GetOutput())
+max_value_0.SetOperationToMax()
+max_value_0.Modified()
+max_value_0.Update()
+blob_image.DeepCopy(max_value_0.GetOutput())
+
+sphere_1 = vtkSphere()
+sphere_1.SetRadius(radius)
+sphere_1.SetCenter(8, -18, 28)
+sampler_1 = vtkSampleFunction()
+sampler_1.SetImplicitFunction(sphere_1)
+sampler_1.SetOutputScalarTypeToFloat()
+sampler_1.SetSampleDimensions(dim, dim, dim)
+sampler_1.SetModelBounds(-50, 50, -50, 50, -50, 50)
+threshold_1 = vtkImageThreshold()
+threshold_1.SetInputConnection(sampler_1.GetOutputPort())
+threshold_1.ThresholdByLower(radius * radius)
+threshold_1.ReplaceInOn()
+threshold_1.ReplaceOutOn()
+threshold_1.SetInValue(2)
+threshold_1.SetOutValue(0)
+threshold_1.Update()
+max_value_1 = vtkImageMathematics()
+max_value_1.SetInputData(0, blob_image)
+max_value_1.SetInputData(1, threshold_1.GetOutput())
+max_value_1.SetOperationToMax()
+max_value_1.Modified()
+max_value_1.Update()
+blob_image.DeepCopy(max_value_1.GetOutput())
+
+sphere_2 = vtkSphere()
+sphere_2.SetRadius(radius)
+sphere_2.SetCenter(7, -38, -12)
+sampler_2 = vtkSampleFunction()
+sampler_2.SetImplicitFunction(sphere_2)
+sampler_2.SetOutputScalarTypeToFloat()
+sampler_2.SetSampleDimensions(dim, dim, dim)
+sampler_2.SetModelBounds(-50, 50, -50, 50, -50, 50)
+threshold_2 = vtkImageThreshold()
+threshold_2.SetInputConnection(sampler_2.GetOutputPort())
+threshold_2.ThresholdByLower(radius * radius)
+threshold_2.ReplaceInOn()
+threshold_2.ReplaceOutOn()
+threshold_2.SetInValue(3)
+threshold_2.SetOutValue(0)
+threshold_2.Update()
+max_value_2 = vtkImageMathematics()
+max_value_2.SetInputData(0, blob_image)
+max_value_2.SetInputData(1, threshold_2.GetOutput())
+max_value_2.SetOperationToMax()
+max_value_2.Modified()
+max_value_2.Update()
+blob_image.DeepCopy(max_value_2.GetOutput())
+
+sphere_3 = vtkSphere()
+sphere_3.SetRadius(radius)
+sphere_3.SetCenter(32, -36, 31)
+sampler_3 = vtkSampleFunction()
+sampler_3.SetImplicitFunction(sphere_3)
+sampler_3.SetOutputScalarTypeToFloat()
+sampler_3.SetSampleDimensions(dim, dim, dim)
+sampler_3.SetModelBounds(-50, 50, -50, 50, -50, 50)
+threshold_3 = vtkImageThreshold()
+threshold_3.SetInputConnection(sampler_3.GetOutputPort())
+threshold_3.ThresholdByLower(radius * radius)
+threshold_3.ReplaceInOn()
+threshold_3.ReplaceOutOn()
+threshold_3.SetInValue(4)
+threshold_3.SetOutValue(0)
+threshold_3.Update()
+max_value_3 = vtkImageMathematics()
+max_value_3.SetInputData(0, blob_image)
+max_value_3.SetInputData(1, threshold_3.GetOutput())
+max_value_3.SetOperationToMax()
+max_value_3.Modified()
+max_value_3.Update()
+blob_image.DeepCopy(max_value_3.GetOutput())
+
+sphere_4 = vtkSphere()
+sphere_4.SetRadius(radius)
+sphere_4.SetCenter(6, 20, -35)
+sampler_4 = vtkSampleFunction()
+sampler_4.SetImplicitFunction(sphere_4)
+sampler_4.SetOutputScalarTypeToFloat()
+sampler_4.SetSampleDimensions(dim, dim, dim)
+sampler_4.SetModelBounds(-50, 50, -50, 50, -50, 50)
+threshold_4 = vtkImageThreshold()
+threshold_4.SetInputConnection(sampler_4.GetOutputPort())
+threshold_4.ThresholdByLower(radius * radius)
+threshold_4.ReplaceInOn()
+threshold_4.ReplaceOutOn()
+threshold_4.SetInValue(5)
+threshold_4.SetOutValue(0)
+threshold_4.Update()
+max_value_4 = vtkImageMathematics()
+max_value_4.SetInputData(0, blob_image)
+max_value_4.SetInputData(1, threshold_4.GetOutput())
+max_value_4.SetOperationToMax()
+max_value_4.Modified()
+max_value_4.Update()
+blob_image.DeepCopy(max_value_4.GetOutput())
+
+sphere_5 = vtkSphere()
+sphere_5.SetRadius(radius)
+sphere_5.SetCenter(26, -11, -29)
+sampler_5 = vtkSampleFunction()
+sampler_5.SetImplicitFunction(sphere_5)
+sampler_5.SetOutputScalarTypeToFloat()
+sampler_5.SetSampleDimensions(dim, dim, dim)
+sampler_5.SetModelBounds(-50, 50, -50, 50, -50, 50)
+threshold_5 = vtkImageThreshold()
+threshold_5.SetInputConnection(sampler_5.GetOutputPort())
+threshold_5.ThresholdByLower(radius * radius)
+threshold_5.ReplaceInOn()
+threshold_5.ReplaceOutOn()
+threshold_5.SetInValue(6)
+threshold_5.SetOutValue(0)
+threshold_5.Update()
+max_value_5 = vtkImageMathematics()
+max_value_5.SetInputData(0, blob_image)
+max_value_5.SetInputData(1, threshold_5.GetOutput())
+max_value_5.SetOperationToMax()
+max_value_5.Modified()
+max_value_5.Update()
+blob_image.DeepCopy(max_value_5.GetOutput())
+
+sphere_6 = vtkSphere()
+sphere_6.SetRadius(radius)
+sphere_6.SetCenter(-38, 7, -30)
+sampler_6 = vtkSampleFunction()
+sampler_6.SetImplicitFunction(sphere_6)
+sampler_6.SetOutputScalarTypeToFloat()
+sampler_6.SetSampleDimensions(dim, dim, dim)
+sampler_6.SetModelBounds(-50, 50, -50, 50, -50, 50)
+threshold_6 = vtkImageThreshold()
+threshold_6.SetInputConnection(sampler_6.GetOutputPort())
+threshold_6.ThresholdByLower(radius * radius)
+threshold_6.ReplaceInOn()
+threshold_6.ReplaceOutOn()
+threshold_6.SetInValue(7)
+threshold_6.SetOutValue(0)
+threshold_6.Update()
+max_value_6 = vtkImageMathematics()
+max_value_6.SetInputData(0, blob_image)
+max_value_6.SetInputData(1, threshold_6.GetOutput())
+max_value_6.SetOperationToMax()
+max_value_6.Modified()
+max_value_6.Update()
+blob_image.DeepCopy(max_value_6.GetOutput())
+
+sphere_7 = vtkSphere()
+sphere_7.SetRadius(radius)
+sphere_7.SetCenter(0, -5, -30)
+sampler_7 = vtkSampleFunction()
+sampler_7.SetImplicitFunction(sphere_7)
+sampler_7.SetOutputScalarTypeToFloat()
+sampler_7.SetSampleDimensions(dim, dim, dim)
+sampler_7.SetModelBounds(-50, 50, -50, 50, -50, 50)
+threshold_7 = vtkImageThreshold()
+threshold_7.SetInputConnection(sampler_7.GetOutputPort())
+threshold_7.ThresholdByLower(radius * radius)
+threshold_7.ReplaceInOn()
+threshold_7.ReplaceOutOn()
+threshold_7.SetInValue(8)
+threshold_7.SetOutValue(0)
+threshold_7.Update()
+max_value_7 = vtkImageMathematics()
+max_value_7.SetInputData(0, blob_image)
+max_value_7.SetInputData(1, threshold_7.GetOutput())
+max_value_7.SetOperationToMax()
+max_value_7.Modified()
+max_value_7.Update()
+blob_image.DeepCopy(max_value_7.GetOutput())
+
+sphere_8 = vtkSphere()
+sphere_8.SetRadius(radius)
+sphere_8.SetCenter(25, -19, 36)
+sampler_8 = vtkSampleFunction()
+sampler_8.SetImplicitFunction(sphere_8)
+sampler_8.SetOutputScalarTypeToFloat()
+sampler_8.SetSampleDimensions(dim, dim, dim)
+sampler_8.SetModelBounds(-50, 50, -50, 50, -50, 50)
+threshold_8 = vtkImageThreshold()
+threshold_8.SetInputConnection(sampler_8.GetOutputPort())
+threshold_8.ThresholdByLower(radius * radius)
+threshold_8.ReplaceInOn()
+threshold_8.ReplaceOutOn()
+threshold_8.SetInValue(9)
+threshold_8.SetOutValue(0)
+threshold_8.Update()
+max_value_8 = vtkImageMathematics()
+max_value_8.SetInputData(0, blob_image)
+max_value_8.SetInputData(1, threshold_8.GetOutput())
+max_value_8.SetOperationToMax()
+max_value_8.Modified()
+max_value_8.Update()
+blob_image.DeepCopy(max_value_8.GetOutput())
+
+sphere_9 = vtkSphere()
+sphere_9.SetRadius(radius)
+sphere_9.SetCenter(9, -31, -30)
+sampler_9 = vtkSampleFunction()
+sampler_9.SetImplicitFunction(sphere_9)
+sampler_9.SetOutputScalarTypeToFloat()
+sampler_9.SetSampleDimensions(dim, dim, dim)
+sampler_9.SetModelBounds(-50, 50, -50, 50, -50, 50)
+threshold_9 = vtkImageThreshold()
+threshold_9.SetInputConnection(sampler_9.GetOutputPort())
+threshold_9.ThresholdByLower(radius * radius)
+threshold_9.ReplaceInOn()
+threshold_9.ReplaceOutOn()
+threshold_9.SetInValue(10)
+threshold_9.SetOutValue(0)
+threshold_9.Update()
+max_value_9 = vtkImageMathematics()
+max_value_9.SetInputData(0, blob_image)
+max_value_9.SetInputData(1, threshold_9.GetOutput())
+max_value_9.SetOperationToMax()
+max_value_9.Modified()
+max_value_9.Update()
+blob_image.DeepCopy(max_value_9.GetOutput())
+
+sphere_10 = vtkSphere()
+sphere_10.SetRadius(radius)
+sphere_10.SetCenter(38, -33, 38)
+sampler_10 = vtkSampleFunction()
+sampler_10.SetImplicitFunction(sphere_10)
+sampler_10.SetOutputScalarTypeToFloat()
+sampler_10.SetSampleDimensions(dim, dim, dim)
+sampler_10.SetModelBounds(-50, 50, -50, 50, -50, 50)
+threshold_10 = vtkImageThreshold()
+threshold_10.SetInputConnection(sampler_10.GetOutputPort())
+threshold_10.ThresholdByLower(radius * radius)
+threshold_10.ReplaceInOn()
+threshold_10.ReplaceOutOn()
+threshold_10.SetInValue(11)
+threshold_10.SetOutValue(0)
+threshold_10.Update()
+max_value_10 = vtkImageMathematics()
+max_value_10.SetInputData(0, blob_image)
+max_value_10.SetInputData(1, threshold_10.GetOutput())
+max_value_10.SetOperationToMax()
+max_value_10.Modified()
+max_value_10.Update()
+blob_image.DeepCopy(max_value_10.GetOutput())
+
+sphere_11 = vtkSphere()
+sphere_11.SetRadius(radius)
+sphere_11.SetCenter(-33, 37, -12)
+sampler_11 = vtkSampleFunction()
+sampler_11.SetImplicitFunction(sphere_11)
+sampler_11.SetOutputScalarTypeToFloat()
+sampler_11.SetSampleDimensions(dim, dim, dim)
+sampler_11.SetModelBounds(-50, 50, -50, 50, -50, 50)
+threshold_11 = vtkImageThreshold()
+threshold_11.SetInputConnection(sampler_11.GetOutputPort())
+threshold_11.ThresholdByLower(radius * radius)
+threshold_11.ReplaceInOn()
+threshold_11.ReplaceOutOn()
+threshold_11.SetInValue(12)
+threshold_11.SetOutValue(0)
+threshold_11.Update()
+max_value_11 = vtkImageMathematics()
+max_value_11.SetInputData(0, blob_image)
+max_value_11.SetInputData(1, threshold_11.GetOutput())
+max_value_11.SetOperationToMax()
+max_value_11.Modified()
+max_value_11.Update()
+blob_image.DeepCopy(max_value_11.GetOutput())
+
+# Apply orientation (rotation about Y axis)
+angle = pi / 6
+orientation = [
+    -cos(angle), 0, sin(angle),
+    0, 1, 0,
+    sin(angle), 0, cos(angle),
+]
+blob_image.SetDirectionMatrix(orientation)
+
+# --- Viewport 0: no smoothing ---
+surface_nets_0 = vtkSurfaceNets3D()
+surface_nets_0.SetInputData(blob_image)
+surface_nets_0.GenerateLabels(num_blobs, 1, num_blobs)
+surface_nets_0.GetSmoother().SetNumberOfIterations(0)
+surface_nets_0.Update()
+
+mapper_0 = vtkPolyDataMapper()
+mapper_0.SetInputConnection(surface_nets_0.GetOutputPort())
+mapper_0.SetLookupTable(lookup_table)
+mapper_0.SetScalarRange(0, lookup_table.GetNumberOfColors())
+
+actor_0 = vtkActor()
+actor_0.SetMapper(mapper_0)
+
+outline_0 = vtkImageDataOutlineFilter()
+outline_0.SetInputData(blob_image)
+
+outline_mapper_0 = vtkPolyDataMapper()
+outline_mapper_0.SetInputConnection(outline_0.GetOutputPort())
+
+outline_actor_0 = vtkActor()
+outline_actor_0.SetMapper(outline_mapper_0)
+outline_actor_0.GetProperty().SetColor(1, 1, 1)
+
+# --- Viewport 1: constrained smoothing ---
+surface_nets_1 = vtkSurfaceNets3D()
+surface_nets_1.SetInputData(blob_image)
+surface_nets_1.GenerateLabels(num_blobs, 1, num_blobs)
+surface_nets_1.GetSmoother().SetNumberOfIterations(50)
+surface_nets_1.GetSmoother().SetRelaxationFactor(0.5)
+surface_nets_1.GetSmoother().SetConstraintDistance(1)
+surface_nets_1.SetOutputMeshTypeToTriangles()
+surface_nets_1.SetOutputStyleToBoundary()
+surface_nets_1.Update()
+
+mapper_1 = vtkPolyDataMapper()
+mapper_1.SetInputConnection(surface_nets_1.GetOutputPort())
+mapper_1.SetLookupTable(lookup_table)
+mapper_1.SetScalarRange(0, lookup_table.GetNumberOfColors())
+
+actor_1 = vtkActor()
+actor_1.SetMapper(mapper_1)
+
+outline_1 = vtkImageDataOutlineFilter()
+outline_1.SetInputData(blob_image)
+
+outline_mapper_1 = vtkPolyDataMapper()
+outline_mapper_1.SetInputConnection(outline_1.GetOutputPort())
+
+outline_actor_1 = vtkActor()
+outline_actor_1.SetMapper(outline_mapper_1)
+outline_actor_1.GetProperty().SetColor(1, 1, 1)
+
+# --- Viewport 2: windowed sinc smoothing ---
+surface_nets_2 = vtkSurfaceNets3D()
+surface_nets_2.SetInputData(blob_image)
+surface_nets_2.GenerateLabels(num_blobs, 1, num_blobs)
+surface_nets_2.SmoothingOff()
+surface_nets_2.SetOutputMeshTypeToQuads()
+
+smoother = vtkWindowedSincPolyDataFilter()
+smoother.SetInputConnection(surface_nets_2.GetOutputPort())
+smoother.SetNumberOfIterations(40)
+smoother.FeatureEdgeSmoothingOff()
+smoother.BoundarySmoothingOff()
+smoother.NonManifoldSmoothingOff()
+smoother.SetWindowFunctionToHamming()
+smoother.Update()
+
+mapper_2 = vtkPolyDataMapper()
+mapper_2.SetInputConnection(smoother.GetOutputPort())
+mapper_2.SetLookupTable(lookup_table)
+mapper_2.SetScalarRange(0, lookup_table.GetNumberOfColors())
+
+actor_2 = vtkActor()
+actor_2.SetMapper(mapper_2)
+
+outline_2 = vtkImageDataOutlineFilter()
+outline_2.SetInputData(blob_image)
+
+outline_mapper_2 = vtkPolyDataMapper()
+outline_mapper_2.SetInputConnection(outline_2.GetOutputPort())
+
+outline_actor_2 = vtkActor()
+outline_actor_2.SetMapper(outline_mapper_2)
+outline_actor_2.GetProperty().SetColor(1, 1, 1)
+
+# Three viewports with shared camera
+renderer_0 = vtkRenderer()
+renderer_0.SetViewport(0, 0, 0.33, 1)
+renderer_0.AddActor(actor_0)
+renderer_0.AddActor(outline_actor_0)
+
+renderer_1 = vtkRenderer()
+renderer_1.SetViewport(0.33, 0, 0.67, 1)
+renderer_1.AddActor(actor_1)
+renderer_1.AddActor(outline_actor_1)
+
+renderer_2 = vtkRenderer()
+renderer_2.SetViewport(0.67, 0, 1, 1)
+renderer_2.AddActor(actor_2)
+renderer_2.AddActor(outline_actor_2)
+
+# Window
+render_window = vtkRenderWindow()
+render_window.SetSize(600, 200)
+render_window.AddRenderer(renderer_0)
+render_window.AddRenderer(renderer_1)
+render_window.AddRenderer(renderer_2)
+render_window.SetWindowName("surface nets 3dsmoothing modes")
+
+# Scene
+renderer_0.ResetCamera()
+renderer_1.SetActiveCamera(renderer_0.GetActiveCamera())
+renderer_2.SetActiveCamera(renderer_0.GetActiveCamera())
+
+# Interactor
+interactor = vtkRenderWindowInteractor()
+interactor.SetRenderWindow(render_window)
+
+interactor.Initialize()
+interactor.Start()

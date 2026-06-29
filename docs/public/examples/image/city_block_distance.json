@@ -1,0 +1,24 @@
+{
+  "title": "city block distance",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example computes the city-block (Manhattan) distance transform of a binary image using vtkImageCityBlockDistance and displays the original and distance map side by side. The left viewport shows the original binary image (white shapes on black); the right shows the distance map where each pixel's brightness indicates its Manhattan distance to the nearest zero-valued (black) pixel — white regions glow brightest at their centers and fade toward their edges. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D images.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts to short — `vtkImageCityBlockDistance` requires short scalar input.\n- [vtkImageCityBlockDistance](https://www.vtk.org/doc/nightly/html/classvtkImageCityBlockDistance.html) computes the city-block distance transform. `SetDimensionality(2)` computes the 2D distance.\n- [vtkImageShiftScale](https://www.vtk.org/doc/nightly/html/classvtkImageShiftScale.html) normalizes the distance values to [0, 255] for visible display.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkPNMReader](https://www.vtk.org/doc/nightly/html/classvtkPNMReader.html) reads the `binary.pgm` binary image.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageCityBlockDistance",
+    "vtkImageShiftScale",
+    "vtkInteractorStyleImage",
+    "vtkPNMReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/binary.pgm"
+  ],
+  "py_filename": "city_block_distance.py",
+  "image": "city_block_distance.png",
+  "metadata_filename": "city_block_distance.json",
+  "topology": "standard"
+}

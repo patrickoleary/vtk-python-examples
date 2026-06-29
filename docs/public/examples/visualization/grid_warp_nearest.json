@@ -1,0 +1,31 @@
+{
+  "title": "grid warp nearest",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nDemonstrate 2D image warping with nearest neighbor interpolation using vtkThinPlateSplineTransform, vtkTransformToGrid, and vtkGridTransform.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkBMPReader](https://www.vtk.org/doc/nightly/html/classvtkBMPReader.html) — bmp reader.\n- [vtkGridTransform](https://www.vtk.org/doc/nightly/html/classvtkGridTransform.html) — grid transform.\n- [vtkImageBlend](https://www.vtk.org/doc/nightly/html/classvtkImageBlend.html) — image blend.\n- [vtkImageGridSource](https://www.vtk.org/doc/nightly/html/classvtkImageGridSource.html) — image grid source.\n- [vtkImageMapToColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToColors.html) — image map to colors.\n- [vtkImageReslice](https://www.vtk.org/doc/nightly/html/classvtkImageReslice.html) — image reslice.\n- [vtkImageSlice](https://www.vtk.org/doc/nightly/html/classvtkImageSlice.html) — image slice.\n- [vtkImageSliceMapper](https://www.vtk.org/doc/nightly/html/classvtkImageSliceMapper.html) — image slice mapper.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) — interactor style image.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkThinPlateSplineTransform](https://www.vtk.org/doc/nightly/html/classvtkThinPlateSplineTransform.html) — thin plate spline transform.\n- [vtkTransformToGrid](https://www.vtk.org/doc/nightly/html/classvtkTransformToGrid.html) — transform to grid.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkBMPReader",
+    "vtkGridTransform",
+    "vtkImageBlend",
+    "vtkImageGridSource",
+    "vtkImageMapToColors",
+    "vtkImageReslice",
+    "vtkImageSlice",
+    "vtkImageSliceMapper",
+    "vtkInteractorStyleImage",
+    "vtkLookupTable",
+    "vtkPoints",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkThinPlateSplineTransform",
+    "vtkTransformToGrid"
+  ],
+  "data_files": [
+    "data/masonry.bmp"
+  ],
+  "py_filename": "grid_warp_nearest.py",
+  "image": "grid_warp_nearest.png",
+  "metadata_filename": "grid_warp_nearest.json",
+  "topology": "standard"
+}

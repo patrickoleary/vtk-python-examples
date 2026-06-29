@@ -1,0 +1,27 @@
+{
+  "title": "ideal high pass",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example compares ideal and Butterworth high-pass filters in the frequency domain. The left viewport shows the ideal high-pass result (with ringing due to the abrupt cutoff); the right shows the Butterworth result (gradual attenuation, less ringing). The Butterworth filter attenuates frequencies with the function `out(i,j) = 1 / (1 + pow(CutOff/Freq(i,j), 2*Order))`. It follows the VTK pipeline structure:\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D images.\n- [vtkImageButterworthHighPass](https://www.vtk.org/doc/nightly/html/classvtkImageButterworthHighPass.html) applies a gradual high-pass filter that avoids ringing.\n- [vtkImageExtractComponents](https://www.vtk.org/doc/nightly/html/classvtkImageExtractComponents.html) extracts the real component from the complex output.\n- [vtkImageFFT](https://www.vtk.org/doc/nightly/html/classvtkImageFFT.html) transforms the image to the frequency domain.\n- [vtkImageIdealHighPass](https://www.vtk.org/doc/nightly/html/classvtkImageIdealHighPass.html) applies a sharp cutoff high-pass filter. The abrupt transition causes ringing artifacts.\n- [vtkImageMapToWindowLevelColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToWindowLevelColors.html) maps scalar values to grayscale via window/level settings.\n- [vtkImageRFFT](https://www.vtk.org/doc/nightly/html/classvtkImageRFFT.html) transforms back to the spatial domain.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) reads the `fullhead15.png` image.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageButterworthHighPass",
+    "vtkImageExtractComponents",
+    "vtkImageFFT",
+    "vtkImageIdealHighPass",
+    "vtkImageMapToWindowLevelColors",
+    "vtkImageRFFT",
+    "vtkInteractorStyleImage",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/fullhead15.png"
+  ],
+  "py_filename": "ideal_high_pass.py",
+  "image": "ideal_high_pass.png",
+  "metadata_filename": "ideal_high_pass.json",
+  "topology": "standard"
+}

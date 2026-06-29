@@ -1,0 +1,21 @@
+{
+  "title": "scatter plot matrix vehicles",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate a scatter plot matrix with vehicle data from CSV.\n\n**dataset → input → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkDelimitedTextReader](https://www.vtk.org/doc/nightly/html/classvtkDelimitedTextReader.html) — delimited text reader.\n- [vtkScatterPlotMatrix](https://www.vtk.org/doc/nightly/html/classvtkScatterPlotMatrix.html) — scatter plot matrix.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkContextActor",
+    "vtkDelimitedTextReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkScatterPlotMatrix"
+  ],
+  "data_files": [
+    "data/vehicle_data.csv"
+  ],
+  "py_filename": "scatter_plot_matrix_vehicles.py",
+  "image": "scatter_plot_matrix_vehicles.png",
+  "metadata_filename": "scatter_plot_matrix_vehicles.json",
+  "topology": "chart"
+}

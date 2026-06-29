@@ -1,0 +1,23 @@
+{
+  "title": "write legacy unstructuredgrid",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nThis example builds a hexahedron cell, writes it to a VTK legacy unstructured grid (.vtk) file, reads it back, and renders the result using the standard VTK pipeline.\n\n**dataset → input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene with front and back face colors.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) maps the unstructured grid to graphics primitives.\n- [vtkHexahedron](https://www.vtk.org/doc/nightly/html/classvtkHexahedron.html) defines a linear hexahedral cell by referencing the point IDs.\n- [vtkProperty](https://www.vtk.org/doc/nightly/html/classvtkProperty.html) defines surface appearance (color, lighting, representation).\n- [vtkUnstructuredGrid](https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGrid.html) assembles the points and cell into an unstructured grid dataset.\n- [vtkUnstructuredGridReader](https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGridReader.html) reads the written file back, verifying the round-trip.\n- [vtkUnstructuredGridWriter](https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGridWriter.html) writes the unstructured grid to a VTK legacy (.vtk) file. `SetFileName()` specifies the output path.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene. `ResetCamera()` frames the data.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDataSetMapper",
+    "vtkHexahedron",
+    "vtkProperty",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkUnstructuredGrid",
+    "vtkUnstructuredGridReader",
+    "vtkUnstructuredGridWriter"
+  ],
+  "data_files": null,
+  "py_filename": "write_legacy_unstructuredgrid.py",
+  "image": "write_legacy_unstructuredgrid.png",
+  "metadata_filename": "write_legacy_unstructuredgrid.json",
+  "topology": "standard"
+}

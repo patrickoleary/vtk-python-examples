@@ -1,0 +1,31 @@
+{
+  "title": "network views",
+  "source_type": "examples",
+  "tag": "infovis",
+  "explanation": "### Description\n\nDemonstrate network hierarchy tree ring with graph overlay using explicit pipeline.\n\n**dataset → input → filter → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkAreaLayout](https://www.vtk.org/doc/nightly/html/classvtkAreaLayout.html) — area layout filter.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) — graph layout filter.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) — converts graph to polydata.\n- [vtkLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkLabeledDataMapper.html) — labeled data mapper.\n- [vtkNetworkHierarchy](https://www.vtk.org/doc/nightly/html/classvtkNetworkHierarchy.html) — network hierarchy.\n- [vtkSQLDatabaseTableSource](https://www.vtk.org/doc/nightly/html/classvtkSQLDatabaseTableSource.html) — sql database table source.\n- [vtkSquarifyLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkSquarifyLayoutStrategy.html) — squarify layout strategy.\n- [vtkTableToGraph](https://www.vtk.org/doc/nightly/html/classvtkTableToGraph.html) — table to graph.\n- [vtkTreeRingToPolyData](https://www.vtk.org/doc/nightly/html/classvtkTreeRingToPolyData.html) — converts tree ring to polydata.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkActor2D",
+    "vtkAreaLayout",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkLabeledDataMapper",
+    "vtkNetworkHierarchy",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSQLDatabaseTableSource",
+    "vtkSimple2DLayoutStrategy",
+    "vtkSquarifyLayoutStrategy",
+    "vtkTableToGraph",
+    "vtkTreeRingToPolyData"
+  ],
+  "data_files": [
+    "data/ports_protocols.db"
+  ],
+  "py_filename": "network_views.py",
+  "image": "network_views.png",
+  "metadata_filename": "network_views.json",
+  "topology": "graph"
+}

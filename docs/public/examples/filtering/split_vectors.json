@@ -1,0 +1,30 @@
+{
+  "title": "split vectors",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nSplit PLOT3D velocity vectors into components, contour each, merge them back, and trace a ribbon streamline using vtkSplitField and vtkMergeFields.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkAssignAttribute](https://www.vtk.org/doc/nightly/html/classvtkAssignAttribute.html) — assign attribute.\n- [vtkContourFilter](https://www.vtk.org/doc/nightly/html/classvtkContourFilter.html) — extracts iso-surfaces at specified scalar values.\n- [vtkMergeFields](https://www.vtk.org/doc/nightly/html/classvtkMergeFields.html) — merge fields.\n- [vtkMultiBlockPLOT3DReader](https://www.vtk.org/doc/nightly/html/classvtkMultiBlockPLOT3DReader.html) — reads PLOT3D structured grid files.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkPolyDataNormals](https://www.vtk.org/doc/nightly/html/classvtkPolyDataNormals.html) — computes surface normals for smooth shading.\n- [vtkRibbonFilter](https://www.vtk.org/doc/nightly/html/classvtkRibbonFilter.html) — ribbon filter.\n- [vtkSplitField](https://www.vtk.org/doc/nightly/html/classvtkSplitField.html) — split field.\n- [vtkStreamTracer](https://www.vtk.org/doc/nightly/html/classvtkStreamTracer.html) — generates streamlines from a vector field.\n- [vtkStructuredGridOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridOutlineFilter.html) — generates an outline of a structured grid.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkAssignAttribute",
+    "vtkContourFilter",
+    "vtkMergeFields",
+    "vtkMultiBlockPLOT3DReader",
+    "vtkPolyDataMapper",
+    "vtkPolyDataNormals",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkRibbonFilter",
+    "vtkSplitField",
+    "vtkStreamTracer",
+    "vtkStructuredGridOutlineFilter"
+  ],
+  "data_files": [
+    "data/combq.bin",
+    "data/combxyz.bin"
+  ],
+  "py_filename": "split_vectors.py",
+  "image": "split_vectors.png",
+  "metadata_filename": "split_vectors.json",
+  "topology": "standard"
+}

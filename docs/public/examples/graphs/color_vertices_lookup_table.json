@@ -1,0 +1,25 @@
+{
+  "title": "color vertices lookup table",
+  "source_type": "examples",
+  "tag": "graphs",
+  "explanation": "### Description\n\nThis example colors vertices of a directed graph using a lookup table. Three vertices are positioned explicitly along the x-axis and each is assigned an integer color index mapped to red, white, or green via a three-entry lookup table. The mapper uses point field data coloring to apply the lookup table.\n\n**dataset → input → layout → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) passes through pre-set vertex positions.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) converts graph to polydata.\n- [vtkIntArray](https://www.vtk.org/doc/nightly/html/classvtkIntArray.html) stores the per-vertex color index.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) maps integer indices to colors.\n- [vtkMutableDirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableDirectedGraph.html) builds the directed graph.\n- [vtkPassThroughLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkPassThroughLayoutStrategy.html) preserves explicit vertex positions.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) positions vertices explicitly.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps polydata with point field data coloring.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkIntArray",
+    "vtkLookupTable",
+    "vtkMutableDirectedGraph",
+    "vtkPassThroughLayoutStrategy",
+    "vtkPoints",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "color_vertices_lookup_table.py",
+  "image": "color_vertices_lookup_table.png",
+  "metadata_filename": "color_vertices_lookup_table.json",
+  "topology": "graph"
+}

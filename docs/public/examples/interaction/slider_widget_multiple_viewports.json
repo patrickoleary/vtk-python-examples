@@ -1,0 +1,25 @@
+{
+  "title": "slider widget multiple viewports",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkSliderWidget with 2D and 3D representations in multiple viewports.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkAppendPolyData](https://www.vtk.org/doc/nightly/html/classvtkAppendPolyData.html) — append poly data.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) — generates a polygonal cone.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) — places oriented, scaled glyphs at each point.\n- [vtkLODActor](https://www.vtk.org/doc/nightly/html/classvtkLODActor.html) — lod actor.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkSliderRepresentation2D](https://www.vtk.org/doc/nightly/html/classvtkSliderRepresentation2D.html) — slider representation2d.\n- [vtkSliderRepresentation3D](https://www.vtk.org/doc/nightly/html/classvtkSliderRepresentation3D.html) — slider representation3d.\n- [vtkSliderWidget](https://www.vtk.org/doc/nightly/html/classvtkSliderWidget.html) — slider widget.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAppendPolyData",
+    "vtkConeSource",
+    "vtkGlyph3D",
+    "vtkLODActor",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSliderRepresentation2D",
+    "vtkSliderRepresentation3D",
+    "vtkSliderWidget",
+    "vtkSphereSource"
+  ],
+  "data_files": null,
+  "py_filename": "slider_widget_multiple_viewports.py",
+  "image": "slider_widget_multiple_viewports.png",
+  "metadata_filename": "slider_widget_multiple_viewports.json",
+  "topology": "standard"
+}

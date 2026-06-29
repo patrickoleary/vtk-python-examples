@@ -1,0 +1,21 @@
+{
+  "title": "hsi to rgb",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nRound-trip RGB to HSI and back to RGB conversion on a canvas image.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageCanvasSource2D](https://www.vtk.org/doc/nightly/html/classvtkImageCanvasSource2D.html) — image canvas source2d.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) — image cast.\n- [vtkImageHSIToRGB](https://www.vtk.org/doc/nightly/html/classvtkImageHSIToRGB.html) — image hsi to rgb.\n- [vtkImageRGBToHSI](https://www.vtk.org/doc/nightly/html/classvtkImageRGBToHSI.html) — image rgb to hsi.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCanvasSource2D",
+    "vtkImageCast",
+    "vtkImageHSIToRGB",
+    "vtkImageRGBToHSI",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "hsi_to_rgb.py",
+  "image": "hsi_to_rgb.png",
+  "metadata_filename": "hsi_to_rgb.json",
+  "topology": "standard"
+}

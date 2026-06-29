@@ -1,0 +1,29 @@
+{
+  "title": "city gml reader",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nRead a CityGML file and render buildings with textures.\n\n**input → dataset → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCityGMLReader](https://www.vtk.org/doc/nightly/html/classvtkCityGMLReader.html) — city gml reader.\n- [vtkJPEGReader](https://www.vtk.org/doc/nightly/html/classvtkJPEGReader.html) — jpeg reader.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkTexture](https://www.vtk.org/doc/nightly/html/classvtkTexture.html) — applies a texture image to geometry.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCityGMLReader",
+    "vtkJPEGReader",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTexture"
+  ],
+  "data_files": [
+    "data/Part-4-Buildings-V4-one.gml",
+    "data/Textures/Kirchenfenster-V2.jpg",
+    "data/Textures/Roofing_Slate_Dark.jpg",
+    "data/Textures/Roofing_Slate_Rounded.jpg",
+    "data/Textures/Stone_Sandstone_Ashlar_Light.jpg",
+    "data/Textures/Stone_Sandstone_Ashlar_Light1.jpg",
+    "data/Textures/Wood_Cherry_Chapel.jpg"
+  ],
+  "py_filename": "city_gml_reader.py",
+  "image": "city_gml_reader.png",
+  "metadata_filename": "city_gml_reader.json",
+  "topology": "standard"
+}

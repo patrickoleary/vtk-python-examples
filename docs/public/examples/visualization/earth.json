@@ -1,0 +1,24 @@
+{
+  "title": "earth",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nDemonstrate vtkEarthSource and vtkTexturedSphereSource with an earth texture map overlay.\n\n**input → dataset → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkEarthSource](https://www.vtk.org/doc/nightly/html/classvtkEarthSource.html) — earth source.\n- [vtkPNMReader](https://www.vtk.org/doc/nightly/html/classvtkPNMReader.html) — pnm reader.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkTexture](https://www.vtk.org/doc/nightly/html/classvtkTexture.html) — applies a texture image to geometry.\n- [vtkTexturedSphereSource](https://www.vtk.org/doc/nightly/html/classvtkTexturedSphereSource.html) — textured sphere source.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkEarthSource",
+    "vtkPNMReader",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTexture",
+    "vtkTexturedSphereSource"
+  ],
+  "data_files": [
+    "data/earth.ppm"
+  ],
+  "py_filename": "earth.py",
+  "image": "earth.png",
+  "metadata_filename": "earth.json",
+  "topology": "standard"
+}

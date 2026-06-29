@@ -1,0 +1,23 @@
+{
+  "title": "vtkm warp scalar",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkmWarpScalar with three modes: XY plane, data normal, and custom normal.\n\n**dataset → input → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkDataObject](https://www.vtk.org/doc/nightly/html/classvtkDataObject.html) — provides field association constants for array processing.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) — maps any dataset type to graphics primitives.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkRTAnalyticSource](https://www.vtk.org/doc/nightly/html/classvtkRTAnalyticSource.html) — generates a synthetic wavelet image volume.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkmWarpScalar](https://www.vtk.org/doc/nightly/html/classvtkmWarpScalar.html) — m warp scalar.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDataObject",
+    "vtkDataSetMapper",
+    "vtkFloatArray",
+    "vtkRTAnalyticSource",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkmWarpScalar"
+  ],
+  "data_files": null,
+  "py_filename": "vtkm_warp_scalar.py",
+  "image": "vtkm_warp_scalar.png",
+  "metadata_filename": "vtkm_warp_scalar.json",
+  "topology": "standard"
+}

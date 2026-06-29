@@ -1,0 +1,20 @@
+{
+  "title": "warp lens",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nThis example demonstrates vtkWarpLens to apply barrel/pincushion lens distortion to a regular planar grid.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkPlaneSource](https://www.vtk.org/doc/nightly/html/classvtkPlaneSource.html) generates the regular planar grid.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the warped grid to graphics primitives.\n- [vtkWarpLens](https://www.vtk.org/doc/nightly/html/classvtkWarpLens.html) deforms geometry according to a lens distortion model (radial and tangential). `SetK1()` and `SetK2()` control radial distortion.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkPlaneSource",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkWarpLens"
+  ],
+  "data_files": null,
+  "py_filename": "warp_lens.py",
+  "image": "warp_lens.png",
+  "metadata_filename": "warp_lens.json",
+  "topology": "standard"
+}

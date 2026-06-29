@@ -1,0 +1,21 @@
+{
+  "title": "perlin noise data model",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nDemonstrate a three-dimensional Perlin noise pattern.\n\n**dataset → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkContourFilter](https://www.vtk.org/doc/nightly/html/classvtkContourFilter.html) — extracts iso-surfaces at specified scalar values.\n- [vtkPerlinNoise](https://www.vtk.org/doc/nightly/html/classvtkPerlinNoise.html) — perlin noise.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkSampleFunction](https://www.vtk.org/doc/nightly/html/classvtkSampleFunction.html) — evaluates an implicit function on a regular grid.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkContourFilter",
+    "vtkPerlinNoise",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSampleFunction"
+  ],
+  "data_files": null,
+  "py_filename": "perlin_noise_data_model.py",
+  "image": "perlin_noise_data_model.png",
+  "metadata_filename": "perlin_noise_data_model.json",
+  "topology": "standard"
+}

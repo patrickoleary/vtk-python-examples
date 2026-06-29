@@ -1,0 +1,24 @@
+{
+  "title": "oriented cylinder",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nThis example orients a cylinder so it spans from one random 3D point to another, with spheres marking each endpoint. It follows the VTK pipeline structure:\n\n**dataset → input → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkCylinderSource](https://www.vtk.org/doc/nightly/html/classvtkCylinderSource.html) generates a cylinder whose height vector is +y by default.\n- [vtkMath](https://www.vtk.org/doc/nightly/html/classvtkMath.html) provides mathematical utility functions.\n- [vtkMatrix4x4](https://www.vtk.org/doc/nightly/html/classvtkMatrix4x4.html) provides matrix4x4 functionality.\n- [vtkMinimalStandardRandomSequence](https://www.vtk.org/doc/nightly/html/classvtkMinimalStandardRandomSequence.html) generates reproducible random start and end points.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps each element to graphics primitives.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) marks the start (yellow) and end (magenta) points.\n- [vtkTransform](https://www.vtk.org/doc/nightly/html/classvtkTransform.html) combines translation, rotation (via the direction cosine matrix), a −90° z-rotation to swap the cylinder's +y height axis to +x, scaling to match the distance, and a half-unit y-shift so the base sits at the start point.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene with a dark blue background.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCylinderSource",
+    "vtkMath",
+    "vtkMatrix4x4",
+    "vtkMinimalStandardRandomSequence",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkTransform"
+  ],
+  "data_files": null,
+  "py_filename": "oriented_cylinder.py",
+  "image": "oriented_cylinder.png",
+  "metadata_filename": "oriented_cylinder.json",
+  "topology": "standard"
+}

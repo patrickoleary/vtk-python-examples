@@ -1,0 +1,22 @@
+{
+  "title": "read gltf",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nThis example reads a glTF 2.0 file using vtkGLTFReader and display the resulting multi-block dataset as a surface.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkCompositeDataGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkCompositeDataGeometryFilter.html) extracts geometry from composite (multi-block) data.\n- [vtkGLTFReader](https://www.vtk.org/doc/nightly/html/classvtkGLTFReader.html) reads glTF 2.0 scene files.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps polygon data to graphics primitives.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCompositeDataGeometryFilter",
+    "vtkGLTFReader",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/ReadSTLWriteGLTF.gltf"
+  ],
+  "py_filename": "read_gltf.py",
+  "image": "read_gltf.png",
+  "metadata_filename": "read_gltf.json",
+  "topology": "standard"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "sinusoid source",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example generates and displays a sinusoidal pattern image using vtkImageSinusoidSource. The source produces a 256×256 double image with a diagonal wave pattern that is cast to unsigned char for display. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays the 2D image.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts the double data to unsigned char for display.\n- [vtkImageSinusoidSource](https://www.vtk.org/doc/nightly/html/classvtkImageSinusoidSource.html) generates a procedural sinusoidal image. `SetDirection()` controls the wave orientation, `SetPeriod()` the wavelength, and `SetAmplitude()` the intensity range.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene with `ParallelProjectionOn()` for correct 2D viewing.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageSinusoidSource",
+    "vtkInteractorStyleImage",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "sinusoid_source.py",
+  "image": "sinusoid_source.png",
+  "metadata_filename": "sinusoid_source.json",
+  "topology": "standard"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "normalize",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example normalizes an RGB image so that each pixel's color vector has unit magnitude using vtkImageNormalize. The left viewport shows the original image with four colored rectangles of varying brightness; the right shows the normalized result where all regions appear at similar brightness but the color direction (hue) is preserved. For example, a dim dark-red block and a bright red block both become the same saturated red after normalization. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D images.\n- [vtkImageCanvasSource2D](https://www.vtk.org/doc/nightly/html/classvtkImageCanvasSource2D.html) creates a 256×256 RGB canvas with four colored rectangles at different brightness levels.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts to float before normalization so fractional results are preserved, then back to unsigned char for display.\n- [vtkImageMathematics](https://www.vtk.org/doc/nightly/html/classvtkImageMathematics.html) scales the normalized [0..1] components back to [0..255] for unsigned char display.\n- [vtkImageNormalize](https://www.vtk.org/doc/nightly/html/classvtkImageNormalize.html) scales each pixel's RGB vector to unit magnitude. This equalizes brightness across all pixels while preserving their color direction.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCanvasSource2D",
+    "vtkImageCast",
+    "vtkImageMathematics",
+    "vtkImageNormalize",
+    "vtkInteractorStyleImage",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "normalize.py",
+  "image": "normalize.png",
+  "metadata_filename": "normalize.json",
+  "topology": "standard"
+}

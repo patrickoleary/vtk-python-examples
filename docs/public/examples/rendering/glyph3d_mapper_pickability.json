@@ -1,0 +1,23 @@
+{
+  "title": "glyph3d mapper pickability",
+  "source_type": "examples",
+  "tag": "rendering",
+  "explanation": "### Description\n\nDemonstrate vtkGlyph3DMapper block pickability with vtkCompositeDataDisplayAttributes.\n\n**dataset → input → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCompositeDataDisplayAttributes](https://www.vtk.org/doc/nightly/html/classvtkCompositeDataDisplayAttributes.html) — composite data display attributes.\n- [vtkGlyph3DMapper](https://www.vtk.org/doc/nightly/html/classvtkGlyph3DMapper.html) — glyph3d mapper.\n- [vtkMultiBlockDataSet](https://www.vtk.org/doc/nightly/html/classvtkMultiBlockDataSet.html) — groups multiple datasets into a composite structure.\n- [vtkPlaneSource](https://www.vtk.org/doc/nightly/html/classvtkPlaneSource.html) — generates a rectangular plane.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) — represents polygonal geometry.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCompositeDataDisplayAttributes",
+    "vtkGlyph3DMapper",
+    "vtkMultiBlockDataSet",
+    "vtkPlaneSource",
+    "vtkPolyData",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource"
+  ],
+  "data_files": null,
+  "py_filename": "glyph3d_mapper_pickability.py",
+  "image": "glyph3d_mapper_pickability.png",
+  "metadata_filename": "glyph3d_mapper_pickability.json",
+  "topology": "standard"
+}

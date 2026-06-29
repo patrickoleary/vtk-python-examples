@@ -1,0 +1,24 @@
+{
+  "title": "box plot michelson morley",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate a box plot with Michelson-Morley experiment data using vtkComputeQuartiles.\n\n**dataset → filter → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChartBox](https://www.vtk.org/doc/nightly/html/classvtkChartBox.html) — chart box.\n- [vtkComputeQuartiles](https://www.vtk.org/doc/nightly/html/classvtkComputeQuartiles.html) — compute quartiles.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkIntArray](https://www.vtk.org/doc/nightly/html/classvtkIntArray.html) — int array.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkPlotBox](https://www.vtk.org/doc/nightly/html/classvtkPlotBox.html) — plot box.\n- [vtkStringArray](https://www.vtk.org/doc/nightly/html/classvtkStringArray.html) — string array.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) — table.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartBox",
+    "vtkComputeQuartiles",
+    "vtkContextActor",
+    "vtkIntArray",
+    "vtkLookupTable",
+    "vtkPlotBox",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStringArray",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "box_plot_michelson_morley.py",
+  "image": "box_plot_michelson_morley.png",
+  "metadata_filename": "box_plot_michelson_morley.json",
+  "topology": "chart"
+}

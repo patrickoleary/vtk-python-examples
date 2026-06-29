@@ -1,0 +1,21 @@
+{
+  "title": "parallel coordinates",
+  "source_type": "examples",
+  "tag": "charting",
+  "explanation": "### Description\n\nThis example parallels coordinates plot of multi-dimensional car attribute data. Each vertical axis represents a different attribute (horsepower, weight, MPG, cylinders, displacement) and each polyline connecting the axes represents one data sample. Interactive brushing on the axes allows filtering.\n\n**dataset → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChartParallelCoordinates](https://www.vtk.org/doc/nightly/html/classvtkChartParallelCoordinates.html) creates the parallel coordinates chart with interactive axis brushing.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) overlays the chart on the VTK rendering pipeline.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) stores each attribute column.\n- [vtkMinimalStandardRandomSequence](https://www.vtk.org/doc/nightly/html/classvtkMinimalStandardRandomSequence.html) generates reproducible random data.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides named colors.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) stores the multi-dimensional data.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartParallelCoordinates",
+    "vtkContextActor",
+    "vtkFloatArray",
+    "vtkMinimalStandardRandomSequence",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "parallel_coordinates.py",
+  "image": "parallel_coordinates.png",
+  "metadata_filename": "parallel_coordinates.json",
+  "topology": "chart"
+}

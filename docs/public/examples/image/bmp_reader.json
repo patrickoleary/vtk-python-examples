@@ -1,0 +1,21 @@
+{
+  "title": "bmp reader",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nRead an 8-bit BMP file, map colors with lookup table, and display with vtkImageActor.\n\n**input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkBMPReader](https://www.vtk.org/doc/nightly/html/classvtkBMPReader.html) — bmp reader.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageMapToColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToColors.html) — image map to colors.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkBMPReader",
+    "vtkImageActor",
+    "vtkImageMapToColors",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/masonry.bmp"
+  ],
+  "py_filename": "bmp_reader.py",
+  "image": "bmp_reader.png",
+  "metadata_filename": "bmp_reader.json",
+  "topology": "standard"
+}

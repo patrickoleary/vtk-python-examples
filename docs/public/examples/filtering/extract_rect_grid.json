@@ -1,0 +1,24 @@
+{
+  "title": "extract rect grid",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkExtractRectilinearGrid extracting a subregion from a rectilinear grid with sample rate, rendered as a triangulated surface.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkDataSetSurfaceFilter](https://www.vtk.org/doc/nightly/html/classvtkDataSetSurfaceFilter.html) — data set surface filter.\n- [vtkExtractRectilinearGrid](https://www.vtk.org/doc/nightly/html/classvtkExtractRectilinearGrid.html) — extract rectilinear grid.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkRectilinearGridReader](https://www.vtk.org/doc/nightly/html/classvtkRectilinearGridReader.html) — rectilinear grid reader.\n- [vtkTriangleFilter](https://www.vtk.org/doc/nightly/html/classvtkTriangleFilter.html) — converts polygons into triangles.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDataSetSurfaceFilter",
+    "vtkExtractRectilinearGrid",
+    "vtkPolyDataMapper",
+    "vtkRectilinearGridReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTriangleFilter"
+  ],
+  "data_files": [
+    "data/RectGrid2.vtk"
+  ],
+  "py_filename": "extract_rect_grid.py",
+  "image": "extract_rect_grid.png",
+  "metadata_filename": "extract_rect_grid.json",
+  "topology": "standard"
+}

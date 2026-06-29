@@ -1,0 +1,22 @@
+{
+  "title": "triangle corner vertices",
+  "source_type": "examples",
+  "tag": "mesh",
+  "explanation": "### Description\n\nThis example creates vertex cells at triangle corner positions, write to a .vtp file, and render.\n\n**dataset → input → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkCellArray](https://www.vtk.org/doc/nightly/html/classvtkCellArray.html) creates individual vertex cells at each corner.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) defines the three corner positions.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) stores the vertex geometry.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the vertex data to graphics primitives.\n- [vtkXMLPolyDataWriter](https://www.vtk.org/doc/nightly/html/classvtkXMLPolyDataWriter.html) writes the vertices to a `.vtp` file.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCellArray",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkXMLPolyDataWriter"
+  ],
+  "data_files": null,
+  "py_filename": "triangle_corner_vertices.py",
+  "image": "triangle_corner_vertices.png",
+  "metadata_filename": "triangle_corner_vertices.json",
+  "topology": "standard"
+}

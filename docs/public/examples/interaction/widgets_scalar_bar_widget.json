@@ -1,0 +1,25 @@
+{
+  "title": "widgets scalar bar widget",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkScalarBarWidget with PLOT3D data and interactive scalar bar repositioning.\n\n**input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkMultiBlockPLOT3DReader](https://www.vtk.org/doc/nightly/html/classvtkMultiBlockPLOT3DReader.html) — reads PLOT3D structured grid files.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkScalarBarActor](https://www.vtk.org/doc/nightly/html/classvtkScalarBarActor.html) — scalar bar actor.\n- [vtkScalarBarWidget](https://www.vtk.org/doc/nightly/html/classvtkScalarBarWidget.html) — scalar bar widget.\n- [vtkStructuredGridGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridGeometryFilter.html) — structured grid geometry filter.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkMultiBlockPLOT3DReader",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkScalarBarActor",
+    "vtkScalarBarWidget",
+    "vtkStructuredGridGeometryFilter"
+  ],
+  "data_files": [
+    "data/combq.bin",
+    "data/combxyz.bin"
+  ],
+  "py_filename": "widgets_scalar_bar_widget.py",
+  "image": "widgets_scalar_bar_widget.png",
+  "metadata_filename": "widgets_scalar_bar_widget.json",
+  "topology": "standard"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "large image gradient background",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nTest vtkRenderLargeImage with a renderer that uses a gradient background, displaying the magnified result using vtkImageSliceMapper.\n\n**dataset → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtk3DSImporter](https://www.vtk.org/doc/nightly/html/classvtk3DSImporter.html) — 3ds importer.\n- [vtkImageSlice](https://www.vtk.org/doc/nightly/html/classvtkImageSlice.html) — image slice.\n- [vtkImageSliceMapper](https://www.vtk.org/doc/nightly/html/classvtkImageSliceMapper.html) — image slice mapper.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) — interactor style image.\n- [vtkRenderLargeImage](https://www.vtk.org/doc/nightly/html/classvtkRenderLargeImage.html) — render large image.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtk3DSImporter",
+    "vtkImageSlice",
+    "vtkImageSliceMapper",
+    "vtkInteractorStyleImage",
+    "vtkRenderLargeImage",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/iflamigm.3ds"
+  ],
+  "py_filename": "large_image_gradient_background.py",
+  "image": "large_image_gradient_background.png",
+  "metadata_filename": "large_image_gradient_background.json",
+  "topology": "standard"
+}

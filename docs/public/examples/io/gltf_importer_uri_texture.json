@@ -1,0 +1,24 @@
+{
+  "title": "gltf importer uri texture",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nImport a glTF file with URI-referenced textures (Lantern) and render.\n\n**input → renderer → infrastructure → output**\n\n- [vtkGLTFImporter](https://www.vtk.org/doc/nightly/html/classvtkGLTFImporter.html) — gltf importer.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkGLTFImporter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/glTF/Lantern/Lantern.gltf",
+    "data/glTF/Lantern/Lantern.bin",
+    "data/glTF/Lantern/Lantern_baseColor.png",
+    "data/glTF/Lantern/Lantern_roughnessMetallic.png",
+    "data/glTF/Lantern/Lantern_normal.png",
+    "data/glTF/Lantern/Lantern_emissive.png"
+  ],
+  "py_filename": "gltf_importer_uri_texture.py",
+  "image": "gltf_importer_uri_texture.png",
+  "metadata_filename": "gltf_importer_uri_texture.json",
+  "topology": "standard"
+}

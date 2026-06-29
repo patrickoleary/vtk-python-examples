@@ -1,0 +1,27 @@
+{
+  "title": "graph layout",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nLayout a simple graph in 2D and 3D using vtkGraphLayoutFilter, displaying edges as tubes and vertices as sphere glyphs.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkAppendPolyData](https://www.vtk.org/doc/nightly/html/classvtkAppendPolyData.html) — append poly data.\n- [vtkCellArray](https://www.vtk.org/doc/nightly/html/classvtkCellArray.html) — cell array.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) — places oriented, scaled glyphs at each point.\n- [vtkGraphLayoutFilter](https://www.vtk.org/doc/nightly/html/classvtkGraphLayoutFilter.html) — graph layout filter.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) — named colors.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) — represents polygonal geometry.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkTubeFilter](https://www.vtk.org/doc/nightly/html/classvtkTubeFilter.html) — generates tubes around lines with optional radius variation.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkAppendPolyData",
+    "vtkCellArray",
+    "vtkGlyph3D",
+    "vtkGraphLayoutFilter",
+    "vtkNamedColors",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkTubeFilter"
+  ],
+  "data_files": null,
+  "py_filename": "graph_layout.py",
+  "image": "graph_layout.png",
+  "metadata_filename": "graph_layout.json",
+  "topology": "standard"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "text widget",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nThis example displays a movable text overlay on a sphere using an interactive text widget.\n\n**dataset → input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides named color lookup.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps polygon data to graphics primitives.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) generates the sphere polygon data.\n- [vtkTextActor](https://www.vtk.org/doc/nightly/html/classvtkTextActor.html) renders the text string.\n- [vtkTextRepresentation](https://www.vtk.org/doc/nightly/html/classvtkTextRepresentation.html) controls the position and size of the text widget.\n- [vtkTextWidget](https://www.vtk.org/doc/nightly/html/classvtkTextWidget.html) provides an interactive, repositionable text overlay.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkTextActor",
+    "vtkTextRepresentation",
+    "vtkTextWidget"
+  ],
+  "data_files": null,
+  "py_filename": "text_widget.py",
+  "image": "text_widget.png",
+  "metadata_filename": "text_widget.json",
+  "topology": "standard"
+}

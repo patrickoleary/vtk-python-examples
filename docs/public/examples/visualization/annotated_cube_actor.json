@@ -1,0 +1,17 @@
+{
+  "title": "annotated cube actor",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nThis example creates and labels an annotated cube actor with anatomic orientation labels.\n\n**dataset → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkAnnotatedCubeActor](https://www.vtk.org/doc/nightly/html/classvtkAnnotatedCubeActor.html) creates a cube with text labels on each face.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkAnnotatedCubeActor",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "annotated_cube_actor.py",
+  "image": "annotated_cube_actor.png",
+  "metadata_filename": "annotated_cube_actor.json",
+  "topology": "standard"
+}

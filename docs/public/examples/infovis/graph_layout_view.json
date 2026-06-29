@@ -1,0 +1,30 @@
+{
+  "title": "graph layout view",
+  "source_type": "examples",
+  "tag": "infovis",
+  "explanation": "### Description\n\nDemonstrate vtkGraphLayout with circular layout, vertex/edge coloring and labels.\n\n**dataset → input → filter → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkCircularLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkCircularLayoutStrategy.html) — circular layout strategy.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) — graph layout filter.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) — converts graph to polydata.\n- [vtkIdTypeArray](https://www.vtk.org/doc/nightly/html/classvtkIdTypeArray.html) — id type array.\n- [vtkLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkLabeledDataMapper.html) — labeled data mapper.\n- [vtkStringArray](https://www.vtk.org/doc/nightly/html/classvtkStringArray.html) — string array.\n- [vtkStringToNumeric](https://www.vtk.org/doc/nightly/html/classvtkStringToNumeric.html) — string to numeric.\n- [vtkVertexGlyphFilter](https://www.vtk.org/doc/nightly/html/classvtkVertexGlyphFilter.html) — vertex glyph filter.\n- [vtkXMLTreeReader](https://www.vtk.org/doc/nightly/html/classvtkXMLTreeReader.html) — xml tree reader.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkActor2D",
+    "vtkCircularLayoutStrategy",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkIdTypeArray",
+    "vtkLabeledDataMapper",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStringArray",
+    "vtkStringToNumeric",
+    "vtkVertexGlyphFilter",
+    "vtkXMLTreeReader"
+  ],
+  "data_files": [
+    "data/vtkclasses.xml"
+  ],
+  "py_filename": "graph_layout_view.py",
+  "image": "graph_layout_view.png",
+  "metadata_filename": "graph_layout_view.json",
+  "topology": "graph"
+}

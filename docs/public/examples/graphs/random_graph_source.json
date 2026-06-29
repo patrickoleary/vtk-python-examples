@@ -1,0 +1,22 @@
+{
+  "title": "random graph source",
+  "source_type": "examples",
+  "tag": "graphs",
+  "explanation": "### Description\n\nThis example generates a random graph with vtkRandomGraphSource and displays it using a force-directed layout. The graph has 5 vertices and 4 edges with a fixed seed for reproducibility.\n\n**dataset → input → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkForceDirectedLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkForceDirectedLayoutStrategy.html) computes vertex positions using force simulation.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) applies the layout strategy to the graph.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) converts graph edges to polydata lines.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps edge polydata to graphics primitives.\n- [vtkRandomGraphSource](https://www.vtk.org/doc/nightly/html/classvtkRandomGraphSource.html) generates a random graph with a specified number of vertices and edges.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkForceDirectedLayoutStrategy",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkPolyDataMapper",
+    "vtkRandomGraphSource",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "random_graph_source.py",
+  "image": "random_graph_source.png",
+  "metadata_filename": "random_graph_source.json",
+  "topology": "graph"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "outline filter",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nDemonstrate vtkOutlineFilter with composite dataset input, showing four outline styles: Root, Leafs, RootAndLeafs, and SpecifiedIndex in a four-viewport layout.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkExtractCells](https://www.vtk.org/doc/nightly/html/classvtkExtractCells.html) — extract cells.\n- [vtkMultiBlockDataSet](https://www.vtk.org/doc/nightly/html/classvtkMultiBlockDataSet.html) — groups multiple datasets into a composite structure.\n- [vtkOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkOutlineFilter.html) — generates a bounding box outline of the input data.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkQuadric](https://www.vtk.org/doc/nightly/html/classvtkQuadric.html) — quadric.\n- [vtkSampleFunction](https://www.vtk.org/doc/nightly/html/classvtkSampleFunction.html) — evaluates an implicit function on a regular grid.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkExtractCells",
+    "vtkMultiBlockDataSet",
+    "vtkOutlineFilter",
+    "vtkPolyDataMapper",
+    "vtkQuadric",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSampleFunction",
+    "vtkSphereSource"
+  ],
+  "data_files": null,
+  "py_filename": "outline_filter.py",
+  "image": "outline_filter.png",
+  "metadata_filename": "outline_filter.json",
+  "topology": "standard"
+}

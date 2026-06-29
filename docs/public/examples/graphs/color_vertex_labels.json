@@ -1,0 +1,25 @@
+{
+  "title": "color vertex labels",
+  "source_type": "examples",
+  "tag": "graphs",
+  "explanation": "### Description\n\nThis example colors vertex labels of a directed graph. Each vertex is labelled with its integer ID and the label text is rendered in red using vtkLabeledDataMapper.\n\n**dataset → input → layout → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) computes vertex positions using a layout strategy.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) converts graph edges to polydata lines.\n- [vtkIntArray](https://www.vtk.org/doc/nightly/html/classvtkIntArray.html) stores the per-vertex label values.\n- [vtkLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkLabeledDataMapper.html) renders text labels at point positions.\n- [vtkMutableDirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableDirectedGraph.html) builds the directed graph.\n- [vtkSimple2DLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkSimple2DLayoutStrategy.html) arranges vertices in 2D.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkActor2D",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkIntArray",
+    "vtkLabeledDataMapper",
+    "vtkMutableDirectedGraph",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSimple2DLayoutStrategy"
+  ],
+  "data_files": null,
+  "py_filename": "color_vertex_labels.py",
+  "image": "color_vertex_labels.png",
+  "metadata_filename": "color_vertex_labels.json",
+  "topology": "graph"
+}

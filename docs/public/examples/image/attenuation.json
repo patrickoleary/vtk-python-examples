@@ -1,0 +1,27 @@
+{
+  "title": "attenuation",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example thises MRI image illustrates attenuation that can occur due to sensor position. The artifact is removed by multiplying by an attenuation profile determined manually using vtkSphere and vtkSampleFunction. The left viewport shows the original image; the right shows the corrected result. It follows the VTK pipeline structure:\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D images.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts data to double for arithmetic operations.\n- [vtkImageGaussianSmooth](https://www.vtk.org/doc/nightly/html/classvtkImageGaussianSmooth.html) smooths the image to reduce discrete scalar artifacts.\n- [vtkImageMathematics](https://www.vtk.org/doc/nightly/html/classvtkImageMathematics.html) multiplies the smoothed image with the attenuation profile to correct the artifact.\n- [vtkImageShiftScale](https://www.vtk.org/doc/nightly/html/classvtkImageShiftScale.html) scales the distance field to match the attenuation profile.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkPNMReader](https://www.vtk.org/doc/nightly/html/classvtkPNMReader.html) reads the `AttenuationArtifact.pgm` PGM image.\n- [vtkSampleFunction](https://www.vtk.org/doc/nightly/html/classvtkSampleFunction.html) samples an implicit function over a grid.\n- [vtkSphere](https://www.vtk.org/doc/nightly/html/classvtkSphere.html) and [vtkSampleFunction](https://www.vtk.org/doc/nightly/html/classvtkSampleFunction.html) generate a distance field modeling the sensor sensitivity fall-off.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageGaussianSmooth",
+    "vtkImageMathematics",
+    "vtkImageShiftScale",
+    "vtkInteractorStyleImage",
+    "vtkPNMReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSampleFunction",
+    "vtkSphere"
+  ],
+  "data_files": [
+    "data/AttenuationArtifact.pgm"
+  ],
+  "py_filename": "attenuation.py",
+  "image": "attenuation.png",
+  "metadata_filename": "attenuation.json",
+  "topology": "standard"
+}

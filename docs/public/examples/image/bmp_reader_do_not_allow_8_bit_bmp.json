@@ -1,0 +1,20 @@
+{
+  "title": "bmp reader do not allow 8 bit bmp",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nRead an 8-bit BMP file with Allow8BitBMP off (renders as RGB directly).\n\n**input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkBMPReader](https://www.vtk.org/doc/nightly/html/classvtkBMPReader.html) — bmp reader.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkBMPReader",
+    "vtkImageActor",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/masonry.bmp"
+  ],
+  "py_filename": "bmp_reader_do_not_allow_8_bit_bmp.py",
+  "image": "bmp_reader_do_not_allow_8_bit_bmp.png",
+  "metadata_filename": "bmp_reader_do_not_allow_8_bit_bmp.json",
+  "topology": "standard"
+}

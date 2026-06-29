@@ -1,0 +1,27 @@
+{
+  "title": "icicle view",
+  "source_type": "examples",
+  "tag": "infovis",
+  "explanation": "### Description\n\nDemonstrate icicle (slice-and-dice) tree layout with area coloring and labels.\n\n**dataset → input → filter → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkAreaLayout](https://www.vtk.org/doc/nightly/html/classvtkAreaLayout.html) — area layout filter.\n- [vtkLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkLabeledDataMapper.html) — labeled data mapper.\n- [vtkSliceAndDiceLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkSliceAndDiceLayoutStrategy.html) — slice-and-dice layout strategy.\n- [vtkStringToNumeric](https://www.vtk.org/doc/nightly/html/classvtkStringToNumeric.html) — string to numeric.\n- [vtkTreeMapToPolyData](https://www.vtk.org/doc/nightly/html/classvtkTreeMapToPolyData.html) — converts tree map to polydata.\n- [vtkXMLTreeReader](https://www.vtk.org/doc/nightly/html/classvtkXMLTreeReader.html) — xml tree reader.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkActor2D",
+    "vtkAreaLayout",
+    "vtkLabeledDataMapper",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSliceAndDiceLayoutStrategy",
+    "vtkStringToNumeric",
+    "vtkTreeMapToPolyData",
+    "vtkXMLTreeReader"
+  ],
+  "data_files": [
+    "data/smalltest.xml"
+  ],
+  "py_filename": "icicle_view.py",
+  "image": "icicle_view.png",
+  "metadata_filename": "icicle_view.json",
+  "topology": "graph"
+}

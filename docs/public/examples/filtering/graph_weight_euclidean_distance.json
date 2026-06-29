@@ -1,0 +1,27 @@
+{
+  "title": "graph weight euclidean distance",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkGraphWeightEuclideanDistanceFilter by creating a simple undirected graph with 4 vertices and 3 edges, computing edge weights based on Euclidean distance, and rendering the graph layout.\n\n**dataset → input → filter → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) — graph layout filter.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) — converts graph to polydata.\n- [vtkGraphWeightEuclideanDistanceFilter](https://www.vtk.org/doc/nightly/html/classvtkGraphWeightEuclideanDistanceFilter.html) — graph weight euclidean distance filter.\n- [vtkLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkLabeledDataMapper.html) — labeled data mapper.\n- [vtkMutableUndirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableUndirectedGraph.html) — mutable undirected graph.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkVertexGlyphFilter](https://www.vtk.org/doc/nightly/html/classvtkVertexGlyphFilter.html) — vertex glyph filter.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkActor2D",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkGraphWeightEuclideanDistanceFilter",
+    "vtkLabeledDataMapper",
+    "vtkMutableUndirectedGraph",
+    "vtkPassThroughLayoutStrategy",
+    "vtkPoints",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkVertexGlyphFilter"
+  ],
+  "data_files": null,
+  "py_filename": "graph_weight_euclidean_distance.py",
+  "image": "graph_weight_euclidean_distance.png",
+  "metadata_filename": "graph_weight_euclidean_distance.json",
+  "topology": "graph"
+}

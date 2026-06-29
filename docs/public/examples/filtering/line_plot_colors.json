@@ -1,0 +1,23 @@
+{
+  "title": "line plot colors",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate colored line plots with lookup tables and scalar visibility.\n\n**dataset → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) — chart xy.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkPen](https://www.vtk.org/doc/nightly/html/classvtkPen.html) — pen.\n- [vtkPlotPoints](https://www.vtk.org/doc/nightly/html/classvtkPlotPoints.html) — plot points.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) — table.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartXY",
+    "vtkContextActor",
+    "vtkFloatArray",
+    "vtkLookupTable",
+    "vtkPen",
+    "vtkPlotPoints",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "line_plot_colors.py",
+  "image": "line_plot_colors.png",
+  "metadata_filename": "line_plot_colors.json",
+  "topology": "chart"
+}

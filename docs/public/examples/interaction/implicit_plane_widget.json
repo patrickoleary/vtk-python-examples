@@ -1,0 +1,25 @@
+{
+  "title": "implicit plane widget",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkImplicitPlaneWidget clipping a mace geometry.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkAppendPolyData](https://www.vtk.org/doc/nightly/html/classvtkAppendPolyData.html) — append poly data.\n- [vtkClipPolyData](https://www.vtk.org/doc/nightly/html/classvtkClipPolyData.html) — clips polygonal data with an implicit function.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) — generates a polygonal cone.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) — places oriented, scaled glyphs at each point.\n- [vtkImplicitPlaneWidget](https://www.vtk.org/doc/nightly/html/classvtkImplicitPlaneWidget.html) — implicit plane widget.\n- [vtkLODActor](https://www.vtk.org/doc/nightly/html/classvtkLODActor.html) — lod actor.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) — defines an implicit plane function.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAppendPolyData",
+    "vtkClipPolyData",
+    "vtkConeSource",
+    "vtkGlyph3D",
+    "vtkImplicitPlaneWidget",
+    "vtkLODActor",
+    "vtkPlane",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource"
+  ],
+  "data_files": null,
+  "py_filename": "implicit_plane_widget.py",
+  "image": "implicit_plane_widget.png",
+  "metadata_filename": "implicit_plane_widget.json",
+  "topology": "standard"
+}

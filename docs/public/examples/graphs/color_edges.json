@@ -1,0 +1,24 @@
+{
+  "title": "color edges",
+  "source_type": "examples",
+  "tag": "graphs",
+  "explanation": "### Description\n\nThis example colors edges of a directed graph using a lookup table. Each edge is assigned an integer index that maps to a color in a two-entry lookup table (red and green). The mapper uses cell field data coloring to apply the lookup table to edge lines.\n\n**dataset → input → layout → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) computes vertex positions using a layout strategy.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) converts graph edges to polydata lines.\n- [vtkIntArray](https://www.vtk.org/doc/nightly/html/classvtkIntArray.html) stores the per-edge color index.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) maps integer indices to colors.\n- [vtkMutableDirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableDirectedGraph.html) builds the directed graph.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps edge polydata with cell field data coloring.\n- [vtkSimple2DLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkSimple2DLayoutStrategy.html) arranges vertices in 2D.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkIntArray",
+    "vtkLookupTable",
+    "vtkMutableDirectedGraph",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSimple2DLayoutStrategy"
+  ],
+  "data_files": null,
+  "py_filename": "color_edges.py",
+  "image": "color_edges.png",
+  "metadata_filename": "color_edges.json",
+  "topology": "graph"
+}

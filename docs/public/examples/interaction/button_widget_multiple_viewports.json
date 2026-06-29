@@ -1,0 +1,34 @@
+{
+  "title": "button widget multiple viewports",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate button widgets across multiple viewports with textured and 3D prop representations.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkAppendPolyData](https://www.vtk.org/doc/nightly/html/classvtkAppendPolyData.html) — append poly data.\n- [vtkButtonWidget](https://www.vtk.org/doc/nightly/html/classvtkButtonWidget.html) — button widget.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) — generates a polygonal cone.\n- [vtkEllipticalButtonSource](https://www.vtk.org/doc/nightly/html/classvtkEllipticalButtonSource.html) — elliptical button source.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) — places oriented, scaled glyphs at each point.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkPlatonicSolidSource](https://www.vtk.org/doc/nightly/html/classvtkPlatonicSolidSource.html) — platonic solid source.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkProp3DButtonRepresentation](https://www.vtk.org/doc/nightly/html/classvtkProp3DButtonRepresentation.html) — prop3d button representation.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkTIFFReader](https://www.vtk.org/doc/nightly/html/classvtkTIFFReader.html) — reads TIFF image files.\n- [vtkTexturedButtonRepresentation](https://www.vtk.org/doc/nightly/html/classvtkTexturedButtonRepresentation.html) — textured button representation.\n- [vtkTexturedButtonRepresentation2D](https://www.vtk.org/doc/nightly/html/classvtkTexturedButtonRepresentation2D.html) — textured button representation2d.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkAppendPolyData",
+    "vtkButtonWidget",
+    "vtkConeSource",
+    "vtkEllipticalButtonSource",
+    "vtkGlyph3D",
+    "vtkLookupTable",
+    "vtkPNGReader",
+    "vtkPlatonicSolidSource",
+    "vtkPolyDataMapper",
+    "vtkProp3DButtonRepresentation",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkTIFFReader",
+    "vtkTexturedButtonRepresentation",
+    "vtkTexturedButtonRepresentation2D"
+  ],
+  "data_files": [
+    "data/beach.tif",
+    "data/fran_cut.png"
+  ],
+  "py_filename": "button_widget_multiple_viewports.py",
+  "image": "button_widget_multiple_viewports.png",
+  "metadata_filename": "button_widget_multiple_viewports.json",
+  "topology": "standard"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "gltf importer pbr",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nImport a glTF GLB file (WaterBottle) with PBR materials and render.\n\n**input → renderer → infrastructure → output**\n\n- [vtkGLTFImporter](https://www.vtk.org/doc/nightly/html/classvtkGLTFImporter.html) — gltf importer.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkGLTFImporter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/WaterBottle.glb",
+    "data/glTF/WaterBottle/WaterBottle.glb"
+  ],
+  "py_filename": "gltf_importer_pbr.py",
+  "image": "gltf_importer_pbr.png",
+  "metadata_filename": "gltf_importer_pbr.json",
+  "topology": "standard"
+}

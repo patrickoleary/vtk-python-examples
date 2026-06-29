@@ -1,0 +1,18 @@
+{
+  "title": "polar axes no data",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkPolarAxesActor with no input data (standalone polar axes).\n\n**visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkLight](https://www.vtk.org/doc/nightly/html/classvtkLight.html) — light.\n- [vtkPolarAxesActor](https://www.vtk.org/doc/nightly/html/classvtkPolarAxesActor.html) — polar axes actor.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkLight",
+    "vtkPolarAxesActor",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "polar_axes_no_data.py",
+  "image": "polar_axes_no_data.png",
+  "metadata_filename": "polar_axes_no_data.json",
+  "topology": "standard"
+}

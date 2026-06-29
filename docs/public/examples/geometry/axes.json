@@ -1,0 +1,21 @@
+{
+  "title": "axes",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nThis example renders a sphere alongside a 3D axes actor positioned with a user transform. It follows the standard VTK pipeline structure:\n\n**dataset → input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkAxesActor](https://www.vtk.org/doc/nightly/html/classvtkAxesActor.html) displays labeled X, Y, Z axes. `SetUserTransform()` positions the axes with the transform.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the polygon data to graphics primitives. Connected to the source via `SetInputConnection()`.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) generates sphere polygon data. `SetCenter()` and `SetRadius()` define its position and size.\n- [vtkTransform](https://www.vtk.org/doc/nightly/html/classvtkTransform.html) defines a translation used to offset the axes. `Translate()` shifts the axes along the x-axis.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera. `Azimuth()` and `Elevation()` adjust the viewing angle; `ResetCamera()` frames the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkAxesActor",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkTransform"
+  ],
+  "data_files": null,
+  "py_filename": "axes.py",
+  "image": "axes.png",
+  "metadata_filename": "axes.json",
+  "topology": "standard"
+}

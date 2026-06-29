@@ -1,0 +1,19 @@
+{
+  "title": "spider plot actor",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkSpiderPlotActor with multiple random data arrays and colored plots.\n\n**dataset → visual_asset → renderer → infrastructure → output**\n\n- [vtkDataObject](https://www.vtk.org/doc/nightly/html/classvtkDataObject.html) — provides field association constants for array processing.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkSpiderPlotActor](https://www.vtk.org/doc/nightly/html/classvtkSpiderPlotActor.html) — spider plot actor.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkDataObject",
+    "vtkFloatArray",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSpiderPlotActor"
+  ],
+  "data_files": null,
+  "py_filename": "spider_plot_actor.py",
+  "image": "spider_plot_actor.png",
+  "metadata_filename": "spider_plot_actor.json",
+  "topology": "standard"
+}

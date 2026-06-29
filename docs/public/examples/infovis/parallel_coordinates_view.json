@@ -1,0 +1,20 @@
+{
+  "title": "parallel coordinates view",
+  "source_type": "examples",
+  "tag": "infovis",
+  "explanation": "### Description\n\nDemonstrate parallel coordinates chart with multiple float arrays on a table using vtkChartParallelCoordinates and vtkContextActor.\n\n**dataset → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChartParallelCoordinates](https://www.vtk.org/doc/nightly/html/classvtkChartParallelCoordinates.html) — parallel coordinates chart.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — provides a 2D scene for context items.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) — table data structure for chart input.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartParallelCoordinates",
+    "vtkContextActor",
+    "vtkFloatArray",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "parallel_coordinates_view.py",
+  "image": "parallel_coordinates_view.png",
+  "metadata_filename": "parallel_coordinates_view.json",
+  "topology": "chart"
+}

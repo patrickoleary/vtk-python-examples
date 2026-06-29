@@ -1,0 +1,21 @@
+{
+  "title": "extract polydata geometry",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nThis example demonstrates vtkExtractPolyDataGeometry to extract cells of a sphere that lie inside a plane implicit function, effectively clipping it in half.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkExtractPolyDataGeometry](https://www.vtk.org/doc/nightly/html/classvtkExtractPolyDataGeometry.html) extracts polydata cells inside or outside an implicit function.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) defines the implicit function used for extraction.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the extracted geometry to graphics primitives.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) generates the sphere mesh.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkExtractPolyDataGeometry",
+    "vtkPlane",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource"
+  ],
+  "data_files": null,
+  "py_filename": "extract_polydata_geometry.py",
+  "image": "extract_polydata_geometry.png",
+  "metadata_filename": "extract_polydata_geometry.json",
+  "topology": "standard"
+}

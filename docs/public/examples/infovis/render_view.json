@@ -1,0 +1,22 @@
+{
+  "title": "render view",
+  "source_type": "examples",
+  "tag": "infovis",
+  "explanation": "### Description\n\nDemonstrate sphere and cube surface rendering using explicit pipeline with mappers and actors.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkCubeSource](https://www.vtk.org/doc/nightly/html/classvtkCubeSource.html) — cube source.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polydata to graphics primitives.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkTransform](https://www.vtk.org/doc/nightly/html/classvtkTransform.html) — defines a 4x4 geometric transformation.\n- [vtkTransformFilter](https://www.vtk.org/doc/nightly/html/classvtkTransformFilter.html) — applies a geometric transformation to a dataset.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCubeSource",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkTransform",
+    "vtkTransformFilter"
+  ],
+  "data_files": null,
+  "py_filename": "render_view.py",
+  "image": "render_view.png",
+  "metadata_filename": "render_view.json",
+  "topology": "standard"
+}

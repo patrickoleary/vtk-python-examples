@@ -1,0 +1,22 @@
+{
+  "title": "plot matrix",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate four fixed-size charts arranged in a 2x2 grid within a single scene.\n\n**dataset → plot → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkAxis](https://www.vtk.org/doc/nightly/html/classvtkAxis.html) — axis.\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) — chart xy.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkRectf](https://www.vtk.org/doc/nightly/html/classvtkRectf.html) — rectf.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) — table.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAxis",
+    "vtkChartXY",
+    "vtkContextActor",
+    "vtkFloatArray",
+    "vtkRectf",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "plot_matrix.py",
+  "image": "plot_matrix.png",
+  "metadata_filename": "plot_matrix.json",
+  "topology": "chart"
+}

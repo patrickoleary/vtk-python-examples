@@ -1,0 +1,26 @@
+{
+  "title": "ensight office bin",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nRead EnSight office binary case file, compute streamlines with cone glyphs.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) — generates a polygonal cone.\n- [vtkDataObject](https://www.vtk.org/doc/nightly/html/classvtkDataObject.html) — provides field association constants for array processing.\n- [vtkGenericEnSightReader](https://www.vtk.org/doc/nightly/html/classvtkGenericEnSightReader.html) — generic en sight reader.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) — places oriented, scaled glyphs at each point.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkStreamTracer](https://www.vtk.org/doc/nightly/html/classvtkStreamTracer.html) — generates streamlines from a vector field.\n- [vtkStructuredGridOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridOutlineFilter.html) — generates an outline of a structured grid.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkConeSource",
+    "vtkDataObject",
+    "vtkGenericEnSightReader",
+    "vtkGlyph3D",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStreamTracer",
+    "vtkStructuredGridOutlineFilter"
+  ],
+  "data_files": [
+    "data/EnSight/office_bin.case"
+  ],
+  "py_filename": "ensight_office_bin.py",
+  "image": "ensight_office_bin.png",
+  "metadata_filename": "ensight_office_bin.json",
+  "topology": "standard"
+}

@@ -1,0 +1,25 @@
+{
+  "title": "rainbow",
+  "source_type": "examples",
+  "tag": "rendering",
+  "explanation": "### Description\n\nThis example colours a plane extracted from PLOT3D combustor data using a rainbow lookup table, with a wireframe outline of the structured grid.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) maps scalar values to rainbow colours.\n- [vtkMultiBlockPLOT3DReader](https://www.vtk.org/doc/nightly/html/classvtkMultiBlockPLOT3DReader.html) loads the PLOT3D combustor geometry and solution files.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the extracted plane and outline to graphics primitives.\n- [vtkStructuredGridGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridGeometryFilter.html) extracts a planar slice from the structured grid.\n- [vtkStructuredGridOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridOutlineFilter.html) extracts a wireframe outline of the structured grid.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkLookupTable",
+    "vtkMultiBlockPLOT3DReader",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStructuredGridGeometryFilter",
+    "vtkStructuredGridOutlineFilter"
+  ],
+  "data_files": [
+    "data/combq.bin",
+    "data/combxyz.bin"
+  ],
+  "py_filename": "rainbow.py",
+  "image": "rainbow.png",
+  "metadata_filename": "rainbow.json",
+  "topology": "standard"
+}

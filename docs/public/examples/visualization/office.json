@@ -1,0 +1,26 @@
+{
+  "title": "office",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nThis example visualizes airflow in an office with ventilation and a heat source using streamlines.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkCamera](https://www.vtk.org/doc/nightly/html/classvtkCamera.html) defines the viewpoint and projection.\n- [vtkDataSetReader](https://www.vtk.org/doc/nightly/html/classvtkDataSetReader.html) reads the office CFD structured grid.\n- [vtkPointSource](https://www.vtk.org/doc/nightly/html/classvtkPointSource.html) generates random seed points for streamlines.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps polygon data to graphics primitives.\n- [vtkStreamTracer](https://www.vtk.org/doc/nightly/html/classvtkStreamTracer.html) traces streamlines through the flow field.\n- [vtkStructuredGridGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridGeometryFilter.html) extracts furniture surfaces for context.\n- [vtkStructuredGridOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridOutlineFilter.html) generates a bounding outline.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCamera",
+    "vtkDataSetReader",
+    "vtkPointSource",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStreamTracer",
+    "vtkStructuredGridGeometryFilter",
+    "vtkStructuredGridOutlineFilter"
+  ],
+  "data_files": [
+    "data/office.binary.vtk"
+  ],
+  "py_filename": "office.py",
+  "image": "office.png",
+  "metadata_filename": "office.json",
+  "topology": "standard"
+}

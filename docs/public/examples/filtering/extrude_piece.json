@@ -1,0 +1,23 @@
+{
+  "title": "extrude piece",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkPLinearExtrusionFilter with vtkExtractPolyDataPiece by extruding a disk source, extracting piece 1 of 2, and rendering with a backface property.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCleanPolyData](https://www.vtk.org/doc/nightly/html/classvtkCleanPolyData.html) — merges duplicate points and removes degenerate cells.\n- [vtkDiskSource](https://www.vtk.org/doc/nightly/html/classvtkDiskSource.html) — disk source.\n- [vtkExtractPolyDataPiece](https://www.vtk.org/doc/nightly/html/classvtkExtractPolyDataPiece.html) — extract poly data piece.\n- [vtkPLinearExtrusionFilter](https://www.vtk.org/doc/nightly/html/classvtkPLinearExtrusionFilter.html) — p linear extrusion filter.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkProperty](https://www.vtk.org/doc/nightly/html/classvtkProperty.html) — property.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCleanPolyData",
+    "vtkDiskSource",
+    "vtkExtractPolyDataPiece",
+    "vtkPLinearExtrusionFilter",
+    "vtkPolyDataMapper",
+    "vtkProperty",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "extrude_piece.py",
+  "image": "extrude_piece.png",
+  "metadata_filename": "extrude_piece.json",
+  "topology": "standard"
+}

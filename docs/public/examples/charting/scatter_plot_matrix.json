@@ -1,0 +1,21 @@
+{
+  "title": "scatter plot matrix",
+  "source_type": "examples",
+  "tag": "charting",
+  "explanation": "### Description\n\nThis example nxns scatter plot matrix of four correlated random variables (height, weight, age, income). The diagonal shows histograms, and each off-diagonal cell shows a scatter plot of one variable versus another. This is a standard exploratory data analysis tool for finding pairwise correlations in multivariate data.\n\n**dataset → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) overlays the chart on the VTK rendering pipeline.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) stores each variable column.\n- [vtkMinimalStandardRandomSequence](https://www.vtk.org/doc/nightly/html/classvtkMinimalStandardRandomSequence.html) generates reproducible random data.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides named colors.\n- [vtkScatterPlotMatrix](https://www.vtk.org/doc/nightly/html/classvtkScatterPlotMatrix.html) creates the NxN grid of scatter plots with diagonal histograms.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) stores the multivariate data.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkContextActor",
+    "vtkFloatArray",
+    "vtkMinimalStandardRandomSequence",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkScatterPlotMatrix",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "scatter_plot_matrix.py",
+  "image": "scatter_plot_matrix.png",
+  "metadata_filename": "scatter_plot_matrix.json",
+  "topology": "chart"
+}

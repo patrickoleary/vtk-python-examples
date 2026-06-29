@@ -1,0 +1,22 @@
+{
+  "title": "triangle strip",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nThis example renders a triangle strip in wireframe using vtkTriangleStrip — a composite 2D cell consisting of two adjacent triangles. It follows the standard VTK pipeline structure:\n\n**dataset → input → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns visual properties. `SetRepresentationToWireframe()` shows the triangle edges.\n- [vtkCellArray](https://www.vtk.org/doc/nightly/html/classvtkCellArray.html) stores the strip cell, set via `SetStrips()` on [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html).\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) maps the strip to graphics primitives via `SetInputData()`.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) stores the four vertices.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) represents polygonal geometry.\n- [vtkTriangleStrip](https://www.vtk.org/doc/nightly/html/classvtkTriangleStrip.html) defines the strip cell. With 4 points it produces 2 triangles. Each consecutive triplet of point IDs defines one triangle.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene with a dark green background.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCellArray",
+    "vtkDataSetMapper",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTriangleStrip"
+  ],
+  "data_files": null,
+  "py_filename": "triangle_strip.py",
+  "image": "triangle_strip.png",
+  "metadata_filename": "triangle_strip.json",
+  "topology": "standard"
+}

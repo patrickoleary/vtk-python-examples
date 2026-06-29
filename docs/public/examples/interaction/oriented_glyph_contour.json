@@ -1,0 +1,25 @@
+{
+  "title": "oriented glyph contour",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkContourWidget with oriented glyph representation on a medical image slice.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkBoundedPlanePointPlacer](https://www.vtk.org/doc/nightly/html/classvtkBoundedPlanePointPlacer.html) — bounded plane point placer.\n- [vtkCommand](https://www.vtk.org/doc/nightly/html/classvtkCommand.html) — command.\n- [vtkContourWidget](https://www.vtk.org/doc/nightly/html/classvtkContourWidget.html) — contour widget.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageShiftScale](https://www.vtk.org/doc/nightly/html/classvtkImageShiftScale.html) — image shift scale.\n- [vtkOrientedGlyphContourRepresentation](https://www.vtk.org/doc/nightly/html/classvtkOrientedGlyphContourRepresentation.html) — oriented glyph contour representation.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) — defines an implicit plane function.\n- [vtkVolume16Reader](https://www.vtk.org/doc/nightly/html/classvtkVolume16Reader.html) — volume16reader.\n- [vtkWidgetEvent](https://www.vtk.org/doc/nightly/html/classvtkWidgetEvent.html) — widget event.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkBoundedPlanePointPlacer",
+    "vtkCommand",
+    "vtkContourWidget",
+    "vtkImageActor",
+    "vtkImageShiftScale",
+    "vtkOrientedGlyphContourRepresentation",
+    "vtkPlane",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkVolume16Reader",
+    "vtkWidgetEvent"
+  ],
+  "data_files": null,
+  "py_filename": "oriented_glyph_contour.py",
+  "image": "oriented_glyph_contour.png",
+  "metadata_filename": "oriented_glyph_contour.json",
+  "topology": "standard"
+}

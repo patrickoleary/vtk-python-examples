@@ -1,0 +1,22 @@
+{
+  "title": "construct graph",
+  "source_type": "examples",
+  "tag": "graphs",
+  "explanation": "### Description\n\nThis example constructs a simple undirected graph with two vertices and two parallel edges, then displays it using a force-directed layout. Demonstrates the basic vtkMutableUndirectedGraph API for adding vertices and edges.\n\n**dataset → input → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkForceDirectedLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkForceDirectedLayoutStrategy.html) computes vertex positions using force simulation.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) applies the layout strategy to the graph.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) converts graph edges to polydata lines.\n- [vtkMutableUndirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableUndirectedGraph.html) builds the undirected graph.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps edge polydata to graphics primitives.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkForceDirectedLayoutStrategy",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkMutableUndirectedGraph",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "construct_graph.py",
+  "image": "construct_graph.png",
+  "metadata_filename": "construct_graph.json",
+  "topology": "graph"
+}

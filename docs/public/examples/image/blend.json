@@ -1,0 +1,25 @@
+{
+  "title": "blend",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example alpha-blends two images using vtkImageBlend. The original FullHead slice is blended with a Sobel edge-detected version to create a composite that highlights edges over the anatomy. Three viewports show the original, the edges, and the blended result. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D slices. `SetDisplayExtent()` selects the middle axial slice.\n- [vtkImageBlend](https://www.vtk.org/doc/nightly/html/classvtkImageBlend.html) alpha-blends two images. `SetOpacity(0, 0.6)` and `SetOpacity(1, 0.4)` control the contribution of each input. Unlike vtkImageWeightedSum, vtkImageBlend supports per-input opacity and alpha channels.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts data to unsigned char for display.\n- [vtkImageMagnitude](https://www.vtk.org/doc/nightly/html/classvtkImageMagnitude.html) computes the magnitude of the gradient vector.\n- [vtkImageSobel2D](https://www.vtk.org/doc/nightly/html/classvtkImageSobel2D.html) computes the Sobel gradient for edge detection.\n- [vtkMetaImageReader](https://www.vtk.org/doc/nightly/html/classvtkMetaImageReader.html) reads the `FullHead.mhd` MetaImage volume.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — three renderers with `SetViewport()` create a three-panel layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageBlend",
+    "vtkImageCast",
+    "vtkImageMagnitude",
+    "vtkImageSobel2D",
+    "vtkMetaImageReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/FullHead.mhd",
+    "data/FullHead.raw"
+  ],
+  "py_filename": "blend.py",
+  "image": "blend.png",
+  "metadata_filename": "blend.json",
+  "topology": "standard"
+}

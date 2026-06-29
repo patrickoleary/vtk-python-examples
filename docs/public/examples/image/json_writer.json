@@ -1,0 +1,23 @@
+{
+  "title": "json writer",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nTest JSON image writer by writing a slice of analytic source, verifying contents, and rendering the source volume.\n\n**dataset → input → visual_asset → renderer → infrastructure → output**\n\n- [vtkColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunction.html) — maps scalar values to RGB colors for volume rendering.\n- [vtkGPUVolumeRayCastMapper](https://www.vtk.org/doc/nightly/html/classvtkGPUVolumeRayCastMapper.html) — gpu volume ray cast mapper.\n- [vtkJSONImageWriter](https://www.vtk.org/doc/nightly/html/classvtkJSONImageWriter.html) — json image writer.\n- [vtkPiecewiseFunction](https://www.vtk.org/doc/nightly/html/classvtkPiecewiseFunction.html) — defines a piecewise linear scalar-to-opacity mapping.\n- [vtkRTAnalyticSource](https://www.vtk.org/doc/nightly/html/classvtkRTAnalyticSource.html) — generates a synthetic wavelet image volume.\n- [vtkVolume](https://www.vtk.org/doc/nightly/html/classvtkVolume.html) — represents a volume in the scene.\n- [vtkVolumeProperty](https://www.vtk.org/doc/nightly/html/classvtkVolumeProperty.html) — controls volume rendering appearance (color, opacity, shading).\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkColorTransferFunction",
+    "vtkGPUVolumeRayCastMapper",
+    "vtkJSONImageWriter",
+    "vtkPiecewiseFunction",
+    "vtkRTAnalyticSource",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkVolume",
+    "vtkVolumeProperty"
+  ],
+  "data_files": null,
+  "py_filename": "json_writer.py",
+  "image": "json_writer.png",
+  "metadata_filename": "json_writer.json",
+  "topology": "standard"
+}

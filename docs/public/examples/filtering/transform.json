@@ -1,0 +1,21 @@
+{
+  "title": "transform",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkTransformFilter by creating a sphere, applying a random affine transform, and rendering the original and transformed meshes side by side.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkTransform](https://www.vtk.org/doc/nightly/html/classvtkTransform.html) — defines a 4x4 geometric transformation.\n- [vtkTransformFilter](https://www.vtk.org/doc/nightly/html/classvtkTransformFilter.html) — applies a geometric transformation to a dataset.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkTransform",
+    "vtkTransformFilter"
+  ],
+  "data_files": null,
+  "py_filename": "transform.py",
+  "image": "transform.png",
+  "metadata_filename": "transform.json",
+  "topology": "standard"
+}

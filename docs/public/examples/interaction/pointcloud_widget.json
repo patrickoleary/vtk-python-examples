@@ -1,0 +1,19 @@
+{
+  "title": "pointcloud widget",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkPointCloudWidget with software picking on a point cloud.\n\n**input → renderer → infrastructure → scene → output**\n\n- [vtkPointCloudRepresentation](https://www.vtk.org/doc/nightly/html/classvtkPointCloudRepresentation.html) — point cloud representation.\n- [vtkPointCloudWidget](https://www.vtk.org/doc/nightly/html/classvtkPointCloudWidget.html) — point cloud widget.\n- [vtkPointSource](https://www.vtk.org/doc/nightly/html/classvtkPointSource.html) — generates random points inside a sphere.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkPointCloudRepresentation",
+    "vtkPointCloudWidget",
+    "vtkPointSource",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "pointcloud_widget.py",
+  "image": "pointcloud_widget.png",
+  "metadata_filename": "pointcloud_widget.json",
+  "topology": "standard"
+}

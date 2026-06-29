@@ -1,0 +1,22 @@
+{
+  "title": "line plot selection",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate line plot selection with rectangle and polygon selection modes.\n\n**dataset → chart → context_asset → renderer → infrastructure → selection → output**\n\n- [vtkAnnotationLink](https://www.vtk.org/doc/nightly/html/classvtkAnnotationLink.html) — annotation link.\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) — chart xy.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkContextMouseEvent](https://www.vtk.org/doc/nightly/html/classvtkContextMouseEvent.html) — context mouse event.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) — table.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAnnotationLink",
+    "vtkChartXY",
+    "vtkContextActor",
+    "vtkContextMouseEvent",
+    "vtkFloatArray",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "line_plot_selection.py",
+  "image": "line_plot_selection.png",
+  "metadata_filename": "line_plot_selection.json",
+  "topology": "chart"
+}

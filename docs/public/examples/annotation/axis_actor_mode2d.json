@@ -1,0 +1,20 @@
+{
+  "title": "axis actor mode2d",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkAxisActor X axis in 2D mode.\n\n**dataset → visual_asset → renderer → infrastructure → output**\n\n- [vtkAxisActor](https://www.vtk.org/doc/nightly/html/classvtkAxisActor.html) — axis actor.\n- [vtkProperty](https://www.vtk.org/doc/nightly/html/classvtkProperty.html) — property.\n- [vtkStringArray](https://www.vtk.org/doc/nightly/html/classvtkStringArray.html) — string array.\n- [vtkTextProperty](https://www.vtk.org/doc/nightly/html/classvtkTextProperty.html) — text property.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAxisActor",
+    "vtkProperty",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStringArray",
+    "vtkTextProperty"
+  ],
+  "data_files": null,
+  "py_filename": "axis_actor_mode2d.py",
+  "image": "axis_actor_mode2d.png",
+  "metadata_filename": "axis_actor_mode2d.json",
+  "topology": "standard"
+}

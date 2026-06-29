@@ -1,0 +1,29 @@
+{
+  "title": "image gradient",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nThis example visualizes gradient information of a CT head slice as an HSV color image.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays the image slice.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) casts scalar types for processing and display.\n- [vtkImageConstantPad](https://www.vtk.org/doc/nightly/html/classvtkImageConstantPad.html) adds a third component for HSV representation.\n- [vtkImageEuclideanToPolar](https://www.vtk.org/doc/nightly/html/classvtkImageEuclideanToPolar.html) converts gradient to polar coordinates.\n- [vtkImageExtractComponents](https://www.vtk.org/doc/nightly/html/classvtkImageExtractComponents.html) permutes components into HSV order.\n- [vtkImageGaussianSmooth](https://www.vtk.org/doc/nightly/html/classvtkImageGaussianSmooth.html) smooths the image to remove artifacts.\n- [vtkImageGradient](https://www.vtk.org/doc/nightly/html/classvtkImageGradient.html) computes the 2D gradient.\n- [vtkImageHSVToRGB](https://www.vtk.org/doc/nightly/html/classvtkImageHSVToRGB.html) converts HSV to RGB for display.\n- [vtkImageMagnify](https://www.vtk.org/doc/nightly/html/classvtkImageMagnify.html) magnifies the image with interpolation.\n- [vtkMetaImageReader](https://www.vtk.org/doc/nightly/html/classvtkMetaImageReader.html) reads the CT head volume.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageConstantPad",
+    "vtkImageEuclideanToPolar",
+    "vtkImageExtractComponents",
+    "vtkImageGaussianSmooth",
+    "vtkImageGradient",
+    "vtkImageHSVToRGB",
+    "vtkImageMagnify",
+    "vtkMetaImageReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/FullHead.mhd",
+    "data/FullHead.raw"
+  ],
+  "py_filename": "image_gradient.py",
+  "image": "image_gradient.png",
+  "metadata_filename": "image_gradient.json",
+  "topology": "standard"
+}

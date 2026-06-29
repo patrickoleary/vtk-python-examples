@@ -1,0 +1,21 @@
+{
+  "title": "image reslice gap",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nTest vtkImageReslice gap bug fix with a near-0.5 shift transform.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) — image cast.\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) — represents a regular grid of points (image/volume).\n- [vtkImageReslice](https://www.vtk.org/doc/nightly/html/classvtkImageReslice.html) — image reslice.\n- [vtkTransform](https://www.vtk.org/doc/nightly/html/classvtkTransform.html) — defines a 4x4 geometric transformation.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageData",
+    "vtkImageReslice",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTransform"
+  ],
+  "data_files": null,
+  "py_filename": "image_reslice_gap.py",
+  "image": "image_reslice_gap.png",
+  "metadata_filename": "image_reslice_gap.json",
+  "topology": "standard"
+}

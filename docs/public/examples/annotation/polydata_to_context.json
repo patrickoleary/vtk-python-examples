@@ -1,0 +1,27 @@
+{
+  "title": "polydata to context",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkPolyDataItem rendering polydata into a context scene with contours.\n\n**dataset → input → filter → plot → item → context_asset → renderer → infrastructure → output**\n\n- [vtkAxis](https://www.vtk.org/doc/nightly/html/classvtkAxis.html) — axis.\n- [vtkBandedPolyDataContourFilter](https://www.vtk.org/doc/nightly/html/classvtkBandedPolyDataContourFilter.html) — banded poly data contour filter.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkFeatureEdges](https://www.vtk.org/doc/nightly/html/classvtkFeatureEdges.html) — feature edges.\n- [vtkInteractiveArea](https://www.vtk.org/doc/nightly/html/classvtkInteractiveArea.html) — interactive area.\n- [vtkPolyDataConnectivityFilter](https://www.vtk.org/doc/nightly/html/classvtkPolyDataConnectivityFilter.html) — poly data connectivity filter.\n- [vtkPolyDataItem](https://www.vtk.org/doc/nightly/html/classvtkPolyDataItem.html) — poly data item.\n- [vtkRectd](https://www.vtk.org/doc/nightly/html/classvtkRectd.html) — rectd.\n- [vtkXMLPolyDataReader](https://www.vtk.org/doc/nightly/html/classvtkXMLPolyDataReader.html) — xml poly data reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAxis",
+    "vtkBandedPolyDataContourFilter",
+    "vtkContextActor",
+    "vtkFeatureEdges",
+    "vtkInteractiveArea",
+    "vtkPolyDataConnectivityFilter",
+    "vtkPolyDataItem",
+    "vtkRectd",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkXMLPolyDataReader"
+  ],
+  "data_files": [
+    "data/isofill_0.vtp"
+  ],
+  "py_filename": "polydata_to_context.py",
+  "image": "polydata_to_context.png",
+  "metadata_filename": "polydata_to_context.json",
+  "topology": "chart"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "obb cylinder",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nVisualize the OBB tree spatial decomposition of a transformed cylinder using vtkOBBTree and vtkSpatialRepresentationFilter.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCylinderSource](https://www.vtk.org/doc/nightly/html/classvtkCylinderSource.html) — generates a polygonal cylinder.\n- [vtkExtractEdges](https://www.vtk.org/doc/nightly/html/classvtkExtractEdges.html) — extract edges.\n- [vtkOBBTree](https://www.vtk.org/doc/nightly/html/classvtkOBBTree.html) — obb tree.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkSpatialRepresentationFilter](https://www.vtk.org/doc/nightly/html/classvtkSpatialRepresentationFilter.html) — spatial representation filter.\n- [vtkTransform](https://www.vtk.org/doc/nightly/html/classvtkTransform.html) — defines a 4x4 geometric transformation.\n- [vtkTransformPolyDataFilter](https://www.vtk.org/doc/nightly/html/classvtkTransformPolyDataFilter.html) — transform poly data filter.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCylinderSource",
+    "vtkExtractEdges",
+    "vtkOBBTree",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSpatialRepresentationFilter",
+    "vtkTransform",
+    "vtkTransformPolyDataFilter"
+  ],
+  "data_files": null,
+  "py_filename": "obb_cylinder.py",
+  "image": "obb_cylinder.png",
+  "metadata_filename": "obb_cylinder.json",
+  "topology": "standard"
+}

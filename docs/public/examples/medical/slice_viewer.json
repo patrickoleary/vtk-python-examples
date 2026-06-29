@@ -1,0 +1,23 @@
+{
+  "title": "slice viewer",
+  "source_type": "examples",
+  "tag": "medical",
+  "explanation": "### Description\n\nThis example displays a 2D axial slice from a CT head volume using the standard vtkImageActor rendering pipeline. A grayscale lookup table maps CT intensity values to display colors. The middle slice along the Z axis is shown.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays a 2D image slice on a quadrilateral plane.\n- [vtkImageMapToColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToColors.html) maps CT intensity scalars to grayscale colors.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) defines a grayscale scalar-to-color mapping.\n- [vtkMetaImageReader](https://www.vtk.org/doc/nightly/html/classvtkMetaImageReader.html) reads the MetaImage (.mhd/.raw) CT volume.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageMapToColors",
+    "vtkLookupTable",
+    "vtkMetaImageReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/FullHead.mhd",
+    "data/FullHead.raw"
+  ],
+  "py_filename": "slice_viewer.py",
+  "image": "slice_viewer.png",
+  "metadata_filename": "slice_viewer.json",
+  "topology": "standard"
+}

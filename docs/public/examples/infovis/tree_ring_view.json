@@ -1,0 +1,30 @@
+{
+  "title": "tree ring view",
+  "source_type": "examples",
+  "tag": "infovis",
+  "explanation": "### Description\n\nDemonstrate tree ring layout with graph overlay using explicit pipeline.\n\n**dataset → input → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkAreaLayout](https://www.vtk.org/doc/nightly/html/classvtkAreaLayout.html) — area layout filter.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) — graph layout filter.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) — converts graph to polydata.\n- [vtkLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkLabeledDataMapper.html) — labeled data mapper.\n- [vtkSquarifyLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkSquarifyLayoutStrategy.html) — squarify layout strategy.\n- [vtkTreeRingToPolyData](https://www.vtk.org/doc/nightly/html/classvtkTreeRingToPolyData.html) — converts tree ring to polydata.\n- [vtkXMLTreeReader](https://www.vtk.org/doc/nightly/html/classvtkXMLTreeReader.html) — xml tree reader.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkActor2D",
+    "vtkAreaLayout",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkLabeledDataMapper",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSimple2DLayoutStrategy",
+    "vtkSquarifyLayoutStrategy",
+    "vtkTreeRingToPolyData",
+    "vtkXMLTreeReader"
+  ],
+  "data_files": [
+    "data/vtkclasses.xml",
+    "data/vtklibrary.xml"
+  ],
+  "py_filename": "tree_ring_view.py",
+  "image": "tree_ring_view.png",
+  "metadata_filename": "tree_ring_view.json",
+  "topology": "graph"
+}

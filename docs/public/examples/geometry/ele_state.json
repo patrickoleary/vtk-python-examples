@@ -1,0 +1,25 @@
+{
+  "title": "ele state",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nDemonstrate vtkLinearExtrusionFilter by reading US state outlines, extruding each state cell with random scale factors, and rendering with random colors.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkGeometryFilter.html) — extracts the outer surface of a dataset.\n- [vtkLinearExtrusionFilter](https://www.vtk.org/doc/nightly/html/classvtkLinearExtrusionFilter.html) — extrudes polygonal data along a direction.\n- [vtkMath](https://www.vtk.org/doc/nightly/html/classvtkMath.html) — provides mathematical utility functions.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkPolyDataReader](https://www.vtk.org/doc/nightly/html/classvtkPolyDataReader.html) — poly data reader.\n- [vtkTriangleFilter](https://www.vtk.org/doc/nightly/html/classvtkTriangleFilter.html) — converts polygons into triangles.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkGeometryFilter",
+    "vtkLinearExtrusionFilter",
+    "vtkMath",
+    "vtkPolyDataMapper",
+    "vtkPolyDataReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTriangleFilter"
+  ],
+  "data_files": [
+    "data/usa.vtk"
+  ],
+  "py_filename": "ele_state.py",
+  "image": "ele_state.png",
+  "metadata_filename": "ele_state.json",
+  "topology": "standard"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "pick imagedata",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nTest picking on image data using vtkImageSliceMapper.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → selection → output**\n\n- [vtkCellPicker](https://www.vtk.org/doc/nightly/html/classvtkCellPicker.html) — cell picker.\n- [vtkImageCanvasSource2D](https://www.vtk.org/doc/nightly/html/classvtkImageCanvasSource2D.html) — image canvas source2d.\n- [vtkImageCheckerboard](https://www.vtk.org/doc/nightly/html/classvtkImageCheckerboard.html) — image checkerboard.\n- [vtkImageSlice](https://www.vtk.org/doc/nightly/html/classvtkImageSlice.html) — image slice.\n- [vtkImageSliceMapper](https://www.vtk.org/doc/nightly/html/classvtkImageSliceMapper.html) — image slice mapper.\n- [vtkImageWrapPad](https://www.vtk.org/doc/nightly/html/classvtkImageWrapPad.html) — image wrap pad.\n- [vtkPicker](https://www.vtk.org/doc/nightly/html/classvtkPicker.html) — picker.\n- [vtkPointPicker](https://www.vtk.org/doc/nightly/html/classvtkPointPicker.html) — point picker.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkCellPicker",
+    "vtkImageCanvasSource2D",
+    "vtkImageCheckerboard",
+    "vtkImageSlice",
+    "vtkImageSliceMapper",
+    "vtkImageWrapPad",
+    "vtkPicker",
+    "vtkPointPicker",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "pick_imagedata.py",
+  "image": "pick_imagedata.png",
+  "metadata_filename": "pick_imagedata.json",
+  "topology": "standard"
+}

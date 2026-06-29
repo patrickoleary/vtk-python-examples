@@ -1,0 +1,29 @@
+{
+  "title": "plot3d vectors",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nDisplay all Plot3D vector functions in a 2x2 grid of renderers with hedgehogs.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkActor2D](https://www.vtk.org/doc/nightly/html/classvtkActor2D.html) — actor2d.\n- [vtkCamera](https://www.vtk.org/doc/nightly/html/classvtkCamera.html) — camera.\n- [vtkHedgeHog](https://www.vtk.org/doc/nightly/html/classvtkHedgeHog.html) — hedge hog.\n- [vtkLight](https://www.vtk.org/doc/nightly/html/classvtkLight.html) — light.\n- [vtkMultiBlockPLOT3DReader](https://www.vtk.org/doc/nightly/html/classvtkMultiBlockPLOT3DReader.html) — reads PLOT3D structured grid files.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkStructuredGridGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridGeometryFilter.html) — structured grid geometry filter.\n- [vtkTextMapper](https://www.vtk.org/doc/nightly/html/classvtkTextMapper.html) — text mapper.\n- [vtkTextProperty](https://www.vtk.org/doc/nightly/html/classvtkTextProperty.html) — text property.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkActor2D",
+    "vtkCamera",
+    "vtkHedgeHog",
+    "vtkLight",
+    "vtkMultiBlockPLOT3DReader",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStructuredGridGeometryFilter",
+    "vtkTextMapper",
+    "vtkTextProperty"
+  ],
+  "data_files": [
+    "data/bluntfinq.bin",
+    "data/bluntfinxyz.bin"
+  ],
+  "py_filename": "plot3d_vectors.py",
+  "image": "plot3d_vectors.png",
+  "metadata_filename": "plot3d_vectors.json",
+  "topology": "standard"
+}

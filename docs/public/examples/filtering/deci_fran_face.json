@@ -1,0 +1,26 @@
+{
+  "title": "deci fran face",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nCompare vtkDecimatePro with different topology and error accumulation settings on a textured face model, shown in four viewports.\n\n**input → dataset → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCamera](https://www.vtk.org/doc/nightly/html/classvtkCamera.html) — camera.\n- [vtkDecimatePro](https://www.vtk.org/doc/nightly/html/classvtkDecimatePro.html) — reduces the number of triangles in a mesh.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkPolyDataReader](https://www.vtk.org/doc/nightly/html/classvtkPolyDataReader.html) — poly data reader.\n- [vtkTexture](https://www.vtk.org/doc/nightly/html/classvtkTexture.html) — applies a texture image to geometry.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCamera",
+    "vtkDecimatePro",
+    "vtkPNGReader",
+    "vtkPolyDataMapper",
+    "vtkPolyDataReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTexture"
+  ],
+  "data_files": [
+    "data/fran_cut.png",
+    "data/fran_cut.vtk"
+  ],
+  "py_filename": "deci_fran_face.py",
+  "image": "deci_fran_face.png",
+  "metadata_filename": "deci_fran_face.json",
+  "topology": "standard"
+}

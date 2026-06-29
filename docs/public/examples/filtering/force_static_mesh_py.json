@@ -1,0 +1,23 @@
+{
+  "title": "force static mesh py",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkForceStaticMesh preserving mesh topology across time steps while allowing data attributes to change.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) — maps any dataset type to graphics primitives.\n- [vtkForceStaticMesh](https://www.vtk.org/doc/nightly/html/classvtkForceStaticMesh.html) — force static mesh.\n- [vtkRandomAttributeGenerator](https://www.vtk.org/doc/nightly/html/classvtkRandomAttributeGenerator.html) — generates random point and cell data arrays for testing.\n- [vtkXMLUnstructuredGridReader](https://www.vtk.org/doc/nightly/html/classvtkXMLUnstructuredGridReader.html) — reads VTK XML unstructured grid files.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDataSetMapper",
+    "vtkForceStaticMesh",
+    "vtkRandomAttributeGenerator",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkXMLUnstructuredGridReader"
+  ],
+  "data_files": [
+    "data/cube-with-time.vtu"
+  ],
+  "py_filename": "force_static_mesh_py.py",
+  "image": "force_static_mesh_py.png",
+  "metadata_filename": "force_static_mesh_py.json",
+  "topology": "standard"
+}

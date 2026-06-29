@@ -1,0 +1,24 @@
+{
+  "title": "mark boundary3d datasets",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nDemonstrate vtkMarkBoundaryFilter on 3D dataset types: image data and unstructured grid, with boundary face generation enabled, thresholding to show only boundary cells.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkDataObject](https://www.vtk.org/doc/nightly/html/classvtkDataObject.html) — provides field association constants for array processing.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) — maps any dataset type to graphics primitives.\n- [vtkExtractGeometry](https://www.vtk.org/doc/nightly/html/classvtkExtractGeometry.html) — extracts cells that lie inside an implicit function.\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) — represents a regular grid of points (image/volume).\n- [vtkMarkBoundaryFilter](https://www.vtk.org/doc/nightly/html/classvtkMarkBoundaryFilter.html) — mark boundary filter.\n- [vtkSphere](https://www.vtk.org/doc/nightly/html/classvtkSphere.html) — defines an implicit sphere function.\n- [vtkThreshold](https://www.vtk.org/doc/nightly/html/classvtkThreshold.html) — extracts cells whose scalar values satisfy a threshold criterion.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDataObject",
+    "vtkDataSetMapper",
+    "vtkExtractGeometry",
+    "vtkImageData",
+    "vtkMarkBoundaryFilter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphere",
+    "vtkThreshold"
+  ],
+  "data_files": null,
+  "py_filename": "mark_boundary3d_datasets.py",
+  "image": "mark_boundary3d_datasets.png",
+  "metadata_filename": "mark_boundary3d_datasets.json",
+  "topology": "standard"
+}

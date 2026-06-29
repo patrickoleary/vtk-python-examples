@@ -1,0 +1,20 @@
+{
+  "title": "logic",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example applies boolean logic operations (AND, OR, XOR) to two binary images using vtkImageLogic. A circle and a rectangle are created procedurally with vtkImageCanvasSource2D and combined with each operation. The five-viewport layout shows Source 1 (circle), Source 2 (rectangle), AND (intersection), OR (union), and XOR (symmetric difference). It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D images. Five actors show the two sources and three logic results.\n- [vtkImageCanvasSource2D](https://www.vtk.org/doc/nightly/html/classvtkImageCanvasSource2D.html) creates procedural binary images. `DrawCircle()` draws a filled circle and `FillBox()` draws a filled rectangle.\n- [vtkImageLogic](https://www.vtk.org/doc/nightly/html/classvtkImageLogic.html) performs pixel-wise boolean operations on two binary images. `SetOperationToAnd()`, `SetOperationToOr()`, and `SetOperationToXor()` select the logic function. `SetOutputTrueValue(255)` sets the output value for true pixels.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — five renderers with `SetViewport()` create a side-by-side layout. Cameras are shared so all viewports pan and zoom together.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCanvasSource2D",
+    "vtkImageLogic",
+    "vtkInteractorStyleImage",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "logic.py",
+  "image": "logic.png",
+  "metadata_filename": "logic.json",
+  "topology": "standard"
+}

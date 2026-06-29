@@ -1,0 +1,23 @@
+{
+  "title": "selected vertices and edges",
+  "source_type": "examples",
+  "tag": "graphs",
+  "explanation": "### Description\n\nThis example selects vertices and edges interactively on a random graph. Click on vertices or edges in the view; a pick callback prints the selected point or cell ID to the console via vtkCellPicker.\n\n**dataset → input → layout → filter → visual_asset → renderer → infrastructure → selection → output**\n\n- [vtkCellPicker](https://www.vtk.org/doc/nightly/html/classvtkCellPicker.html) picks cells and points under the mouse cursor.\n- [vtkForceDirectedLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkForceDirectedLayoutStrategy.html) computes vertex positions using force simulation.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) applies the layout strategy to the graph.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) converts graph edges to polydata lines.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps edge polydata to graphics primitives.\n- [vtkRandomGraphSource](https://www.vtk.org/doc/nightly/html/classvtkRandomGraphSource.html) generates a random graph.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCellPicker",
+    "vtkForceDirectedLayoutStrategy",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkPolyDataMapper",
+    "vtkRandomGraphSource",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "selected_vertices_and_edges.py",
+  "image": "selected_vertices_and_edges.png",
+  "metadata_filename": "selected_vertices_and_edges.json",
+  "topology": "graph"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "map to colors",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example converts an RGB image to grayscale luminance, then applies a rainbow lookup table via vtkImageMapToColors to produce a vivid false-color image. The left viewport shows the original `Gourds2.jpg` color photograph; the right shows a rainbow false-color version where dark regions appear blue, mid-tones green/yellow, and bright regions red. It follows the VTK pipeline structure:\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D images.\n- [vtkImageExtractComponents](https://www.vtk.org/doc/nightly/html/classvtkImageExtractComponents.html) provides image extract components functionality.\n- [vtkImageMagnitude](https://www.vtk.org/doc/nightly/html/classvtkImageMagnitude.html) computes per-pixel magnitude of the RGB components, producing a single-component grayscale luminance image.\n- [vtkImageMapToColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToColors.html) maps single-component scalar values through the lookup table to produce an RGB false-color image.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkJPEGReader](https://www.vtk.org/doc/nightly/html/classvtkJPEGReader.html) reads the `Gourds2.jpg` RGB image.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) defines a blue → cyan → green → yellow → red rainbow ramp with 256 entries. `SetRange()` maps it to the luminance data range.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageMagnitude",
+    "vtkImageMapToColors",
+    "vtkInteractorStyleImage",
+    "vtkJPEGReader",
+    "vtkLookupTable",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/Gourds2.jpg"
+  ],
+  "py_filename": "map_to_colors.py",
+  "image": "map_to_colors.png",
+  "metadata_filename": "map_to_colors.json",
+  "topology": "standard"
+}

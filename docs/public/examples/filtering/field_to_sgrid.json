@@ -1,0 +1,33 @@
+{
+  "title": "field to sgrid",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nGenerate a structured grid from field data via a write/read round-trip using PLOT3D combustor data, then visualize with an isosurface and outline.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkContourFilter](https://www.vtk.org/doc/nightly/html/classvtkContourFilter.html) — extracts iso-surfaces at specified scalar values.\n- [vtkDataObjectReader](https://www.vtk.org/doc/nightly/html/classvtkDataObjectReader.html) — data object reader.\n- [vtkDataObjectToDataSetFilter](https://www.vtk.org/doc/nightly/html/classvtkDataObjectToDataSetFilter.html) — data object to data set filter.\n- [vtkDataObjectWriter](https://www.vtk.org/doc/nightly/html/classvtkDataObjectWriter.html) — data object writer.\n- [vtkDataSetToDataObjectFilter](https://www.vtk.org/doc/nightly/html/classvtkDataSetToDataObjectFilter.html) — data set to data object filter.\n- [vtkFieldDataToAttributeDataFilter](https://www.vtk.org/doc/nightly/html/classvtkFieldDataToAttributeDataFilter.html) — field data to attribute data filter.\n- [vtkMultiBlockPLOT3DReader](https://www.vtk.org/doc/nightly/html/classvtkMultiBlockPLOT3DReader.html) — reads PLOT3D structured grid files.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) — named colors.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkPolyDataNormals](https://www.vtk.org/doc/nightly/html/classvtkPolyDataNormals.html) — computes surface normals for smooth shading.\n- [vtkStructuredGridOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridOutlineFilter.html) — generates an outline of a structured grid.\n- [vtkStructuredGridReader](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridReader.html) — structured grid reader.\n- [vtkStructuredGridWriter](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridWriter.html) — structured grid writer.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkContourFilter",
+    "vtkDataObjectReader",
+    "vtkDataObjectToDataSetFilter",
+    "vtkDataObjectWriter",
+    "vtkDataSetToDataObjectFilter",
+    "vtkFieldDataToAttributeDataFilter",
+    "vtkMultiBlockPLOT3DReader",
+    "vtkNamedColors",
+    "vtkPolyDataMapper",
+    "vtkPolyDataNormals",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStructuredGridOutlineFilter",
+    "vtkStructuredGridReader",
+    "vtkStructuredGridWriter"
+  ],
+  "data_files": [
+    "data/combq.bin",
+    "data/combxyz.bin"
+  ],
+  "py_filename": "field_to_sgrid.py",
+  "image": "field_to_sgrid.png",
+  "metadata_filename": "field_to_sgrid.json",
+  "topology": "standard"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "rectilinear wipe widget",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkRectilinearWipeWidget with two canvas images.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageCanvasSource2D](https://www.vtk.org/doc/nightly/html/classvtkImageCanvasSource2D.html) — image canvas source2d.\n- [vtkImageRectilinearWipe](https://www.vtk.org/doc/nightly/html/classvtkImageRectilinearWipe.html) — image rectilinear wipe.\n- [vtkImageWrapPad](https://www.vtk.org/doc/nightly/html/classvtkImageWrapPad.html) — image wrap pad.\n- [vtkRectilinearWipeRepresentation](https://www.vtk.org/doc/nightly/html/classvtkRectilinearWipeRepresentation.html) — rectilinear wipe representation.\n- [vtkRectilinearWipeWidget](https://www.vtk.org/doc/nightly/html/classvtkRectilinearWipeWidget.html) — rectilinear wipe widget.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCanvasSource2D",
+    "vtkImageRectilinearWipe",
+    "vtkImageWrapPad",
+    "vtkRectilinearWipeRepresentation",
+    "vtkRectilinearWipeWidget",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "rectilinear_wipe_widget.py",
+  "image": "rectilinear_wipe_widget.png",
+  "metadata_filename": "rectilinear_wipe_widget.json",
+  "topology": "standard"
+}

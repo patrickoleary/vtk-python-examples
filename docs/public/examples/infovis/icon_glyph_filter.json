@@ -1,0 +1,30 @@
+{
+  "title": "icon glyph filter",
+  "source_type": "examples",
+  "tag": "infovis",
+  "explanation": "### Description\n\nDemonstrate icon glyphs on graph vertices using explicit pipeline with vtkGraphLayout and a PNG icon sheet.\n\n**dataset → input → dataset → filter → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) — graph layout filter.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) — converts graph to polydata.\n- [vtkIntArray](https://www.vtk.org/doc/nightly/html/classvtkIntArray.html) — int array.\n- [vtkMutableUndirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableUndirectedGraph.html) — mutable undirected graph.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkSimple2DLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkSimple2DLayoutStrategy.html) — simple 2D layout strategy.\n- [vtkTexture](https://www.vtk.org/doc/nightly/html/classvtkTexture.html) — applies a texture image to geometry.\n- [vtkVertexGlyphFilter](https://www.vtk.org/doc/nightly/html/classvtkVertexGlyphFilter.html) — vertex glyph filter.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDoubleArray",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkIntArray",
+    "vtkMutableUndirectedGraph",
+    "vtkPNGReader",
+    "vtkPoints",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSimple2DLayoutStrategy",
+    "vtkTexture",
+    "vtkVertexGlyphFilter"
+  ],
+  "data_files": [
+    "data/Tango/TangoIcons.png"
+  ],
+  "py_filename": "icon_glyph_filter.py",
+  "image": "icon_glyph_filter.png",
+  "metadata_filename": "icon_glyph_filter.json",
+  "topology": "graph"
+}

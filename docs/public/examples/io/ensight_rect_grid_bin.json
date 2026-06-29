@@ -1,0 +1,37 @@
+{
+  "title": "ensight rect grid bin",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nRead EnSight RectGrid binary case with plane extraction, contour, streamlines, and tube filter.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCastToConcrete](https://www.vtk.org/doc/nightly/html/classvtkCastToConcrete.html) — casts abstract data objects to their concrete types.\n- [vtkContourFilter](https://www.vtk.org/doc/nightly/html/classvtkContourFilter.html) — extracts iso-surfaces at specified scalar values.\n- [vtkCutter](https://www.vtk.org/doc/nightly/html/classvtkCutter.html) — cutter.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) — maps any dataset type to graphics primitives.\n- [vtkGenericEnSightReader](https://www.vtk.org/doc/nightly/html/classvtkGenericEnSightReader.html) — generic en sight reader.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) — named colors.\n- [vtkOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkOutlineFilter.html) — generates a bounding box outline of the input data.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) — defines an implicit plane function.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkPolyDataNormals](https://www.vtk.org/doc/nightly/html/classvtkPolyDataNormals.html) — computes surface normals for smooth shading.\n- [vtkRectilinearGridGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkRectilinearGridGeometryFilter.html) — rectilinear grid geometry filter.\n- [vtkStreamTracer](https://www.vtk.org/doc/nightly/html/classvtkStreamTracer.html) — generates streamlines from a vector field.\n- [vtkTriangleFilter](https://www.vtk.org/doc/nightly/html/classvtkTriangleFilter.html) — converts polygons into triangles.\n- [vtkTubeFilter](https://www.vtk.org/doc/nightly/html/classvtkTubeFilter.html) — generates tubes around lines with optional radius variation.\n- [vtkWarpVector](https://www.vtk.org/doc/nightly/html/classvtkWarpVector.html) — warp vector.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCastToConcrete",
+    "vtkContourFilter",
+    "vtkCutter",
+    "vtkDataSetMapper",
+    "vtkGenericEnSightReader",
+    "vtkNamedColors",
+    "vtkOutlineFilter",
+    "vtkPlane",
+    "vtkPolyDataMapper",
+    "vtkPolyDataNormals",
+    "vtkRectilinearGridGeometryFilter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStreamTracer",
+    "vtkTriangleFilter",
+    "vtkTubeFilter",
+    "vtkWarpVector"
+  ],
+  "data_files": [
+    "data/EnSight/RectGrid_bin.case",
+    "data/EnSight/RectGrid_bin.geo",
+    "data/EnSight/RectGrid_bin_pd_scalars",
+    "data/EnSight/RectGrid_bin_pd_vectors"
+  ],
+  "py_filename": "ensight_rect_grid_bin.py",
+  "image": "ensight_rect_grid_bin.png",
+  "metadata_filename": "ensight_rect_grid_bin.json",
+  "topology": "standard"
+}

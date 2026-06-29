@@ -1,0 +1,24 @@
+{
+  "title": "dendrogram item",
+  "source_type": "examples",
+  "tag": "infovis",
+  "explanation": "### Description\n\nDemonstrate vtkDendrogramItem rendering a weighted tree with vtkContextActor.\n\n**dataset → input → item → context_asset → renderer → infrastructure → output**\n\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkContextScene](https://www.vtk.org/doc/nightly/html/classvtkContextScene.html) — context scene.\n- [vtkContextTransform](https://www.vtk.org/doc/nightly/html/classvtkContextTransform.html) — context transform.\n- [vtkDendrogramItem](https://www.vtk.org/doc/nightly/html/classvtkDendrogramItem.html) — dendrogram item.\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkMutableDirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableDirectedGraph.html) — mutable directed graph.\n- [vtkStringArray](https://www.vtk.org/doc/nightly/html/classvtkStringArray.html) — string array.\n- [vtkTree](https://www.vtk.org/doc/nightly/html/classvtkTree.html) — tree.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkContextActor",
+    "vtkContextScene",
+    "vtkContextTransform",
+    "vtkDendrogramItem",
+    "vtkDoubleArray",
+    "vtkMutableDirectedGraph",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStringArray",
+    "vtkTree"
+  ],
+  "data_files": null,
+  "py_filename": "dendrogram_item.py",
+  "image": "dendrogram_item.png",
+  "metadata_filename": "dendrogram_item.json",
+  "topology": "chart"
+}

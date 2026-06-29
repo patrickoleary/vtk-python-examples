@@ -1,0 +1,24 @@
+{
+  "title": "checkerboard",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example compares two images using a checkerboard pattern with vtkImageCheckerboard. You should see a single CT head slice divided into a 4×4 grid of alternating tiles — sharp original tiles next to visibly blurry smoothed tiles. The contrast between crisp detail and soft blur makes differences easy to spot at tile boundaries. This technique is commonly used to evaluate image registration quality. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays the checkerboard as a 2D slice.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts data to unsigned char for display.\n- [vtkImageCheckerboard](https://www.vtk.org/doc/nightly/html/classvtkImageCheckerboard.html) interleaves two images in a checkerboard pattern. `SetNumberOfDivisions(4, 4, 1)` creates a 4×4 grid of alternating tiles.\n- [vtkImageGaussianSmooth](https://www.vtk.org/doc/nightly/html/classvtkImageGaussianSmooth.html) creates a smoothed version for comparison. `SetStandardDeviations()` and `SetRadiusFactors()` control the blur kernel.\n- [vtkMetaImageReader](https://www.vtk.org/doc/nightly/html/classvtkMetaImageReader.html) reads the `FullHead.mhd` MetaImage volume.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene with a black background.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageCheckerboard",
+    "vtkImageGaussianSmooth",
+    "vtkMetaImageReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/FullHead.mhd",
+    "data/FullHead.raw"
+  ],
+  "py_filename": "checkerboard.py",
+  "image": "checkerboard.png",
+  "metadata_filename": "checkerboard.json",
+  "topology": "standard"
+}

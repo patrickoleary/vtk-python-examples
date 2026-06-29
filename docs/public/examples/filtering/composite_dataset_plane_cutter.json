@@ -1,0 +1,24 @@
+{
+  "title": "composite dataset plane cutter",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nCut a composite dataset (multi-block and partitioned) with vtkPlaneCutter, comparing results in two viewports.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCompositePolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkCompositePolyDataMapper.html) — maps composite (multi-block) polygonal data to graphics primitives.\n- [vtkConvertToMultiBlockDataSet](https://www.vtk.org/doc/nightly/html/classvtkConvertToMultiBlockDataSet.html) — convert to multi block data set.\n- [vtkIOSSReader](https://www.vtk.org/doc/nightly/html/classvtkIOSSReader.html) — ioss reader.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) — defines an implicit plane function.\n- [vtkPlaneCutter](https://www.vtk.org/doc/nightly/html/classvtkPlaneCutter.html) — plane cutter.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCompositePolyDataMapper",
+    "vtkConvertToMultiBlockDataSet",
+    "vtkIOSSReader",
+    "vtkPlane",
+    "vtkPlaneCutter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/can.ex2"
+  ],
+  "py_filename": "composite_dataset_plane_cutter.py",
+  "image": "composite_dataset_plane_cutter.png",
+  "metadata_filename": "composite_dataset_plane_cutter.json",
+  "topology": "standard"
+}

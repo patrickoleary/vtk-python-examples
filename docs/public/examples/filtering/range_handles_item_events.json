@@ -1,0 +1,20 @@
+{
+  "title": "range handles item events",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate range handles item events with color transfer function and event replay.\n\n**dataset → chart → item → context_asset → renderer → infrastructure → output**\n\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) — chart xy.\n- [vtkColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunction.html) — maps scalar values to RGB colors for volume rendering.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkRangeHandlesItem](https://www.vtk.org/doc/nightly/html/classvtkRangeHandlesItem.html) — range handles item.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartXY",
+    "vtkColorTransferFunction",
+    "vtkContextActor",
+    "vtkRangeHandlesItem",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "range_handles_item_events.py",
+  "image": "range_handles_item_events.png",
+  "metadata_filename": "range_handles_item_events.json",
+  "topology": "chart"
+}

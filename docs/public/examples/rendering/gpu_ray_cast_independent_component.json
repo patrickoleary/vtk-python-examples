@@ -1,0 +1,23 @@
+{
+  "title": "gpu ray cast independent component",
+  "source_type": "examples",
+  "tag": "rendering",
+  "explanation": "### Description\n\nDemonstrate GPU volume ray casting with independent component transfer functions on a 4-component dataset.\n\n**dataset → input → visual_asset → renderer → infrastructure → output**\n\n- [vtkColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunction.html) — maps scalar values to RGB colors for volume rendering.\n- [vtkGPUVolumeRayCastMapper](https://www.vtk.org/doc/nightly/html/classvtkGPUVolumeRayCastMapper.html) — gpu volume ray cast mapper.\n- [vtkPiecewiseFunction](https://www.vtk.org/doc/nightly/html/classvtkPiecewiseFunction.html) — defines a piecewise linear scalar-to-opacity mapping.\n- [vtkVolume](https://www.vtk.org/doc/nightly/html/classvtkVolume.html) — represents a volume in the scene.\n- [vtkXMLImageDataReader](https://www.vtk.org/doc/nightly/html/classvtkXMLImageDataReader.html) — xml image data reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkColorTransferFunction",
+    "vtkGPUVolumeRayCastMapper",
+    "vtkPiecewiseFunction",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkVolume",
+    "vtkXMLImageDataReader"
+  ],
+  "data_files": [
+    "data/vase_4comp.vti"
+  ],
+  "py_filename": "gpu_ray_cast_independent_component.py",
+  "image": "gpu_ray_cast_independent_component.png",
+  "metadata_filename": "gpu_ray_cast_independent_component.json",
+  "topology": "standard"
+}

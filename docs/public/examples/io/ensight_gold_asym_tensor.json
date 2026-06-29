@@ -1,0 +1,31 @@
+{
+  "title": "ensight gold asym tensor",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nRead EnSight Gold pitzDaily case, assign UGrad as scalars, and render.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkAssignAttribute](https://www.vtk.org/doc/nightly/html/classvtkAssignAttribute.html) — assign attribute.\n- [vtkCompositePolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkCompositePolyDataMapper.html) — maps composite (multi-block) polygonal data to graphics primitives.\n- [vtkDataSetAttributes](https://www.vtk.org/doc/nightly/html/classvtkDataSetAttributes.html) — data set attributes.\n- [vtkDataSetSurfaceFilter](https://www.vtk.org/doc/nightly/html/classvtkDataSetSurfaceFilter.html) — data set surface filter.\n- [vtkGenericEnSightReader](https://www.vtk.org/doc/nightly/html/classvtkGenericEnSightReader.html) — generic en sight reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkAssignAttribute",
+    "vtkCompositePolyDataMapper",
+    "vtkDataSetAttributes",
+    "vtkDataSetSurfaceFilter",
+    "vtkGenericEnSightReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/EnSight/pitzDaily.case",
+    "data/EnSight/pitzDaily.0000.mesh",
+    "data/EnSight/pitzDaily.0000.nut",
+    "data/EnSight/pitzDaily.0000.k",
+    "data/EnSight/pitzDaily.0000.p",
+    "data/EnSight/pitzDaily.0000.epsilon",
+    "data/EnSight/pitzDaily.0000.U",
+    "data/EnSight/pitzDaily.0000.UGrad"
+  ],
+  "py_filename": "ensight_gold_asym_tensor.py",
+  "image": "ensight_gold_asym_tensor.png",
+  "metadata_filename": "ensight_gold_asym_tensor.json",
+  "topology": "standard"
+}

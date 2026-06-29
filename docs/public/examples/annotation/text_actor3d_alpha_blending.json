@@ -1,0 +1,17 @@
+{
+  "title": "text actor3d alpha blending",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkTextActor3D rendering with alpha blending.\n\n**dataset → visual_asset → renderer → infrastructure → output**\n\n- [vtkTextActor3D](https://www.vtk.org/doc/nightly/html/classvtkTextActor3D.html) — text actor3d.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTextActor3D"
+  ],
+  "data_files": null,
+  "py_filename": "text_actor3d_alpha_blending.py",
+  "image": "text_actor3d_alpha_blending.png",
+  "metadata_filename": "text_actor3d_alpha_blending.json",
+  "topology": "standard"
+}

@@ -1,0 +1,35 @@
+{
+  "title": "slac particle reader",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nRead SLAC mesh with field modes and particle data, render both together.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCompositeDataGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkCompositeDataGeometryFilter.html) — extracts the outer surface from a composite dataset.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkSLACParticleReader](https://www.vtk.org/doc/nightly/html/classvtkSLACParticleReader.html) — slac particle reader.\n- [vtkSLACReader](https://www.vtk.org/doc/nightly/html/classvtkSLACReader.html) — slac reader.\n- [vtkStreamingDemandDrivenPipeline](https://www.vtk.org/doc/nightly/html/classvtkStreamingDemandDrivenPipeline.html) — streaming demand driven pipeline.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCompositeDataGeometryFilter",
+    "vtkLookupTable",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSLACParticleReader",
+    "vtkSLACReader",
+    "vtkStreamingDemandDrivenPipeline"
+  ],
+  "data_files": [
+    "data/SLAC/pic-example/fields_0.mod",
+    "data/SLAC/pic-example/fields_1.mod",
+    "data/SLAC/pic-example/fields_2.mod",
+    "data/SLAC/pic-example/fields_3.mod",
+    "data/SLAC/pic-example/fields_4.mod",
+    "data/SLAC/pic-example/fields_5.mod",
+    "data/SLAC/pic-example/fields_6.mod",
+    "data/SLAC/pic-example/fields_7.mod",
+    "data/SLAC/pic-example/fields_8.mod",
+    "data/SLAC/pic-example/mesh.ncdf",
+    "data/SLAC/pic-example/particles_5.ncdf"
+  ],
+  "py_filename": "slac_particle_reader.py",
+  "image": "slac_particle_reader.png",
+  "metadata_filename": "slac_particle_reader.json",
+  "topology": "standard"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "euclidean distance",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example computes a Euclidean distance transform from a binary mask of a 3D medical volume (FullHead.mhd) using vtkImageEuclideanDistance. The left viewport shows the original slice; the right shows the distance field mapped to a cool-to-warm colormap. The distance transform assigns each voxel the distance to the nearest boundary, useful for shape analysis and segmentation refinement. It follows the VTK pipeline structure:\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D slices. `SetDisplayExtent()` selects the middle axial slice.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts image scalar type for display.\n- [vtkImageEuclideanDistance](https://www.vtk.org/doc/nightly/html/classvtkImageEuclideanDistance.html) computes the Euclidean distance from each voxel to the nearest zero-valued voxel. `SetAlgorithmToSaito()` selects the efficient Saito algorithm.\n- [vtkImageMapToColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToColors.html) applies the lookup table to produce a colored distance image.\n- [vtkImageThreshold](https://www.vtk.org/doc/nightly/html/classvtkImageThreshold.html) creates a binary mask with `ThresholdByUpper(600)`.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) maps distance values to a blue-to-red colormap.\n- [vtkMetaImageReader](https://www.vtk.org/doc/nightly/html/classvtkMetaImageReader.html) reads the `FullHead.mhd` MetaImage volume.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageEuclideanDistance",
+    "vtkImageMapToColors",
+    "vtkImageThreshold",
+    "vtkLookupTable",
+    "vtkMetaImageReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/FullHead.mhd",
+    "data/FullHead.raw"
+  ],
+  "py_filename": "euclidean_distance.py",
+  "image": "euclidean_distance.png",
+  "metadata_filename": "euclidean_distance.json",
+  "topology": "standard"
+}

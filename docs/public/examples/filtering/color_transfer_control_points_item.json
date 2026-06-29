@@ -1,0 +1,22 @@
+{
+  "title": "color transfer control points item",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkColorTransferControlPointsItem API for moving and spreading control points.\n\n**dataset → chart → item → context_asset → renderer → infrastructure → output**\n\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) — chart xy.\n- [vtkColorTransferControlPointsItem](https://www.vtk.org/doc/nightly/html/classvtkColorTransferControlPointsItem.html) — color transfer control points item.\n- [vtkColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunction.html) — maps scalar values to RGB colors for volume rendering.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkIdTypeArray](https://www.vtk.org/doc/nightly/html/classvtkIdTypeArray.html) — id type array.\n- [vtkVector2f](https://www.vtk.org/doc/nightly/html/classvtkVector2f.html) — vector2f.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartXY",
+    "vtkColorTransferControlPointsItem",
+    "vtkColorTransferFunction",
+    "vtkContextActor",
+    "vtkIdTypeArray",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkVector2f"
+  ],
+  "data_files": null,
+  "py_filename": "color_transfer_control_points_item.py",
+  "image": "color_transfer_control_points_item.png",
+  "metadata_filename": "color_transfer_control_points_item.json",
+  "topology": "chart"
+}

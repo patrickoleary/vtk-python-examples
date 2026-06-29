@@ -1,0 +1,21 @@
+{
+  "title": "corner overlay",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkCornerAnnotation with image actor and window/level display.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkCornerAnnotation](https://www.vtk.org/doc/nightly/html/classvtkCornerAnnotation.html) — corner annotation.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageMandelbrotSource](https://www.vtk.org/doc/nightly/html/classvtkImageMandelbrotSource.html) — image mandelbrot source.\n- [vtkImageMapToWindowLevelColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToWindowLevelColors.html) — image map to window level colors.\n- [vtkImageShiftScale](https://www.vtk.org/doc/nightly/html/classvtkImageShiftScale.html) — image shift scale.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkCornerAnnotation",
+    "vtkImageActor",
+    "vtkImageMandelbrotSource",
+    "vtkImageMapToWindowLevelColors",
+    "vtkImageShiftScale",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "corner_overlay.py",
+  "image": "corner_overlay.png",
+  "metadata_filename": "corner_overlay.json",
+  "topology": "standard"
+}

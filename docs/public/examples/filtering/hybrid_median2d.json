@@ -1,0 +1,23 @@
+{
+  "title": "hybrid median2d",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nApply hybrid median filter to remove shot noise from a canvas image.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageCanvasSource2D](https://www.vtk.org/doc/nightly/html/classvtkImageCanvasSource2D.html) — image canvas source2d.\n- [vtkImageHybridMedian2D](https://www.vtk.org/doc/nightly/html/classvtkImageHybridMedian2D.html) — image hybrid median2d.\n- [vtkImageMathematics](https://www.vtk.org/doc/nightly/html/classvtkImageMathematics.html) — performs mathematical operations on image data.\n- [vtkImageMedian3D](https://www.vtk.org/doc/nightly/html/classvtkImageMedian3D.html) — image median3d.\n- [vtkImageNoiseSource](https://www.vtk.org/doc/nightly/html/classvtkImageNoiseSource.html) — image noise source.\n- [vtkImageThreshold](https://www.vtk.org/doc/nightly/html/classvtkImageThreshold.html) — thresholds an image, replacing values inside/outside a range.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCanvasSource2D",
+    "vtkImageHybridMedian2D",
+    "vtkImageMathematics",
+    "vtkImageMedian3D",
+    "vtkImageNoiseSource",
+    "vtkImageThreshold",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "hybrid_median2d.py",
+  "image": "hybrid_median2d.png",
+  "metadata_filename": "hybrid_median2d.json",
+  "topology": "standard"
+}

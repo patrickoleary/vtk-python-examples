@@ -1,0 +1,21 @@
+{
+  "title": "perlin noise",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nThis example samples a Perlin noise implicit function on a volume grid using vtkSampleFunction and extracts an iso-surface at value 0 with vtkContourFilter, producing an organic-looking surface.\n\n**dataset → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene. `GetProperty().SetColor()` sets the surface color.\n- [vtkContourFilter](https://www.vtk.org/doc/nightly/html/classvtkContourFilter.html) extracts the zero-level iso-surface from the sampled volume.\n- [vtkPerlinNoise](https://www.vtk.org/doc/nightly/html/classvtkPerlinNoise.html) defines a coherent noise implicit function with configurable frequency and phase.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the iso-surface to graphics primitives. `ScalarVisibilityOff()` disables color-mapping so the actor color is used.\n- [vtkSampleFunction](https://www.vtk.org/doc/nightly/html/classvtkSampleFunction.html) evaluates the implicit function on a 65x65x20 volume grid.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera. `ResetCamera()` frames the iso-surface.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkContourFilter",
+    "vtkPerlinNoise",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSampleFunction"
+  ],
+  "data_files": null,
+  "py_filename": "perlin_noise.py",
+  "image": "perlin_noise.png",
+  "metadata_filename": "perlin_noise.json",
+  "topology": "standard"
+}

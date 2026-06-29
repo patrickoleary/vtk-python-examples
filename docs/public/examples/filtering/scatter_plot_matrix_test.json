@@ -1,0 +1,20 @@
+{
+  "title": "scatter plot matrix test",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate a scatter plot matrix with multiple columns and polygon selection.\n\n**dataset → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkScatterPlotMatrix](https://www.vtk.org/doc/nightly/html/classvtkScatterPlotMatrix.html) — scatter plot matrix.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) — table.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkContextActor",
+    "vtkFloatArray",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkScatterPlotMatrix",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "scatter_plot_matrix_test.py",
+  "image": "scatter_plot_matrix_test.png",
+  "metadata_filename": "scatter_plot_matrix_test.json",
+  "topology": "chart"
+}

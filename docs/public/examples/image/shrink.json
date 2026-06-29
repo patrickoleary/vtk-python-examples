@@ -1,0 +1,23 @@
+{
+  "title": "shrink",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example downsamples a 3D medical volume (FullHead.mhd) by an integer factor using vtkImageShrink3D. The left viewport shows the original middle axial slice; the right shows the downsampled version. `AveragingOn()` applies a box filter before subsampling to reduce aliasing. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D slices. `SetDisplayExtent()` selects the middle axial slice.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts data to unsigned char for display.\n- [vtkImageShrink3D](https://www.vtk.org/doc/nightly/html/classvtkImageShrink3D.html) downsamples the image by integer factors. `SetShrinkFactors(4, 4, 1)` reduces X and Y by 4× while keeping Z unchanged. `AveragingOn()` applies a mean filter before subsampling.\n- [vtkMetaImageReader](https://www.vtk.org/doc/nightly/html/classvtkMetaImageReader.html) reads the `FullHead.mhd` MetaImage volume.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageShrink3D",
+    "vtkMetaImageReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/FullHead.mhd",
+    "data/FullHead.raw"
+  ],
+  "py_filename": "shrink.py",
+  "image": "shrink.png",
+  "metadata_filename": "shrink.json",
+  "topology": "standard"
+}

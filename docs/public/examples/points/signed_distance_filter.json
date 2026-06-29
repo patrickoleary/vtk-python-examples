@@ -1,0 +1,30 @@
+{
+  "title": "signed distance filter",
+  "source_type": "examples",
+  "tag": "points",
+  "explanation": "### Description\n\nDemonstrate vtkSignedDistance and vtkExtractSurface by generating a hemi-sphere point cloud from implicit functions, estimating normals, computing signed distance, and extracting a surface.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkBoundedPointSource](https://www.vtk.org/doc/nightly/html/classvtkBoundedPointSource.html) — bounded point source.\n- [vtkExtractSurface](https://www.vtk.org/doc/nightly/html/classvtkExtractSurface.html) — extract surface.\n- [vtkFitImplicitFunction](https://www.vtk.org/doc/nightly/html/classvtkFitImplicitFunction.html) — fit implicit function.\n- [vtkImplicitBoolean](https://www.vtk.org/doc/nightly/html/classvtkImplicitBoolean.html) — implicit boolean.\n- [vtkMath](https://www.vtk.org/doc/nightly/html/classvtkMath.html) — provides mathematical utility functions.\n- [vtkOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkOutlineFilter.html) — generates a bounding box outline of the input data.\n- [vtkPCANormalEstimation](https://www.vtk.org/doc/nightly/html/classvtkPCANormalEstimation.html) — pca normal estimation.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) — defines an implicit plane function.\n- [vtkPointGaussianMapper](https://www.vtk.org/doc/nightly/html/classvtkPointGaussianMapper.html) — point gaussian mapper.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkSignedDistance](https://www.vtk.org/doc/nightly/html/classvtkSignedDistance.html) — signed distance.\n- [vtkSphere](https://www.vtk.org/doc/nightly/html/classvtkSphere.html) — defines an implicit sphere function.\n- [vtkTimerLog](https://www.vtk.org/doc/nightly/html/classvtkTimerLog.html) — timer log.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkBoundedPointSource",
+    "vtkExtractSurface",
+    "vtkFitImplicitFunction",
+    "vtkImplicitBoolean",
+    "vtkMath",
+    "vtkOutlineFilter",
+    "vtkPCANormalEstimation",
+    "vtkPlane",
+    "vtkPointGaussianMapper",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSignedDistance",
+    "vtkSphere",
+    "vtkTimerLog"
+  ],
+  "data_files": null,
+  "py_filename": "signed_distance_filter.py",
+  "image": "signed_distance_filter.png",
+  "metadata_filename": "signed_distance_filter.json",
+  "topology": "standard"
+}

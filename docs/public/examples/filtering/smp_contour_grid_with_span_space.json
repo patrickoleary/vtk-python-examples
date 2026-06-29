@@ -1,0 +1,24 @@
+{
+  "title": "smp contour grid with span space",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkContourFilter with vtkSpanSpace scalar tree on an Exodus II dataset, contouring the CH4 point result array.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkAssignAttribute](https://www.vtk.org/doc/nightly/html/classvtkAssignAttribute.html) — assign attribute.\n- [vtkCompositePolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkCompositePolyDataMapper.html) — maps composite (multi-block) polygonal data to graphics primitives.\n- [vtkContourFilter](https://www.vtk.org/doc/nightly/html/classvtkContourFilter.html) — extracts iso-surfaces at specified scalar values.\n- [vtkExodusIIReader](https://www.vtk.org/doc/nightly/html/classvtkExodusIIReader.html) — reads Exodus II finite element data files.\n- [vtkSpanSpace](https://www.vtk.org/doc/nightly/html/classvtkSpanSpace.html) — span space.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkAssignAttribute",
+    "vtkCompositePolyDataMapper",
+    "vtkContourFilter",
+    "vtkExodusIIReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSpanSpace"
+  ],
+  "data_files": [
+    "data/disk_out_ref.ex2"
+  ],
+  "py_filename": "smp_contour_grid_with_span_space.py",
+  "image": "smp_contour_grid_with_span_space.png",
+  "metadata_filename": "smp_contour_grid_with_span_space.json",
+  "topology": "standard"
+}

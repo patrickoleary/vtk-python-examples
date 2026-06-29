@@ -1,0 +1,23 @@
+{
+  "title": "transient hdf reader app",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nThis example reads transient data from a VTK HDF file and animates through the time steps using a repeating timer callback.\n\n**dataset → input → visual_asset → renderer → infrastructure → interaction → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunction.html) defines a diverging blue-white-red color map via `SetColorSpaceToDiverging()` and `AddRGBPoint()` control points.\n- [vtkCompositePolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkCompositePolyDataMapper.html) maps composite (multi-block) polydata to graphics primitives. `SelectColorArray()` and `SetScalarModeToUsePointFieldData()` color the surface by a named field.\n- [vtkHDFReader](https://www.vtk.org/doc/nightly/html/classvtkHDFReader.html) reads a VTK HDF (.vtkhdf) file containing time-varying data. `SetFileName()` specifies the input file. `SetStep()` selects the time step and `GetNumberOfSteps()` reports the total count.\n- [vtkInteractorStyleTrackballCamera](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleTrackballCamera.html) maps mouse motion to camera transformations.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene. `UseHiddenLineRemovalOn()` improves wireframe rendering of overlapping surfaces.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events. `CreateRepeatingTimer()` drives the animation; an `AnimationCallback` observer advances the time step on each timer event.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkColorTransferFunction",
+    "vtkCompositePolyDataMapper",
+    "vtkHDFReader",
+    "vtkInteractorStyleTrackballCamera",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/warping_spheres.vtkhdf"
+  ],
+  "py_filename": "transient_hdf_reader_app.py",
+  "image": "transient_hdf_reader_app.png",
+  "metadata_filename": "transient_hdf_reader_app.json",
+  "topology": "standard"
+}

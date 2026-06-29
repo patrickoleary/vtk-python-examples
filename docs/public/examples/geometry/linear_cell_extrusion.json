@@ -1,0 +1,25 @@
+{
+  "title": "linear cell extrusion",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nDemonstrate vtkLinearCellExtrusionFilter by creating a polydata with a pentagon, quad, and triangle, extruding cells by a scalar array using both normal and user-defined vector modes, and rendering both results side by side.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCellArray](https://www.vtk.org/doc/nightly/html/classvtkCellArray.html) — cell array.\n- [vtkDataObject](https://www.vtk.org/doc/nightly/html/classvtkDataObject.html) — provides field association constants for array processing.\n- [vtkDataSetSurfaceFilter](https://www.vtk.org/doc/nightly/html/classvtkDataSetSurfaceFilter.html) — data set surface filter.\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkLinearCellExtrusionFilter](https://www.vtk.org/doc/nightly/html/classvtkLinearCellExtrusionFilter.html) — linear cell extrusion filter.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) — represents polygonal geometry.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCellArray",
+    "vtkDataObject",
+    "vtkDataSetSurfaceFilter",
+    "vtkDoubleArray",
+    "vtkLinearCellExtrusionFilter",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "linear_cell_extrusion.py",
+  "image": "linear_cell_extrusion.png",
+  "metadata_filename": "linear_cell_extrusion.json",
+  "topology": "standard"
+}

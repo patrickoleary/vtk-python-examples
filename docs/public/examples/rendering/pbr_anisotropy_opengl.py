@@ -1,0 +1,311 @@
+#!/usr/bin/env python
+
+# Demonstrate PBR anisotropy rendering with varying roughness, anisotropy, and rotation.
+
+import vtkmodules.vtkInteractionStyle  # noqa: F401
+import vtkmodules.vtkRenderingOpenGL2  # noqa: F401
+
+import os
+
+from vtkmodules.vtkFiltersCore import vtkPolyDataTangents
+from vtkmodules.vtkFiltersSources import vtkSphereSource
+from vtkmodules.vtkFiltersTexture import vtkTextureMapToSphere
+from vtkmodules.vtkIOImage import vtkJPEGReader
+from vtkmodules.vtkImagingCore import vtkImageFlip
+from vtkmodules.vtkRenderingCore import (
+    vtkActor,
+    vtkPolyDataMapper,
+    vtkRenderWindow,
+    vtkRenderWindowInteractor,
+    vtkRenderer,
+    vtkTexture,
+)
+
+data_dir = os.environ.get("VPE_DATA_DIR", os.path.dirname(os.path.abspath(__file__)))
+
+# Cubemap environment texture
+cubemap = vtkTexture()
+cubemap.CubeMapOn()
+cubemap.UseSRGBColorSpaceOn()
+
+jpg_px = vtkJPEGReader()
+jpg_px.SetFileName(os.path.join(data_dir, "skybox", "posx.jpg"))
+flip_px = vtkImageFlip()
+flip_px.SetInputConnection(jpg_px.GetOutputPort())
+flip_px.SetFilteredAxis(1)
+cubemap.SetInputConnection(0, flip_px.GetOutputPort())
+
+jpg_nx = vtkJPEGReader()
+jpg_nx.SetFileName(os.path.join(data_dir, "skybox", "negx.jpg"))
+flip_nx = vtkImageFlip()
+flip_nx.SetInputConnection(jpg_nx.GetOutputPort())
+flip_nx.SetFilteredAxis(1)
+cubemap.SetInputConnection(1, flip_nx.GetOutputPort())
+
+jpg_py = vtkJPEGReader()
+jpg_py.SetFileName(os.path.join(data_dir, "skybox", "posy.jpg"))
+flip_py = vtkImageFlip()
+flip_py.SetInputConnection(jpg_py.GetOutputPort())
+flip_py.SetFilteredAxis(1)
+cubemap.SetInputConnection(2, flip_py.GetOutputPort())
+
+jpg_ny = vtkJPEGReader()
+jpg_ny.SetFileName(os.path.join(data_dir, "skybox", "negy.jpg"))
+flip_ny = vtkImageFlip()
+flip_ny.SetInputConnection(jpg_ny.GetOutputPort())
+flip_ny.SetFilteredAxis(1)
+cubemap.SetInputConnection(3, flip_ny.GetOutputPort())
+
+jpg_pz = vtkJPEGReader()
+jpg_pz.SetFileName(os.path.join(data_dir, "skybox", "posz.jpg"))
+flip_pz = vtkImageFlip()
+flip_pz.SetInputConnection(jpg_pz.GetOutputPort())
+flip_pz.SetFilteredAxis(1)
+cubemap.SetInputConnection(4, flip_pz.GetOutputPort())
+
+jpg_nz = vtkJPEGReader()
+jpg_nz.SetFileName(os.path.join(data_dir, "skybox", "negz.jpg"))
+flip_nz = vtkImageFlip()
+flip_nz.SetInputConnection(jpg_nz.GetOutputPort())
+flip_nz.SetFilteredAxis(1)
+cubemap.SetInputConnection(5, flip_nz.GetOutputPort())
+
+# Sphere with tangents
+sphere = vtkSphereSource()
+sphere.SetThetaResolution(75)
+sphere.SetPhiResolution(75)
+
+texture_map = vtkTextureMapToSphere()
+texture_map.SetInputConnection(sphere.GetOutputPort())
+texture_map.PreventSeamOff()
+
+tangents = vtkPolyDataTangents()
+tangents.SetInputConnection(texture_map.GetOutputPort())
+
+mapper = vtkPolyDataMapper()
+mapper.SetInputConnection(tangents.GetOutputPort())
+
+# Row 0: varying roughness, anisotropy=1.0
+actor_r0_0 = vtkActor()
+actor_r0_0.SetPosition(0, 0.0, 0.0)
+actor_r0_0.RotateX(20)
+actor_r0_0.RotateY(20)
+actor_r0_0.SetMapper(mapper)
+actor_r0_0.GetProperty().SetInterpolationToPBR()
+actor_r0_0.GetProperty().SetMetallic(1.0)
+actor_r0_0.GetProperty().SetAnisotropy(1.0)
+actor_r0_0.GetProperty().SetRoughness(0.0)
+
+actor_r0_1 = vtkActor()
+actor_r0_1.SetPosition(1, 0.0, 0.0)
+actor_r0_1.RotateX(20)
+actor_r0_1.RotateY(20)
+actor_r0_1.SetMapper(mapper)
+actor_r0_1.GetProperty().SetInterpolationToPBR()
+actor_r0_1.GetProperty().SetMetallic(1.0)
+actor_r0_1.GetProperty().SetAnisotropy(1.0)
+actor_r0_1.GetProperty().SetRoughness(0.2)
+
+actor_r0_2 = vtkActor()
+actor_r0_2.SetPosition(2, 0.0, 0.0)
+actor_r0_2.RotateX(20)
+actor_r0_2.RotateY(20)
+actor_r0_2.SetMapper(mapper)
+actor_r0_2.GetProperty().SetInterpolationToPBR()
+actor_r0_2.GetProperty().SetMetallic(1.0)
+actor_r0_2.GetProperty().SetAnisotropy(1.0)
+actor_r0_2.GetProperty().SetRoughness(0.4)
+
+actor_r0_3 = vtkActor()
+actor_r0_3.SetPosition(3, 0.0, 0.0)
+actor_r0_3.RotateX(20)
+actor_r0_3.RotateY(20)
+actor_r0_3.SetMapper(mapper)
+actor_r0_3.GetProperty().SetInterpolationToPBR()
+actor_r0_3.GetProperty().SetMetallic(1.0)
+actor_r0_3.GetProperty().SetAnisotropy(1.0)
+actor_r0_3.GetProperty().SetRoughness(0.6)
+
+actor_r0_4 = vtkActor()
+actor_r0_4.SetPosition(4, 0.0, 0.0)
+actor_r0_4.RotateX(20)
+actor_r0_4.RotateY(20)
+actor_r0_4.SetMapper(mapper)
+actor_r0_4.GetProperty().SetInterpolationToPBR()
+actor_r0_4.GetProperty().SetMetallic(1.0)
+actor_r0_4.GetProperty().SetAnisotropy(1.0)
+actor_r0_4.GetProperty().SetRoughness(0.8)
+
+actor_r0_5 = vtkActor()
+actor_r0_5.SetPosition(5, 0.0, 0.0)
+actor_r0_5.RotateX(20)
+actor_r0_5.RotateY(20)
+actor_r0_5.SetMapper(mapper)
+actor_r0_5.GetProperty().SetInterpolationToPBR()
+actor_r0_5.GetProperty().SetMetallic(1.0)
+actor_r0_5.GetProperty().SetAnisotropy(1.0)
+actor_r0_5.GetProperty().SetRoughness(1.0)
+
+# Row 1: varying anisotropy, roughness=0.1
+actor_r1_0 = vtkActor()
+actor_r1_0.SetPosition(0, 1.0, 0.0)
+actor_r1_0.RotateX(20)
+actor_r1_0.RotateY(20)
+actor_r1_0.SetMapper(mapper)
+actor_r1_0.GetProperty().SetInterpolationToPBR()
+actor_r1_0.GetProperty().SetMetallic(1.0)
+actor_r1_0.GetProperty().SetRoughness(0.1)
+actor_r1_0.GetProperty().SetAnisotropy(0.0)
+
+actor_r1_1 = vtkActor()
+actor_r1_1.SetPosition(1, 1.0, 0.0)
+actor_r1_1.RotateX(20)
+actor_r1_1.RotateY(20)
+actor_r1_1.SetMapper(mapper)
+actor_r1_1.GetProperty().SetInterpolationToPBR()
+actor_r1_1.GetProperty().SetMetallic(1.0)
+actor_r1_1.GetProperty().SetRoughness(0.1)
+actor_r1_1.GetProperty().SetAnisotropy(0.2)
+
+actor_r1_2 = vtkActor()
+actor_r1_2.SetPosition(2, 1.0, 0.0)
+actor_r1_2.RotateX(20)
+actor_r1_2.RotateY(20)
+actor_r1_2.SetMapper(mapper)
+actor_r1_2.GetProperty().SetInterpolationToPBR()
+actor_r1_2.GetProperty().SetMetallic(1.0)
+actor_r1_2.GetProperty().SetRoughness(0.1)
+actor_r1_2.GetProperty().SetAnisotropy(0.4)
+
+actor_r1_3 = vtkActor()
+actor_r1_3.SetPosition(3, 1.0, 0.0)
+actor_r1_3.RotateX(20)
+actor_r1_3.RotateY(20)
+actor_r1_3.SetMapper(mapper)
+actor_r1_3.GetProperty().SetInterpolationToPBR()
+actor_r1_3.GetProperty().SetMetallic(1.0)
+actor_r1_3.GetProperty().SetRoughness(0.1)
+actor_r1_3.GetProperty().SetAnisotropy(0.6)
+
+actor_r1_4 = vtkActor()
+actor_r1_4.SetPosition(4, 1.0, 0.0)
+actor_r1_4.RotateX(20)
+actor_r1_4.RotateY(20)
+actor_r1_4.SetMapper(mapper)
+actor_r1_4.GetProperty().SetInterpolationToPBR()
+actor_r1_4.GetProperty().SetMetallic(1.0)
+actor_r1_4.GetProperty().SetRoughness(0.1)
+actor_r1_4.GetProperty().SetAnisotropy(0.8)
+
+actor_r1_5 = vtkActor()
+actor_r1_5.SetPosition(5, 1.0, 0.0)
+actor_r1_5.RotateX(20)
+actor_r1_5.RotateY(20)
+actor_r1_5.SetMapper(mapper)
+actor_r1_5.GetProperty().SetInterpolationToPBR()
+actor_r1_5.GetProperty().SetMetallic(1.0)
+actor_r1_5.GetProperty().SetRoughness(0.1)
+actor_r1_5.GetProperty().SetAnisotropy(1.0)
+
+# Row 2: varying anisotropy rotation, anisotropy=1.0, roughness=0.1
+actor_r2_0 = vtkActor()
+actor_r2_0.SetPosition(0, 2.0, 0.0)
+actor_r2_0.RotateX(20)
+actor_r2_0.RotateY(20)
+actor_r2_0.SetMapper(mapper)
+actor_r2_0.GetProperty().SetInterpolationToPBR()
+actor_r2_0.GetProperty().SetMetallic(1.0)
+actor_r2_0.GetProperty().SetRoughness(0.1)
+actor_r2_0.GetProperty().SetAnisotropy(1.0)
+actor_r2_0.GetProperty().SetAnisotropyRotation(0.0)
+
+actor_r2_1 = vtkActor()
+actor_r2_1.SetPosition(1, 2.0, 0.0)
+actor_r2_1.RotateX(20)
+actor_r2_1.RotateY(20)
+actor_r2_1.SetMapper(mapper)
+actor_r2_1.GetProperty().SetInterpolationToPBR()
+actor_r2_1.GetProperty().SetMetallic(1.0)
+actor_r2_1.GetProperty().SetRoughness(0.1)
+actor_r2_1.GetProperty().SetAnisotropy(1.0)
+actor_r2_1.GetProperty().SetAnisotropyRotation(0.2)
+
+actor_r2_2 = vtkActor()
+actor_r2_2.SetPosition(2, 2.0, 0.0)
+actor_r2_2.RotateX(20)
+actor_r2_2.RotateY(20)
+actor_r2_2.SetMapper(mapper)
+actor_r2_2.GetProperty().SetInterpolationToPBR()
+actor_r2_2.GetProperty().SetMetallic(1.0)
+actor_r2_2.GetProperty().SetRoughness(0.1)
+actor_r2_2.GetProperty().SetAnisotropy(1.0)
+actor_r2_2.GetProperty().SetAnisotropyRotation(0.4)
+
+actor_r2_3 = vtkActor()
+actor_r2_3.SetPosition(3, 2.0, 0.0)
+actor_r2_3.RotateX(20)
+actor_r2_3.RotateY(20)
+actor_r2_3.SetMapper(mapper)
+actor_r2_3.GetProperty().SetInterpolationToPBR()
+actor_r2_3.GetProperty().SetMetallic(1.0)
+actor_r2_3.GetProperty().SetRoughness(0.1)
+actor_r2_3.GetProperty().SetAnisotropy(1.0)
+actor_r2_3.GetProperty().SetAnisotropyRotation(0.6)
+
+actor_r2_4 = vtkActor()
+actor_r2_4.SetPosition(4, 2.0, 0.0)
+actor_r2_4.RotateX(20)
+actor_r2_4.RotateY(20)
+actor_r2_4.SetMapper(mapper)
+actor_r2_4.GetProperty().SetInterpolationToPBR()
+actor_r2_4.GetProperty().SetMetallic(1.0)
+actor_r2_4.GetProperty().SetRoughness(0.1)
+actor_r2_4.GetProperty().SetAnisotropy(1.0)
+actor_r2_4.GetProperty().SetAnisotropyRotation(0.8)
+
+actor_r2_5 = vtkActor()
+actor_r2_5.SetPosition(5, 2.0, 0.0)
+actor_r2_5.RotateX(20)
+actor_r2_5.RotateY(20)
+actor_r2_5.SetMapper(mapper)
+actor_r2_5.GetProperty().SetInterpolationToPBR()
+actor_r2_5.GetProperty().SetMetallic(1.0)
+actor_r2_5.GetProperty().SetRoughness(0.1)
+actor_r2_5.GetProperty().SetAnisotropy(1.0)
+actor_r2_5.GetProperty().SetAnisotropyRotation(1.0)
+
+# Renderer with image-based lighting
+renderer = vtkRenderer()
+renderer.SetEnvironmentTexture(cubemap)
+renderer.UseImageBasedLightingOn()
+renderer.UseSphericalHarmonicsOff()
+renderer.GetEnvMapIrradiance().SetIrradianceStep(0.3)
+renderer.AddActor(actor_r0_0)
+renderer.AddActor(actor_r0_1)
+renderer.AddActor(actor_r0_2)
+renderer.AddActor(actor_r0_3)
+renderer.AddActor(actor_r0_4)
+renderer.AddActor(actor_r0_5)
+renderer.AddActor(actor_r1_0)
+renderer.AddActor(actor_r1_1)
+renderer.AddActor(actor_r1_2)
+renderer.AddActor(actor_r1_3)
+renderer.AddActor(actor_r1_4)
+renderer.AddActor(actor_r1_5)
+renderer.AddActor(actor_r2_0)
+renderer.AddActor(actor_r2_1)
+renderer.AddActor(actor_r2_2)
+renderer.AddActor(actor_r2_3)
+renderer.AddActor(actor_r2_4)
+renderer.AddActor(actor_r2_5)
+
+render_window = vtkRenderWindow()
+render_window.SetSize(600, 600)
+render_window.AddRenderer(renderer)
+render_window.SetWindowName("pbr anisotropy opengl")
+
+interactor = vtkRenderWindowInteractor()
+interactor.SetRenderWindow(render_window)
+
+interactor.Initialize()
+interactor.Start()

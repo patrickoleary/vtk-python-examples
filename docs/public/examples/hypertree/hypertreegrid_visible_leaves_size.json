@@ -1,0 +1,22 @@
+{
+  "title": "hypertreegrid visible leaves size",
+  "source_type": "examples",
+  "tag": "hypertree",
+  "explanation": "### Description\n\nThis example computes visible leaf cell sizes in a hyper tree grid using vtkHyperTreeGridGenerateFields and colors the surface by the computed cell-size array. Small refined cells appear blue and large coarse cells appear red using a diverging color transfer function. It follows the VTK pipeline structure:\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene with `EdgeVisibilityOn()` to show cell boundaries.\n- [vtkColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunction.html) maps the cell-size scalar range to a blue-white-red diverging colormap.\n- [vtkHyperTreeGridGeometry](https://www.vtk.org/doc/nightly/html/classvtkHyperTreeGridGeometry.html) extracts the external surface of the HTG as polydata for rendering.\n- [vtkHyperTreeGridSource](https://www.vtk.org/doc/nightly/html/classvtkHyperTreeGridSource.html) creates a hyper tree grid from a text descriptor with a `Depth` cell scalar field.\n- [vtkHyperTreeGridGenerateFields](https://www.vtk.org/doc/nightly/html/classvtkHyperTreeGridGenerateFields.html) computes derived cell data arrays for a hyper tree grid. `SetComputeCellSizeArray(True)` enables computation of cell sizes (volumes) for each visible leaf. This replaces the deprecated vtkHyperTreeGridVisibleLeavesSize.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the surface polydata to graphics primitives. `SetScalarModeToUseCellFieldData()` and `SelectColorArray()` color by the computed size array.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkColorTransferFunction",
+    "vtkHyperTreeGridGenerateFields",
+    "vtkHyperTreeGridGeometry",
+    "vtkHyperTreeGridSource",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "hypertreegrid_visible_leaves_size.py",
+  "image": "hypertreegrid_visible_leaves_size.png",
+  "metadata_filename": "hypertreegrid_visible_leaves_size.json",
+  "topology": "standard"
+}

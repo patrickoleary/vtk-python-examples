@@ -1,0 +1,22 @@
+{
+  "title": "minc image writer",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nRead a MINC image, write it with various attributes, read it back, and display.\n\n**dataset → input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkMINCImageAttributes](https://www.vtk.org/doc/nightly/html/classvtkMINCImageAttributes.html) — minc image attributes.\n- [vtkMINCImageReader](https://www.vtk.org/doc/nightly/html/classvtkMINCImageReader.html) — minc image reader.\n- [vtkMINCImageWriter](https://www.vtk.org/doc/nightly/html/classvtkMINCImageWriter.html) — minc image writer.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkMINCImageAttributes",
+    "vtkMINCImageReader",
+    "vtkMINCImageWriter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/t3_grid_0.mnc"
+  ],
+  "py_filename": "minc_image_writer.py",
+  "image": "minc_image_writer.png",
+  "metadata_filename": "minc_image_writer.json",
+  "topology": "standard"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "contour triangulator bad data",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkContourTriangulator handling bad data gracefully by reading a VTK dataset with problematic contours and verifying the triangulator terminates without infinite recursion.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkContourTriangulator](https://www.vtk.org/doc/nightly/html/classvtkContourTriangulator.html) — contour triangulator.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) — maps any dataset type to graphics primitives.\n- [vtkDataSetReader](https://www.vtk.org/doc/nightly/html/classvtkDataSetReader.html) — data set reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkContourTriangulator",
+    "vtkDataSetMapper",
+    "vtkDataSetReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/TriangulatorBadData.vtk"
+  ],
+  "py_filename": "contour_triangulator_bad_data.py",
+  "image": "contour_triangulator_bad_data.png",
+  "metadata_filename": "contour_triangulator_bad_data.json",
+  "topology": "standard"
+}

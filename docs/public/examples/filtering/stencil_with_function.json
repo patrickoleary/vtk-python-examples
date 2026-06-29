@@ -1,0 +1,24 @@
+{
+  "title": "stencil with function",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nUse a spherical implicit function as a stencil to mask a medical image.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageShiftScale](https://www.vtk.org/doc/nightly/html/classvtkImageShiftScale.html) — image shift scale.\n- [vtkImageStencil](https://www.vtk.org/doc/nightly/html/classvtkImageStencil.html) — image stencil.\n- [vtkImplicitFunctionToImageStencil](https://www.vtk.org/doc/nightly/html/classvtkImplicitFunctionToImageStencil.html) — implicit function to image stencil.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkSphere](https://www.vtk.org/doc/nightly/html/classvtkSphere.html) — defines an implicit sphere function.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageShiftScale",
+    "vtkImageStencil",
+    "vtkImplicitFunctionToImageStencil",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphere"
+  ],
+  "data_files": [
+    "data/fullhead15.png"
+  ],
+  "py_filename": "stencil_with_function.py",
+  "image": "stencil_with_function.png",
+  "metadata_filename": "stencil_with_function.json",
+  "topology": "standard"
+}

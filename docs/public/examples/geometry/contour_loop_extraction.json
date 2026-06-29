@@ -1,0 +1,32 @@
+{
+  "title": "contour loop extraction",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nDemonstrate vtkContourLoopExtraction by reading a DEM height field, generating contours with vtkFlyingEdges2D, extracting contour loops, cookie-cutting glyphed plane points with the loops, and rendering.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCellArray](https://www.vtk.org/doc/nightly/html/classvtkCellArray.html) — cell array.\n- [vtkContourLoopExtraction](https://www.vtk.org/doc/nightly/html/classvtkContourLoopExtraction.html) — contour loop extraction.\n- [vtkCookieCutter](https://www.vtk.org/doc/nightly/html/classvtkCookieCutter.html) — cookie cutter.\n- [vtkDEMReader](https://www.vtk.org/doc/nightly/html/classvtkDEMReader.html) — dem reader.\n- [vtkFlyingEdges2D](https://www.vtk.org/doc/nightly/html/classvtkFlyingEdges2D.html) — extracts iso-contours from a 2D image using the flying edges algorithm.\n- [vtkGenerateIds](https://www.vtk.org/doc/nightly/html/classvtkGenerateIds.html) — generates point and/or cell ID arrays.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) — places oriented, scaled glyphs at each point.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkPlaneSource](https://www.vtk.org/doc/nightly/html/classvtkPlaneSource.html) — generates a rectangular plane.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) — represents polygonal geometry.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkTriangleFilter](https://www.vtk.org/doc/nightly/html/classvtkTriangleFilter.html) — converts polygons into triangles.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCellArray",
+    "vtkContourLoopExtraction",
+    "vtkCookieCutter",
+    "vtkDEMReader",
+    "vtkFlyingEdges2D",
+    "vtkGenerateIds",
+    "vtkGlyph3D",
+    "vtkLookupTable",
+    "vtkPlaneSource",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTriangleFilter"
+  ],
+  "data_files": [
+    "data/SainteHelens.dem"
+  ],
+  "py_filename": "contour_loop_extraction.py",
+  "image": "contour_loop_extraction.png",
+  "metadata_filename": "contour_loop_extraction.json",
+  "topology": "standard"
+}

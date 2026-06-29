@@ -1,0 +1,20 @@
+{
+  "title": "tiff reader tiled rgb",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nRead a tiled RGB TIFF file and display with vtkImageActor.\n\n**input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkTIFFReader](https://www.vtk.org/doc/nightly/html/classvtkTIFFReader.html) — reads TIFF image files.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTIFFReader"
+  ],
+  "data_files": [
+    "data/libtiff/gourds_tiled_200x300.tif"
+  ],
+  "py_filename": "tiff_reader_tiled_rgb.py",
+  "image": "tiff_reader_tiled_rgb.png",
+  "metadata_filename": "tiff_reader_tiled_rgb.json",
+  "topology": "standard"
+}

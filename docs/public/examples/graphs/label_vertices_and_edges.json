@@ -1,0 +1,26 @@
+{
+  "title": "label vertices and edges",
+  "source_type": "examples",
+  "tag": "graphs",
+  "explanation": "### Description\n\nThis example labels vertices of an undirected graph. Vertices are labelled with integer IDs (yellow) using a circular layout strategy. Edge weights are stored but vertex labels are the primary display.\n\n**dataset → input → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkCircularLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkCircularLayoutStrategy.html) arranges vertices in a circle.\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) stores per-edge weight values.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) applies the circular layout strategy.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) converts graph edges to polydata lines.\n- [vtkIntArray](https://www.vtk.org/doc/nightly/html/classvtkIntArray.html) stores per-vertex ID values.\n- [vtkLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkLabeledDataMapper.html) renders vertex labels as yellow text.\n- [vtkMutableUndirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableUndirectedGraph.html) builds the undirected graph.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkActor2D",
+    "vtkCircularLayoutStrategy",
+    "vtkDoubleArray",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkIntArray",
+    "vtkLabeledDataMapper",
+    "vtkMutableUndirectedGraph",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "label_vertices_and_edges.py",
+  "image": "label_vertices_and_edges.png",
+  "metadata_filename": "label_vertices_and_edges.json",
+  "topology": "graph"
+}

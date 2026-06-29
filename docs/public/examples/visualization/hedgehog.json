@@ -1,0 +1,23 @@
+{
+  "title": "hedgehog",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nThis example visualizes a procedural swirling vector field as a hedgehog plot on a structured grid.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) stores float data arrays.\n- [vtkHedgeHog](https://www.vtk.org/doc/nightly/html/classvtkHedgeHog.html) draws a line segment at each point oriented along the vector.\n- [vtkOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkOutlineFilter.html) generates a bounding outline.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) stores 3D point coordinates.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps polygon data to graphics primitives.\n- [vtkStructuredGrid](https://www.vtk.org/doc/nightly/html/classvtkStructuredGrid.html) holds the procedural 15×15×15 grid with vectors.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkFloatArray",
+    "vtkHedgeHog",
+    "vtkOutlineFilter",
+    "vtkPoints",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStructuredGrid"
+  ],
+  "data_files": null,
+  "py_filename": "hedgehog.py",
+  "image": "hedgehog.png",
+  "metadata_filename": "hedgehog.json",
+  "topology": "standard"
+}

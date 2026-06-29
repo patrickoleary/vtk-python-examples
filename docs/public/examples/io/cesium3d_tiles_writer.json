@@ -1,0 +1,38 @@
+{
+  "title": "cesium3d tiles writer",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nWrite 3D Tiles from OBJ and CityGML buildings, then import and render the church model.\n\n**dataset → input → renderer → infrastructure → scene → output**\n\n- [vtkCesium3DTilesWriter](https://www.vtk.org/doc/nightly/html/classvtkCesium3DTilesWriter.html) — cesium3d tiles writer.\n- [vtkCityGMLReader](https://www.vtk.org/doc/nightly/html/classvtkCityGMLReader.html) — city gml reader.\n- [vtkFieldData](https://www.vtk.org/doc/nightly/html/classvtkFieldData.html) — field data.\n- [vtkGLTFImporter](https://www.vtk.org/doc/nightly/html/classvtkGLTFImporter.html) — gltf importer.\n- [vtkMultiBlockDataSet](https://www.vtk.org/doc/nightly/html/classvtkMultiBlockDataSet.html) — groups multiple datasets into a composite structure.\n- [vtkOBJReader](https://www.vtk.org/doc/nightly/html/classvtkOBJReader.html) — obj reader.\n- [vtkStringArray](https://www.vtk.org/doc/nightly/html/classvtkStringArray.html) — string array.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkCesium3DTilesWriter",
+    "vtkCityGMLReader",
+    "vtkFieldData",
+    "vtkGLTFImporter",
+    "vtkMultiBlockDataSet",
+    "vtkOBJReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStringArray"
+  ],
+  "data_files": [
+    "data/CityGML/Part-4-Buildings-V4-one.gml",
+    "data/berlin-triangle.gml",
+    "data/jacksonville-triangle.obj",
+    "data/jacksonville-gltf/tileset.json",
+    "data/jacksonville-gltf/9/9.glb",
+    "data/jacksonville-gltf/14/14.glb",
+    "data/jacksonville-gltf/15/15.glb",
+    "data/jacksonville-gltf/16/16.glb",
+    "data/CityGML/textures/Kirchenfenster-V2.jpg",
+    "data/CityGML/textures/Roofing_Slate_Dark.jpg",
+    "data/CityGML/textures/Roofing_Slate_Rounded.jpg",
+    "data/CityGML/textures/Stone_Sandstone_Ashlar_Light.jpg",
+    "data/CityGML/textures/Stone_Sandstone_Ashlar_Light1.jpg",
+    "data/CityGML/textures/Wood_Cherry_Chapel.jpg"
+  ],
+  "py_filename": "cesium3d_tiles_writer.py",
+  "image": "cesium3d_tiles_writer.png",
+  "metadata_filename": "cesium3d_tiles_writer.json",
+  "topology": "standard"
+}

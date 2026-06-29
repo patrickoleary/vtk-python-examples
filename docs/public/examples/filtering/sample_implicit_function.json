@@ -1,0 +1,23 @@
+{
+  "title": "sample implicit function",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nSample a cylinder implicit function over a random point cloud using vtkSampleImplicitFunctionFilter and display with a point Gaussian mapper.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCylinder](https://www.vtk.org/doc/nightly/html/classvtkCylinder.html) — defines an implicit cylinder function.\n- [vtkOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkOutlineFilter.html) — generates a bounding box outline of the input data.\n- [vtkPointGaussianMapper](https://www.vtk.org/doc/nightly/html/classvtkPointGaussianMapper.html) — point gaussian mapper.\n- [vtkPointSource](https://www.vtk.org/doc/nightly/html/classvtkPointSource.html) — generates random points inside a sphere.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkSampleImplicitFunctionFilter](https://www.vtk.org/doc/nightly/html/classvtkSampleImplicitFunctionFilter.html) — sample implicit function filter.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCylinder",
+    "vtkOutlineFilter",
+    "vtkPointGaussianMapper",
+    "vtkPointSource",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSampleImplicitFunctionFilter"
+  ],
+  "data_files": null,
+  "py_filename": "sample_implicit_function.py",
+  "image": "sample_implicit_function.png",
+  "metadata_filename": "sample_implicit_function.json",
+  "topology": "standard"
+}

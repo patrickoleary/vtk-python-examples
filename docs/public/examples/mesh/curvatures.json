@@ -1,0 +1,29 @@
+{
+  "title": "curvatures",
+  "source_type": "examples",
+  "tag": "mesh",
+  "explanation": "### Description\n\nThis example computes Mean curvature on a cowHead mesh, adjust edge curvatures via distance-weighted averaging of interior neighbours, and display the result with a colour-mapped scalar bar.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkCameraOrientationWidget](https://www.vtk.org/doc/nightly/html/classvtkCameraOrientationWidget.html) provides an interactive orientation gizmo.\n- [vtkColorSeries](https://www.vtk.org/doc/nightly/html/classvtkColorSeries.html) provides a predefined set of colours used to build the lookup table.\n- [vtkColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunction.html) maps scalar curvature values to colours.\n- [vtkCurvatures](https://www.vtk.org/doc/nightly/html/classvtkCurvatures.html) computes Mean curvature at each vertex.\n- [vtkFeatureEdges](https://www.vtk.org/doc/nightly/html/classvtkFeatureEdges.html) extracts boundary edges to identify points needing curvature adjustment.\n- [vtkGenerateIds](https://www.vtk.org/doc/nightly/html/classvtkGenerateIds.html) assigns original point IDs so boundary points can be mapped back after edge extraction.\n- [vtkIdList](https://www.vtk.org/doc/nightly/html/classvtkIdList.html) stores neighbour point IDs during edge curvature adjustment.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the curvature-coloured mesh to graphics primitives.\n- [vtkScalarBarActor](https://www.vtk.org/doc/nightly/html/classvtkScalarBarActor.html) displays the curvature legend.\n- [vtkXMLPolyDataReader](https://www.vtk.org/doc/nightly/html/classvtkXMLPolyDataReader.html) loads `cowHead.vtp` from the data directory.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCameraOrientationWidget",
+    "vtkColorSeries",
+    "vtkColorTransferFunction",
+    "vtkCurvatures",
+    "vtkFeatureEdges",
+    "vtkGenerateIds",
+    "vtkIdList",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkScalarBarActor",
+    "vtkXMLPolyDataReader"
+  ],
+  "data_files": [
+    "data/cowHead.vtp"
+  ],
+  "py_filename": "curvatures.py",
+  "image": "curvatures.png",
+  "metadata_filename": "curvatures.json",
+  "topology": "standard"
+}

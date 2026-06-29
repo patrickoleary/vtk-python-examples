@@ -1,0 +1,31 @@
+{
+  "title": "windowed sinc polyline smoothing",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nSmooth aliased polylines using vtkWindowedSincPolyDataFilter applied to discrete contour edges extracted from a rasterized cross shape, displayed in two viewports (original vs smoothed).\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCellArray](https://www.vtk.org/doc/nightly/html/classvtkCellArray.html) — cell array.\n- [vtkContourLoopExtraction](https://www.vtk.org/doc/nightly/html/classvtkContourLoopExtraction.html) — contour loop extraction.\n- [vtkDiscreteFlyingEdges2D](https://www.vtk.org/doc/nightly/html/classvtkDiscreteFlyingEdges2D.html) — discrete flying edges2d.\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) — represents a regular grid of points (image/volume).\n- [vtkImageExtractComponents](https://www.vtk.org/doc/nightly/html/classvtkImageExtractComponents.html) — extracts selected components from multi-component image data.\n- [vtkImageQuantizeRGBToIndex](https://www.vtk.org/doc/nightly/html/classvtkImageQuantizeRGBToIndex.html) — image quantize rgb to index.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) — represents polygonal geometry.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkStripper](https://www.vtk.org/doc/nightly/html/classvtkStripper.html) — creates triangle strips and/or polylines from polygonal data.\n- [vtkTransform](https://www.vtk.org/doc/nightly/html/classvtkTransform.html) — defines a 4x4 geometric transformation.\n- [vtkTransformPolyDataFilter](https://www.vtk.org/doc/nightly/html/classvtkTransformPolyDataFilter.html) — transform poly data filter.\n- [vtkWindowToImageFilter](https://www.vtk.org/doc/nightly/html/classvtkWindowToImageFilter.html) — window to image filter.\n- [vtkWindowedSincPolyDataFilter](https://www.vtk.org/doc/nightly/html/classvtkWindowedSincPolyDataFilter.html) — smooths a mesh using windowed sinc interpolation.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCellArray",
+    "vtkContourLoopExtraction",
+    "vtkDiscreteFlyingEdges2D",
+    "vtkImageData",
+    "vtkImageExtractComponents",
+    "vtkImageQuantizeRGBToIndex",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStripper",
+    "vtkTransform",
+    "vtkTransformPolyDataFilter",
+    "vtkWindowToImageFilter",
+    "vtkWindowedSincPolyDataFilter"
+  ],
+  "data_files": null,
+  "py_filename": "windowed_sinc_polyline_smoothing.py",
+  "image": "windowed_sinc_polyline_smoothing.png",
+  "metadata_filename": "windowed_sinc_polyline_smoothing.json",
+  "topology": "standard"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "change information",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example modifies the spacing and origin of a procedural image using [vtkImageChangeInformation](https://www.vtk.org/doc/nightly/html/classvtkImageChangeInformation.html) and display the original and modified images side by side. The pixel data is identical in both viewports — only the metadata that maps the image to world coordinates is changed.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D images.\n- [vtkImageCanvasSource2D](https://www.vtk.org/doc/nightly/html/classvtkImageCanvasSource2D.html) creates a procedural canvas with a colored box.\n- [vtkImageChangeInformation](https://www.vtk.org/doc/nightly/html/classvtkImageChangeInformation.html) modifies image metadata (spacing, origin, extent) without altering pixel data.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkTextActor](https://www.vtk.org/doc/nightly/html/classvtkTextActor.html) overlays text labels showing spacing and origin values.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene; two renderers create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCanvasSource2D",
+    "vtkImageChangeInformation",
+    "vtkInteractorStyleImage",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTextActor"
+  ],
+  "data_files": null,
+  "py_filename": "change_information.py",
+  "image": "change_information.png",
+  "metadata_filename": "change_information.json",
+  "topology": "standard"
+}

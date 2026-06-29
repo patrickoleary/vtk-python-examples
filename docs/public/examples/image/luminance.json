@@ -1,0 +1,21 @@
+{
+  "title": "luminance",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example converts an RGB color image (Gourds.png) to grayscale using vtkImageLuminance. The left viewport shows the original color image; the right shows the grayscale luminance result. vtkImageLuminance computes luminance as 0.30×R + 0.59×G + 0.11×B, matching the human eye's sensitivity to color channels. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D images.\n- [vtkImageLuminance](https://www.vtk.org/doc/nightly/html/classvtkImageLuminance.html) converts RGB to a single-component grayscale image using perceptual luminance weights.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) reads the `Gourds.png` color image.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageLuminance",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/Gourds.png"
+  ],
+  "py_filename": "luminance.py",
+  "image": "luminance.png",
+  "metadata_filename": "luminance.json",
+  "topology": "standard"
+}

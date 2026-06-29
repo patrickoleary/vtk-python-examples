@@ -1,0 +1,28 @@
+{
+  "title": "banded contour non monotonous",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nDemonstrate vtkBandedPolyDataContourFilter with cells whose scalar values do not monotonously climb from minimum to maximum. Shows contour bands, cell edges, contour edges, and scalar labels on a 4x4 grid.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkActor2D](https://www.vtk.org/doc/nightly/html/classvtkActor2D.html) — actor2d.\n- [vtkBandedPolyDataContourFilter](https://www.vtk.org/doc/nightly/html/classvtkBandedPolyDataContourFilter.html) — banded poly data contour filter.\n- [vtkCellArray](https://www.vtk.org/doc/nightly/html/classvtkCellArray.html) — cell array.\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkExtractEdges](https://www.vtk.org/doc/nightly/html/classvtkExtractEdges.html) — extract edges.\n- [vtkLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkLabeledDataMapper.html) — labeled data mapper.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) — represents polygonal geometry.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkTrivialProducer](https://www.vtk.org/doc/nightly/html/classvtkTrivialProducer.html) — trivial producer.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkActor2D",
+    "vtkBandedPolyDataContourFilter",
+    "vtkCellArray",
+    "vtkDoubleArray",
+    "vtkExtractEdges",
+    "vtkLabeledDataMapper",
+    "vtkLookupTable",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTrivialProducer"
+  ],
+  "data_files": null,
+  "py_filename": "banded_contour_non_monotonous.py",
+  "image": "banded_contour_non_monotonous.png",
+  "metadata_filename": "banded_contour_non_monotonous.json",
+  "topology": "standard"
+}

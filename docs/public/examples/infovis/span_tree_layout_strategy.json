@@ -1,0 +1,27 @@
+{
+  "title": "span tree layout strategy",
+  "source_type": "examples",
+  "tag": "infovis",
+  "explanation": "### Description\n\nDemonstrate vtkSpanTreeLayoutStrategy with a graph read from XGML format.\n\n**dataset → input → filter → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) — graph layout filter.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) — converts graph to polydata.\n- [vtkLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkLabeledDataMapper.html) — labeled data mapper.\n- [vtkSpanTreeLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkSpanTreeLayoutStrategy.html) — span tree layout strategy.\n- [vtkVertexGlyphFilter](https://www.vtk.org/doc/nightly/html/classvtkVertexGlyphFilter.html) — vertex glyph filter.\n- [vtkXGMLReader](https://www.vtk.org/doc/nightly/html/classvtkXGMLReader.html) — xgml reader.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkActor2D",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkLabeledDataMapper",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSpanTreeLayoutStrategy",
+    "vtkVertexGlyphFilter",
+    "vtkXGMLReader"
+  ],
+  "data_files": [
+    "data/fsm.gml"
+  ],
+  "py_filename": "span_tree_layout_strategy.py",
+  "image": "span_tree_layout_strategy.png",
+  "metadata_filename": "span_tree_layout_strategy.json",
+  "topology": "graph"
+}

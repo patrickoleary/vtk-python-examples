@@ -1,0 +1,20 @@
+{
+  "title": "picking manager seed toggle",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkPickingManager with seed widgets and disabled seeds toggling.\n\n**dataset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkInteractorStyleTrackballCamera](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleTrackballCamera.html) — interactor style trackball camera.\n- [vtkSeedRepresentation](https://www.vtk.org/doc/nightly/html/classvtkSeedRepresentation.html) — seed representation.\n- [vtkSeedWidget](https://www.vtk.org/doc/nightly/html/classvtkSeedWidget.html) — seed widget.\n- [vtkSphereHandleRepresentation](https://www.vtk.org/doc/nightly/html/classvtkSphereHandleRepresentation.html) — sphere handle representation.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkInteractorStyleTrackballCamera",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSeedRepresentation",
+    "vtkSeedWidget",
+    "vtkSphereHandleRepresentation"
+  ],
+  "data_files": null,
+  "py_filename": "picking_manager_seed_toggle.py",
+  "image": "picking_manager_seed_toggle.png",
+  "metadata_filename": "picking_manager_seed_toggle.json",
+  "topology": "standard"
+}

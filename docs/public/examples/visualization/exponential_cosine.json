@@ -1,0 +1,25 @@
+{
+  "title": "exponential cosine",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nThis example warps a plane with an exponential cosine function and color by derivative.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) maps the warped surface to graphics primitives.\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) stores double data arrays.\n- [vtkPlaneSource](https://www.vtk.org/doc/nightly/html/classvtkPlaneSource.html) generates a high-resolution plane.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) represents polygonal geometry.\n- [vtkTransform](https://www.vtk.org/doc/nightly/html/classvtkTransform.html) scales the plane to the desired domain.\n- [vtkTransformPolyDataFilter](https://www.vtk.org/doc/nightly/html/classvtkTransformPolyDataFilter.html) applies the transform to the plane.\n- [vtkWarpScalar](https://www.vtk.org/doc/nightly/html/classvtkWarpScalar.html) warps the plane by the computed function values.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDataSetMapper",
+    "vtkDoubleArray",
+    "vtkPlaneSource",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTransform",
+    "vtkTransformPolyDataFilter",
+    "vtkWarpScalar"
+  ],
+  "data_files": null,
+  "py_filename": "exponential_cosine.py",
+  "image": "exponential_cosine.png",
+  "metadata_filename": "exponential_cosine.json",
+  "topology": "standard"
+}

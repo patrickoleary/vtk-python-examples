@@ -1,0 +1,27 @@
+{
+  "title": "extrude copy cd",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nDemonstrate vtkLinearExtrusionFilter with cell data preservation by extruding vector text with random cell colors, and also testing vtkArrowSource with different resolutions.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkAppendPolyData](https://www.vtk.org/doc/nightly/html/classvtkAppendPolyData.html) — append poly data.\n- [vtkArrowSource](https://www.vtk.org/doc/nightly/html/classvtkArrowSource.html) — generates a 3D arrow.\n- [vtkLinearExtrusionFilter](https://www.vtk.org/doc/nightly/html/classvtkLinearExtrusionFilter.html) — extrudes polygonal data along a direction.\n- [vtkMath](https://www.vtk.org/doc/nightly/html/classvtkMath.html) — provides mathematical utility functions.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkStripper](https://www.vtk.org/doc/nightly/html/classvtkStripper.html) — creates triangle strips and/or polylines from polygonal data.\n- [vtkTransform](https://www.vtk.org/doc/nightly/html/classvtkTransform.html) — defines a 4x4 geometric transformation.\n- [vtkTransformFilter](https://www.vtk.org/doc/nightly/html/classvtkTransformFilter.html) — applies a geometric transformation to a dataset.\n- [vtkUnsignedCharArray](https://www.vtk.org/doc/nightly/html/classvtkUnsignedCharArray.html) — unsigned char array.\n- [vtkVectorText](https://www.vtk.org/doc/nightly/html/classvtkVectorText.html) — vector text.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkAppendPolyData",
+    "vtkArrowSource",
+    "vtkLinearExtrusionFilter",
+    "vtkMath",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStripper",
+    "vtkTransform",
+    "vtkTransformFilter",
+    "vtkUnsignedCharArray",
+    "vtkVectorText"
+  ],
+  "data_files": null,
+  "py_filename": "extrude_copy_cd.py",
+  "image": "extrude_copy_cd.png",
+  "metadata_filename": "extrude_copy_cd.json",
+  "topology": "standard"
+}

@@ -1,0 +1,28 @@
+{
+  "title": "sph interpolator",
+  "source_type": "examples",
+  "tag": "points",
+  "explanation": "### Description\n\nDemonstrate vtkSPHInterpolator with a quintic kernel by reading SPH particle data from a VTU file and interpolating onto a probe plane.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkOutlineFilter.html) — generates a bounding box outline of the input data.\n- [vtkPlaneSource](https://www.vtk.org/doc/nightly/html/classvtkPlaneSource.html) — generates a rectangular plane.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) — represents polygonal geometry.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkSPHInterpolator](https://www.vtk.org/doc/nightly/html/classvtkSPHInterpolator.html) — sph interpolator.\n- [vtkSPHQuinticKernel](https://www.vtk.org/doc/nightly/html/classvtkSPHQuinticKernel.html) — sph quintic kernel.\n- [vtkTimerLog](https://www.vtk.org/doc/nightly/html/classvtkTimerLog.html) — timer log.\n- [vtkXMLUnstructuredGridReader](https://www.vtk.org/doc/nightly/html/classvtkXMLUnstructuredGridReader.html) — reads VTK XML unstructured grid files.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkOutlineFilter",
+    "vtkPlaneSource",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSPHInterpolator",
+    "vtkSPHQuinticKernel",
+    "vtkTimerLog",
+    "vtkXMLUnstructuredGridReader"
+  ],
+  "data_files": [
+    "data/SPH_Points.vtu"
+  ],
+  "py_filename": "sph_interpolator.py",
+  "image": "sph_interpolator.png",
+  "metadata_filename": "sph_interpolator.json",
+  "topology": "standard"
+}

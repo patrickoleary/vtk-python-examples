@@ -1,0 +1,23 @@
+{
+  "title": "stream lines",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nThis example generates a synthetic swirling vector field on a 3D volume grid and traces streamlines through it using vtkStreamTracer, displayed as gold tubes.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene. `GetProperty().SetColor()` sets the tube color.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) stores float data arrays.\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) holds a 30x30x30 volume grid with a procedurally generated swirling vector field.\n- [vtkPointSource](https://www.vtk.org/doc/nightly/html/classvtkPointSource.html) generates 50 random seed points near the bottom of the field.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the streamline tubes to graphics primitives. `ScalarVisibilityOff()` disables color-mapping so the actor color is used.\n- [vtkStreamTracer](https://www.vtk.org/doc/nightly/html/classvtkStreamTracer.html) integrates the vector field forward from each seed point, producing streamline polylines.\n- [vtkTubeFilter](https://www.vtk.org/doc/nightly/html/classvtkTubeFilter.html) wraps tubes around the streamlines for 3D visibility.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkFloatArray",
+    "vtkImageData",
+    "vtkPointSource",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStreamTracer",
+    "vtkTubeFilter"
+  ],
+  "data_files": null,
+  "py_filename": "stream_lines.py",
+  "image": "stream_lines.png",
+  "metadata_filename": "stream_lines.json",
+  "topology": "standard"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "subtract stencil data",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nTest vtkImageStencilData Subtract operation with two box stencils.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) — represents a regular grid of points (image/volume).\n- [vtkImageStencil](https://www.vtk.org/doc/nightly/html/classvtkImageStencil.html) — image stencil.\n- [vtkLinearExtrusionFilter](https://www.vtk.org/doc/nightly/html/classvtkLinearExtrusionFilter.html) — extrudes polygonal data along a direction.\n- [vtkMatrix4x4](https://www.vtk.org/doc/nightly/html/classvtkMatrix4x4.html) — matrix4x4.\n- [vtkMatrixToLinearTransform](https://www.vtk.org/doc/nightly/html/classvtkMatrixToLinearTransform.html) — matrix to linear transform.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) — represents polygonal geometry.\n- [vtkPolyDataToImageStencil](https://www.vtk.org/doc/nightly/html/classvtkPolyDataToImageStencil.html) — poly data to image stencil.\n- [vtkTransformPolyDataFilter](https://www.vtk.org/doc/nightly/html/classvtkTransformPolyDataFilter.html) — transform poly data filter.\n- [vtkTrivialProducer](https://www.vtk.org/doc/nightly/html/classvtkTrivialProducer.html) — trivial producer.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageData",
+    "vtkImageStencil",
+    "vtkLinearExtrusionFilter",
+    "vtkMatrix4x4",
+    "vtkMatrixToLinearTransform",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataToImageStencil",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTransformPolyDataFilter",
+    "vtkTrivialProducer"
+  ],
+  "data_files": null,
+  "py_filename": "subtract_stencil_data.py",
+  "image": "subtract_stencil_data.png",
+  "metadata_filename": "subtract_stencil_data.json",
+  "topology": "standard"
+}

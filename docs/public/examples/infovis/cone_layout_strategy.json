@@ -1,0 +1,31 @@
+{
+  "title": "cone layout strategy",
+  "source_type": "examples",
+  "tag": "infovis",
+  "explanation": "### Description\n\nDemonstrate vtkConeLayoutStrategy with a tree read from XML, showing vertex and edge labels.\n\n**dataset → input → filter → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkConeLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkConeLayoutStrategy.html) — cone layout strategy.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) — graph layout filter.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) — converts graph to polydata.\n- [vtkIdTypeArray](https://www.vtk.org/doc/nightly/html/classvtkIdTypeArray.html) — id type array.\n- [vtkLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkLabeledDataMapper.html) — labeled data mapper.\n- [vtkStringArray](https://www.vtk.org/doc/nightly/html/classvtkStringArray.html) — string array.\n- [vtkStringToNumeric](https://www.vtk.org/doc/nightly/html/classvtkStringToNumeric.html) — string to numeric.\n- [vtkVertexGlyphFilter](https://www.vtk.org/doc/nightly/html/classvtkVertexGlyphFilter.html) — vertex glyph filter.\n- [vtkXMLTreeReader](https://www.vtk.org/doc/nightly/html/classvtkXMLTreeReader.html) — xml tree reader.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkActor2D",
+    "vtkConeLayoutStrategy",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkIdTypeArray",
+    "vtkLabelPlacementMapper",
+    "vtkPointSetToLabelHierarchy",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStringArray",
+    "vtkStringToNumeric",
+    "vtkVertexGlyphFilter",
+    "vtkXMLTreeReader"
+  ],
+  "data_files": [
+    "data/vtkclasses.xml"
+  ],
+  "py_filename": "cone_layout_strategy.py",
+  "image": "cone_layout_strategy.png",
+  "metadata_filename": "cone_layout_strategy.json",
+  "topology": "graph"
+}

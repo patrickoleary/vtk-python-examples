@@ -1,0 +1,22 @@
+{
+  "title": "bag plot test",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate a bag plot with density data using vtkPlotBag.\n\n**dataset → plot → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) — chart xy.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkIntArray](https://www.vtk.org/doc/nightly/html/classvtkIntArray.html) — int array.\n- [vtkPlotBag](https://www.vtk.org/doc/nightly/html/classvtkPlotBag.html) — plot bag.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) — table.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartXY",
+    "vtkContextActor",
+    "vtkDoubleArray",
+    "vtkIntArray",
+    "vtkPlotBag",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "bag_plot_test.py",
+  "image": "bag_plot_test.png",
+  "metadata_filename": "bag_plot_test.json",
+  "topology": "chart"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "hdr reader rgbe",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nRead an HDR file in RGBE format, crop it, and display with vtkImageActor.\n\n**input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkHDRReader](https://www.vtk.org/doc/nightly/html/classvtkHDRReader.html) — hdr reader.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageShiftScale](https://www.vtk.org/doc/nightly/html/classvtkImageShiftScale.html) — image shift scale.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkHDRReader",
+    "vtkImageActor",
+    "vtkImageShiftScale",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/spiaggia_di_mondello_1k.hdr"
+  ],
+  "py_filename": "hdr_reader_rgbe.py",
+  "image": "hdr_reader_rgbe.png",
+  "metadata_filename": "hdr_reader_rgbe.json",
+  "topology": "standard"
+}

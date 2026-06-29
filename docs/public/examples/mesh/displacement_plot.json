@@ -1,0 +1,26 @@
+{
+  "title": "displacement plot",
+  "source_type": "examples",
+  "tag": "mesh",
+  "explanation": "### Description\n\nThis example surfaces displacement plot of a vibrating plane colored by vector dot product. The second torsional mode is shown with a diverging color scheme: cool for negative motion, warm for positive, white at the nodes.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunction.html) defines a diverging green-to-red color map.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) maps the warped surface to graphics primitives.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) maps dot-product scalars to the diverging color scheme.\n- [vtkPolyDataNormals](https://www.vtk.org/doc/nightly/html/classvtkPolyDataNormals.html) computes surface normals on the warped geometry.\n- [vtkPolyDataReader](https://www.vtk.org/doc/nightly/html/classvtkPolyDataReader.html) loads the plate vibration data with mode8 displacement vectors.\n- [vtkVectorDot](https://www.vtk.org/doc/nightly/html/classvtkVectorDot.html) computes the dot product between normals and displacement vectors to produce modal scalars.\n- [vtkWarpVector](https://www.vtk.org/doc/nightly/html/classvtkWarpVector.html) deforms the surface by displacement vectors.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkColorTransferFunction",
+    "vtkDataSetMapper",
+    "vtkLookupTable",
+    "vtkPolyDataNormals",
+    "vtkPolyDataReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkVectorDot",
+    "vtkWarpVector"
+  ],
+  "data_files": [
+    "data/plate.vtk"
+  ],
+  "py_filename": "displacement_plot.py",
+  "image": "displacement_plot.png",
+  "metadata_filename": "displacement_plot.json",
+  "topology": "standard"
+}

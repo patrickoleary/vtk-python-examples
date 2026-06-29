@@ -1,0 +1,22 @@
+{
+  "title": "reslice information input",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nReslice an image using information input to preserve original geometry.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageChangeInformation](https://www.vtk.org/doc/nightly/html/classvtkImageChangeInformation.html) — image change information.\n- [vtkImageReslice](https://www.vtk.org/doc/nightly/html/classvtkImageReslice.html) — image reslice.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageChangeInformation",
+    "vtkImageReslice",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/fullhead15.png"
+  ],
+  "py_filename": "reslice_information_input.py",
+  "image": "reslice_information_input.png",
+  "metadata_filename": "reslice_information_input.json",
+  "topology": "standard"
+}

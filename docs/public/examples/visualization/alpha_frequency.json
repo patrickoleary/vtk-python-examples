@@ -1,0 +1,22 @@
+{
+  "title": "alpha frequency",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nThis example linearlies extrude letter glyphs to visualize character frequency in a text file.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkLinearExtrusionFilter](https://www.vtk.org/doc/nightly/html/classvtkLinearExtrusionFilter.html) extrudes each letter proportionally to its frequency.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps polygon data to graphics primitives.\n- [vtkVectorText](https://www.vtk.org/doc/nightly/html/classvtkVectorText.html) generates 3D vector text polygon data for each letter.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkLinearExtrusionFilter",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkVectorText"
+  ],
+  "data_files": [
+    "data/Gettysburg.txt"
+  ],
+  "py_filename": "alpha_frequency.py",
+  "image": "alpha_frequency.png",
+  "metadata_filename": "alpha_frequency.json",
+  "topology": "standard"
+}

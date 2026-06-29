@@ -1,0 +1,21 @@
+{
+  "title": "polydata plane clipper",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nClip a high-resolution sphere with a plane using vtkPolyDataPlaneClipper, displaying both the clipped surface and the capping polygon.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) — defines an implicit plane function.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkPolyDataPlaneClipper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataPlaneClipper.html) — poly data plane clipper.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkPlane",
+    "vtkPolyDataMapper",
+    "vtkPolyDataPlaneClipper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource"
+  ],
+  "data_files": null,
+  "py_filename": "polydata_plane_clipper.py",
+  "image": "polydata_plane_clipper.png",
+  "metadata_filename": "polydata_plane_clipper.json",
+  "topology": "standard"
+}

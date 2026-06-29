@@ -1,0 +1,106 @@
+#!/usr/bin/env python
+
+# Demonstrate vtkCellTypeSource for the Quadratic Pyramid cell type. The
+# source generates an unstructured grid of quadratic pyramid cells, which are
+# perturbed, shrunk, and color-mapped by cell ID.
+
+# Factory overrides: importing these modules registers the OpenGL rendering,
+# FreeType text rendering, and interaction style implementations.
+import vtkmodules.vtkInteractionStyle  # noqa: F401
+import vtkmodules.vtkRenderingFreeType  # noqa: F401
+import vtkmodules.vtkRenderingOpenGL2  # noqa: F401
+# VTK pipeline classes used in this example
+from vtkmodules.vtkCommonCore import (
+    vtkIntArray,
+    vtkMinimalStandardRandomSequence,
+    vtkPoints,
+)
+from vtkmodules.vtkCommonDataModel import VTK_QUADRATIC_PYRAMID
+from vtkmodules.vtkFiltersGeneral import vtkShrinkFilter
+from vtkmodules.vtkFiltersSources import vtkCellTypeSource
+from vtkmodules.vtkRenderingCore import (
+    vtkActor,
+    vtkDataSetMapper,
+    vtkRenderWindow,
+    vtkRenderWindowInteractor,
+    vtkRenderer,
+)
+
+# Colors (normalized RGB)
+dark_blue_background_rgb = (0.2, 0.302, 0.4)
+
+# Source: generate quadratic pyramid cells
+cell_type_source = vtkCellTypeSource()
+cell_type_source.SetCellType(VTK_QUADRATIC_PYRAMID)
+cell_type_source.Update()
+
+# Perturb points so cell edges are visible
+original_points = cell_type_source.GetOutput().GetPoints()
+points = vtkPoints()
+points.SetNumberOfPoints(cell_type_source.GetOutput().GetNumberOfPoints())
+rng = vtkMinimalStandardRandomSequence()
+rng.SetSeed(5070)
+for i in range(points.GetNumberOfPoints()):
+    perturbation = [0.0, 0.0, 0.0]
+    for j in range(3):
+        rng.Next()
+        perturbation[j] = rng.GetRangeValue(-0.1, 0.1)
+    current = [0.0, 0.0, 0.0]
+    original_points.GetPoint(i, current)
+    points.SetPoint(i,
+                    current[0] + perturbation[0],
+                    current[1] + perturbation[1],
+                    current[2] + perturbation[2])
+cell_type_source.GetOutput().SetPoints(points)
+
+# Cell ID array for scalar coloring
+num_cells = cell_type_source.GetOutput().GetNumberOfCells()
+id_array = vtkIntArray()
+id_array.SetNumberOfTuples(num_cells)
+for i in range(num_cells):
+    id_array.InsertTuple1(i, i + 1)
+id_array.SetName("Ids")
+cell_type_source.GetOutput().GetCellData().AddArray(id_array)
+cell_type_source.GetOutput().GetCellData().SetActiveScalars("Ids")
+
+# Shrink: separate cells visually
+shrink = vtkShrinkFilter()
+shrink.SetInputConnection(cell_type_source.GetOutputPort())
+shrink.SetShrinkFactor(0.8)
+
+# Mapper: color by cell ID
+mapper = vtkDataSetMapper()
+mapper.SetInputConnection(shrink.GetOutputPort())
+mapper.SetScalarRange(0, num_cells + 1)
+mapper.SetScalarModeToUseCellData()
+mapper.SetResolveCoincidentTopologyToPolygonOffset()
+
+# Actor: tilt to show 3D shape
+actor = vtkActor()
+actor.SetMapper(mapper)
+actor.GetProperty().EdgeVisibilityOn()
+actor.RotateX(20.0)
+actor.RotateY(-20.0)
+
+# Renderer: assemble the scene
+renderer = vtkRenderer()
+renderer.AddActor(actor)
+renderer.SetBackground(dark_blue_background_rgb)
+
+# Render window: display the rendered scene
+render_window = vtkRenderWindow()
+render_window.AddRenderer(renderer)
+render_window.SetWindowName("celltype quadratic pyramid")
+render_window.SetMultiSamples(0)
+render_window.SetSize(300, 300)
+
+# Interactor: handle mouse and keyboard events
+render_window_interactor = vtkRenderWindowInteractor()
+render_window_interactor.SetRenderWindow(render_window)
+
+# Scene: configure the camera
+renderer.ResetCamera()
+
+# Start: launch the interactive visualization
+render_window_interactor.Initialize()
+render_window_interactor.Start()

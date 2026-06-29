@@ -1,0 +1,24 @@
+{
+  "title": "line plot3d",
+  "source_type": "examples",
+  "tag": "charting",
+  "explanation": "### Description\n\nThis example 3D line plot of a parametric helix using a chart overlay on the normal VTK rendering pipeline. The helix is defined as (cos(t), sin(t), t/2π) and rendered with vtkPlotLine3D inside a vtkChartXYZ. A synthetic mouse event rotates the chart to an oblique initial view.\n\n**dataset → plot → chart → item → context_asset → renderer → infrastructure → output**\n\n- [vtkChartXYZ](https://www.vtk.org/doc/nightly/html/classvtkChartXYZ.html) creates the 3D chart with axes.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) overlays the chart on the VTK rendering pipeline.\n- [vtkContextMouseEvent](https://www.vtk.org/doc/nightly/html/classvtkContextMouseEvent.html) simulates a mouse drag for initial rotation.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) stores each coordinate column.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides named colors.\n- [vtkPlotLine3D](https://www.vtk.org/doc/nightly/html/classvtkPlotLine3D.html) renders a 3D polyline from tabular X, Y, Z data.\n- [vtkRectf](https://www.vtk.org/doc/nightly/html/classvtkRectf.html) specifies the chart geometry.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) stores the helix coordinates.\n- [vtkVector2i](https://www.vtk.org/doc/nightly/html/classvtkVector2i.html) provides vector2i functionality.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartXYZ",
+    "vtkContextActor",
+    "vtkContextMouseEvent",
+    "vtkFloatArray",
+    "vtkPlotLine3D",
+    "vtkRectf",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable",
+    "vtkVector2i"
+  ],
+  "data_files": null,
+  "py_filename": "line_plot3d.py",
+  "image": "line_plot3d.png",
+  "metadata_filename": "line_plot3d.json",
+  "topology": "chart"
+}

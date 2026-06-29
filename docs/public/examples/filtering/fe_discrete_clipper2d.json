@@ -1,0 +1,21 @@
+{
+  "title": "fe discrete clipper2d",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nClip discrete regions from a synthetic labeled image using vtkDiscreteFlyingEdgesClipper2D with a wireframe grid overlay.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) — maps any dataset type to graphics primitives.\n- [vtkDiscreteFlyingEdgesClipper2D](https://www.vtk.org/doc/nightly/html/classvtkDiscreteFlyingEdgesClipper2D.html) — discrete flying edges clipper2d.\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) — represents a regular grid of points (image/volume).\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDataSetMapper",
+    "vtkDiscreteFlyingEdgesClipper2D",
+    "vtkImageData",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "fe_discrete_clipper2d.py",
+  "image": "fe_discrete_clipper2d.png",
+  "metadata_filename": "fe_discrete_clipper2d.json",
+  "topology": "standard"
+}

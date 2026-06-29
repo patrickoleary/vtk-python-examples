@@ -1,0 +1,28 @@
+{
+  "title": "dem",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nRead a DEM elevation model file and render with LOD actors at multiple resolutions.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkCastToConcrete](https://www.vtk.org/doc/nightly/html/classvtkCastToConcrete.html) — casts abstract data objects to their concrete types.\n- [vtkDEMReader](https://www.vtk.org/doc/nightly/html/classvtkDEMReader.html) — dem reader.\n- [vtkElevationFilter](https://www.vtk.org/doc/nightly/html/classvtkElevationFilter.html) — generates scalar data based on elevation (distance along a direction).\n- [vtkImageDataGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkImageDataGeometryFilter.html) — converts image data to polygonal geometry.\n- [vtkImageShrink3D](https://www.vtk.org/doc/nightly/html/classvtkImageShrink3D.html) — subsamples an image by averaging neighboring voxels.\n- [vtkLODActor](https://www.vtk.org/doc/nightly/html/classvtkLODActor.html) — lod actor.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkPolyDataNormals](https://www.vtk.org/doc/nightly/html/classvtkPolyDataNormals.html) — computes surface normals for smooth shading.\n- [vtkWarpScalar](https://www.vtk.org/doc/nightly/html/classvtkWarpScalar.html) — warp scalar.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkCastToConcrete",
+    "vtkDEMReader",
+    "vtkElevationFilter",
+    "vtkImageDataGeometryFilter",
+    "vtkImageShrink3D",
+    "vtkLODActor",
+    "vtkLookupTable",
+    "vtkPolyDataMapper",
+    "vtkPolyDataNormals",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkWarpScalar"
+  ],
+  "data_files": [
+    "data/SainteHelens.dem"
+  ],
+  "py_filename": "dem.py",
+  "image": "dem.png",
+  "metadata_filename": "dem.json",
+  "topology": "standard"
+}

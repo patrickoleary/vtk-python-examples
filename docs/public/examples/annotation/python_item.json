@@ -1,0 +1,28 @@
+{
+  "title": "python item",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nDemonstrate vtkPythonItem for custom 2D drawing with Context2D API.\n\n**dataset → input → plot → item → context_asset → renderer → infrastructure → output**\n\n- [vtkAxis](https://www.vtk.org/doc/nightly/html/classvtkAxis.html) — axis.\n- [vtkCellArray](https://www.vtk.org/doc/nightly/html/classvtkCellArray.html) — cell array.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkInteractiveArea](https://www.vtk.org/doc/nightly/html/classvtkInteractiveArea.html) — interactive area.\n- [vtkMarkerUtilities](https://www.vtk.org/doc/nightly/html/classvtkMarkerUtilities.html) — marker utilities.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) — represents polygonal geometry.\n- [vtkPythonItem](https://www.vtk.org/doc/nightly/html/classvtkPythonItem.html) — python item.\n- [vtkRectd](https://www.vtk.org/doc/nightly/html/classvtkRectd.html) — rectd.\n- [vtkRecti](https://www.vtk.org/doc/nightly/html/classvtkRecti.html) — recti.\n- [vtkTextProperty](https://www.vtk.org/doc/nightly/html/classvtkTextProperty.html) — text property.\n- [vtkUnsignedCharArray](https://www.vtk.org/doc/nightly/html/classvtkUnsignedCharArray.html) — unsigned char array.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAxis",
+    "vtkCellArray",
+    "vtkContextActor",
+    "vtkInteractiveArea",
+    "vtkMarkerUtilities",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPythonItem",
+    "vtkRectd",
+    "vtkRecti",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTextProperty",
+    "vtkUnsignedCharArray"
+  ],
+  "data_files": null,
+  "py_filename": "python_item.py",
+  "image": "python_item.png",
+  "metadata_filename": "python_item.json",
+  "topology": "chart"
+}

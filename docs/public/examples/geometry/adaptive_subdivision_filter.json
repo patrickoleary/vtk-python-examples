@@ -1,0 +1,22 @@
+{
+  "title": "adaptive subdivision filter",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nDemonstrate vtkAdaptiveSubdivisionFilter by creating a low-resolution sphere, generating cell IDs, adaptively subdividing based on maximum edge length, and rendering with edge visibility and cell ID coloring.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkAdaptiveSubdivisionFilter](https://www.vtk.org/doc/nightly/html/classvtkAdaptiveSubdivisionFilter.html) — adaptive subdivision filter.\n- [vtkGenerateIds](https://www.vtk.org/doc/nightly/html/classvtkGenerateIds.html) — generates point and/or cell ID arrays.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkProperty](https://www.vtk.org/doc/nightly/html/classvtkProperty.html) — property.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkAdaptiveSubdivisionFilter",
+    "vtkGenerateIds",
+    "vtkPolyDataMapper",
+    "vtkProperty",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource"
+  ],
+  "data_files": null,
+  "py_filename": "adaptive_subdivision_filter.py",
+  "image": "adaptive_subdivision_filter.png",
+  "metadata_filename": "adaptive_subdivision_filter.json",
+  "topology": "standard"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "table fft",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkTableFFT by creating a table with known input signals, computing the FFT with a rectangular window, and rendering the frequency-domain magnitude as a bar chart.\n\n**dataset → filter → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChart](https://www.vtk.org/doc/nightly/html/classvtkChart.html) — chart.\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) — chart xy.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) — table.\n- [vtkTableFFT](https://www.vtk.org/doc/nightly/html/classvtkTableFFT.html) — table fft.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChart",
+    "vtkChartXY",
+    "vtkContextActor",
+    "vtkDoubleArray",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable",
+    "vtkTableFFT"
+  ],
+  "data_files": null,
+  "py_filename": "table_fft.py",
+  "image": "table_fft.png",
+  "metadata_filename": "table_fft.json",
+  "topology": "chart"
+}

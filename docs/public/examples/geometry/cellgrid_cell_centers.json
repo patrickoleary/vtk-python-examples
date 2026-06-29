@@ -1,0 +1,28 @@
+{
+  "title": "cellgrid cell centers",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nDemonstrate vtkCellGridCellCenters computing cell centers on a DG hexahedral mesh, rendering cell edges with center glyphs.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCellGridCellCenters](https://www.vtk.org/doc/nightly/html/classvtkCellGridCellCenters.html) — cell grid cell centers.\n- [vtkCellGridComputeSides](https://www.vtk.org/doc/nightly/html/classvtkCellGridComputeSides.html) — cell grid compute sides.\n- [vtkCellGridMapper](https://www.vtk.org/doc/nightly/html/classvtkCellGridMapper.html) — cell grid mapper.\n- [vtkCellGridReader](https://www.vtk.org/doc/nightly/html/classvtkCellGridReader.html) — cell grid reader.\n- [vtkCellGridSidesQuery](https://www.vtk.org/doc/nightly/html/classvtkCellGridSidesQuery.html) — cell grid sides query.\n- [vtkCellGridToUnstructuredGrid](https://www.vtk.org/doc/nightly/html/classvtkCellGridToUnstructuredGrid.html) — cell grid to unstructured grid.\n- [vtkFiltersCellGrid](https://www.vtk.org/doc/nightly/html/classvtkFiltersCellGrid.html) — filters cell grid.\n- [vtkProperty](https://www.vtk.org/doc/nightly/html/classvtkProperty.html) — property.\n- [vtkRenderingCellGrid](https://www.vtk.org/doc/nightly/html/classvtkRenderingCellGrid.html) — rendering cell grid.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCellGridCellCenters",
+    "vtkCellGridComputeSides",
+    "vtkCellGridMapper",
+    "vtkCellGridReader",
+    "vtkCellGridSidesQuery",
+    "vtkCellGridToUnstructuredGrid",
+    "vtkFiltersCellGrid",
+    "vtkProperty",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkRenderingCellGrid"
+  ],
+  "data_files": [
+    "data/dgHexahedra.dg"
+  ],
+  "py_filename": "cellgrid_cell_centers.py",
+  "image": "cellgrid_cell_centers.png",
+  "metadata_filename": "cellgrid_cell_centers.json",
+  "topology": "standard"
+}

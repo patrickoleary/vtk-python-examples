@@ -1,0 +1,27 @@
+{
+  "title": "fixed point ray caster nearest cropped",
+  "source_type": "examples",
+  "tag": "rendering",
+  "explanation": "### Description\n\nDemonstrate fixed-point volume ray casting with nearest interpolation and cropping across a 5x5 grid.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunction.html) — maps scalar values to RGB colors for volume rendering.\n- [vtkFixedPointVolumeRayCastMapper](https://www.vtk.org/doc/nightly/html/classvtkFixedPointVolumeRayCastMapper.html) — fixed point volume ray cast mapper.\n- [vtkImageAppendComponents](https://www.vtk.org/doc/nightly/html/classvtkImageAppendComponents.html) — image append components.\n- [vtkImageContinuousDilate3D](https://www.vtk.org/doc/nightly/html/classvtkImageContinuousDilate3D.html) — image continuous dilate3d.\n- [vtkImageGaussianSource](https://www.vtk.org/doc/nightly/html/classvtkImageGaussianSource.html) — image gaussian source.\n- [vtkImageGridSource](https://www.vtk.org/doc/nightly/html/classvtkImageGridSource.html) — image grid source.\n- [vtkImageShiftScale](https://www.vtk.org/doc/nightly/html/classvtkImageShiftScale.html) — image shift scale.\n- [vtkImageThreshold](https://www.vtk.org/doc/nightly/html/classvtkImageThreshold.html) — thresholds an image, replacing values inside/outside a range.\n- [vtkPiecewiseFunction](https://www.vtk.org/doc/nightly/html/classvtkPiecewiseFunction.html) — defines a piecewise linear scalar-to-opacity mapping.\n- [vtkVolume](https://www.vtk.org/doc/nightly/html/classvtkVolume.html) — represents a volume in the scene.\n- [vtkVolumeProperty](https://www.vtk.org/doc/nightly/html/classvtkVolumeProperty.html) — controls volume rendering appearance (color, opacity, shading).\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkColorTransferFunction",
+    "vtkFixedPointVolumeRayCastMapper",
+    "vtkImageAppendComponents",
+    "vtkImageContinuousDilate3D",
+    "vtkImageGaussianSource",
+    "vtkImageGridSource",
+    "vtkImageShiftScale",
+    "vtkImageThreshold",
+    "vtkPiecewiseFunction",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkVolume",
+    "vtkVolumeProperty"
+  ],
+  "data_files": null,
+  "py_filename": "fixed_point_ray_caster_nearest_cropped.py",
+  "image": "fixed_point_ray_caster_nearest_cropped.png",
+  "metadata_filename": "fixed_point_ray_caster_nearest_cropped.json",
+  "topology": "standard"
+}

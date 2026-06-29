@@ -1,0 +1,23 @@
+{
+  "title": "math text actor",
+  "source_type": "examples",
+  "tag": "rendering",
+  "explanation": "### Description\n\nDemonstrate vtkTextActor with MathText rendering via matplotlib backend.\n\n**dataset → input → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor2D](https://www.vtk.org/doc/nightly/html/classvtkActor2D.html) — actor2d.\n- [vtkCellArray](https://www.vtk.org/doc/nightly/html/classvtkCellArray.html) — cell array.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) — represents polygonal geometry.\n- [vtkPolyDataMapper2D](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper2D.html) — poly data mapper2d.\n- [vtkTextActor](https://www.vtk.org/doc/nightly/html/classvtkTextActor.html) — text actor.\n- [vtkUnsignedCharArray](https://www.vtk.org/doc/nightly/html/classvtkUnsignedCharArray.html) — unsigned char array.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor2D",
+    "vtkCellArray",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataMapper2D",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTextActor",
+    "vtkUnsignedCharArray"
+  ],
+  "data_files": null,
+  "py_filename": "math_text_actor.py",
+  "image": "math_text_actor.png",
+  "metadata_filename": "math_text_actor.json",
+  "topology": "standard"
+}

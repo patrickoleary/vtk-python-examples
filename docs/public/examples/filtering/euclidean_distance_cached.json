@@ -1,0 +1,23 @@
+{
+  "title": "euclidean distance cached",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nCompute Euclidean distance transform using cached Saito algorithm.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) — image cast.\n- [vtkImageEuclideanDistance](https://www.vtk.org/doc/nightly/html/classvtkImageEuclideanDistance.html) — image euclidean distance.\n- [vtkImageThreshold](https://www.vtk.org/doc/nightly/html/classvtkImageThreshold.html) — thresholds an image, replacing values inside/outside a range.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageEuclideanDistance",
+    "vtkImageThreshold",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/fullhead15.png"
+  ],
+  "py_filename": "euclidean_distance_cached.py",
+  "image": "euclidean_distance_cached.png",
+  "metadata_filename": "euclidean_distance_cached.json",
+  "topology": "standard"
+}

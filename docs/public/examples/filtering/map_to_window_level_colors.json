@@ -1,0 +1,19 @@
+{
+  "title": "map to window level colors",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nMap Mandelbrot set to window/level colors using vtkImageMapToWindowLevelColors.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageMandelbrotSource](https://www.vtk.org/doc/nightly/html/classvtkImageMandelbrotSource.html) — image mandelbrot source.\n- [vtkImageMapToWindowLevelColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToWindowLevelColors.html) — image map to window level colors.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageMandelbrotSource",
+    "vtkImageMapToWindowLevelColors",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "map_to_window_level_colors.py",
+  "image": "map_to_window_level_colors.png",
+  "metadata_filename": "map_to_window_level_colors.json",
+  "topology": "standard"
+}

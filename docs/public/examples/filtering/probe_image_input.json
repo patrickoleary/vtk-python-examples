@@ -1,0 +1,28 @@
+{
+  "title": "probe image input",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nProbe a wavelet image through a Delaunay-triangulated point cloud and render the result using ray-cast volume rendering.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunction.html) — maps scalar values to RGB colors for volume rendering.\n- [vtkDelaunay3D](https://www.vtk.org/doc/nightly/html/classvtkDelaunay3D.html) — creates a 3D Delaunay triangulation from a point set.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) — represents a regular grid of points (image/volume).\n- [vtkMath](https://www.vtk.org/doc/nightly/html/classvtkMath.html) — provides mathematical utility functions.\n- [vtkPiecewiseFunction](https://www.vtk.org/doc/nightly/html/classvtkPiecewiseFunction.html) — defines a piecewise linear scalar-to-opacity mapping.\n- [vtkPointSource](https://www.vtk.org/doc/nightly/html/classvtkPointSource.html) — generates random points inside a sphere.\n- [vtkProbeFilter](https://www.vtk.org/doc/nightly/html/classvtkProbeFilter.html) — samples source data at the point locations of the input.\n- [vtkRTAnalyticSource](https://www.vtk.org/doc/nightly/html/classvtkRTAnalyticSource.html) — generates a synthetic wavelet image volume.\n- [vtkSmartVolumeMapper](https://www.vtk.org/doc/nightly/html/classvtkSmartVolumeMapper.html) — selects the best volume rendering strategy automatically.\n- [vtkVolume](https://www.vtk.org/doc/nightly/html/classvtkVolume.html) — represents a volume in the scene.\n- [vtkVolumeProperty](https://www.vtk.org/doc/nightly/html/classvtkVolumeProperty.html) — controls volume rendering appearance (color, opacity, shading).\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkColorTransferFunction",
+    "vtkDelaunay3D",
+    "vtkFloatArray",
+    "vtkImageData",
+    "vtkMath",
+    "vtkPiecewiseFunction",
+    "vtkPointSource",
+    "vtkProbeFilter",
+    "vtkRTAnalyticSource",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSmartVolumeMapper",
+    "vtkVolume",
+    "vtkVolumeProperty"
+  ],
+  "data_files": null,
+  "py_filename": "probe_image_input.py",
+  "image": "probe_image_input.png",
+  "metadata_filename": "probe_image_input.json",
+  "topology": "standard"
+}

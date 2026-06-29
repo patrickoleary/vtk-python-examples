@@ -1,0 +1,23 @@
+{
+  "title": "reslice mapper background",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nTest the Background variable on vtkImageResliceMapper with beach.tif.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkImageClip](https://www.vtk.org/doc/nightly/html/classvtkImageClip.html) — image clip.\n- [vtkImageResliceMapper](https://www.vtk.org/doc/nightly/html/classvtkImageResliceMapper.html) — image reslice mapper.\n- [vtkImageSlice](https://www.vtk.org/doc/nightly/html/classvtkImageSlice.html) — image slice.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) — interactor style image.\n- [vtkTIFFReader](https://www.vtk.org/doc/nightly/html/classvtkTIFFReader.html) — reads TIFF image files.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageClip",
+    "vtkImageResliceMapper",
+    "vtkImageSlice",
+    "vtkInteractorStyleImage",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTIFFReader"
+  ],
+  "data_files": [
+    "data/beach.tif"
+  ],
+  "py_filename": "reslice_mapper_background.py",
+  "image": "reslice_mapper_background.png",
+  "metadata_filename": "reslice_mapper_background.json",
+  "topology": "standard"
+}

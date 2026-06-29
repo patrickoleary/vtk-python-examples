@@ -1,0 +1,25 @@
+{
+  "title": "pad",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example compares constant padding and mirror padding for reducing border artifacts during frequency-domain processing. The discrete Fourier transform treats the image as periodic, so pixels on opposite borders are adjacent. This can distort the frequency spectrum. Padding the image before processing eliminates these wraparound artifacts. The left viewport shows constant-value padding (800); the right shows mirror padding. It follows the VTK pipeline structure:\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D images.\n- [vtkImageConstantPad](https://www.vtk.org/doc/nightly/html/classvtkImageConstantPad.html) pads the image with a constant scalar value.\n- [vtkImageMapToWindowLevelColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToWindowLevelColors.html) maps scalar values to grayscale via window/level settings.\n- [vtkImageMirrorPad](https://www.vtk.org/doc/nightly/html/classvtkImageMirrorPad.html) pads the image by reflecting pixels at the borders, producing a continuous periodic extension.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkMetaImageReader](https://www.vtk.org/doc/nightly/html/classvtkMetaImageReader.html) reads the `FullHead.mhd` MetaImage volume.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageConstantPad",
+    "vtkImageMapToWindowLevelColors",
+    "vtkImageMirrorPad",
+    "vtkInteractorStyleImage",
+    "vtkMetaImageReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/FullHead.mhd",
+    "data/FullHead.raw"
+  ],
+  "py_filename": "pad.py",
+  "image": "pad.png",
+  "metadata_filename": "pad.json",
+  "topology": "standard"
+}

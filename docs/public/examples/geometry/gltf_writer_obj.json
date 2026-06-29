@@ -1,0 +1,22 @@
+{
+  "title": "gltf writer obj",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nRead OBJ, write as glTF, re-import and render.\n\n**input → renderer → infrastructure → output**\n\n- [vtkGLTFImporter](https://www.vtk.org/doc/nightly/html/classvtkGLTFImporter.html) — gltf importer.\n- [vtkGLTFWriter](https://www.vtk.org/doc/nightly/html/classvtkGLTFWriter.html) — gltf writer.\n- [vtkMultiBlockDataSet](https://www.vtk.org/doc/nightly/html/classvtkMultiBlockDataSet.html) — groups multiple datasets into a composite structure.\n- [vtkOBJReader](https://www.vtk.org/doc/nightly/html/classvtkOBJReader.html) — obj reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkGLTFImporter",
+    "vtkGLTFWriter",
+    "vtkMultiBlockDataSet",
+    "vtkOBJReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/jacksonville_15.obj"
+  ],
+  "py_filename": "gltf_writer_obj.py",
+  "image": "gltf_writer_obj.png",
+  "metadata_filename": "gltf_writer_obj.json",
+  "topology": "standard"
+}

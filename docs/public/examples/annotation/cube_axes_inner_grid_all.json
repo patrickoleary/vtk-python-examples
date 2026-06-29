@@ -1,0 +1,18 @@
+{
+  "title": "cube axes inner grid all",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkCubeAxesActor with inner gridlines on all faces using oriented bounds.\n\n**dataset → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkCubeAxesActor](https://www.vtk.org/doc/nightly/html/classvtkCubeAxesActor.html) — cube axes actor.\n- [vtkLight](https://www.vtk.org/doc/nightly/html/classvtkLight.html) — light.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkCubeAxesActor",
+    "vtkLight",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "cube_axes_inner_grid_all.py",
+  "image": "cube_axes_inner_grid_all.png",
+  "metadata_filename": "cube_axes_inner_grid_all.json",
+  "topology": "standard"
+}

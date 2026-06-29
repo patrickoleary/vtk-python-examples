@@ -1,0 +1,18 @@
+{
+  "title": "text actor scale mode prop",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkTextActor with PROP scale mode and pre-instantiated text property.\n\n**dataset → visual_asset → renderer → infrastructure → output**\n\n- [vtkTextActor](https://www.vtk.org/doc/nightly/html/classvtkTextActor.html) — text actor.\n- [vtkTextProperty](https://www.vtk.org/doc/nightly/html/classvtkTextProperty.html) — text property.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTextActor",
+    "vtkTextProperty"
+  ],
+  "data_files": null,
+  "py_filename": "text_actor_scale_mode_prop.py",
+  "image": "text_actor_scale_mode_prop.png",
+  "metadata_filename": "text_actor_scale_mode_prop.json",
+  "topology": "standard"
+}

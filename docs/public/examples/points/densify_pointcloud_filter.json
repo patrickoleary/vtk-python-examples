@@ -1,0 +1,26 @@
+{
+  "title": "densify pointcloud filter",
+  "source_type": "examples",
+  "tag": "points",
+  "explanation": "### Description\n\nDemonstrate vtkDensifyPointCloudFilter by clipping a bounded point source to a hemisphere, computing point density before and after densification, and displaying the density slices side by side.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkBoundedPointSource](https://www.vtk.org/doc/nightly/html/classvtkBoundedPointSource.html) — bounded point source.\n- [vtkClipPolyData](https://www.vtk.org/doc/nightly/html/classvtkClipPolyData.html) — clips polygonal data with an implicit function.\n- [vtkDensifyPointCloudFilter](https://www.vtk.org/doc/nightly/html/classvtkDensifyPointCloudFilter.html) — densify point cloud filter.\n- [vtkFitImplicitFunction](https://www.vtk.org/doc/nightly/html/classvtkFitImplicitFunction.html) — fit implicit function.\n- [vtkImageSlice](https://www.vtk.org/doc/nightly/html/classvtkImageSlice.html) — image slice.\n- [vtkImageSliceMapper](https://www.vtk.org/doc/nightly/html/classvtkImageSliceMapper.html) — image slice mapper.\n- [vtkMath](https://www.vtk.org/doc/nightly/html/classvtkMath.html) — provides mathematical utility functions.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) — defines an implicit plane function.\n- [vtkPointDensityFilter](https://www.vtk.org/doc/nightly/html/classvtkPointDensityFilter.html) — point density filter.\n- [vtkSphere](https://www.vtk.org/doc/nightly/html/classvtkSphere.html) — defines an implicit sphere function.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkBoundedPointSource",
+    "vtkClipPolyData",
+    "vtkDensifyPointCloudFilter",
+    "vtkFitImplicitFunction",
+    "vtkImageSlice",
+    "vtkImageSliceMapper",
+    "vtkMath",
+    "vtkPlane",
+    "vtkPointDensityFilter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphere"
+  ],
+  "data_files": null,
+  "py_filename": "densify_pointcloud_filter.py",
+  "image": "densify_pointcloud_filter.png",
+  "metadata_filename": "densify_pointcloud_filter.json",
+  "topology": "standard"
+}

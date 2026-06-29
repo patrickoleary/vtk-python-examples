@@ -1,0 +1,22 @@
+{
+  "title": "piechart",
+  "source_type": "examples",
+  "tag": "charting",
+  "explanation": "### Description\n\nThis example pies chart of browser market share data using a chart overlay on the normal VTK rendering pipeline. Each slice is labeled and colored to represent a different browser's market share percentage.\n\n**dataset → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChartPie](https://www.vtk.org/doc/nightly/html/classvtkChartPie.html) creates the pie chart with title and legend.\n- [vtkColorSeries](https://www.vtk.org/doc/nightly/html/classvtkColorSeries.html) provides predefined color palettes.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) overlays the chart on the VTK rendering pipeline.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) stores the slice values.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides named colors.\n- [vtkStringArray](https://www.vtk.org/doc/nightly/html/classvtkStringArray.html) stores the slice labels.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) stores the label, value, and color data.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartPie",
+    "vtkColorSeries",
+    "vtkContextActor",
+    "vtkFloatArray",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStringArray",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "piechart.py",
+  "image": "piechart.png",
+  "metadata_filename": "piechart.json",
+  "topology": "chart"
+}

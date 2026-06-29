@@ -1,0 +1,23 @@
+{
+  "title": "box plot",
+  "source_type": "examples",
+  "tag": "charting",
+  "explanation": "### Description\n\nThis example boxes plot comparing five random distributions with different spreads using a chart overlay on the normal VTK rendering pipeline. Raw samples are generated procedurally, then summarised into quartile statistics by vtkComputeQuartiles before being passed to vtkChartBox. The box plot displays minimum, first quartile, median, third quartile, and maximum for each distribution.\n\n**dataset → filter → plot → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChartBox](https://www.vtk.org/doc/nightly/html/classvtkChartBox.html) creates the box plot chart with labeled columns.\n- [vtkComputeQuartiles](https://www.vtk.org/doc/nightly/html/classvtkComputeQuartiles.html) computes quartile summary statistics from raw samples.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) overlays the chart on the VTK rendering pipeline.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) stores each data column.\n- [vtkMinimalStandardRandomSequence](https://www.vtk.org/doc/nightly/html/classvtkMinimalStandardRandomSequence.html) generates reproducible random values for each distribution.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides named colors.\n- [vtkPlotBox](https://www.vtk.org/doc/nightly/html/classvtkPlotBox.html) renders individual box-and-whisker glyphs for each column.\n- [vtkStatisticsAlgorithm](https://www.vtk.org/doc/nightly/html/classvtkStatisticsAlgorithm.html) provides statistics algorithm functionality.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) stores the per-column data values.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartBox",
+    "vtkComputeQuartiles",
+    "vtkContextActor",
+    "vtkFloatArray",
+    "vtkMinimalStandardRandomSequence",
+    "vtkPlotBox",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "box_plot.py",
+  "image": "box_plot.png",
+  "metadata_filename": "box_plot.json",
+  "topology": "chart"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "vtk spectrum",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example computes and displays the power spectrum of an image using the discrete Fourier transform. The left viewport shows the original image; the right shows the log-scaled, centered magnitude spectrum. The logarithmic transfer function compresses the large dynamic range of the spectrum for display. It follows the VTK pipeline structure:\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D images.\n- [vtkImageFFT](https://www.vtk.org/doc/nightly/html/classvtkImageFFT.html) transforms the image to the frequency domain.\n- [vtkImageFourierCenter](https://www.vtk.org/doc/nightly/html/classvtkImageFourierCenter.html) shifts the zero-frequency component to the center of the spectrum.\n- [vtkImageLogarithmicScale](https://www.vtk.org/doc/nightly/html/classvtkImageLogarithmicScale.html) applies logarithmic scaling to compress the dynamic range.\n- [vtkImageMagnitude](https://www.vtk.org/doc/nightly/html/classvtkImageMagnitude.html) computes the magnitude of the complex FFT output.\n- [vtkImageMapToColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToColors.html) maps scalar values to colors through a lookup table.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkPNMReader](https://www.vtk.org/doc/nightly/html/classvtkPNMReader.html) reads the `vtks.pgm` PGM image.\n- [vtkWindowLevelLookupTable](https://www.vtk.org/doc/nightly/html/classvtkWindowLevelLookupTable.html) and [vtkImageMapToColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToColors.html) map spectrum values to displayable colors.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageFFT",
+    "vtkImageFourierCenter",
+    "vtkImageLogarithmicScale",
+    "vtkImageMagnitude",
+    "vtkImageMapToColors",
+    "vtkInteractorStyleImage",
+    "vtkPNMReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkWindowLevelLookupTable"
+  ],
+  "data_files": [
+    "data/vtks.pgm"
+  ],
+  "py_filename": "vtk_spectrum.py",
+  "image": "vtk_spectrum.png",
+  "metadata_filename": "vtk_spectrum.json",
+  "topology": "standard"
+}

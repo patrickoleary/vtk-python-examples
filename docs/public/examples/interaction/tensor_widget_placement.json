@@ -1,0 +1,18 @@
+{
+  "title": "tensor widget placement",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkTensorWidget and vtkTensorRepresentation with tensor placement.\n\n**renderer → infrastructure → scene → output**\n\n- [vtkTensorRepresentation](https://www.vtk.org/doc/nightly/html/classvtkTensorRepresentation.html) — tensor representation.\n- [vtkTensorWidget](https://www.vtk.org/doc/nightly/html/classvtkTensorWidget.html) — tensor widget.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTensorRepresentation",
+    "vtkTensorWidget"
+  ],
+  "data_files": null,
+  "py_filename": "tensor_widget_placement.py",
+  "image": "tensor_widget_placement.png",
+  "metadata_filename": "tensor_widget_placement.json",
+  "topology": "standard"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "edge weights",
+  "source_type": "examples",
+  "tag": "graphs",
+  "explanation": "### Description\n\nThis example displays edge weights on a fully connected directed graph. The force-directed layout uses the weight values to influence vertex spacing, and labels show the numeric weights at vertex positions.\n\n**dataset → input → filter → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) stores per-edge weight values.\n- [vtkForceDirectedLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkForceDirectedLayoutStrategy.html) computes vertex positions using force simulation with edge weights.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) applies the layout strategy to the graph.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) converts graph edges to polydata lines.\n- [vtkLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkLabeledDataMapper.html) renders weight labels at point positions.\n- [vtkMutableDirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableDirectedGraph.html) builds the directed graph.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkActor2D",
+    "vtkCellCenters",
+    "vtkDoubleArray",
+    "vtkForceDirectedLayoutStrategy",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkLabeledDataMapper",
+    "vtkMutableDirectedGraph",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "edge_weights.py",
+  "image": "edge_weights.png",
+  "metadata_filename": "edge_weights.json",
+  "topology": "graph"
+}

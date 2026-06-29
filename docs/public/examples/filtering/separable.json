@@ -1,0 +1,22 @@
+{
+  "title": "separable",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nApply separable convolution with gradient in X and Gaussian smoothing in Y.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageSeparableConvolution](https://www.vtk.org/doc/nightly/html/classvtkImageSeparableConvolution.html) — image separable convolution.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkFloatArray",
+    "vtkImageActor",
+    "vtkImageSeparableConvolution",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/fullhead15.png"
+  ],
+  "py_filename": "separable.py",
+  "image": "separable.png",
+  "metadata_filename": "separable.json",
+  "topology": "standard"
+}

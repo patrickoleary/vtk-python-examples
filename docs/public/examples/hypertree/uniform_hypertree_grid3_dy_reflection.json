@@ -1,0 +1,26 @@
+{
+  "title": "uniform hypertree grid3 dy reflection",
+  "source_type": "examples",
+  "tag": "hypertree",
+  "explanation": "### Description\n\nDemonstrate vtkHyperTreeGridAxisReflection on a 3D uniform HyperTreeGrid reflected along the Y axis.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCamera](https://www.vtk.org/doc/nightly/html/classvtkCamera.html) — camera.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) — maps any dataset type to graphics primitives.\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkHyperTreeGridAxisReflection](https://www.vtk.org/doc/nightly/html/classvtkHyperTreeGridAxisReflection.html) — hyper tree grid axis reflection.\n- [vtkHyperTreeGridGeometry](https://www.vtk.org/doc/nightly/html/classvtkHyperTreeGridGeometry.html) — hyper tree grid geometry.\n- [vtkHyperTreeGridNonOrientedCursor](https://www.vtk.org/doc/nightly/html/classvtkHyperTreeGridNonOrientedCursor.html) — hyper tree grid non oriented cursor.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkShrinkFilter](https://www.vtk.org/doc/nightly/html/classvtkShrinkFilter.html) — shrinks cells in any dataset toward their centroid.\n- [vtkUniformHyperTreeGrid](https://www.vtk.org/doc/nightly/html/classvtkUniformHyperTreeGrid.html) — uniform hyper tree grid.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCamera",
+    "vtkDataSetMapper",
+    "vtkDoubleArray",
+    "vtkHyperTreeGridAxisReflection",
+    "vtkHyperTreeGridGeometry",
+    "vtkHyperTreeGridNonOrientedCursor",
+    "vtkLookupTable",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkShrinkFilter",
+    "vtkUniformHyperTreeGrid"
+  ],
+  "data_files": null,
+  "py_filename": "uniform_hypertree_grid3_dy_reflection.py",
+  "image": "uniform_hypertree_grid3_dy_reflection.png",
+  "metadata_filename": "uniform_hypertree_grid3_dy_reflection.json",
+  "topology": "standard"
+}

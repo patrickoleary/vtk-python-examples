@@ -1,0 +1,25 @@
+{
+  "title": "pass through",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkPassThrough by creating a directed graph with vertex data arrays, passing it through the filter, and rendering the graph using an explicit layout pipeline.\n\n**dataset → input → filter → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) — graph layout filter.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) — converts graph to polydata.\n- [vtkMutableDirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableDirectedGraph.html) — mutable directed graph.\n- [vtkPassThrough](https://www.vtk.org/doc/nightly/html/classvtkPassThrough.html) — pass through.\n- [vtkVertexGlyphFilter](https://www.vtk.org/doc/nightly/html/classvtkVertexGlyphFilter.html) — vertex glyph filter.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDoubleArray",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkMutableDirectedGraph",
+    "vtkPassThrough",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSimple2DLayoutStrategy",
+    "vtkVertexGlyphFilter"
+  ],
+  "data_files": null,
+  "py_filename": "pass_through.py",
+  "image": "pass_through.png",
+  "metadata_filename": "pass_through.json",
+  "topology": "graph"
+}

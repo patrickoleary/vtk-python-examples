@@ -1,0 +1,19 @@
+{
+  "title": "math text free type text renderer",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkTextActor with MathText FreeType text renderer, math text, and UTF-8.\n\n**dataset → visual_asset → renderer → infrastructure → output**\n\n- [vtkTextActor](https://www.vtk.org/doc/nightly/html/classvtkTextActor.html) — text actor.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTextActor"
+  ],
+  "data_files": [
+    "data/DejaVuSans.ttf"
+  ],
+  "py_filename": "math_text_free_type_text_renderer.py",
+  "image": "math_text_free_type_text_renderer.png",
+  "metadata_filename": "math_text_free_type_text_renderer.json",
+  "topology": "standard"
+}

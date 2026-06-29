@@ -1,0 +1,17 @@
+{
+  "title": "sphere widget",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nThis example uses an interactive sphere widget that can be repositioned and resized. The sphere center is printed on each interaction.\n\n**renderer → infrastructure → scene → output**\n\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides named color lookup.\n- [vtkSphereWidget](https://www.vtk.org/doc/nightly/html/classvtkSphereWidget.html) provides an interactive sphere that can be moved and resized.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereWidget"
+  ],
+  "data_files": null,
+  "py_filename": "sphere_widget.py",
+  "image": "sphere_widget.png",
+  "metadata_filename": "sphere_widget.json",
+  "topology": "standard"
+}

@@ -1,0 +1,19 @@
+{
+  "title": "grid source",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example generates and displays a grid pattern image using vtkImageGridSource. The source produces a 256×256 unsigned char image with white grid lines on a black background. It follows the VTK pipeline structure:\n\n**input → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays the 2D image.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts image scalar type for display.\n- [vtkImageGridSource](https://www.vtk.org/doc/nightly/html/classvtkImageGridSource.html) generates a procedural grid pattern image. `SetGridSpacing()` controls the distance between grid lines, `SetLineValue()` and `SetFillValue()` control the line and background intensities.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene with `ParallelProjectionOn()` for correct 2D viewing.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageGridSource",
+    "vtkInteractorStyleImage",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "grid_source.py",
+  "image": "grid_source.png",
+  "metadata_filename": "grid_source.json",
+  "topology": "standard"
+}

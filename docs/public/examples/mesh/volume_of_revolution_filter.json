@@ -1,0 +1,23 @@
+{
+  "title": "volume of revolution filter",
+  "source_type": "examples",
+  "tag": "mesh",
+  "explanation": "### Description\n\nThis example demonstrates vtkVolumeOfRevolutionFilter to revolve a 2D polyline profile around the Y axis, creating a vase-like 3D solid.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkCellArray](https://www.vtk.org/doc/nightly/html/classvtkCellArray.html) stores cell connectivity.\n- [vtkDataSetSurfaceFilter](https://www.vtk.org/doc/nightly/html/classvtkDataSetSurfaceFilter.html) extracts the surface geometry from the unstructured grid output.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) represents polygonal geometry.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the surface to graphics primitives.\n- [vtkVolumeOfRevolutionFilter](https://www.vtk.org/doc/nightly/html/classvtkVolumeOfRevolutionFilter.html) revolves a 2D profile around an axis to produce a 3D unstructured grid.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCellArray",
+    "vtkDataSetSurfaceFilter",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkVolumeOfRevolutionFilter"
+  ],
+  "data_files": null,
+  "py_filename": "volume_of_revolution_filter.py",
+  "image": "volume_of_revolution_filter.png",
+  "metadata_filename": "volume_of_revolution_filter.json",
+  "topology": "standard"
+}

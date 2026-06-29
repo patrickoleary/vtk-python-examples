@@ -1,0 +1,19 @@
+{
+  "title": "finite plane widget",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkFinitePlaneWidget with two plane widgets showing different configurations.\n\n**renderer → infrastructure → scene → interaction → output**\n\n- [vtkFinitePlaneRepresentation](https://www.vtk.org/doc/nightly/html/classvtkFinitePlaneRepresentation.html) — finite plane representation.\n- [vtkFinitePlaneWidget](https://www.vtk.org/doc/nightly/html/classvtkFinitePlaneWidget.html) — finite plane widget.\n- [vtkInteractorStyleTrackballCamera](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleTrackballCamera.html) — interactor style trackball camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkFinitePlaneRepresentation",
+    "vtkFinitePlaneWidget",
+    "vtkInteractorStyleTrackballCamera",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "finite_plane_widget.py",
+  "image": "finite_plane_widget.png",
+  "metadata_filename": "finite_plane_widget.json",
+  "topology": "standard"
+}

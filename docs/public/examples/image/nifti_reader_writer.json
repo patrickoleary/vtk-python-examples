@@ -1,0 +1,26 @@
+{
+  "title": "nifti reader writer",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nRead NIFTI files, write and re-read to verify, then display in two viewports.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkImageMathematics](https://www.vtk.org/doc/nightly/html/classvtkImageMathematics.html) — performs mathematical operations on image data.\n- [vtkImageSlice](https://www.vtk.org/doc/nightly/html/classvtkImageSlice.html) — image slice.\n- [vtkImageSliceMapper](https://www.vtk.org/doc/nightly/html/classvtkImageSliceMapper.html) — image slice mapper.\n- [vtkNIFTIImageReader](https://www.vtk.org/doc/nightly/html/classvtkNIFTIImageReader.html) — nifti image reader.\n- [vtkNIFTIImageWriter](https://www.vtk.org/doc/nightly/html/classvtkNIFTIImageWriter.html) — nifti image writer.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageMathematics",
+    "vtkImageSlice",
+    "vtkImageSliceMapper",
+    "vtkNIFTIImageReader",
+    "vtkNIFTIImageWriter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/avg152T1_RL_nifti.nii.gz",
+    "data/minimal.hdr.gz",
+    "data/minimal.img.gz",
+    "data/minimal.nii.gz"
+  ],
+  "py_filename": "nifti_reader_writer.py",
+  "image": "nifti_reader_writer.png",
+  "metadata_filename": "nifti_reader_writer.json",
+  "topology": "standard"
+}

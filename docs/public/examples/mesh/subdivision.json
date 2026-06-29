@@ -1,0 +1,21 @@
+{
+  "title": "subdivision",
+  "source_type": "examples",
+  "tag": "mesh",
+  "explanation": "### Description\n\nThis example subdivides an icosahedron using vtkLoopSubdivisionFilter, which applies Loop subdivision to increase mesh density and smooth the geometry. Side-by-side viewports show the original coarse mesh (left) and the subdivided smooth mesh (right), both with visible edges. It follows the VTK pipeline structure:\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — two actors with alice-blue faces and steel-blue edges, one per viewport.\n- [vtkCamera](https://www.vtk.org/doc/nightly/html/classvtkCamera.html) shared between both viewports for synchronized navigation.\n- [vtkLoopSubdivisionFilter](https://www.vtk.org/doc/nightly/html/classvtkLoopSubdivisionFilter.html) applies 3 iterations of Loop subdivision. Each iteration splits every triangle into four, smoothing vertex positions using a weighted average of neighbors.\n- [vtkPlatonicSolidSource](https://www.vtk.org/doc/nightly/html/classvtkPlatonicSolidSource.html) generates an icosahedron (20-face platonic solid) as the coarse input mesh.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the original and subdivided meshes to graphics primitives.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers in side-by-side viewports.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCamera",
+    "vtkLoopSubdivisionFilter",
+    "vtkPlatonicSolidSource",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "subdivision.py",
+  "image": "subdivision.png",
+  "metadata_filename": "subdivision.json",
+  "topology": "standard"
+}

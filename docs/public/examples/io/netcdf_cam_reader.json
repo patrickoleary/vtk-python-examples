@@ -1,0 +1,23 @@
+{
+  "title": "netcdf cam reader",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nRead a NetCDF CAM file with connectivity and render the temperature field.\n\n**input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkGeometryFilter.html) — extracts the outer surface of a dataset.\n- [vtkNetCDFCAMReader](https://www.vtk.org/doc/nightly/html/classvtkNetCDFCAMReader.html) — net cdfcam reader.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkGeometryFilter",
+    "vtkNetCDFCAMReader",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/NetCDF/CAMReaderConnectivity.nc",
+    "data/NetCDF/CAMReaderPoints.nc"
+  ],
+  "py_filename": "netcdf_cam_reader.py",
+  "image": "netcdf_cam_reader.png",
+  "metadata_filename": "netcdf_cam_reader.json",
+  "topology": "standard"
+}

@@ -1,0 +1,19 @@
+{
+  "title": "noise source",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example generates and displays a random noise image using vtkImageNoiseSource. The noise image is a 256×256 2D image with uniformly distributed random values mapped to grayscale. No external data files are needed. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays the 2D noise image.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts data to unsigned char for display.\n- [vtkImageNoiseSource](https://www.vtk.org/doc/nightly/html/classvtkImageNoiseSource.html) generates a synthetic image with random noise. `SetWholeExtent()` defines the image dimensions. `SetMinimum()` and `SetMaximum()` control the value range.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene with a black background.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageNoiseSource",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "noise_source.py",
+  "image": "noise_source.png",
+  "metadata_filename": "noise_source.json",
+  "topology": "standard"
+}

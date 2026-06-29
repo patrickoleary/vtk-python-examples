@@ -1,0 +1,21 @@
+{
+  "title": "gradient magnitude",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nCompute 2D gradient magnitude of a GE Signa MR image.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkGESignaReader](https://www.vtk.org/doc/nightly/html/classvtkGESignaReader.html) — ge signa reader.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageGradientMagnitude](https://www.vtk.org/doc/nightly/html/classvtkImageGradientMagnitude.html) — image gradient magnitude.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkGESignaReader",
+    "vtkImageActor",
+    "vtkImageGradientMagnitude",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/E07733S002I009.MR"
+  ],
+  "py_filename": "gradient_magnitude.py",
+  "image": "gradient_magnitude.png",
+  "metadata_filename": "gradient_magnitude.json",
+  "topology": "standard"
+}

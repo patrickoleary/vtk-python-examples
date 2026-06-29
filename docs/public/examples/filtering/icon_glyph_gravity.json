@@ -1,0 +1,28 @@
+{
+  "title": "icon glyph gravity",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkIconGlyphFilter with various gravity settings by reading a PNG icon sheet and rendering 9 rows of icons, each with a different gravity anchor point.\n\n**dataset → input → dataset → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkAppendPolyData](https://www.vtk.org/doc/nightly/html/classvtkAppendPolyData.html) — append poly data.\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkIconGlyphFilter](https://www.vtk.org/doc/nightly/html/classvtkIconGlyphFilter.html) — icon glyph filter.\n- [vtkIntArray](https://www.vtk.org/doc/nightly/html/classvtkIntArray.html) — int array.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) — represents polygonal geometry.\n- [vtkPolyDataMapper2D](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper2D.html) — poly data mapper2d.\n- [vtkTexture](https://www.vtk.org/doc/nightly/html/classvtkTexture.html) — applies a texture image to geometry.\n- [vtkTexturedActor2D](https://www.vtk.org/doc/nightly/html/classvtkTexturedActor2D.html) — textured actor2d.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAppendPolyData",
+    "vtkDoubleArray",
+    "vtkIconGlyphFilter",
+    "vtkIntArray",
+    "vtkPNGReader",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataMapper2D",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTexture",
+    "vtkTexturedActor2D"
+  ],
+  "data_files": [
+    "data/Tango/TangoIcons.png"
+  ],
+  "py_filename": "icon_glyph_gravity.py",
+  "image": "icon_glyph_gravity.png",
+  "metadata_filename": "icon_glyph_gravity.json",
+  "topology": "standard"
+}

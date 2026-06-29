@@ -1,0 +1,27 @@
+{
+  "title": "write amr vtk hdf",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nThis example builds a two-level overlapping AMR dataset with a Gaussian pulse scalar field, writes it to the VTKHDF file format using vtkHDFWriter, reads it back with vtkHDFReader, and renders block outlines and an iso-surface of the round-tripped data. It follows the VTK pipeline structure:\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkAMRBox](https://www.vtk.org/doc/nightly/html/classvtkAMRBox.html) describes the index-space extent of each block in the AMR hierarchy.\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene. Two actors are used — gold wireframe block outlines with `SetLineWidth(2)` and a peach puff iso-surface.\n- [vtkCompositeDataGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkCompositeDataGeometryFilter.html) aggregates the composite contour output into one polydata for rendering.\n- [vtkContourFilter](https://www.vtk.org/doc/nightly/html/classvtkContourFilter.html) extracts an iso-surface at the half-maximum value (0.5) of the Gaussian pulse.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) stores float data arrays.\n- [vtkHDFReader](https://www.vtk.org/doc/nightly/html/classvtkHDFReader.html) reads the VTKHDF file back, producing the same AMR dataset.\n- [vtkHDFWriter](https://www.vtk.org/doc/nightly/html/classvtkHDFWriter.html) writes the overlapping AMR dataset to a `.vtkhdf` file. `SetOverwrite(True)` replaces an existing file. The VTKHDF format stores the AMR hierarchy, refinement ratios, and all block data in a single HDF5 file.\n- [vtkOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkOutlineFilter.html) shows the bounding boxes of the AMR blocks.\n- [vtkOverlappingAMR](https://www.vtk.org/doc/nightly/html/classvtkOverlappingAMR.html) holds a two-level adaptive mesh refinement hierarchy. `Initialize([1, 2])` creates one coarse block (level 0) and two refined blocks (level 1). `SetRefinementRatio(0, 2)` specifies that level 1 cells are half the size of level 0 cells.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the outline and contour polydata to graphics primitives.\n- [vtkUniformGrid](https://www.vtk.org/doc/nightly/html/classvtkUniformGrid.html) defines each AMR block as a regular grid with `SetOrigin()`, `SetSpacing()`, and `SetDimensions()`.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene. `ResetCamera()` frames the data.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAMRBox",
+    "vtkActor",
+    "vtkCompositeDataGeometryFilter",
+    "vtkContourFilter",
+    "vtkFloatArray",
+    "vtkHDFReader",
+    "vtkHDFWriter",
+    "vtkOutlineFilter",
+    "vtkOverlappingAMR",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkUniformGrid"
+  ],
+  "data_files": null,
+  "py_filename": "write_amr_vtk_hdf.py",
+  "image": "write_amr_vtk_hdf.png",
+  "metadata_filename": "write_amr_vtk_hdf.json",
+  "topology": "standard"
+}

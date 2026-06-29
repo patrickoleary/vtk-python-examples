@@ -1,0 +1,20 @@
+{
+  "title": "euclidean to polar",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nConvert a 2D gradient to polar coordinates using vtkImageEuclideanToPolar.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageEuclideanToPolar](https://www.vtk.org/doc/nightly/html/classvtkImageEuclideanToPolar.html) — image euclidean to polar.\n- [vtkImageGaussianSource](https://www.vtk.org/doc/nightly/html/classvtkImageGaussianSource.html) — image gaussian source.\n- [vtkImageGradient](https://www.vtk.org/doc/nightly/html/classvtkImageGradient.html) — computes the gradient vector of an image.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageEuclideanToPolar",
+    "vtkImageGaussianSource",
+    "vtkImageGradient",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "euclidean_to_polar.py",
+  "image": "euclidean_to_polar.png",
+  "metadata_filename": "euclidean_to_polar.json",
+  "topology": "standard"
+}

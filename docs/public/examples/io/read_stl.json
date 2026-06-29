@@ -1,0 +1,21 @@
+{
+  "title": "read stl",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nThis example reads an STL file and renders the mesh with specular lighting using the standard VTK pipeline.\n\n**dataset → input → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene. `GetProperty().SetSpecular()` and `SetSpecularPower()` add specular highlights for a shiny appearance.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the polygon data to graphics primitives.\n- [vtkSTLReader](https://www.vtk.org/doc/nightly/html/classvtkSTLReader.html) reads a stereolithography (.stl) file. `SetFileName()` specifies the input file. STL is a widely used format for 3D printing and CAD interchange.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene. `ResetCamera()` frames the data.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSTLReader"
+  ],
+  "data_files": [
+    "data/42400-IDGH.stl"
+  ],
+  "py_filename": "read_stl.py",
+  "image": "read_stl.png",
+  "metadata_filename": "read_stl.json",
+  "topology": "standard"
+}

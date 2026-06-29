@@ -1,0 +1,29 @@
+{
+  "title": "coincident graph layout view",
+  "source_type": "examples",
+  "tag": "infovis",
+  "explanation": "### Description\n\nDemonstrate coincident graph layout with pass-through strategy, vertex and edge labels.\n\n**dataset → input → filter → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) — graph layout filter.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) — converts graph to polydata.\n- [vtkIdTypeArray](https://www.vtk.org/doc/nightly/html/classvtkIdTypeArray.html) — id type array.\n- [vtkLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkLabeledDataMapper.html) — labeled data mapper.\n- [vtkMutableUndirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableUndirectedGraph.html) — mutable undirected graph.\n- [vtkPassThroughLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkPassThroughLayoutStrategy.html) — pass-through layout strategy.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkStringArray](https://www.vtk.org/doc/nightly/html/classvtkStringArray.html) — string array.\n- [vtkVertexGlyphFilter](https://www.vtk.org/doc/nightly/html/classvtkVertexGlyphFilter.html) — vertex glyph filter.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkActor2D",
+    "vtkDoubleArray",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkIdTypeArray",
+    "vtkLabeledDataMapper",
+    "vtkMutableUndirectedGraph",
+    "vtkPassThroughLayoutStrategy",
+    "vtkPoints",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStringArray",
+    "vtkVertexGlyphFilter"
+  ],
+  "data_files": null,
+  "py_filename": "coincident_graph_layout_view.py",
+  "image": "coincident_graph_layout_view.png",
+  "metadata_filename": "coincident_graph_layout_view.json",
+  "topology": "graph"
+}

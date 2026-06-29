@@ -1,0 +1,21 @@
+{
+  "title": "color series",
+  "source_type": "examples",
+  "tag": "rendering",
+  "explanation": "### Description\n\nDemonstrate vtkColorSeries by rendering swatches of all built-in color palettes.\n\n**dataset → input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkColorSeries](https://www.vtk.org/doc/nightly/html/classvtkColorSeries.html) — color series.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) — represents a regular grid of points (image/volume).\n- [vtkTrivialProducer](https://www.vtk.org/doc/nightly/html/classvtkTrivialProducer.html) — trivial producer.\n- [vtkUnsignedCharArray](https://www.vtk.org/doc/nightly/html/classvtkUnsignedCharArray.html) — unsigned char array.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkColorSeries",
+    "vtkImageActor",
+    "vtkImageData",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTrivialProducer",
+    "vtkUnsignedCharArray"
+  ],
+  "data_files": null,
+  "py_filename": "color_series.py",
+  "image": "color_series.png",
+  "metadata_filename": "color_series.json",
+  "topology": "standard"
+}

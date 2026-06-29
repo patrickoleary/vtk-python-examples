@@ -1,0 +1,20 @@
+{
+  "title": "axes",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkAxis with various configurations including custom labels and log scale.\n\n**dataset → plot → context_asset → renderer → infrastructure → output**\n\n- [vtkAxis](https://www.vtk.org/doc/nightly/html/classvtkAxis.html) — axis.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkStringArray](https://www.vtk.org/doc/nightly/html/classvtkStringArray.html) — string array.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAxis",
+    "vtkContextActor",
+    "vtkDoubleArray",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStringArray"
+  ],
+  "data_files": null,
+  "py_filename": "axes.py",
+  "image": "axes.png",
+  "metadata_filename": "axes.json",
+  "topology": "chart"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "chaco graph reader",
+  "source_type": "examples",
+  "tag": "infovis",
+  "explanation": "### Description\n\nDemonstrate vtkChacoGraphReader with circular layout and graph mapper.\n\n**dataset → input → layout → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkChacoGraphReader](https://www.vtk.org/doc/nightly/html/classvtkChacoGraphReader.html) — chaco graph reader.\n- [vtkCircularLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkCircularLayoutStrategy.html) — circular layout strategy.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) — graph layout.\n- [vtkGraphMapper](https://www.vtk.org/doc/nightly/html/classvtkGraphMapper.html) — graph mapper.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkChacoGraphReader",
+    "vtkCircularLayoutStrategy",
+    "vtkGraphLayout",
+    "vtkGraphMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/small.graph"
+  ],
+  "py_filename": "chaco_graph_reader.py",
+  "image": "chaco_graph_reader.png",
+  "metadata_filename": "chaco_graph_reader.json",
+  "topology": "graph"
+}

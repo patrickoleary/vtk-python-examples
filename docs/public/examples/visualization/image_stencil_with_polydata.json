@@ -1,0 +1,30 @@
+{
+  "title": "image stencil with polydata",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nTest vtkImageStencil with a polydata stencil, combining a sphere stencil and a contour-based stencil side by side using vtkImageAppend.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkCutter](https://www.vtk.org/doc/nightly/html/classvtkCutter.html) — cutter.\n- [vtkImageAppend](https://www.vtk.org/doc/nightly/html/classvtkImageAppend.html) — image append.\n- [vtkImageSlice](https://www.vtk.org/doc/nightly/html/classvtkImageSlice.html) — image slice.\n- [vtkImageSliceMapper](https://www.vtk.org/doc/nightly/html/classvtkImageSliceMapper.html) — image slice mapper.\n- [vtkImageStencil](https://www.vtk.org/doc/nightly/html/classvtkImageStencil.html) — image stencil.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) — interactor style image.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) — defines an implicit plane function.\n- [vtkPolyDataToImageStencil](https://www.vtk.org/doc/nightly/html/classvtkPolyDataToImageStencil.html) — poly data to image stencil.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkStripper](https://www.vtk.org/doc/nightly/html/classvtkStripper.html) — creates triangle strips and/or polylines from polygonal data.\n- [vtkTriangleFilter](https://www.vtk.org/doc/nightly/html/classvtkTriangleFilter.html) — converts polygons into triangles.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkCutter",
+    "vtkImageAppend",
+    "vtkImageSlice",
+    "vtkImageSliceMapper",
+    "vtkImageStencil",
+    "vtkInteractorStyleImage",
+    "vtkPNGReader",
+    "vtkPlane",
+    "vtkPolyDataToImageStencil",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkStripper",
+    "vtkTriangleFilter"
+  ],
+  "data_files": [
+    "data/fullhead15.png"
+  ],
+  "py_filename": "image_stencil_with_polydata.py",
+  "image": "image_stencil_with_polydata.png",
+  "metadata_filename": "image_stencil_with_polydata.json",
+  "topology": "standard"
+}

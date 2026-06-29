@@ -1,0 +1,42 @@
+{
+  "title": "read dicom series app",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nThis example reads a directory of DICOM files and allows interactive browsing through slices using the mouse wheel or Up/Down keys, with a slice counter overlay.\n\n**dataset → input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor2D](https://www.vtk.org/doc/nightly/html/classvtkActor2D.html) renders 2D overlay geometry.\n- [vtkDICOMImageReader](https://www.vtk.org/doc/nightly/html/classvtkDICOMImageReader.html) reads all DICOM files from a directory into a 3D volume. `SetDirectoryName()` specifies the folder containing the DICOM series.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays a single slice as a 2D texture. `SetDisplayExtent()` selects the visible Z slice. `GetProperty().SetColorWindow()` and `SetColorLevel()` map the scalar range to grayscale.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkTextMapper](https://www.vtk.org/doc/nightly/html/classvtkTextMapper.html) and [vtkActor2D](https://www.vtk.org/doc/nightly/html/classvtkActor2D.html) create text overlays showing the current slice number and usage hints.\n- [vtkTextProperty](https://www.vtk.org/doc/nightly/html/classvtkTextProperty.html) defines text appearance (font, color, size).\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene. `GetActiveCamera().ParallelProjectionOn()` ensures the image is displayed without perspective distortion. `ResetCamera()` is called after each slice change to keep the camera centered.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkDICOMImageReader",
+    "vtkImageActor",
+    "vtkInteractorStyleImage",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTextActor",
+    "vtkTextProperty"
+  ],
+  "data_files": [
+    "data/brain/brain_001.dcm",
+    "data/brain/brain_002.dcm",
+    "data/brain/brain_003.dcm",
+    "data/brain/brain_004.dcm",
+    "data/brain/brain_005.dcm",
+    "data/brain/brain_006.dcm",
+    "data/brain/brain_007.dcm",
+    "data/brain/brain_008.dcm",
+    "data/brain/brain_009.dcm",
+    "data/brain/brain_010.dcm",
+    "data/brain/brain_011.dcm",
+    "data/brain/brain_012.dcm",
+    "data/brain/brain_013.dcm",
+    "data/brain/brain_014.dcm",
+    "data/brain/brain_015.dcm",
+    "data/brain/brain_016.dcm",
+    "data/brain/brain_017.dcm",
+    "data/brain/brain_018.dcm",
+    "data/brain/brain_019.dcm",
+    "data/brain/brain_020.dcm"
+  ],
+  "py_filename": "read_dicom_series_app.py",
+  "image": "read_dicom_series_app.png",
+  "metadata_filename": "read_dicom_series_app.json",
+  "topology": "standard"
+}

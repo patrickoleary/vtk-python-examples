@@ -1,0 +1,20 @@
+{
+  "title": "obj import-mt lwithout texture file",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nImport OBJ with MTL but no texture file and render.\n\n**input → renderer → infrastructure → scene → output**\n\n- [vtkOBJImporter](https://www.vtk.org/doc/nightly/html/classvtkOBJImporter.html) — obj importer.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkOBJImporter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/Input/boxes_4_mtl_no_texture.obj",
+    "data/Input/boxes_4_mtl_no_texture.obj.mtl"
+  ],
+  "py_filename": "obj_import-mt_lwithout_texture_file.py",
+  "image": "obj_import-mt_lwithout_texture_file.png",
+  "metadata_filename": "obj_import-mt_lwithout_texture_file.json",
+  "topology": "standard"
+}

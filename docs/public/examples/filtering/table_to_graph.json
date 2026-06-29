@@ -1,0 +1,37 @@
+{
+  "title": "table to graph",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkTableToGraph with multiple link configurations on author data.\n\n**dataset → input → filter → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkBitArray](https://www.vtk.org/doc/nightly/html/classvtkBitArray.html) — bit array.\n- [vtkCircularLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkCircularLayoutStrategy.html) — circular layout strategy.\n- [vtkDataObject](https://www.vtk.org/doc/nightly/html/classvtkDataObject.html) — provides field association constants for array processing.\n- [vtkDelimitedTextReader](https://www.vtk.org/doc/nightly/html/classvtkDelimitedTextReader.html) — delimited text reader.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) — places oriented, scaled glyphs at each point.\n- [vtkGlyphSource2D](https://www.vtk.org/doc/nightly/html/classvtkGlyphSource2D.html) — glyph source2d.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) — graph layout.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) — graph to poly data.\n- [vtkIntArray](https://www.vtk.org/doc/nightly/html/classvtkIntArray.html) — int array.\n- [vtkMergeTables](https://www.vtk.org/doc/nightly/html/classvtkMergeTables.html) — merge tables.\n- [vtkMutableUndirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableUndirectedGraph.html) — mutable undirected graph.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkStringArray](https://www.vtk.org/doc/nightly/html/classvtkStringArray.html) — string array.\n- [vtkStringToCategory](https://www.vtk.org/doc/nightly/html/classvtkStringToCategory.html) — string to category.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) — table.\n- [vtkTableToGraph](https://www.vtk.org/doc/nightly/html/classvtkTableToGraph.html) — table to graph.\n- [vtkUndirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkUndirectedGraph.html) — undirected graph.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkBitArray",
+    "vtkCircularLayoutStrategy",
+    "vtkDataObject",
+    "vtkDelimitedTextReader",
+    "vtkGlyph3D",
+    "vtkGlyphSource2D",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkIntArray",
+    "vtkMergeTables",
+    "vtkMutableUndirectedGraph",
+    "vtkPoints",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStringArray",
+    "vtkStringToCategory",
+    "vtkTable",
+    "vtkTableToGraph",
+    "vtkUndirectedGraph"
+  ],
+  "data_files": [
+    "data/authors-tabletographtest.csv"
+  ],
+  "py_filename": "table_to_graph.py",
+  "image": "table_to_graph.png",
+  "metadata_filename": "table_to_graph.json",
+  "topology": "graph"
+}

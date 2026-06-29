@@ -1,0 +1,19 @@
+{
+  "title": "cone actor properties",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nThis example creates multiple actors with different surface properties and transformations, demonstrating two ways to control actor appearance.\n\n**dataset → input → visual_asset → renderer → infrastructure → scene**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) orchestrates rendering; two instances share the same mapper.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) generates a polygonal cone.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides named colors.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps polygonal data into graphics primitives.\n- [vtkProperty](https://www.vtk.org/doc/nightly/html/classvtkProperty.html) controls surface appearance (color, diffuse, specular); can be shared across actors.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) a viewport that draws its actors.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkConeSource",
+    "vtkPolyDataMapper",
+    "vtkProperty",
+    "vtkRenderWindow",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "cone_actor_properties.py",
+  "image": "cone_actor_properties.png",
+  "metadata_filename": "cone_actor_properties.json",
+  "topology": "standard"
+}

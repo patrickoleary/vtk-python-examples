@@ -1,0 +1,27 @@
+{
+  "title": "blend stencil",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nAlpha-blend two images with a spherical stencil using vtkImageBlend.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkBMPReader](https://www.vtk.org/doc/nightly/html/classvtkBMPReader.html) — bmp reader.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageBlend](https://www.vtk.org/doc/nightly/html/classvtkImageBlend.html) — image blend.\n- [vtkImageTranslateExtent](https://www.vtk.org/doc/nightly/html/classvtkImageTranslateExtent.html) — image translate extent.\n- [vtkImplicitFunctionToImageStencil](https://www.vtk.org/doc/nightly/html/classvtkImplicitFunctionToImageStencil.html) — implicit function to image stencil.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkPNMReader](https://www.vtk.org/doc/nightly/html/classvtkPNMReader.html) — pnm reader.\n- [vtkSphere](https://www.vtk.org/doc/nightly/html/classvtkSphere.html) — defines an implicit sphere function.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkBMPReader",
+    "vtkImageActor",
+    "vtkImageBlend",
+    "vtkImageTranslateExtent",
+    "vtkImplicitFunctionToImageStencil",
+    "vtkLookupTable",
+    "vtkPNMReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphere"
+  ],
+  "data_files": [
+    "data/B.pgm",
+    "data/masonry.bmp"
+  ],
+  "py_filename": "blend_stencil.py",
+  "image": "blend_stencil.png",
+  "metadata_filename": "blend_stencil.json",
+  "topology": "standard"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "legend box sphere entries",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkLegendBoxActor with sphere source entries and colored text.\n\n**input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkLegendBoxActor](https://www.vtk.org/doc/nightly/html/classvtkLegendBoxActor.html) — legend box actor.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkLegendBoxActor",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource"
+  ],
+  "data_files": null,
+  "py_filename": "legend_box_sphere_entries.py",
+  "image": "legend_box_sphere_entries.png",
+  "metadata_filename": "legend_box_sphere_entries.json",
+  "topology": "standard"
+}

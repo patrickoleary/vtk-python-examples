@@ -1,0 +1,30 @@
+{
+  "title": "histogram",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example computes and displays a histogram of scalar values from a 3D medical volume (FullHead.mhd). The left viewport shows the middle axial slice colored with a discrete cool-to-warm lookup table. The right viewport shows the histogram as a bar chart using vtkChartXY / vtkPlotBar rendered through vtkContextActor. It follows the VTK pipeline structure:\n\n**dataset → input → filter → plot → chart → context_asset → visual_asset → renderer → infrastructure → output**\n\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) creates a 2D bar chart. `AddPlot(0)` adds a bar plot and `SetInputData()` connects it to the table.\n- [vtkColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunction.html) defines a cool-to-warm diverging colormap used to build a discrete [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html).\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) hosts the chart scene inside a standard vtkRenderer, enabling the chart to coexist with 3D actors in the same window.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) stores float data arrays.\n- [vtkImageAccumulate](https://www.vtk.org/doc/nightly/html/classvtkImageAccumulate.html) computes a histogram of the scalar values. `SetComponentExtent()` defines the number of bins.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays the colormapped middle axial slice. `SetDisplayExtent()` selects a single Z value.\n- [vtkImageMapToColors](https://www.vtk.org/doc/nightly/html/classvtkImageMapToColors.html) applies the lookup table to the volume slice.\n- [vtkIntArray](https://www.vtk.org/doc/nightly/html/classvtkIntArray.html) stores integer data arrays.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) maps scalar values to colors.\n- [vtkMetaImageReader](https://www.vtk.org/doc/nightly/html/classvtkMetaImageReader.html) reads the `FullHead.mhd` MetaImage volume (256×256×94 voxels of signed short scalars).\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) holds the bin values and frequencies as columns for the chart.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartXY",
+    "vtkColorTransferFunction",
+    "vtkContextActor",
+    "vtkFloatArray",
+    "vtkImageAccumulate",
+    "vtkImageActor",
+    "vtkImageMapToColors",
+    "vtkIntArray",
+    "vtkLookupTable",
+    "vtkMetaImageReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable"
+  ],
+  "data_files": [
+    "data/FullHead.mhd",
+    "data/FullHead.raw"
+  ],
+  "py_filename": "histogram.py",
+  "image": "histogram.png",
+  "metadata_filename": "histogram.json",
+  "topology": "chart"
+}

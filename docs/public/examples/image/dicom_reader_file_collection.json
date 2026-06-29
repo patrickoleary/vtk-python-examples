@@ -1,0 +1,30 @@
+{
+  "title": "dicom reader file collection",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nRead a directory of DICOM files and display the center slice with vtkImageActor.\n\n**input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkDICOMImageReader](https://www.vtk.org/doc/nightly/html/classvtkDICOMImageReader.html) — dicom image reader.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkDICOMImageReader",
+    "vtkImageActor",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/dicom/collection/IM-0001-1983.dcm",
+    "data/dicom/collection/IM-0001-1984.dcm",
+    "data/dicom/collection/IM-0001-1985.dcm",
+    "data/dicom/collection/IM-0001-1986.dcm",
+    "data/dicom/collection/IM-0001-1987.dcm",
+    "data/dicom/collection/IM-0001-1988.dcm",
+    "data/dicom/collection/IM-0001-1989.dcm",
+    "data/dicom/collection/IM-0001-1990.dcm",
+    "data/dicom/collection/IM-0001-1991.dcm",
+    "data/dicom/collection/IM-0001-1992.dcm",
+    "data/dicom/collection/IM-0001-1993.dcm"
+  ],
+  "py_filename": "dicom_reader_file_collection.py",
+  "image": "dicom_reader_file_collection.png",
+  "metadata_filename": "dicom_reader_file_collection.json",
+  "topology": "standard"
+}

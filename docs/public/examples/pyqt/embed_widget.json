@@ -1,0 +1,17 @@
+{
+  "title": "embed widget",
+  "source_type": "examples",
+  "tag": "pyqt",
+  "explanation": "### Description\n\nThis example embeds a VTK render window inside a PyQt6 application. A sphere is displayed in the VTK viewport within a QMainWindow. Uses QOpenGLWidget as the render window interactor base for macOS compatibility.\n\n**input → visual_asset → renderer**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps polygon data to graphics primitives.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) generates the sphere polygon data.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkPolyDataMapper",
+    "vtkRenderer",
+    "vtkSphereSource"
+  ],
+  "data_files": null,
+  "py_filename": "embed_widget.py",
+  "image": "embed_widget.png",
+  "metadata_filename": "embed_widget.json",
+  "topology": "standard"
+}

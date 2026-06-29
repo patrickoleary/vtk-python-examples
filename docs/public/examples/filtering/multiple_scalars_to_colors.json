@@ -1,0 +1,29 @@
+{
+  "title": "multiple scalars to colors",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate multiple scalars-to-colors items in separate chart viewports.\n\n**dataset → plot → chart → item → context_asset → renderer → infrastructure → output**\n\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) — chart xy.\n- [vtkColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunction.html) — maps scalar values to RGB colors for volume rendering.\n- [vtkColorTransferFunctionItem](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunctionItem.html) — color transfer function item.\n- [vtkCompositeTransferFunctionItem](https://www.vtk.org/doc/nightly/html/classvtkCompositeTransferFunctionItem.html) — composite transfer function item.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkContextScene](https://www.vtk.org/doc/nightly/html/classvtkContextScene.html) — context scene.\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkLookupTableItem](https://www.vtk.org/doc/nightly/html/classvtkLookupTableItem.html) — lookup table item.\n- [vtkPiecewiseControlPointsItem](https://www.vtk.org/doc/nightly/html/classvtkPiecewiseControlPointsItem.html) — piecewise control points item.\n- [vtkPiecewiseFunction](https://www.vtk.org/doc/nightly/html/classvtkPiecewiseFunction.html) — defines a piecewise linear scalar-to-opacity mapping.\n- [vtkPiecewiseFunctionItem](https://www.vtk.org/doc/nightly/html/classvtkPiecewiseFunctionItem.html) — piecewise function item.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) — table.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartXY",
+    "vtkColorTransferFunction",
+    "vtkColorTransferFunctionItem",
+    "vtkCompositeTransferFunctionItem",
+    "vtkContextActor",
+    "vtkContextScene",
+    "vtkDoubleArray",
+    "vtkLookupTable",
+    "vtkLookupTableItem",
+    "vtkPiecewiseControlPointsItem",
+    "vtkPiecewiseFunction",
+    "vtkPiecewiseFunctionItem",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "multiple_scalars_to_colors.py",
+  "image": "multiple_scalars_to_colors.png",
+  "metadata_filename": "multiple_scalars_to_colors.json",
+  "topology": "chart"
+}

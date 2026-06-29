@@ -1,0 +1,22 @@
+{
+  "title": "chart bad points",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate chart handling of NaN values in line and point plots.\n\n**dataset → plot → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) — chart xy.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkPlotLine](https://www.vtk.org/doc/nightly/html/classvtkPlotLine.html) — plot line.\n- [vtkPlotPoints](https://www.vtk.org/doc/nightly/html/classvtkPlotPoints.html) — plot points.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) — table.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartXY",
+    "vtkContextActor",
+    "vtkDoubleArray",
+    "vtkPlotLine",
+    "vtkPlotPoints",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "chart_bad_points.py",
+  "image": "chart_bad_points.png",
+  "metadata_filename": "chart_bad_points.json",
+  "topology": "chart"
+}

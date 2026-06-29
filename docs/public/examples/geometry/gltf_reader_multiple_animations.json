@@ -1,0 +1,23 @@
+{
+  "title": "gltf reader multiple animations",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nRead a glTF file with multiple animations (interpolation test) and render.\n\n**input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCompositePolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkCompositePolyDataMapper.html) — maps composite (multi-block) polygonal data to graphics primitives.\n- [vtkGLTFReader](https://www.vtk.org/doc/nightly/html/classvtkGLTFReader.html) — gltf reader.\n- [vtkStreamingDemandDrivenPipeline](https://www.vtk.org/doc/nightly/html/classvtkStreamingDemandDrivenPipeline.html) — streaming demand driven pipeline.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCompositePolyDataMapper",
+    "vtkGLTFReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStreamingDemandDrivenPipeline"
+  ],
+  "data_files": [
+    "data/glTF/InterpolationTest/InterpolationTest.gltf",
+    "data/glTF/InterpolationTest/InterpolationTest_data.bin"
+  ],
+  "py_filename": "gltf_reader_multiple_animations.py",
+  "image": "gltf_reader_multiple_animations.png",
+  "metadata_filename": "gltf_reader_multiple_animations.json",
+  "topology": "standard"
+}

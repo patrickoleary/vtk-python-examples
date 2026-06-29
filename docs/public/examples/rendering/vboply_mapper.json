@@ -1,0 +1,22 @@
+{
+  "title": "vboply mapper",
+  "source_type": "examples",
+  "tag": "rendering",
+  "explanation": "### Description\n\nDemonstrate VBO-based PLY mapper rendering a dragon model with a light kit.\n\n**dataset → input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkLightKit](https://www.vtk.org/doc/nightly/html/classvtkLightKit.html) — light kit.\n- [vtkPLYReader](https://www.vtk.org/doc/nightly/html/classvtkPLYReader.html) — ply reader.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkLightKit",
+    "vtkPLYReader",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/dragon.ply"
+  ],
+  "py_filename": "vboply_mapper.py",
+  "image": "vboply_mapper.png",
+  "metadata_filename": "vboply_mapper.json",
+  "topology": "standard"
+}

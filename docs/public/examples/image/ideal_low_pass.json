@@ -1,0 +1,27 @@
+{
+  "title": "ideal low pass",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example applies an ideal low-pass filter in the frequency domain to smooth a medical volume slice and displays the original and filtered images side by side. The ideal low-pass filter zeros all frequencies above a cutoff, producing a smoothed image (with ringing artifacts typical of ideal filters). It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → scene → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D image slices.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts to unsigned char for display.\n- [vtkImageFFT](https://www.vtk.org/doc/nightly/html/classvtkImageFFT.html) transforms the image to the frequency domain.\n- [vtkImageIdealLowPass](https://www.vtk.org/doc/nightly/html/classvtkImageIdealLowPass.html) zeros all frequencies above the cutoff values. `SetXCutOff()` and `SetYCutOff()` set the cutoff in each dimension.\n- [vtkImageMagnitude](https://www.vtk.org/doc/nightly/html/classvtkImageMagnitude.html) extracts real magnitude from the complex output.\n- [vtkImageRFFT](https://www.vtk.org/doc/nightly/html/classvtkImageRFFT.html) transforms back to the spatial domain.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkMetaImageReader](https://www.vtk.org/doc/nightly/html/classvtkMetaImageReader.html) reads the `FullHead.mhd` MetaImage volume.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageFFT",
+    "vtkImageIdealLowPass",
+    "vtkImageMagnitude",
+    "vtkImageRFFT",
+    "vtkInteractorStyleImage",
+    "vtkMetaImageReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/FullHead.mhd",
+    "data/FullHead.raw"
+  ],
+  "py_filename": "ideal_low_pass.py",
+  "image": "ideal_low_pass.png",
+  "metadata_filename": "ideal_low_pass.json",
+  "topology": "standard"
+}

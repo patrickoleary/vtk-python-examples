@@ -1,0 +1,22 @@
+{
+  "title": "cut material",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkCutMaterial by creating synthetic image data with a Gaussian scalar field and an ellipsoid material mask, then cutting through the material to show the scalar distribution.\n\n**input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCutMaterial](https://www.vtk.org/doc/nightly/html/classvtkCutMaterial.html) — cut material.\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) — represents a regular grid of points (image/volume).\n- [vtkImageEllipsoidSource](https://www.vtk.org/doc/nightly/html/classvtkImageEllipsoidSource.html) — image ellipsoid source.\n- [vtkImageGaussianSource](https://www.vtk.org/doc/nightly/html/classvtkImageGaussianSource.html) — image gaussian source.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCutMaterial",
+    "vtkImageData",
+    "vtkImageEllipsoidSource",
+    "vtkImageGaussianSource",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "cut_material.py",
+  "image": "cut_material.png",
+  "metadata_filename": "cut_material.json",
+  "topology": "standard"
+}

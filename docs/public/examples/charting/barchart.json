@@ -1,0 +1,22 @@
+{
+  "title": "barchart",
+  "source_type": "examples",
+  "tag": "charting",
+  "explanation": "### Description\n\nThis example bars chart of quarterly revenue data for two product lines using a chart overlay on the normal VTK rendering pipeline. Grouped bars allow direct comparison between categories.\n\n**dataset → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChart](https://www.vtk.org/doc/nightly/html/classvtkChart.html) provides chart functionality.\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) creates the 2D bar chart with axes and legend.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) overlays the chart on the VTK rendering pipeline.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) stores revenue values.\n- [vtkIntArray](https://www.vtk.org/doc/nightly/html/classvtkIntArray.html) stores quarter indices.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides named colors.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) stores the columnar data.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChart",
+    "vtkChartXY",
+    "vtkContextActor",
+    "vtkFloatArray",
+    "vtkIntArray",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "barchart.py",
+  "image": "barchart.png",
+  "metadata_filename": "barchart.json",
+  "topology": "chart"
+}

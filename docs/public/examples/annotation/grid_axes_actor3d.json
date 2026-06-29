@@ -1,0 +1,25 @@
+{
+  "title": "grid axes actor3d",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkGridAxesActor3D with a teapot model and axis labels.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkBYUReader](https://www.vtk.org/doc/nightly/html/classvtkBYUReader.html) — byu reader.\n- [vtkCamera](https://www.vtk.org/doc/nightly/html/classvtkCamera.html) — camera.\n- [vtkGridAxesActor3D](https://www.vtk.org/doc/nightly/html/classvtkGridAxesActor3D.html) — grid axes actor3d.\n- [vtkLODActor](https://www.vtk.org/doc/nightly/html/classvtkLODActor.html) — lod actor.\n- [vtkLight](https://www.vtk.org/doc/nightly/html/classvtkLight.html) — light.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkPolyDataNormals](https://www.vtk.org/doc/nightly/html/classvtkPolyDataNormals.html) — computes surface normals for smooth shading.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkBYUReader",
+    "vtkCamera",
+    "vtkGridAxesActor3D",
+    "vtkLODActor",
+    "vtkLight",
+    "vtkPolyDataMapper",
+    "vtkPolyDataNormals",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/teapot.g"
+  ],
+  "py_filename": "grid_axes_actor3d.py",
+  "image": "grid_axes_actor3d.png",
+  "metadata_filename": "grid_axes_actor3d.json",
+  "topology": "standard"
+}

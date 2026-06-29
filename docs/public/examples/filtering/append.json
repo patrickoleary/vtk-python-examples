@@ -1,0 +1,25 @@
+{
+  "title": "append",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nThis example combines a vtkPolyData point cloud and a vtkUnstructuredGrid into a single dataset using vtkAppendFilter, then visualizes the merged result with sphere glyphs.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene. `SetPointSize()` makes raw points visible; glyph actor colors are set via `GetProperty().SetColor()`.\n- [vtkAppendFilter](https://www.vtk.org/doc/nightly/html/classvtkAppendFilter.html) merges the polydata and unstructured grid into a single unstructured grid.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) maps the combined dataset to graphics primitives. Connected to the append filter via `SetInputConnection()`.\n- [vtkGlyph3DMapper](https://www.vtk.org/doc/nightly/html/classvtkGlyph3DMapper.html) places sphere glyphs at each merged point for visibility.\n- [vtkPointSource](https://www.vtk.org/doc/nightly/html/classvtkPointSource.html) generates 5 random points as vtkPolyData.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) represents polygonal geometry.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) generates a sphere.\n- [vtkUnstructuredGrid](https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGrid.html) represents unstructured geometry.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkAppendFilter",
+    "vtkDataSetMapper",
+    "vtkGlyph3DMapper",
+    "vtkPointSource",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkUnstructuredGrid"
+  ],
+  "data_files": null,
+  "py_filename": "append.py",
+  "image": "append.png",
+  "metadata_filename": "append.json",
+  "topology": "standard"
+}

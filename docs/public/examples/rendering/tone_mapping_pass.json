@@ -1,0 +1,26 @@
+{
+  "title": "tone mapping pass",
+  "source_type": "examples",
+  "tag": "rendering",
+  "explanation": "### Description\n\nDemonstrate tone mapping render pass with 9 viewports showing different tone mapping modes.\n\n**dataset → input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCameraPass](https://www.vtk.org/doc/nightly/html/classvtkCameraPass.html) — camera pass.\n- [vtkLight](https://www.vtk.org/doc/nightly/html/classvtkLight.html) — light.\n- [vtkLightsPass](https://www.vtk.org/doc/nightly/html/classvtkLightsPass.html) — lights pass.\n- [vtkOpaquePass](https://www.vtk.org/doc/nightly/html/classvtkOpaquePass.html) — opaque pass.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkRenderPassCollection](https://www.vtk.org/doc/nightly/html/classvtkRenderPassCollection.html) — render pass collection.\n- [vtkSequencePass](https://www.vtk.org/doc/nightly/html/classvtkSequencePass.html) — sequence pass.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkToneMappingPass](https://www.vtk.org/doc/nightly/html/classvtkToneMappingPass.html) — tone mapping pass.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCameraPass",
+    "vtkLight",
+    "vtkLightsPass",
+    "vtkOpaquePass",
+    "vtkPolyDataMapper",
+    "vtkRenderPassCollection",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSequencePass",
+    "vtkSphereSource",
+    "vtkToneMappingPass"
+  ],
+  "data_files": null,
+  "py_filename": "tone_mapping_pass.py",
+  "image": "tone_mapping_pass.png",
+  "metadata_filename": "tone_mapping_pass.json",
+  "topology": "standard"
+}

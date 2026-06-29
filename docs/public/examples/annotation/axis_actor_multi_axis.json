@@ -1,0 +1,21 @@
+{
+  "title": "axis actor multi axis",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkAxisActor with X, Y, and Z axes displayed together.\n\n**dataset → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkAxisActor](https://www.vtk.org/doc/nightly/html/classvtkAxisActor.html) — axis actor.\n- [vtkCamera](https://www.vtk.org/doc/nightly/html/classvtkCamera.html) — camera.\n- [vtkProperty](https://www.vtk.org/doc/nightly/html/classvtkProperty.html) — property.\n- [vtkStringArray](https://www.vtk.org/doc/nightly/html/classvtkStringArray.html) — string array.\n- [vtkTextProperty](https://www.vtk.org/doc/nightly/html/classvtkTextProperty.html) — text property.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAxisActor",
+    "vtkCamera",
+    "vtkProperty",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStringArray",
+    "vtkTextProperty"
+  ],
+  "data_files": null,
+  "py_filename": "axis_actor_multi_axis.py",
+  "image": "axis_actor_multi_axis.png",
+  "metadata_filename": "axis_actor_multi_axis.json",
+  "topology": "standard"
+}

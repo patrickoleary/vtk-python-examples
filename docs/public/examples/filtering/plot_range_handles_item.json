@@ -1,0 +1,20 @@
+{
+  "title": "plot range handles item",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate plot range handles with vertical and horizontal orientation and synchronization.\n\n**plot → chart → item → context_asset → renderer → infrastructure → output**\n\n- [vtkAxis](https://www.vtk.org/doc/nightly/html/classvtkAxis.html) — axis.\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) — chart xy.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkPlotRangeHandlesItem](https://www.vtk.org/doc/nightly/html/classvtkPlotRangeHandlesItem.html) — plot range handles item.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAxis",
+    "vtkChartXY",
+    "vtkContextActor",
+    "vtkPlotRangeHandlesItem",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "plot_range_handles_item.py",
+  "image": "plot_range_handles_item.png",
+  "metadata_filename": "plot_range_handles_item.json",
+  "topology": "chart"
+}

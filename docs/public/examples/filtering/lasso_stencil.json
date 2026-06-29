@@ -1,0 +1,25 @@
+{
+  "title": "lasso stencil",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nTest vtkLassoStencilSource with polygon and spline shapes.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor2D](https://www.vtk.org/doc/nightly/html/classvtkActor2D.html) — actor2d.\n- [vtkImageMapper](https://www.vtk.org/doc/nightly/html/classvtkImageMapper.html) — image mapper.\n- [vtkImageShiftScale](https://www.vtk.org/doc/nightly/html/classvtkImageShiftScale.html) — image shift scale.\n- [vtkImageStencil](https://www.vtk.org/doc/nightly/html/classvtkImageStencil.html) — image stencil.\n- [vtkLassoStencilSource](https://www.vtk.org/doc/nightly/html/classvtkLassoStencilSource.html) — lasso stencil source.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor2D",
+    "vtkImageMapper",
+    "vtkImageShiftScale",
+    "vtkImageStencil",
+    "vtkLassoStencilSource",
+    "vtkPNGReader",
+    "vtkPoints",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/fullhead15.png"
+  ],
+  "py_filename": "lasso_stencil.py",
+  "image": "lasso_stencil.png",
+  "metadata_filename": "lasso_stencil.json",
+  "topology": "standard"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "general cursor3d",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nCreate a 3D cursor with shadows over PLOT3D combustor data, probing the velocity field and displaying a cone glyph at the focal point.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → interaction → visual_asset → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) — generates a polygonal cone.\n- [vtkCursor3D](https://www.vtk.org/doc/nightly/html/classvtkCursor3D.html) — cursor3d.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) — places oriented, scaled glyphs at each point.\n- [vtkMultiBlockPLOT3DReader](https://www.vtk.org/doc/nightly/html/classvtkMultiBlockPLOT3DReader.html) — reads PLOT3D structured grid files.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkProbeFilter](https://www.vtk.org/doc/nightly/html/classvtkProbeFilter.html) — samples source data at the point locations of the input.\n- [vtkStructuredGridOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridOutlineFilter.html) — generates an outline of a structured grid.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkConeSource",
+    "vtkCursor3D",
+    "vtkGlyph3D",
+    "vtkMultiBlockPLOT3DReader",
+    "vtkPolyDataMapper",
+    "vtkProbeFilter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStructuredGridOutlineFilter"
+  ],
+  "data_files": [
+    "data/combq.bin",
+    "data/combxyz.bin"
+  ],
+  "py_filename": "general_cursor3d.py",
+  "image": "general_cursor3d.png",
+  "metadata_filename": "general_cursor3d.json",
+  "topology": "standard"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "rendering parallel coordinates",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nTest vtkParallelCoordinatesActor with blow dataset.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkDataSetToDataObjectFilter](https://www.vtk.org/doc/nightly/html/classvtkDataSetToDataObjectFilter.html) — data set to data object filter.\n- [vtkParallelCoordinatesActor](https://www.vtk.org/doc/nightly/html/classvtkParallelCoordinatesActor.html) — parallel coordinates actor.\n- [vtkUnstructuredGridReader](https://www.vtk.org/doc/nightly/html/classvtkUnstructuredGridReader.html) — unstructured grid reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkDataSetToDataObjectFilter",
+    "vtkParallelCoordinatesActor",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkUnstructuredGridReader"
+  ],
+  "data_files": [
+    "data/blow.vtk"
+  ],
+  "py_filename": "rendering_parallel_coordinates.py",
+  "image": "rendering_parallel_coordinates.png",
+  "metadata_filename": "rendering_parallel_coordinates.json",
+  "topology": "standard"
+}

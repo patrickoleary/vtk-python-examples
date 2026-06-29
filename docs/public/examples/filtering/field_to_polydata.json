@@ -1,0 +1,26 @@
+{
+  "title": "field to polydata",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate reading a field and converting it to PolyData via a write/read round-trip with vtkDataObjectToDataSetFilter.\n\n**input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkDataObjectReader](https://www.vtk.org/doc/nightly/html/classvtkDataObjectReader.html) — data object reader.\n- [vtkDataObjectToDataSetFilter](https://www.vtk.org/doc/nightly/html/classvtkDataObjectToDataSetFilter.html) — data object to data set filter.\n- [vtkDataObjectWriter](https://www.vtk.org/doc/nightly/html/classvtkDataObjectWriter.html) — data object writer.\n- [vtkDataSetToDataObjectFilter](https://www.vtk.org/doc/nightly/html/classvtkDataSetToDataObjectFilter.html) — data set to data object filter.\n- [vtkFieldDataToAttributeDataFilter](https://www.vtk.org/doc/nightly/html/classvtkFieldDataToAttributeDataFilter.html) — field data to attribute data filter.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkPolyDataReader](https://www.vtk.org/doc/nightly/html/classvtkPolyDataReader.html) — poly data reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDataObjectReader",
+    "vtkDataObjectToDataSetFilter",
+    "vtkDataObjectWriter",
+    "vtkDataSetToDataObjectFilter",
+    "vtkFieldDataToAttributeDataFilter",
+    "vtkPolyDataMapper",
+    "vtkPolyDataReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/polyEx.vtk"
+  ],
+  "py_filename": "field_to_polydata.py",
+  "image": "field_to_polydata.png",
+  "metadata_filename": "field_to_polydata.json",
+  "topology": "standard"
+}

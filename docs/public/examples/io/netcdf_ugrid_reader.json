@@ -1,0 +1,22 @@
+{
+  "title": "netcdf ugrid reader",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nRead a NetCDF UGRID file, verify cell and point data, and render the unstructured grid.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) — maps any dataset type to graphics primitives.\n- [vtkGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkGeometryFilter.html) — extracts the outer surface of a dataset.\n- [vtkNetCDFUGRIDReader](https://www.vtk.org/doc/nightly/html/classvtkNetCDFUGRIDReader.html) — net cdfugrid reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDataSetMapper",
+    "vtkGeometryFilter",
+    "vtkNetCDFUGRIDReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/NetCDF/ugrid.nc"
+  ],
+  "py_filename": "netcdf_ugrid_reader.py",
+  "image": "netcdf_ugrid_reader.png",
+  "metadata_filename": "netcdf_ugrid_reader.json",
+  "topology": "standard"
+}

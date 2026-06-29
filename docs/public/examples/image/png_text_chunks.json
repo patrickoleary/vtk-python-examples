@@ -1,0 +1,23 @@
+{
+  "title": "png text chunks",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nTest PNG text chunk writing and reading, then render the source image.\n\n**input → visual_asset → renderer → infrastructure → output**\n\n- [vtkCommand](https://www.vtk.org/doc/nightly/html/classvtkCommand.html) — command.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkPNGWriter](https://www.vtk.org/doc/nightly/html/classvtkPNGWriter.html) — png writer.\n- [vtkTIFFReader](https://www.vtk.org/doc/nightly/html/classvtkTIFFReader.html) — reads TIFF image files.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkCommand",
+    "vtkImageActor",
+    "vtkPNGReader",
+    "vtkPNGWriter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTIFFReader"
+  ],
+  "data_files": [
+    "data/beach.tif"
+  ],
+  "py_filename": "png_text_chunks.py",
+  "image": "png_text_chunks.png",
+  "metadata_filename": "png_text_chunks.json",
+  "topology": "standard"
+}

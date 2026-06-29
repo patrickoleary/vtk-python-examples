@@ -1,0 +1,23 @@
+{
+  "title": "quantize to 16 colors",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nQuantize an earth image to 16 colors using vtkImageQuantizeRGBToIndex.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageMapToRGBA](https://www.vtk.org/doc/nightly/html/classvtkImageMapToRGBA.html) — image map to rgba.\n- [vtkImageMirrorPad](https://www.vtk.org/doc/nightly/html/classvtkImageMirrorPad.html) — image mirror pad.\n- [vtkImageQuantizeRGBToIndex](https://www.vtk.org/doc/nightly/html/classvtkImageQuantizeRGBToIndex.html) — image quantize rgb to index.\n- [vtkPNMReader](https://www.vtk.org/doc/nightly/html/classvtkPNMReader.html) — pnm reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageMapToRGBA",
+    "vtkImageMirrorPad",
+    "vtkImageQuantizeRGBToIndex",
+    "vtkPNMReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/earth.ppm"
+  ],
+  "py_filename": "quantize_to_16_colors.py",
+  "image": "quantize_to_16_colors.png",
+  "metadata_filename": "quantize_to_16_colors.json",
+  "topology": "standard"
+}

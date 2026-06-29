@@ -1,0 +1,20 @@
+{
+  "title": "stencil to image",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nConvert a spherical stencil to a binary image.\n\n**dataset → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageStencilToImage](https://www.vtk.org/doc/nightly/html/classvtkImageStencilToImage.html) — image stencil to image.\n- [vtkImplicitFunctionToImageStencil](https://www.vtk.org/doc/nightly/html/classvtkImplicitFunctionToImageStencil.html) — implicit function to image stencil.\n- [vtkSphere](https://www.vtk.org/doc/nightly/html/classvtkSphere.html) — defines an implicit sphere function.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageStencilToImage",
+    "vtkImplicitFunctionToImageStencil",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphere"
+  ],
+  "data_files": null,
+  "py_filename": "stencil_to_image.py",
+  "image": "stencil_to_image.png",
+  "metadata_filename": "stencil_to_image.json",
+  "topology": "standard"
+}

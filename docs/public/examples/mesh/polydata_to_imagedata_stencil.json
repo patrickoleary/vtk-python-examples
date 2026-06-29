@@ -1,0 +1,28 @@
+{
+  "title": "polydata to imagedata stencil",
+  "source_type": "examples",
+  "tag": "mesh",
+  "explanation": "### Description\n\nThis example masks a PNG image with a sphere stencil and a contour stencil, then display the two results side-by-side using vtkPolyDataToImageStencil.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkCutter](https://www.vtk.org/doc/nightly/html/classvtkCutter.html) cuts the sphere to produce a circular contour.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays the masked image results.\n- [vtkImageAppend](https://www.vtk.org/doc/nightly/html/classvtkImageAppend.html) places the two masked images side-by-side.\n- [vtkImageStencil](https://www.vtk.org/doc/nightly/html/classvtkImageStencil.html) applies each stencil to mask the image.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) loads the input PNG image to be masked.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) defines the implicit cutting plane through the sphere.\n- [vtkPolyDataToImageStencil](https://www.vtk.org/doc/nightly/html/classvtkPolyDataToImageStencil.html) converts the polydata shapes into image stencils.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) generates the sphere used as one of the stencil shapes.\n- [vtkStripper](https://www.vtk.org/doc/nightly/html/classvtkStripper.html) joins contour segments into a continuous polyline.\n- [vtkTriangleFilter](https://www.vtk.org/doc/nightly/html/classvtkTriangleFilter.html) triangulates the sphere for stencil conversion.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkCutter",
+    "vtkImageActor",
+    "vtkImageAppend",
+    "vtkImageStencil",
+    "vtkPNGReader",
+    "vtkPlane",
+    "vtkPolyDataToImageStencil",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkStripper",
+    "vtkTriangleFilter"
+  ],
+  "data_files": [
+    "data/VTKLogo.png"
+  ],
+  "py_filename": "polydata_to_imagedata_stencil.py",
+  "image": "polydata_to_imagedata_stencil.png",
+  "metadata_filename": "polydata_to_imagedata_stencil.json",
+  "topology": "standard"
+}

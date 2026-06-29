@@ -1,0 +1,19 @@
+{
+  "title": "cone dual viewport animated",
+  "source_type": "examples",
+  "tag": "rendering",
+  "explanation": "### Description\n\nThis example renders a cone in two side-by-side viewports with independent cameras, then animate 60 frames of azimuth rotation before entering interactive mode.\n\n**input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) generates the cone polygon data.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the cone polygon data to graphics primitives.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera. Two renderers provide side-by-side viewports.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkConeSource",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "cone_dual_viewport_animated.py",
+  "image": "cone_dual_viewport_animated.png",
+  "metadata_filename": "cone_dual_viewport_animated.json",
+  "topology": "standard"
+}

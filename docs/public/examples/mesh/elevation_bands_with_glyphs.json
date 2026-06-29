@@ -1,0 +1,31 @@
+{
+  "title": "elevation bands with glyphs",
+  "source_type": "examples",
+  "tag": "mesh",
+  "explanation": "### Description\n\nThis example elevations banded contours with normal glyphs on a parametric RandomHills surface. The banded contour filter and an indexed lookup table partition the elevation into color bands, while arrow glyphs show surface normals colored by elevation.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkArrowSource](https://www.vtk.org/doc/nightly/html/classvtkArrowSource.html) generates the arrow glyph shape.\n- [vtkBandedPolyDataContourFilter](https://www.vtk.org/doc/nightly/html/classvtkBandedPolyDataContourFilter.html) partitions the elevation into indexed contour bands.\n- [vtkColorSeries](https://www.vtk.org/doc/nightly/html/classvtkColorSeries.html) provides the Brewer Qualitative Set3 color scheme.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) places oriented arrow glyphs along surface normals.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) maps elevation band indices to colors.\n- [vtkMaskPoints](https://www.vtk.org/doc/nightly/html/classvtkMaskPoints.html) subsamples surface points for glyphing.\n- [vtkParametricFunctionSource](https://www.vtk.org/doc/nightly/html/classvtkParametricFunctionSource.html) tessellates the parametric surface with Z-based scalars.\n- [vtkParametricRandomHills](https://www.vtk.org/doc/nightly/html/classvtkParametricRandomHills.html) defines the parametric random hills surface.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps polygon data to graphics primitives.\n- [vtkScalarBarActor](https://www.vtk.org/doc/nightly/html/classvtkScalarBarActor.html) displays the elevation legend.\n- [vtkTransform](https://www.vtk.org/doc/nightly/html/classvtkTransform.html) defines a 4×4 geometric transformation.\n- [vtkTransformPolyDataFilter](https://www.vtk.org/doc/nightly/html/classvtkTransformPolyDataFilter.html) rotates the surface so Y is up.\n- [vtkVariant](https://www.vtk.org/doc/nightly/html/classvtkVariant.html) provides variant functionality.\n- [vtkVariantArray](https://www.vtk.org/doc/nightly/html/classvtkVariantArray.html) provides variant array functionality.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkArrowSource",
+    "vtkBandedPolyDataContourFilter",
+    "vtkColorSeries",
+    "vtkGlyph3D",
+    "vtkLookupTable",
+    "vtkMaskPoints",
+    "vtkParametricFunctionSource",
+    "vtkParametricRandomHills",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkScalarBarActor",
+    "vtkTransform",
+    "vtkTransformPolyDataFilter",
+    "vtkVariant",
+    "vtkVariantArray"
+  ],
+  "data_files": null,
+  "py_filename": "elevation_bands_with_glyphs.py",
+  "image": "elevation_bands_with_glyphs.png",
+  "metadata_filename": "elevation_bands_with_glyphs.json",
+  "topology": "standard"
+}

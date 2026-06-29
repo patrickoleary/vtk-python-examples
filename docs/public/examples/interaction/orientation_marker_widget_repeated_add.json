@@ -1,0 +1,18 @@
+{
+  "title": "orientation marker widget repeated add",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkOrientationMarkerWidget with repeated add/remove cycle.\n\n**visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkAxesActor](https://www.vtk.org/doc/nightly/html/classvtkAxesActor.html) — axes actor.\n- [vtkOrientationMarkerWidget](https://www.vtk.org/doc/nightly/html/classvtkOrientationMarkerWidget.html) — orientation marker widget.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAxesActor",
+    "vtkOrientationMarkerWidget",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "orientation_marker_widget_repeated_add.py",
+  "image": "orientation_marker_widget_repeated_add.png",
+  "metadata_filename": "orientation_marker_widget_repeated_add.json",
+  "topology": "standard"
+}

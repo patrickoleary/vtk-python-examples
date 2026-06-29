@@ -1,0 +1,20 @@
+{
+  "title": "transparent background",
+  "source_type": "examples",
+  "tag": "rendering",
+  "explanation": "### Description\n\nThis example renders a cube on layer 0 and a semi-transparent cone on layer 1 so the layer-1 background is transparent and layer-0 shows through. Press '0' or '1' to switch which layer receives interaction.\n\n**dataset → input → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) generates the cone polygon data on layer 1.\n- [vtkCubeSource](https://www.vtk.org/doc/nightly/html/classvtkCubeSource.html) generates the cube polygon data on layer 0.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the polygon data to graphics primitives.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene. Two renderers on separate layers.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkConeSource",
+    "vtkCubeSource",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "transparent_background.py",
+  "image": "transparent_background.png",
+  "metadata_filename": "transparent_background.json",
+  "topology": "standard"
+}

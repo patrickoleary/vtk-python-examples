@@ -1,0 +1,23 @@
+{
+  "title": "category legend",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkCategoryLegend with colored categories.\n\n**dataset → item → context_asset → renderer → infrastructure → output**\n\n- [vtkCategoryLegend](https://www.vtk.org/doc/nightly/html/classvtkCategoryLegend.html) — category legend.\n- [vtkColorSeries](https://www.vtk.org/doc/nightly/html/classvtkColorSeries.html) — color series.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkContextTransform](https://www.vtk.org/doc/nightly/html/classvtkContextTransform.html) — context transform.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkVariant](https://www.vtk.org/doc/nightly/html/classvtkVariant.html) — variant.\n- [vtkVariantArray](https://www.vtk.org/doc/nightly/html/classvtkVariantArray.html) — variant array.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkCategoryLegend",
+    "vtkColorSeries",
+    "vtkContextActor",
+    "vtkContextTransform",
+    "vtkLookupTable",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkVariant",
+    "vtkVariantArray"
+  ],
+  "data_files": null,
+  "py_filename": "category_legend.py",
+  "image": "category_legend.png",
+  "metadata_filename": "category_legend.json",
+  "topology": "chart"
+}

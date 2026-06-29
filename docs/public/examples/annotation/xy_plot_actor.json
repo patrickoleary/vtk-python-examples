@@ -1,0 +1,20 @@
+{
+  "title": "xy plot actor",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkXYPlotActor with multiple function plots, legend, and custom formatting.\n\n**dataset → input → visual_asset → renderer → infrastructure → output**\n\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) — stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) — represents polygonal geometry.\n- [vtkXYPlotActor](https://www.vtk.org/doc/nightly/html/classvtkXYPlotActor.html) — xy plot actor.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkDoubleArray",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkXYPlotActor"
+  ],
+  "data_files": null,
+  "py_filename": "xy_plot_actor.py",
+  "image": "xy_plot_actor.png",
+  "metadata_filename": "xy_plot_actor.json",
+  "topology": "standard"
+}

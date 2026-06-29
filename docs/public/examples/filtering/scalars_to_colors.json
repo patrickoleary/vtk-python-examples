@@ -1,0 +1,23 @@
+{
+  "title": "scalars to colors",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate composite transfer function and control points items in a chart.\n\n**dataset → chart → item → context_asset → renderer → infrastructure → output**\n\n- [vtkChartXY](https://www.vtk.org/doc/nightly/html/classvtkChartXY.html) — chart xy.\n- [vtkColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunction.html) — maps scalar values to RGB colors for volume rendering.\n- [vtkCompositeControlPointsItem](https://www.vtk.org/doc/nightly/html/classvtkCompositeControlPointsItem.html) — composite control points item.\n- [vtkCompositeTransferFunctionItem](https://www.vtk.org/doc/nightly/html/classvtkCompositeTransferFunctionItem.html) — composite transfer function item.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkPiecewiseFunction](https://www.vtk.org/doc/nightly/html/classvtkPiecewiseFunction.html) — defines a piecewise linear scalar-to-opacity mapping.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartXY",
+    "vtkColorTransferFunction",
+    "vtkCompositeControlPointsItem",
+    "vtkCompositeTransferFunctionItem",
+    "vtkContextActor",
+    "vtkLookupTable",
+    "vtkPiecewiseFunction",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "scalars_to_colors.py",
+  "image": "scalars_to_colors.png",
+  "metadata_filename": "scalars_to_colors.json",
+  "topology": "chart"
+}

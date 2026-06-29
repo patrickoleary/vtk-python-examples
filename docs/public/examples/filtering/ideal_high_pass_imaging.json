@@ -1,0 +1,24 @@
+{
+  "title": "ideal high pass imaging",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nIdeal high-pass filter applied to a medical image in the frequency domain.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageExtractComponents](https://www.vtk.org/doc/nightly/html/classvtkImageExtractComponents.html) — extracts selected components from multi-component image data.\n- [vtkImageFFT](https://www.vtk.org/doc/nightly/html/classvtkImageFFT.html) — image fft.\n- [vtkImageIdealHighPass](https://www.vtk.org/doc/nightly/html/classvtkImageIdealHighPass.html) — image ideal high pass.\n- [vtkImageRFFT](https://www.vtk.org/doc/nightly/html/classvtkImageRFFT.html) — image rfft.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageExtractComponents",
+    "vtkImageFFT",
+    "vtkImageIdealHighPass",
+    "vtkImageRFFT",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/fullhead15.png"
+  ],
+  "py_filename": "ideal_high_pass_imaging.py",
+  "image": "ideal_high_pass_imaging.png",
+  "metadata_filename": "ideal_high_pass_imaging.json",
+  "topology": "standard"
+}

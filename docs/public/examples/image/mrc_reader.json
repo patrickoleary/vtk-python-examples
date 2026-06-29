@@ -1,0 +1,21 @@
+{
+  "title": "mrc reader",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nRead an MRC file and display a slice with vtkImageSliceMapper.\n\n**dataset → input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkImageSlice](https://www.vtk.org/doc/nightly/html/classvtkImageSlice.html) — image slice.\n- [vtkImageSliceMapper](https://www.vtk.org/doc/nightly/html/classvtkImageSliceMapper.html) — image slice mapper.\n- [vtkMRCReader](https://www.vtk.org/doc/nightly/html/classvtkMRCReader.html) — mrc reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageSlice",
+    "vtkImageSliceMapper",
+    "vtkMRCReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/mrc/emd_1056.mrc"
+  ],
+  "py_filename": "mrc_reader.py",
+  "image": "mrc_reader.png",
+  "metadata_filename": "mrc_reader.json",
+  "topology": "standard"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "ensight gold elements bin",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nRead EnSight Gold binary elements case file with time step and render pointTensors.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCompositePolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkCompositePolyDataMapper.html) — maps composite (multi-block) polygonal data to graphics primitives.\n- [vtkGenericEnSightReader](https://www.vtk.org/doc/nightly/html/classvtkGenericEnSightReader.html) — generic en sight reader.\n- [vtkGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkGeometryFilter.html) — extracts the outer surface of a dataset.\n- [vtkStreamingDemandDrivenPipeline](https://www.vtk.org/doc/nightly/html/classvtkStreamingDemandDrivenPipeline.html) — streaming demand driven pipeline.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCompositePolyDataMapper",
+    "vtkGenericEnSightReader",
+    "vtkGeometryFilter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStreamingDemandDrivenPipeline"
+  ],
+  "data_files": [
+    "data/EnSight/elements-bin.case"
+  ],
+  "py_filename": "ensight_gold_elements_bin.py",
+  "image": "ensight_gold_elements_bin.png",
+  "metadata_filename": "ensight_gold_elements_bin.json",
+  "topology": "standard"
+}

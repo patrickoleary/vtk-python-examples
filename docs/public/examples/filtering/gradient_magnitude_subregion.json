@@ -1,0 +1,23 @@
+{
+  "title": "gradient magnitude subregion",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nCompute 2D gradient magnitude on a clipped subregion of a medical image.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageChangeInformation](https://www.vtk.org/doc/nightly/html/classvtkImageChangeInformation.html) — image change information.\n- [vtkImageClip](https://www.vtk.org/doc/nightly/html/classvtkImageClip.html) — image clip.\n- [vtkImageGradientMagnitude](https://www.vtk.org/doc/nightly/html/classvtkImageGradientMagnitude.html) — image gradient magnitude.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageChangeInformation",
+    "vtkImageClip",
+    "vtkImageGradientMagnitude",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/fullhead15.png"
+  ],
+  "py_filename": "gradient_magnitude_subregion.py",
+  "image": "gradient_magnitude_subregion.png",
+  "metadata_filename": "gradient_magnitude_subregion.json",
+  "topology": "standard"
+}

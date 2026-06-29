@@ -1,0 +1,18 @@
+{
+  "title": "legend box actor labels",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkLegendBoxActor with line source entries and colored text.\n\n**input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkLegendBoxActor](https://www.vtk.org/doc/nightly/html/classvtkLegendBoxActor.html) — legend box actor.\n- [vtkLineSource](https://www.vtk.org/doc/nightly/html/classvtkLineSource.html) — line source.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkLegendBoxActor",
+    "vtkLineSource",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "legend_box_actor_labels.py",
+  "image": "legend_box_actor_labels.png",
+  "metadata_filename": "legend_box_actor_labels.json",
+  "topology": "standard"
+}

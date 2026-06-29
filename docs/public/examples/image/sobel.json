@@ -1,0 +1,25 @@
+{
+  "title": "sobel",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example applies a Sobel 2D edge detector to a slice of a 3D medical volume (FullHead.mhd). The left viewport shows the original middle axial slice; the right shows the Sobel edge-detected result. vtkImageSobel2D produces a 2-component gradient output which is converted to a single scalar using vtkImageMagnitude. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D slices. `SetDisplayExtent()` selects the middle axial slice.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts data to unsigned char for display.\n- [vtkImageExtractComponents](https://www.vtk.org/doc/nightly/html/classvtkImageExtractComponents.html) provides image extract components functionality.\n- [vtkImageMagnitude](https://www.vtk.org/doc/nightly/html/classvtkImageMagnitude.html) computes the magnitude of the 2-component gradient vector, yielding a single scalar edge strength.\n- [vtkImageSobel2D](https://www.vtk.org/doc/nightly/html/classvtkImageSobel2D.html) computes the Sobel gradient in X and Y, producing a 2-component output.\n- [vtkMetaImageReader](https://www.vtk.org/doc/nightly/html/classvtkMetaImageReader.html) reads the `FullHead.mhd` MetaImage volume.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageExtractComponents",
+    "vtkImageMagnitude",
+    "vtkImageSobel2D",
+    "vtkMetaImageReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/FullHead.mhd",
+    "data/FullHead.raw"
+  ],
+  "py_filename": "sobel.py",
+  "image": "sobel.png",
+  "metadata_filename": "sobel.json",
+  "topology": "standard"
+}

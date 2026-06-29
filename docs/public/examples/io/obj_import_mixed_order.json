@@ -1,0 +1,21 @@
+{
+  "title": "obj import mixed order",
+  "source_type": "examples",
+  "tag": "io",
+  "explanation": "### Description\n\nImport OBJ with mixed ordering and render.\n\n**input → renderer → infrastructure → scene → output**\n\n- [vtkOBJImporter](https://www.vtk.org/doc/nightly/html/classvtkOBJImporter.html) — obj importer.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkOBJImporter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/Input/boxes_2.obj",
+    "data/Input/boxes_2.obj.mtl",
+    "data/Input/flare.jpg"
+  ],
+  "py_filename": "obj_import_mixed_order.py",
+  "image": "obj_import_mixed_order.png",
+  "metadata_filename": "obj_import_mixed_order.json",
+  "topology": "standard"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "laplacian",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example applies a Laplacian filter to a 3D medical volume (FullHead.mhd) for second-derivative edge detection. The left viewport shows the original middle axial slice; the right shows the Laplacian result. The Laplacian highlights regions of rapid intensity change — edges appear as bright or dark lines against a neutral background. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D slices. `SetDisplayExtent()` selects the middle axial slice.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts data to unsigned char for display.\n- [vtkImageLaplacian](https://www.vtk.org/doc/nightly/html/classvtkImageLaplacian.html) computes the discrete Laplacian (sum of second partial derivatives). `SetDimensionality(2)` restricts computation to the XY plane.\n- [vtkMetaImageReader](https://www.vtk.org/doc/nightly/html/classvtkMetaImageReader.html) reads the `FullHead.mhd` MetaImage volume.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageLaplacian",
+    "vtkMetaImageReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/FullHead.mhd",
+    "data/FullHead.raw"
+  ],
+  "py_filename": "laplacian.py",
+  "image": "laplacian.png",
+  "metadata_filename": "laplacian.json",
+  "topology": "standard"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "gaussian smooth",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example demonstrates low-pass filtering with a Gaussian kernel applied to a color image (Gourds.png). The left viewport shows the original; the right shows the smoothed result. Gaussian smoothing reduces high-frequency noise while preserving the overall structure of the image. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → interaction → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays 2D images.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts data to float for the Gaussian filter.\n- [vtkImageGaussianSmooth](https://www.vtk.org/doc/nightly/html/classvtkImageGaussianSmooth.html) applies a Gaussian convolution kernel. `SetStandardDeviations()` controls the blur width and `SetRadiusFactors()` controls the kernel extent.\n- [vtkInteractorStyleImage](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleImage.html) provides 2D image-appropriate interaction (pan and zoom).\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) reads the `Gourds.png` color image.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageGaussianSmooth",
+    "vtkInteractorStyleImage",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/Gourds.png"
+  ],
+  "py_filename": "gaussian_smooth.py",
+  "image": "gaussian_smooth.png",
+  "metadata_filename": "gaussian_smooth.json",
+  "topology": "standard"
+}

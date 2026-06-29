@@ -1,0 +1,22 @@
+{
+  "title": "ellipsoid mask earth",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nApply multiple ellipsoid masks to an earth image using vtkImageMask.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageEllipsoidSource](https://www.vtk.org/doc/nightly/html/classvtkImageEllipsoidSource.html) — image ellipsoid source.\n- [vtkImageMask](https://www.vtk.org/doc/nightly/html/classvtkImageMask.html) — image mask.\n- [vtkPNMReader](https://www.vtk.org/doc/nightly/html/classvtkPNMReader.html) — pnm reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageEllipsoidSource",
+    "vtkImageMask",
+    "vtkPNMReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/earth.ppm"
+  ],
+  "py_filename": "ellipsoid_mask_earth.py",
+  "image": "ellipsoid_mask_earth.png",
+  "metadata_filename": "ellipsoid_mask_earth.json",
+  "topology": "standard"
+}

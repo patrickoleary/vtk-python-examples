@@ -1,0 +1,22 @@
+{
+  "title": "rectilineargrid to pointset",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkRectilinearGridToPointSet by creating a rectilinear grid with non-uniform spacing, converting it to a structured grid, and rendering the result.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkDataSetSurfaceFilter](https://www.vtk.org/doc/nightly/html/classvtkDataSetSurfaceFilter.html) — data set surface filter.\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkRectilinearGrid](https://www.vtk.org/doc/nightly/html/classvtkRectilinearGrid.html) — rectilinear grid.\n- [vtkRectilinearGridToPointSet](https://www.vtk.org/doc/nightly/html/classvtkRectilinearGridToPointSet.html) — rectilinear grid to point set.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDataSetSurfaceFilter",
+    "vtkDoubleArray",
+    "vtkPolyDataMapper",
+    "vtkRectilinearGrid",
+    "vtkRectilinearGridToPointSet",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "rectilineargrid_to_pointset.py",
+  "image": "rectilineargrid_to_pointset.png",
+  "metadata_filename": "rectilineargrid_to_pointset.json",
+  "topology": "standard"
+}

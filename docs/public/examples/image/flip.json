@@ -1,0 +1,23 @@
+{
+  "title": "flip",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nThis example mirrors a 3D medical volume along the X axis using vtkImageFlip and displays the original and flipped slices side by side. The FullHead dataset is flipped left-to-right, demonstrating spatial transformation of image data. It follows the VTK pipeline structure:\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) displays the original and flipped slices. `SetDisplayExtent()` selects the middle axial slice from each volume.\n- [vtkImageCast](https://www.vtk.org/doc/nightly/html/classvtkImageCast.html) converts the signed short data to unsigned char for display.\n- [vtkImageFlip](https://www.vtk.org/doc/nightly/html/classvtkImageFlip.html) mirrors the volume along a specified axis. `SetFilteredAxis(0)` flips along the X axis (left-right). Use `1` for Y (top-bottom) or `2` for Z (front-back).\n- [vtkMetaImageReader](https://www.vtk.org/doc/nightly/html/classvtkMetaImageReader.html) reads the `FullHead.mhd` MetaImage volume (256×256×94 voxels of signed short scalars).\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — two renderers with `SetViewport()` create a left/right layout showing original vs. flipped.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCast",
+    "vtkImageFlip",
+    "vtkMetaImageReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/FullHead.mhd",
+    "data/FullHead.raw"
+  ],
+  "py_filename": "flip.py",
+  "image": "flip.png",
+  "metadata_filename": "flip.json",
+  "topology": "standard"
+}

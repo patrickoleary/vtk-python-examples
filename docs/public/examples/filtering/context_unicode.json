@@ -1,0 +1,18 @@
+{
+  "title": "context unicode",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate Unicode string rendering in a 2D context scene.\n\n**item → context_asset → renderer → infrastructure → output**\n\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkPythonItem](https://www.vtk.org/doc/nightly/html/classvtkPythonItem.html) — python item.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkContextActor",
+    "vtkPythonItem",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "context_unicode.py",
+  "image": "context_unicode.png",
+  "metadata_filename": "context_unicode.json",
+  "topology": "chart"
+}

@@ -1,0 +1,20 @@
+{
+  "title": "context",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate 2D context drawing primitives: lines, points, poly, rect, quad, ellipse, markers.\n\n**item → context_asset → renderer → infrastructure → output**\n\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkPoints2D](https://www.vtk.org/doc/nightly/html/classvtkPoints2D.html) — points2d.\n- [vtkPythonItem](https://www.vtk.org/doc/nightly/html/classvtkPythonItem.html) — python item.\n- [vtkTransform2D](https://www.vtk.org/doc/nightly/html/classvtkTransform2D.html) — transform2d.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkContextActor",
+    "vtkPoints2D",
+    "vtkPythonItem",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTransform2D"
+  ],
+  "data_files": null,
+  "py_filename": "context.py",
+  "image": "context.png",
+  "metadata_filename": "context.json",
+  "topology": "chart"
+}

@@ -1,0 +1,24 @@
+{
+  "title": "distance between points",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nThis example visualizes the Euclidean distance between two 3D points. Two spheres mark the endpoints, a line connects them, and a text label displays the computed distance at the midpoint.\n\n**dataset → input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkActor2D](https://www.vtk.org/doc/nightly/html/classvtkActor2D.html) renders 2D overlay geometry.\n- [vtkCellArray](https://www.vtk.org/doc/nightly/html/classvtkCellArray.html) defines the line cell connectivity.\n- [vtkLabeledDataMapper](https://www.vtk.org/doc/nightly/html/classvtkLabeledDataMapper.html) provides labeled data mapper functionality.\n- [vtkMath](https://www.vtk.org/doc/nightly/html/classvtkMath.html) computes the squared distance between two 3D points.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides named colors.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) stores the line endpoint coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) holds the line geometry.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps polygonal data into graphics primitives.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) generates spheres marking the two endpoints.\n- [vtkVectorText](https://www.vtk.org/doc/nightly/html/classvtkVectorText.html) generates 3D text for the distance and coordinate labels.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCellArray",
+    "vtkMath",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource",
+    "vtkVectorText"
+  ],
+  "data_files": null,
+  "py_filename": "distance_between_points.py",
+  "image": "distance_between_points.png",
+  "metadata_filename": "distance_between_points.json",
+  "topology": "standard"
+}

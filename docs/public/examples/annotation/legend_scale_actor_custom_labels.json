@@ -1,0 +1,22 @@
+{
+  "title": "legend scale actor custom labels",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkLegendScaleActor with custom label counts, grid, notation, and axis properties.\n\n**dataset → input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) — generates a polygonal cone.\n- [vtkLegendScaleActor](https://www.vtk.org/doc/nightly/html/classvtkLegendScaleActor.html) — legend scale actor.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkProperty2D](https://www.vtk.org/doc/nightly/html/classvtkProperty2D.html) — property2d.\n- [vtkTextProperty](https://www.vtk.org/doc/nightly/html/classvtkTextProperty.html) — text property.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkConeSource",
+    "vtkLegendScaleActor",
+    "vtkPolyDataMapper",
+    "vtkProperty2D",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTextProperty"
+  ],
+  "data_files": null,
+  "py_filename": "legend_scale_actor_custom_labels.py",
+  "image": "legend_scale_actor_custom_labels.png",
+  "metadata_filename": "legend_scale_actor_custom_labels.json",
+  "topology": "standard"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "poly line",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nThis example connects five points with a single vtkPolyLine cell. It follows the standard VTK pipeline structure:\n\n**dataset → input → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns visual properties including color to the mapped geometry.\n- [vtkCellArray](https://www.vtk.org/doc/nightly/html/classvtkCellArray.html) stores the polyline cell, set via `SetLines()` on [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html).\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) stores the path vertices.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) represents polygonal geometry.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the polyline to graphics primitives via `SetInputData()`.\n- [vtkPolyLine](https://www.vtk.org/doc/nightly/html/classvtkPolyLine.html) defines a composite one-dimensional cell consisting of connected line segments. Each pair of consecutive point IDs defines one segment.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene with a dark olive green background.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCellArray",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataMapper",
+    "vtkPolyLine",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "poly_line.py",
+  "image": "poly_line.png",
+  "metadata_filename": "poly_line.json",
+  "topology": "standard"
+}

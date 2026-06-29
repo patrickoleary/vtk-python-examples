@@ -1,0 +1,21 @@
+{
+  "title": "tensor probe widget",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkTensorProbeWidget with a synthetic polyline trajectory.\n\n**input → renderer → infrastructure → scene → output**\n\n- [vtkTensorProbeRepresentation](https://www.vtk.org/doc/nightly/html/classvtkTensorProbeRepresentation.html) — tensor probe representation.\n- [vtkTensorProbeWidget](https://www.vtk.org/doc/nightly/html/classvtkTensorProbeWidget.html) — tensor probe widget.\n- [vtkXMLPolyDataReader](https://www.vtk.org/doc/nightly/html/classvtkXMLPolyDataReader.html) — xml poly data reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTensorProbeRepresentation",
+    "vtkTensorProbeWidget",
+    "vtkXMLPolyDataReader"
+  ],
+  "data_files": [
+    "data/SyntheticPolyline.vtp"
+  ],
+  "py_filename": "tensor_probe_widget.py",
+  "image": "tensor_probe_widget.png",
+  "metadata_filename": "tensor_probe_widget.json",
+  "topology": "standard"
+}

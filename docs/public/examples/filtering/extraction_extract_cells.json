@@ -1,0 +1,21 @@
+{
+  "title": "extraction extract cells",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nExtract cells from a sampled quadric volume using vtkExtractCells, comparing full range and interior range extraction in two viewports.\n\n**dataset → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkDataSetMapper](https://www.vtk.org/doc/nightly/html/classvtkDataSetMapper.html) — maps any dataset type to graphics primitives.\n- [vtkExtractCells](https://www.vtk.org/doc/nightly/html/classvtkExtractCells.html) — extract cells.\n- [vtkQuadric](https://www.vtk.org/doc/nightly/html/classvtkQuadric.html) — quadric.\n- [vtkSampleFunction](https://www.vtk.org/doc/nightly/html/classvtkSampleFunction.html) — evaluates an implicit function on a regular grid.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDataSetMapper",
+    "vtkExtractCells",
+    "vtkQuadric",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSampleFunction"
+  ],
+  "data_files": null,
+  "py_filename": "extraction_extract_cells.py",
+  "image": "extraction_extract_cells.png",
+  "metadata_filename": "extraction_extract_cells.json",
+  "topology": "standard"
+}

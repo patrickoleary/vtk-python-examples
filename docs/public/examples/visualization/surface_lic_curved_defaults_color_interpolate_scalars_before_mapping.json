@@ -1,0 +1,25 @@
+{
+  "title": "surface lic curved defaults color interpolate scalars before mapping",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nTest vtkCompositeSurfaceLICMapper: SurfaceLICCurvedDefaultsColorInterpolateScalarsBeforeMapping.\n\n**dataset → input → visual_asset → renderer → infrastructure**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCompositeSurfaceLICMapper](https://www.vtk.org/doc/nightly/html/classvtkCompositeSurfaceLICMapper.html) — composite surface lic mapper.\n- [vtkDataObject](https://www.vtk.org/doc/nightly/html/classvtkDataObject.html) — provides field association constants for array processing.\n- [vtkDiscretizableColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkDiscretizableColorTransferFunction.html) — discretizable color transfer function.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkSurfaceLICInterface](https://www.vtk.org/doc/nightly/html/classvtkSurfaceLICInterface.html) — surface lic interface.\n- [vtkXMLPolyDataReader](https://www.vtk.org/doc/nightly/html/classvtkXMLPolyDataReader.html) — xml poly data reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCompositeSurfaceLICMapper",
+    "vtkDataObject",
+    "vtkDiscretizableColorTransferFunction",
+    "vtkFloatArray",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSurfaceLICInterface",
+    "vtkXMLPolyDataReader"
+  ],
+  "data_files": [
+    "data/disk_out_ref_surface.vtp"
+  ],
+  "py_filename": "surface_lic_curved_defaults_color_interpolate_scalars_before_mapping.py",
+  "image": "surface_lic_curved_defaults_color_interpolate_scalars_before_mapping.png",
+  "metadata_filename": "surface_lic_curved_defaults_color_interpolate_scalars_before_mapping.json",
+  "topology": "standard"
+}

@@ -1,0 +1,337 @@
+#!/usr/bin/env python
+
+# Demonstrate vtkLoopBooleanPolyDataFilter with union, intersection, and
+# difference operations on spheres, cubes, and cylinders arranged in a
+# 3x3 grid layout.
+
+# Factory overrides
+import vtkmodules.vtkInteractionStyle  # noqa: F401
+import vtkmodules.vtkRenderingOpenGL2  # noqa: F401
+
+from vtkmodules.vtkFiltersCore import vtkTriangleFilter
+from vtkmodules.vtkFiltersModeling import vtkLinearSubdivisionFilter
+from vtkmodules.vtkFiltersGeneral import (
+    vtkLoopBooleanPolyDataFilter,
+    vtkTransformPolyDataFilter,
+)
+from vtkmodules.vtkFiltersSources import (
+    vtkCubeSource,
+    vtkCylinderSource,
+    vtkSphereSource,
+)
+from vtkmodules.vtkCommonTransforms import vtkTransform
+from vtkmodules.vtkRenderingCore import (
+    vtkActor,
+    vtkPolyDataMapper,
+    vtkRenderWindow,
+    vtkRenderWindowInteractor,
+    vtkRenderer,
+)
+
+# --- Sphere boolean operations (row 0, y=0) ---
+
+# Union
+sphere_0a = vtkSphereSource()
+sphere_0a.SetCenter(-0.15 - 2.0, 0.0, 0.0)
+
+sphere_0b = vtkSphereSource()
+sphere_0b.SetCenter(0.15 - 2.0, 0.0, 0.0)
+
+bool_sphere_union = vtkLoopBooleanPolyDataFilter()
+bool_sphere_union.SetOperationToUnion()
+bool_sphere_union.SetInputConnection(0, sphere_0a.GetOutputPort())
+bool_sphere_union.SetInputConnection(1, sphere_0b.GetOutputPort())
+bool_sphere_union.Update()
+
+output_su = bool_sphere_union.GetOutput()
+output_su.GetCellData().SetActiveScalars("FreeEdge")
+mapper_su = vtkPolyDataMapper()
+mapper_su.SetInputData(output_su)
+mapper_su.SetScalarRange(0, 1)
+mapper_su.SetScalarModeToUseCellData()
+actor_su = vtkActor()
+actor_su.SetMapper(mapper_su)
+
+# Intersection
+sphere_1a = vtkSphereSource()
+sphere_1a.SetCenter(-0.15, 0.0, 0.0)
+
+sphere_1b = vtkSphereSource()
+sphere_1b.SetCenter(0.15, 0.0, 0.0)
+
+bool_sphere_inter = vtkLoopBooleanPolyDataFilter()
+bool_sphere_inter.SetOperationToIntersection()
+bool_sphere_inter.SetInputConnection(0, sphere_1a.GetOutputPort())
+bool_sphere_inter.SetInputConnection(1, sphere_1b.GetOutputPort())
+bool_sphere_inter.Update()
+
+output_si = bool_sphere_inter.GetOutput()
+output_si.GetCellData().SetActiveScalars("FreeEdge")
+mapper_si = vtkPolyDataMapper()
+mapper_si.SetInputData(output_si)
+mapper_si.SetScalarRange(0, 1)
+mapper_si.SetScalarModeToUseCellData()
+actor_si = vtkActor()
+actor_si.SetMapper(mapper_si)
+
+# Difference
+sphere_2a = vtkSphereSource()
+sphere_2a.SetCenter(-0.15 + 2.0, 0.0, 0.0)
+
+sphere_2b = vtkSphereSource()
+sphere_2b.SetCenter(0.15 + 2.0, 0.0, 0.0)
+
+bool_sphere_diff = vtkLoopBooleanPolyDataFilter()
+bool_sphere_diff.SetOperationToDifference()
+bool_sphere_diff.SetInputConnection(0, sphere_2a.GetOutputPort())
+bool_sphere_diff.SetInputConnection(1, sphere_2b.GetOutputPort())
+bool_sphere_diff.Update()
+
+output_sd = bool_sphere_diff.GetOutput()
+output_sd.GetCellData().SetActiveScalars("FreeEdge")
+mapper_sd = vtkPolyDataMapper()
+mapper_sd.SetInputData(output_sd)
+mapper_sd.SetScalarRange(0, 1)
+mapper_sd.SetScalarModeToUseCellData()
+actor_sd = vtkActor()
+actor_sd.SetMapper(mapper_sd)
+
+# --- Cube boolean operations (row 1, y=4) ---
+
+# Cube union.
+cube_u0 = vtkCubeSource()
+cube_u0.SetCenter(-2.0, 4.0, 0.0)
+tri_cu0 = vtkTriangleFilter()
+tri_cu0.SetInputConnection(cube_u0.GetOutputPort())
+sub_cu0 = vtkLinearSubdivisionFilter()
+sub_cu0.SetInputConnection(tri_cu0.GetOutputPort())
+cube_u1 = vtkCubeSource()
+cube_u1.SetCenter(-1.7, 4.3, 0.3)
+tri_cu1 = vtkTriangleFilter()
+tri_cu1.SetInputConnection(cube_u1.GetOutputPort())
+sub_cu1 = vtkLinearSubdivisionFilter()
+sub_cu1.SetInputConnection(tri_cu1.GetOutputPort())
+bool_cube_union = vtkLoopBooleanPolyDataFilter()
+bool_cube_union.SetOperationToUnion()
+bool_cube_union.SetInputConnection(0, sub_cu0.GetOutputPort())
+bool_cube_union.SetInputConnection(1, sub_cu1.GetOutputPort())
+bool_cube_union.Update()
+output_cu = bool_cube_union.GetOutput()
+output_cu.GetCellData().SetActiveScalars("FreeEdge")
+mapper_cu = vtkPolyDataMapper()
+mapper_cu.SetInputData(output_cu)
+mapper_cu.SetScalarRange(0, 1)
+mapper_cu.SetScalarModeToUseCellData()
+actor_cu = vtkActor()
+actor_cu.SetMapper(mapper_cu)
+
+# Cube intersection.
+cube_i0 = vtkCubeSource()
+cube_i0.SetCenter(0.0, 4.0, 0.0)
+tri_ci0 = vtkTriangleFilter()
+tri_ci0.SetInputConnection(cube_i0.GetOutputPort())
+sub_ci0 = vtkLinearSubdivisionFilter()
+sub_ci0.SetInputConnection(tri_ci0.GetOutputPort())
+cube_i1 = vtkCubeSource()
+cube_i1.SetCenter(0.3, 4.3, 0.3)
+tri_ci1 = vtkTriangleFilter()
+tri_ci1.SetInputConnection(cube_i1.GetOutputPort())
+sub_ci1 = vtkLinearSubdivisionFilter()
+sub_ci1.SetInputConnection(tri_ci1.GetOutputPort())
+bool_cube_inter = vtkLoopBooleanPolyDataFilter()
+bool_cube_inter.SetOperationToIntersection()
+bool_cube_inter.SetInputConnection(0, sub_ci0.GetOutputPort())
+bool_cube_inter.SetInputConnection(1, sub_ci1.GetOutputPort())
+bool_cube_inter.Update()
+output_ci = bool_cube_inter.GetOutput()
+output_ci.GetCellData().SetActiveScalars("FreeEdge")
+mapper_ci = vtkPolyDataMapper()
+mapper_ci.SetInputData(output_ci)
+mapper_ci.SetScalarRange(0, 1)
+mapper_ci.SetScalarModeToUseCellData()
+actor_ci = vtkActor()
+actor_ci.SetMapper(mapper_ci)
+
+# Cube difference.
+cube_d0 = vtkCubeSource()
+cube_d0.SetCenter(2.0, 4.0, 0.0)
+tri_cd0 = vtkTriangleFilter()
+tri_cd0.SetInputConnection(cube_d0.GetOutputPort())
+sub_cd0 = vtkLinearSubdivisionFilter()
+sub_cd0.SetInputConnection(tri_cd0.GetOutputPort())
+cube_d1 = vtkCubeSource()
+cube_d1.SetCenter(2.3, 4.3, 0.3)
+tri_cd1 = vtkTriangleFilter()
+tri_cd1.SetInputConnection(cube_d1.GetOutputPort())
+sub_cd1 = vtkLinearSubdivisionFilter()
+sub_cd1.SetInputConnection(tri_cd1.GetOutputPort())
+bool_cube_diff = vtkLoopBooleanPolyDataFilter()
+bool_cube_diff.SetOperationToDifference()
+bool_cube_diff.SetInputConnection(0, sub_cd0.GetOutputPort())
+bool_cube_diff.SetInputConnection(1, sub_cd1.GetOutputPort())
+bool_cube_diff.Update()
+output_cd = bool_cube_diff.GetOutput()
+output_cd.GetCellData().SetActiveScalars("FreeEdge")
+mapper_cd = vtkPolyDataMapper()
+mapper_cd.SetInputData(output_cd)
+mapper_cd.SetScalarRange(0, 1)
+mapper_cd.SetScalarModeToUseCellData()
+actor_cd = vtkActor()
+actor_cd.SetMapper(mapper_cd)
+
+# --- Cylinder boolean operations (row 2, y=-4) ---
+
+# Cylinder union.
+cyl_u0 = vtkCylinderSource()
+cyl_u0.SetHeight(2.0)
+cyl_u0.SetRadius(0.5)
+cyl_u0.SetResolution(15)
+tri_cyu0 = vtkTriangleFilter()
+tri_cyu0.SetInputConnection(cyl_u0.GetOutputPort())
+move_u0 = vtkTransform()
+move_u0.Translate(-2.0, -4.0, 0.0)
+xform_u0 = vtkTransformPolyDataFilter()
+xform_u0.SetInputConnection(tri_cyu0.GetOutputPort())
+xform_u0.SetTransform(move_u0)
+cyl_u1 = vtkCylinderSource()
+cyl_u1.SetHeight(2.0)
+cyl_u1.SetRadius(0.5)
+cyl_u1.SetResolution(15)
+rot_u1 = vtkTransform()
+rot_u1.RotateZ(90)
+rot_u1.Translate(0, 0, 0)
+xform_rot_u1 = vtkTransformPolyDataFilter()
+xform_rot_u1.SetInputConnection(cyl_u1.GetOutputPort())
+xform_rot_u1.SetTransform(rot_u1)
+tri_cyu1 = vtkTriangleFilter()
+tri_cyu1.SetInputConnection(xform_rot_u1.GetOutputPort())
+move_u1 = vtkTransform()
+move_u1.Translate(-2.0, -4.0, 0.0)
+xform_u1 = vtkTransformPolyDataFilter()
+xform_u1.SetInputConnection(tri_cyu1.GetOutputPort())
+xform_u1.SetTransform(move_u1)
+bool_cyl_union = vtkLoopBooleanPolyDataFilter()
+bool_cyl_union.SetOperationToUnion()
+bool_cyl_union.SetInputConnection(0, xform_u0.GetOutputPort())
+bool_cyl_union.SetInputConnection(1, xform_u1.GetOutputPort())
+bool_cyl_union.Update()
+output_cyu = bool_cyl_union.GetOutput()
+output_cyu.GetCellData().SetActiveScalars("FreeEdge")
+mapper_cyu = vtkPolyDataMapper()
+mapper_cyu.SetInputData(output_cyu)
+mapper_cyu.SetScalarRange(0, 1)
+mapper_cyu.SetScalarModeToUseCellData()
+actor_cyu = vtkActor()
+actor_cyu.SetMapper(mapper_cyu)
+
+# Cylinder intersection.
+cyl_i0 = vtkCylinderSource()
+cyl_i0.SetHeight(2.0)
+cyl_i0.SetRadius(0.5)
+cyl_i0.SetResolution(15)
+tri_cyi0 = vtkTriangleFilter()
+tri_cyi0.SetInputConnection(cyl_i0.GetOutputPort())
+move_i0 = vtkTransform()
+move_i0.Translate(0.0, -4.0, 0.0)
+xform_i0 = vtkTransformPolyDataFilter()
+xform_i0.SetInputConnection(tri_cyi0.GetOutputPort())
+xform_i0.SetTransform(move_i0)
+cyl_i1 = vtkCylinderSource()
+cyl_i1.SetHeight(2.0)
+cyl_i1.SetRadius(0.5)
+cyl_i1.SetResolution(15)
+rot_i1 = vtkTransform()
+rot_i1.RotateZ(90)
+rot_i1.Translate(0, 0, 0)
+xform_rot_i1 = vtkTransformPolyDataFilter()
+xform_rot_i1.SetInputConnection(cyl_i1.GetOutputPort())
+xform_rot_i1.SetTransform(rot_i1)
+tri_cyi1 = vtkTriangleFilter()
+tri_cyi1.SetInputConnection(xform_rot_i1.GetOutputPort())
+move_i1 = vtkTransform()
+move_i1.Translate(0.0, -4.0, 0.0)
+xform_i1 = vtkTransformPolyDataFilter()
+xform_i1.SetInputConnection(tri_cyi1.GetOutputPort())
+xform_i1.SetTransform(move_i1)
+bool_cyl_inter = vtkLoopBooleanPolyDataFilter()
+bool_cyl_inter.SetOperationToIntersection()
+bool_cyl_inter.SetInputConnection(0, xform_i0.GetOutputPort())
+bool_cyl_inter.SetInputConnection(1, xform_i1.GetOutputPort())
+bool_cyl_inter.Update()
+output_cyi = bool_cyl_inter.GetOutput()
+output_cyi.GetCellData().SetActiveScalars("FreeEdge")
+mapper_cyi = vtkPolyDataMapper()
+mapper_cyi.SetInputData(output_cyi)
+mapper_cyi.SetScalarRange(0, 1)
+mapper_cyi.SetScalarModeToUseCellData()
+actor_cyi = vtkActor()
+actor_cyi.SetMapper(mapper_cyi)
+
+# Cylinder difference.
+cyl_d0 = vtkCylinderSource()
+cyl_d0.SetHeight(2.0)
+cyl_d0.SetRadius(0.5)
+cyl_d0.SetResolution(15)
+tri_cyd0 = vtkTriangleFilter()
+tri_cyd0.SetInputConnection(cyl_d0.GetOutputPort())
+move_d0 = vtkTransform()
+move_d0.Translate(2.0, -4.0, 0.0)
+xform_d0 = vtkTransformPolyDataFilter()
+xform_d0.SetInputConnection(tri_cyd0.GetOutputPort())
+xform_d0.SetTransform(move_d0)
+cyl_d1 = vtkCylinderSource()
+cyl_d1.SetHeight(2.0)
+cyl_d1.SetRadius(0.5)
+cyl_d1.SetResolution(15)
+rot_d1 = vtkTransform()
+rot_d1.RotateZ(90)
+rot_d1.Translate(0, 0, 0)
+xform_rot_d1 = vtkTransformPolyDataFilter()
+xform_rot_d1.SetInputConnection(cyl_d1.GetOutputPort())
+xform_rot_d1.SetTransform(rot_d1)
+tri_cyd1 = vtkTriangleFilter()
+tri_cyd1.SetInputConnection(xform_rot_d1.GetOutputPort())
+move_d1 = vtkTransform()
+move_d1.Translate(2.0, -4.0, 0.0)
+xform_d1 = vtkTransformPolyDataFilter()
+xform_d1.SetInputConnection(tri_cyd1.GetOutputPort())
+xform_d1.SetTransform(move_d1)
+bool_cyl_diff = vtkLoopBooleanPolyDataFilter()
+bool_cyl_diff.SetOperationToDifference()
+bool_cyl_diff.SetInputConnection(0, xform_d0.GetOutputPort())
+bool_cyl_diff.SetInputConnection(1, xform_d1.GetOutputPort())
+bool_cyl_diff.Update()
+output_cyd = bool_cyl_diff.GetOutput()
+output_cyd.GetCellData().SetActiveScalars("FreeEdge")
+mapper_cyd = vtkPolyDataMapper()
+mapper_cyd.SetInputData(output_cyd)
+mapper_cyd.SetScalarRange(0, 1)
+mapper_cyd.SetScalarModeToUseCellData()
+actor_cyd = vtkActor()
+actor_cyd.SetMapper(mapper_cyd)
+
+# Renderer
+renderer = vtkRenderer()
+renderer.AddActor(actor_su)
+renderer.AddActor(actor_si)
+renderer.AddActor(actor_sd)
+renderer.AddActor(actor_cu)
+renderer.AddActor(actor_ci)
+renderer.AddActor(actor_cd)
+renderer.AddActor(actor_cyu)
+renderer.AddActor(actor_cyi)
+renderer.AddActor(actor_cyd)
+renderer.SetBackground(0.4392, 0.5020, 0.5647)
+
+# Window
+render_window = vtkRenderWindow()
+render_window.AddRenderer(renderer)
+render_window.SetSize(600, 600)
+render_window.SetWindowName("loop boolean polydata")
+
+# Interactor
+interactor = vtkRenderWindowInteractor()
+interactor.SetRenderWindow(render_window)
+
+interactor.Initialize()
+interactor.Start()

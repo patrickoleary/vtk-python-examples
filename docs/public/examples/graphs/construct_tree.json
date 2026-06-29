@@ -1,0 +1,23 @@
+{
+  "title": "construct tree",
+  "source_type": "examples",
+  "tag": "graphs",
+  "explanation": "### Description\n\nThis example constructs a tree from a directed graph using AddChild, converts it to a vtkTree with CheckedShallowCopy, and displays it with a hierarchical tree layout.\n\n**dataset → input → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) applies the tree layout strategy.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) converts graph edges to polydata lines.\n- [vtkMutableDirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableDirectedGraph.html) builds the directed graph using AddChild.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps edge polydata to graphics primitives.\n- [vtkTree](https://www.vtk.org/doc/nightly/html/classvtkTree.html) represents the validated tree structure.\n- [vtkTreeLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkTreeLayoutStrategy.html) arranges tree nodes hierarchically.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkMutableDirectedGraph",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTree",
+    "vtkTreeLayoutStrategy"
+  ],
+  "data_files": null,
+  "py_filename": "construct_tree.py",
+  "image": "construct_tree.png",
+  "metadata_filename": "construct_tree.json",
+  "topology": "graph"
+}

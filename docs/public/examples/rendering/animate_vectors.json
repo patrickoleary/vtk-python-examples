@@ -1,0 +1,34 @@
+{
+  "title": "animate vectors",
+  "source_type": "examples",
+  "tag": "rendering",
+  "explanation": "### Description\n\nThis example animates vector field motion using texture map animation on the carotid artery dataset.\n\n**dataset → input → dataset → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry and animated texture.\n- [vtkCamera](https://www.vtk.org/doc/nightly/html/classvtkCamera.html) positions the viewpoint.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) places line glyphs at each thresholded point.\n- [vtkLineSource](https://www.vtk.org/doc/nightly/html/classvtkLineSource.html) generates the line segment used as the glyph shape.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides named colors.\n- [vtkOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkOutlineFilter.html) generates a wireframe bounding box for context.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the glyphs and outline to graphics primitives.\n- [vtkStructuredPointsReader](https://www.vtk.org/doc/nightly/html/classvtkStructuredPointsReader.html) reads the carotid artery dataset and the animation texture maps.\n- [vtkTexture](https://www.vtk.org/doc/nightly/html/classvtkTexture.html) applies each animation frame as a texture map.\n- [vtkThresholdPoints](https://www.vtk.org/doc/nightly/html/classvtkThresholdPoints.html) filters points by scalar threshold.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCamera",
+    "vtkGlyph3D",
+    "vtkLineSource",
+    "vtkOutlineFilter",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStructuredPointsReader",
+    "vtkTexture",
+    "vtkThresholdPoints"
+  ],
+  "data_files": [
+    "data/VectorAnimation/vecAnim2.vtk",
+    "data/VectorAnimation/vecAnim3.vtk",
+    "data/VectorAnimation/vecAnim4.vtk",
+    "data/VectorAnimation/vecAnim5.vtk",
+    "data/VectorAnimation/vecAnim6.vtk",
+    "data/VectorAnimation/vecAnim7.vtk",
+    "data/VectorAnimation/vecAnim8.vtk",
+    "data/carotid.vtk"
+  ],
+  "py_filename": "animate_vectors.py",
+  "image": "animate_vectors.png",
+  "metadata_filename": "animate_vectors.json",
+  "topology": "standard"
+}

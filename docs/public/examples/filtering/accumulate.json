@@ -1,0 +1,25 @@
+{
+  "title": "accumulate",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nAccumulate a smoothed image histogram using vtkImageAccumulate.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageAccumulate](https://www.vtk.org/doc/nightly/html/classvtkImageAccumulate.html) — image accumulate.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageAppendComponents](https://www.vtk.org/doc/nightly/html/classvtkImageAppendComponents.html) — image append components.\n- [vtkImageClip](https://www.vtk.org/doc/nightly/html/classvtkImageClip.html) — image clip.\n- [vtkImageGaussianSmooth](https://www.vtk.org/doc/nightly/html/classvtkImageGaussianSmooth.html) — smooths an image with a Gaussian kernel.\n- [vtkImageShiftScale](https://www.vtk.org/doc/nightly/html/classvtkImageShiftScale.html) — image shift scale.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageAccumulate",
+    "vtkImageActor",
+    "vtkImageAppendComponents",
+    "vtkImageClip",
+    "vtkImageGaussianSmooth",
+    "vtkImageShiftScale",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/fullhead15.png"
+  ],
+  "py_filename": "accumulate.py",
+  "image": "accumulate.png",
+  "metadata_filename": "accumulate.json",
+  "topology": "standard"
+}

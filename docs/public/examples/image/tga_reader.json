@@ -1,0 +1,20 @@
+{
+  "title": "tga reader",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nRead a TGA file and display with vtkImageActor.\n\n**input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkTGAReader](https://www.vtk.org/doc/nightly/html/classvtkTGAReader.html) — tga reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTGAReader"
+  ],
+  "data_files": [
+    "data/vtk.tga"
+  ],
+  "py_filename": "tga_reader.py",
+  "image": "tga_reader.png",
+  "metadata_filename": "tga_reader.json",
+  "topology": "standard"
+}

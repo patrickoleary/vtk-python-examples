@@ -1,0 +1,23 @@
+{
+  "title": "fft correlation",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nPerform correlation in frequency domain using FFT multiply and inverse FFT.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageCanvasSource2D](https://www.vtk.org/doc/nightly/html/classvtkImageCanvasSource2D.html) — image canvas source2d.\n- [vtkImageConstantPad](https://www.vtk.org/doc/nightly/html/classvtkImageConstantPad.html) — pads an image with a constant value.\n- [vtkImageExtractComponents](https://www.vtk.org/doc/nightly/html/classvtkImageExtractComponents.html) — extracts selected components from multi-component image data.\n- [vtkImageFFT](https://www.vtk.org/doc/nightly/html/classvtkImageFFT.html) — image fft.\n- [vtkImageMathematics](https://www.vtk.org/doc/nightly/html/classvtkImageMathematics.html) — performs mathematical operations on image data.\n- [vtkImageRFFT](https://www.vtk.org/doc/nightly/html/classvtkImageRFFT.html) — image rfft.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageCanvasSource2D",
+    "vtkImageConstantPad",
+    "vtkImageExtractComponents",
+    "vtkImageFFT",
+    "vtkImageMathematics",
+    "vtkImageRFFT",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "fft_correlation.py",
+  "image": "fft_correlation.png",
+  "metadata_filename": "fft_correlation.json",
+  "topology": "standard"
+}

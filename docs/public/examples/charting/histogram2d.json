@@ -1,0 +1,22 @@
+{
+  "title": "histogram2d",
+  "source_type": "examples",
+  "tag": "charting",
+  "explanation": "### Description\n\nThis example 2D histogram (heatmap) of correlated Gaussian random data using a chart overlay on the normal VTK rendering pipeline. 50,000 random samples are generated with Box-Muller and binned into a 60×60 grid stored as vtkImageData. A color transfer function maps bin counts from white (empty) through blue to red (dense).\n\n**dataset → input → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChartHistogram2D](https://www.vtk.org/doc/nightly/html/classvtkChartHistogram2D.html) displays a 2D histogram from image data.\n- [vtkColorTransferFunction](https://www.vtk.org/doc/nightly/html/classvtkColorTransferFunction.html) maps bin counts to RGB colors.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) overlays the chart on the VTK rendering pipeline.\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) stores the 2D bin grid.\n- [vtkMinimalStandardRandomSequence](https://www.vtk.org/doc/nightly/html/classvtkMinimalStandardRandomSequence.html) generates reproducible random samples.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides named colors.\n- [vtkPlotHistogram2D](https://www.vtk.org/doc/nightly/html/classvtkPlotHistogram2D.html) renders the heatmap with a color transfer function.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartHistogram2D",
+    "vtkColorTransferFunction",
+    "vtkContextActor",
+    "vtkImageData",
+    "vtkMinimalStandardRandomSequence",
+    "vtkPlotHistogram2D",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "histogram2d.py",
+  "image": "histogram2d.png",
+  "metadata_filename": "histogram2d.json",
+  "topology": "chart"
+}

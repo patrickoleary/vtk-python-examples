@@ -1,0 +1,22 @@
+{
+  "title": "nifti reader analyze",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nRead an Analyze 7.5 format file with vtkNIFTIImageReader and display in two viewports.\n\n**dataset → input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkImageSlice](https://www.vtk.org/doc/nightly/html/classvtkImageSlice.html) — image slice.\n- [vtkImageSliceMapper](https://www.vtk.org/doc/nightly/html/classvtkImageSliceMapper.html) — image slice mapper.\n- [vtkNIFTIImageReader](https://www.vtk.org/doc/nightly/html/classvtkNIFTIImageReader.html) — nifti image reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageSlice",
+    "vtkImageSliceMapper",
+    "vtkNIFTIImageReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/ANALYZE.HDR",
+    "data/ANALYZE.IMG.GZ"
+  ],
+  "py_filename": "nifti_reader_analyze.py",
+  "image": "nifti_reader_analyze.png",
+  "metadata_filename": "nifti_reader_analyze.json",
+  "topology": "standard"
+}

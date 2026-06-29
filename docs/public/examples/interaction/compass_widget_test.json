@@ -1,0 +1,19 @@
+{
+  "title": "compass widget test",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkCompassWidget controlling camera position on an annotated cube.\n\n**visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkAnnotatedCubeActor](https://www.vtk.org/doc/nightly/html/classvtkAnnotatedCubeActor.html) — annotated cube actor.\n- [vtkCompassRepresentation](https://www.vtk.org/doc/nightly/html/classvtkCompassRepresentation.html) — compass representation.\n- [vtkCompassWidget](https://www.vtk.org/doc/nightly/html/classvtkCompassWidget.html) — compass widget.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAnnotatedCubeActor",
+    "vtkCompassRepresentation",
+    "vtkCompassWidget",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "compass_widget_test.py",
+  "image": "compass_widget_test.png",
+  "metadata_filename": "compass_widget_test.json",
+  "topology": "standard"
+}

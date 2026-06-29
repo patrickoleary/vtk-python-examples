@@ -1,0 +1,29 @@
+{
+  "title": "carotid flow glyphs",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nThis example visualizes carotid artery blood flow using cone glyphs oriented by velocity.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkCamera](https://www.vtk.org/doc/nightly/html/classvtkCamera.html) defines the viewpoint and projection.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) provides the glyph shape.\n- [vtkContourFilter](https://www.vtk.org/doc/nightly/html/classvtkContourFilter.html) generates a speed isosurface for context.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) places cone glyphs oriented and scaled by velocity.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) maps scalar values to color.\n- [vtkMaskPoints](https://www.vtk.org/doc/nightly/html/classvtkMaskPoints.html) subsamples points for glyph placement.\n- [vtkOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkOutlineFilter.html) creates a bounding box outline.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps polygon data to graphics primitives.\n- [vtkStructuredPointsReader](https://www.vtk.org/doc/nightly/html/classvtkStructuredPointsReader.html) reads the carotid artery velocity field.\n- [vtkThresholdPoints](https://www.vtk.org/doc/nightly/html/classvtkThresholdPoints.html) keeps only high-speed points.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCamera",
+    "vtkConeSource",
+    "vtkContourFilter",
+    "vtkGlyph3D",
+    "vtkLookupTable",
+    "vtkMaskPoints",
+    "vtkOutlineFilter",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStructuredPointsReader",
+    "vtkThresholdPoints"
+  ],
+  "data_files": [
+    "data/carotid.vtk"
+  ],
+  "py_filename": "carotid_flow_glyphs.py",
+  "image": "carotid_flow_glyphs.png",
+  "metadata_filename": "carotid_flow_glyphs.json",
+  "topology": "standard"
+}

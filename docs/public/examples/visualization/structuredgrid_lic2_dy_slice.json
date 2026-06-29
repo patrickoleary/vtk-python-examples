@@ -1,0 +1,30 @@
+{
+  "title": "structuredgrid lic2 dy slice",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nTest vtkStructuredGridLIC2D with a Y-direction slice.\n\n**input → filter → renderer → infrastructure**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkDataSetSurfaceFilter](https://www.vtk.org/doc/nightly/html/classvtkDataSetSurfaceFilter.html) — data set surface filter.\n- [vtkExtractGrid](https://www.vtk.org/doc/nightly/html/classvtkExtractGrid.html) — extract grid.\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) — represents a regular grid of points (image/volume).\n- [vtkImageShiftScale](https://www.vtk.org/doc/nightly/html/classvtkImageShiftScale.html) — image shift scale.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkStructuredGrid](https://www.vtk.org/doc/nightly/html/classvtkStructuredGrid.html) — structured grid.\n- [vtkStructuredGridLIC2D](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridLIC2D.html) — structured grid lic2d.\n- [vtkTexture](https://www.vtk.org/doc/nightly/html/classvtkTexture.html) — applies a texture image to geometry.\n- [vtkXMLStructuredGridReader](https://www.vtk.org/doc/nightly/html/classvtkXMLStructuredGridReader.html) — xml structured grid reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDataSetSurfaceFilter",
+    "vtkExtractGrid",
+    "vtkImageData",
+    "vtkImageShiftScale",
+    "vtkPNGReader",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStructuredGrid",
+    "vtkStructuredGridLIC2D",
+    "vtkTexture",
+    "vtkXMLStructuredGridReader"
+  ],
+  "data_files": [
+    "data/noise.png",
+    "data/timestep_0_15.vts"
+  ],
+  "py_filename": "structuredgrid_lic2_dy_slice.py",
+  "image": "structuredgrid_lic2_dy_slice.png",
+  "metadata_filename": "structuredgrid_lic2_dy_slice.json",
+  "topology": "standard"
+}

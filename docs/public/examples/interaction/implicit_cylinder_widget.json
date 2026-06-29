@@ -1,0 +1,26 @@
+{
+  "title": "implicit cylinder widget",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkImplicitCylinderWidget clipping a mace geometry.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkAppendPolyData](https://www.vtk.org/doc/nightly/html/classvtkAppendPolyData.html) — append poly data.\n- [vtkClipPolyData](https://www.vtk.org/doc/nightly/html/classvtkClipPolyData.html) — clips polygonal data with an implicit function.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) — generates a polygonal cone.\n- [vtkCylinder](https://www.vtk.org/doc/nightly/html/classvtkCylinder.html) — defines an implicit cylinder function.\n- [vtkGlyph3D](https://www.vtk.org/doc/nightly/html/classvtkGlyph3D.html) — places oriented, scaled glyphs at each point.\n- [vtkImplicitCylinderRepresentation](https://www.vtk.org/doc/nightly/html/classvtkImplicitCylinderRepresentation.html) — implicit cylinder representation.\n- [vtkImplicitCylinderWidget](https://www.vtk.org/doc/nightly/html/classvtkImplicitCylinderWidget.html) — implicit cylinder widget.\n- [vtkLODActor](https://www.vtk.org/doc/nightly/html/classvtkLODActor.html) — lod actor.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkSphereSource](https://www.vtk.org/doc/nightly/html/classvtkSphereSource.html) — generates a tessellated sphere.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAppendPolyData",
+    "vtkClipPolyData",
+    "vtkConeSource",
+    "vtkCylinder",
+    "vtkGlyph3D",
+    "vtkImplicitCylinderRepresentation",
+    "vtkImplicitCylinderWidget",
+    "vtkLODActor",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSphereSource"
+  ],
+  "data_files": null,
+  "py_filename": "implicit_cylinder_widget.py",
+  "image": "implicit_cylinder_widget.png",
+  "metadata_filename": "implicit_cylinder_widget.json",
+  "topology": "standard"
+}

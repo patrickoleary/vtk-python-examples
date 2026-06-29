@@ -1,0 +1,23 @@
+{
+  "title": "side by side graphs",
+  "source_type": "examples",
+  "tag": "graphs",
+  "explanation": "### Description\n\nThis example displays two graphs side by side in split viewports within a single render window. The left viewport shows a triangle graph (three vertices, three edges) and the right shows a single-edge graph (two vertices, one edge), both using force-directed layouts with different background colors.\n\n**dataset → input → layout → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkForceDirectedLayoutStrategy](https://www.vtk.org/doc/nightly/html/classvtkForceDirectedLayoutStrategy.html) computes vertex positions using force simulation.\n- [vtkGraphLayout](https://www.vtk.org/doc/nightly/html/classvtkGraphLayout.html) applies the layout strategy to each graph.\n- [vtkGraphToPolyData](https://www.vtk.org/doc/nightly/html/classvtkGraphToPolyData.html) converts graph edges to polydata lines.\n- [vtkMutableUndirectedGraph](https://www.vtk.org/doc/nightly/html/classvtkMutableUndirectedGraph.html) builds undirected graphs.\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) positions vertices explicitly.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps edge polydata to graphics primitives.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) provides split viewports for side-by-side display.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkForceDirectedLayoutStrategy",
+    "vtkGraphLayout",
+    "vtkGraphToPolyData",
+    "vtkMutableUndirectedGraph",
+    "vtkPoints",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "side_by_side_graphs.py",
+  "image": "side_by_side_graphs.png",
+  "metadata_filename": "side_by_side_graphs.json",
+  "topology": "graph"
+}

@@ -1,0 +1,29 @@
+{
+  "title": "multidimensional solution",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate vtkProgrammableAttributeDataFilter by computing the cosine of the angle between pressure gradient and velocity vector fields from a PLOT3D dataset, visualized with hedgehog glyphs and a dot product scalar field on a contour surface.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkContourFilter](https://www.vtk.org/doc/nightly/html/classvtkContourFilter.html) — extracts iso-surfaces at specified scalar values.\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkHedgeHog](https://www.vtk.org/doc/nightly/html/classvtkHedgeHog.html) — hedge hog.\n- [vtkLODActor](https://www.vtk.org/doc/nightly/html/classvtkLODActor.html) — lod actor.\n- [vtkMultiBlockPLOT3DReader](https://www.vtk.org/doc/nightly/html/classvtkMultiBlockPLOT3DReader.html) — reads PLOT3D structured grid files.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkProbeFilter](https://www.vtk.org/doc/nightly/html/classvtkProbeFilter.html) — samples source data at the point locations of the input.\n- [vtkProgrammableAttributeDataFilter](https://www.vtk.org/doc/nightly/html/classvtkProgrammableAttributeDataFilter.html) — programmable attribute data filter.\n- [vtkStructuredGridOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkStructuredGridOutlineFilter.html) — generates an outline of a structured grid.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkContourFilter",
+    "vtkFloatArray",
+    "vtkHedgeHog",
+    "vtkLODActor",
+    "vtkMultiBlockPLOT3DReader",
+    "vtkPolyDataMapper",
+    "vtkProbeFilter",
+    "vtkProgrammableAttributeDataFilter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStructuredGridOutlineFilter"
+  ],
+  "data_files": [
+    "data/combq.bin",
+    "data/combxyz.bin"
+  ],
+  "py_filename": "multidimensional_solution.py",
+  "image": "multidimensional_solution.png",
+  "metadata_filename": "multidimensional_solution.json",
+  "topology": "standard"
+}

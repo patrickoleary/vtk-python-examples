@@ -1,0 +1,23 @@
+{
+  "title": "named colors",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nThis example demonstrates vtkNamedColors by contouring a cone with primary additive and subtractive colors.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) assigns the mapped geometry to the scene.\n- [vtkBandedPolyDataContourFilter](https://www.vtk.org/doc/nightly/html/classvtkBandedPolyDataContourFilter.html) partitions elevation into colored bands.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) generates cone polygon data.\n- [vtkElevationFilter](https://www.vtk.org/doc/nightly/html/classvtkElevationFilter.html) computes scalar values based on height.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) maps scalar values to colors.\n- [vtkNamedColors](https://www.vtk.org/doc/nightly/html/classvtkNamedColors.html) provides a database of named colors.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps polygon data to graphics primitives.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene and configures the camera.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkBandedPolyDataContourFilter",
+    "vtkConeSource",
+    "vtkElevationFilter",
+    "vtkLookupTable",
+    "vtkNamedColors",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "named_colors.py",
+  "image": "named_colors.png",
+  "metadata_filename": "named_colors.json",
+  "topology": "standard"
+}

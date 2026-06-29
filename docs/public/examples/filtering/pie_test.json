@@ -1,0 +1,23 @@
+{
+  "title": "pie test",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nDemonstrate a pie chart with labeled slices using vtkChartPie.\n\n**dataset → chart → context_asset → renderer → infrastructure → output**\n\n- [vtkChartPie](https://www.vtk.org/doc/nightly/html/classvtkChartPie.html) — chart pie.\n- [vtkColorSeries](https://www.vtk.org/doc/nightly/html/classvtkColorSeries.html) — color series.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkIntArray](https://www.vtk.org/doc/nightly/html/classvtkIntArray.html) — int array.\n- [vtkPlotPie](https://www.vtk.org/doc/nightly/html/classvtkPlotPie.html) — plot pie.\n- [vtkStringArray](https://www.vtk.org/doc/nightly/html/classvtkStringArray.html) — string array.\n- [vtkTable](https://www.vtk.org/doc/nightly/html/classvtkTable.html) — table.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkChartPie",
+    "vtkColorSeries",
+    "vtkContextActor",
+    "vtkIntArray",
+    "vtkPlotPie",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStringArray",
+    "vtkTable"
+  ],
+  "data_files": null,
+  "py_filename": "pie_test.py",
+  "image": "pie_test.png",
+  "metadata_filename": "pie_test.json",
+  "topology": "chart"
+}

@@ -1,0 +1,491 @@
+#!/usr/bin/env python
+
+# Compare rendering with and without FXAA render pass side by side.
+
+import vtkmodules.vtkInteractionStyle  # noqa: F401
+import vtkmodules.vtkRenderingOpenGL2  # noqa: F401
+
+from vtkmodules.vtkFiltersSources import (
+    vtkConeSource,
+    vtkCylinderSource,
+    vtkDiskSource,
+    vtkLineSource,
+    vtkSphereSource,
+)
+from vtkmodules.vtkRenderingCore import (
+    vtkActor,
+    vtkPolyDataMapper,
+    vtkRenderWindow,
+    vtkRenderWindowInteractor,
+    vtkRenderer,
+    vtkTextActor,
+)
+from vtkmodules.vtkRenderingOpenGL2 import (
+    vtkCameraPass,
+    vtkDefaultPass,
+    vtkLightsPass,
+    vtkOpenGLFXAAPass,
+    vtkRenderPassCollection,
+    vtkSequencePass,
+)
+
+# Left renderer: no FXAA
+renderer_0 = vtkRenderer()
+renderer_0.SetViewport(0.0, 0.0, 0.5, 1.0)
+renderer_0.SetBackground(0.0, 0.0, 0.0)
+
+# Renderer 0 line 0: c = -1.0, width_bias=0, i=0 → (0+0)%2=0 → width=3
+line_0_0 = vtkLineSource()
+line_0_0.SetPoint1(-1, -1.0, 0.0)
+line_0_0.SetPoint2(1, 1.0, 0.0)
+line_0_0_mapper = vtkPolyDataMapper()
+line_0_0_mapper.SetInputConnection(line_0_0.GetOutputPort())
+line_0_0_actor = vtkActor()
+line_0_0_actor.SetMapper(line_0_0_mapper)
+line_0_0_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_0_0_actor.GetProperty().SetRepresentationToWireframe()
+line_0_0_actor.GetProperty().SetLineWidth(3)
+renderer_0.AddActor(line_0_0_actor)
+
+# Renderer 0 line 1: c = -0.7778, i=1 → (1+0)%2=1 → width=1
+line_0_1 = vtkLineSource()
+line_0_1.SetPoint1(-1, -0.7777777777777778, 0.0)
+line_0_1.SetPoint2(1, 0.7777777777777778, 0.0)
+line_0_1_mapper = vtkPolyDataMapper()
+line_0_1_mapper.SetInputConnection(line_0_1.GetOutputPort())
+line_0_1_actor = vtkActor()
+line_0_1_actor.SetMapper(line_0_1_mapper)
+line_0_1_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_0_1_actor.GetProperty().SetRepresentationToWireframe()
+line_0_1_actor.GetProperty().SetLineWidth(1)
+renderer_0.AddActor(line_0_1_actor)
+
+# Renderer 0 line 2: c = -0.5556, i=2 → (2+0)%2=0 → width=3
+line_0_2 = vtkLineSource()
+line_0_2.SetPoint1(-1, -0.5555555555555556, 0.0)
+line_0_2.SetPoint2(1, 0.5555555555555556, 0.0)
+line_0_2_mapper = vtkPolyDataMapper()
+line_0_2_mapper.SetInputConnection(line_0_2.GetOutputPort())
+line_0_2_actor = vtkActor()
+line_0_2_actor.SetMapper(line_0_2_mapper)
+line_0_2_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_0_2_actor.GetProperty().SetRepresentationToWireframe()
+line_0_2_actor.GetProperty().SetLineWidth(3)
+renderer_0.AddActor(line_0_2_actor)
+
+# Renderer 0 line 3: c = -0.3333, i=3 → (3+0)%2=1 → width=1
+line_0_3 = vtkLineSource()
+line_0_3.SetPoint1(-1, -0.3333333333333333, 0.0)
+line_0_3.SetPoint2(1, 0.3333333333333333, 0.0)
+line_0_3_mapper = vtkPolyDataMapper()
+line_0_3_mapper.SetInputConnection(line_0_3.GetOutputPort())
+line_0_3_actor = vtkActor()
+line_0_3_actor.SetMapper(line_0_3_mapper)
+line_0_3_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_0_3_actor.GetProperty().SetRepresentationToWireframe()
+line_0_3_actor.GetProperty().SetLineWidth(1)
+renderer_0.AddActor(line_0_3_actor)
+
+# Renderer 0 line 4: c = -0.1111, i=4 → (4+0)%2=0 → width=3
+line_0_4 = vtkLineSource()
+line_0_4.SetPoint1(-1, -0.1111111111111111, 0.0)
+line_0_4.SetPoint2(1, 0.1111111111111111, 0.0)
+line_0_4_mapper = vtkPolyDataMapper()
+line_0_4_mapper.SetInputConnection(line_0_4.GetOutputPort())
+line_0_4_actor = vtkActor()
+line_0_4_actor.SetMapper(line_0_4_mapper)
+line_0_4_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_0_4_actor.GetProperty().SetRepresentationToWireframe()
+line_0_4_actor.GetProperty().SetLineWidth(3)
+renderer_0.AddActor(line_0_4_actor)
+
+# Renderer 0 line 5: c = 0.1111, i=5 → (5+0)%2=1 → width=1
+line_0_5 = vtkLineSource()
+line_0_5.SetPoint1(-1, 0.1111111111111111, 0.0)
+line_0_5.SetPoint2(1, -0.1111111111111111, 0.0)
+line_0_5_mapper = vtkPolyDataMapper()
+line_0_5_mapper.SetInputConnection(line_0_5.GetOutputPort())
+line_0_5_actor = vtkActor()
+line_0_5_actor.SetMapper(line_0_5_mapper)
+line_0_5_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_0_5_actor.GetProperty().SetRepresentationToWireframe()
+line_0_5_actor.GetProperty().SetLineWidth(1)
+renderer_0.AddActor(line_0_5_actor)
+
+# Renderer 0 line 6: c = 0.3333, i=6 → (6+0)%2=0 → width=3
+line_0_6 = vtkLineSource()
+line_0_6.SetPoint1(-1, 0.3333333333333333, 0.0)
+line_0_6.SetPoint2(1, -0.3333333333333333, 0.0)
+line_0_6_mapper = vtkPolyDataMapper()
+line_0_6_mapper.SetInputConnection(line_0_6.GetOutputPort())
+line_0_6_actor = vtkActor()
+line_0_6_actor.SetMapper(line_0_6_mapper)
+line_0_6_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_0_6_actor.GetProperty().SetRepresentationToWireframe()
+line_0_6_actor.GetProperty().SetLineWidth(3)
+renderer_0.AddActor(line_0_6_actor)
+
+# Renderer 0 line 7: c = 0.5556, i=7 → (7+0)%2=1 → width=1
+line_0_7 = vtkLineSource()
+line_0_7.SetPoint1(-1, 0.5555555555555556, 0.0)
+line_0_7.SetPoint2(1, -0.5555555555555556, 0.0)
+line_0_7_mapper = vtkPolyDataMapper()
+line_0_7_mapper.SetInputConnection(line_0_7.GetOutputPort())
+line_0_7_actor = vtkActor()
+line_0_7_actor.SetMapper(line_0_7_mapper)
+line_0_7_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_0_7_actor.GetProperty().SetRepresentationToWireframe()
+line_0_7_actor.GetProperty().SetLineWidth(1)
+renderer_0.AddActor(line_0_7_actor)
+
+# Renderer 0 line 8: c = 0.7778, i=8 → (8+0)%2=0 → width=3
+line_0_8 = vtkLineSource()
+line_0_8.SetPoint1(-1, 0.7777777777777778, 0.0)
+line_0_8.SetPoint2(1, -0.7777777777777778, 0.0)
+line_0_8_mapper = vtkPolyDataMapper()
+line_0_8_mapper.SetInputConnection(line_0_8.GetOutputPort())
+line_0_8_actor = vtkActor()
+line_0_8_actor.SetMapper(line_0_8_mapper)
+line_0_8_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_0_8_actor.GetProperty().SetRepresentationToWireframe()
+line_0_8_actor.GetProperty().SetLineWidth(3)
+renderer_0.AddActor(line_0_8_actor)
+
+# Renderer 0 line 9: c = 1.0, i=9 → (9+0)%2=1 → width=1
+line_0_9 = vtkLineSource()
+line_0_9.SetPoint1(-1, 1.0, 0.0)
+line_0_9.SetPoint2(1, -1.0, 0.0)
+line_0_9_mapper = vtkPolyDataMapper()
+line_0_9_mapper.SetInputConnection(line_0_9.GetOutputPort())
+line_0_9_actor = vtkActor()
+line_0_9_actor.SetMapper(line_0_9_mapper)
+line_0_9_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_0_9_actor.GetProperty().SetRepresentationToWireframe()
+line_0_9_actor.GetProperty().SetLineWidth(1)
+renderer_0.AddActor(line_0_9_actor)
+
+# Renderer 0 sphere
+sphere_0 = vtkSphereSource()
+sphere_0.SetCenter(0.0, 0.6, 0.0)
+sphere_0.SetThetaResolution(80)
+sphere_0.SetPhiResolution(80)
+sphere_0.SetRadius(0.4)
+sphere_0_mapper = vtkPolyDataMapper()
+sphere_0_mapper.SetInputConnection(sphere_0.GetOutputPort())
+sphere_0_actor = vtkActor()
+sphere_0_actor.SetMapper(sphere_0_mapper)
+sphere_0_actor.GetProperty().SetColor(0.9, 0.4, 0.2)
+sphere_0_actor.GetProperty().SetAmbient(0.6)
+sphere_0_actor.GetProperty().SetDiffuse(0.4)
+renderer_0.AddActor(sphere_0_actor)
+
+# Renderer 0 cone
+cone_0 = vtkConeSource()
+cone_0.SetCenter(0.0, 0.5, -0.5)
+cone_0.SetResolution(160)
+cone_0.SetRadius(0.9)
+cone_0.SetHeight(0.9)
+cone_0.SetDirection(0.0, -1.0, 0.0)
+cone_0_mapper = vtkPolyDataMapper()
+cone_0_mapper.SetInputConnection(cone_0.GetOutputPort())
+cone_0_actor = vtkActor()
+cone_0_actor.SetMapper(cone_0_mapper)
+cone_0_actor.GetProperty().SetColor(0.9, 0.6, 0.8)
+cone_0_actor.GetProperty().SetAmbient(0.6)
+cone_0_actor.GetProperty().SetDiffuse(0.4)
+renderer_0.AddActor(cone_0_actor)
+
+# Renderer 0 disk
+disk_0 = vtkDiskSource()
+disk_0.SetCircumferentialResolution(80)
+disk_0.SetInnerRadius(0)
+disk_0.SetOuterRadius(0.5)
+disk_0_mapper = vtkPolyDataMapper()
+disk_0_mapper.SetInputConnection(disk_0.GetOutputPort())
+disk_0_actor = vtkActor()
+disk_0_actor.SetPosition(0.0, -0.5, -0.5)
+disk_0_actor.SetMapper(disk_0_mapper)
+disk_0_actor.GetProperty().SetColor(0.3, 0.1, 0.4)
+disk_0_actor.GetProperty().SetAmbient(0.6)
+disk_0_actor.GetProperty().SetDiffuse(0.4)
+renderer_0.AddActor(disk_0_actor)
+
+# Renderer 0 cylinder
+cyl_0 = vtkCylinderSource()
+cyl_0.SetCenter(0.0, -0.5, 0.0)
+cyl_0.SetHeight(0.6)
+cyl_0.SetRadius(0.2)
+cyl_0.SetResolution(80)
+cyl_0_mapper = vtkPolyDataMapper()
+cyl_0_mapper.SetInputConnection(cyl_0.GetOutputPort())
+cyl_0_actor = vtkActor()
+cyl_0_actor.SetOrigin(cyl_0.GetCenter())
+cyl_0_actor.RotateWXYZ(35, -0.2, 0.0, 1.0)
+cyl_0_actor.SetMapper(cyl_0_mapper)
+cyl_0_actor.GetProperty().SetColor(0.3, 0.9, 0.4)
+cyl_0_actor.GetProperty().SetAmbient(0.6)
+cyl_0_actor.GetProperty().SetDiffuse(0.4)
+renderer_0.AddActor(cyl_0_actor)
+
+label = vtkTextActor()
+label.SetInput("No FXAA")
+label.GetTextProperty().SetFontSize(20)
+label.GetTextProperty().SetJustificationToCentered()
+label.GetTextProperty().SetVerticalJustificationToBottom()
+label.SetPosition(85, 10)
+renderer_0.AddViewProp(label)
+
+# Right renderer: FXAA via render pass pipeline
+renderer_1 = vtkRenderer()
+renderer_1.SetViewport(0.5, 0.0, 1.0, 1.0)
+renderer_1.SetBackground(0.0, 0.0, 0.0)
+
+# Renderer 1 line 0: c = -1.0, width_bias=1, i=0 → (0+1)%2=1 → width=1
+line_1_0 = vtkLineSource()
+line_1_0.SetPoint1(-1, -1.0, 0.0)
+line_1_0.SetPoint2(1, 1.0, 0.0)
+line_1_0_mapper = vtkPolyDataMapper()
+line_1_0_mapper.SetInputConnection(line_1_0.GetOutputPort())
+line_1_0_actor = vtkActor()
+line_1_0_actor.SetMapper(line_1_0_mapper)
+line_1_0_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_1_0_actor.GetProperty().SetRepresentationToWireframe()
+line_1_0_actor.GetProperty().SetLineWidth(1)
+renderer_1.AddActor(line_1_0_actor)
+
+# Renderer 1 line 1: c = -0.7778, i=1 → (1+1)%2=0 → width=3
+line_1_1 = vtkLineSource()
+line_1_1.SetPoint1(-1, -0.7777777777777778, 0.0)
+line_1_1.SetPoint2(1, 0.7777777777777778, 0.0)
+line_1_1_mapper = vtkPolyDataMapper()
+line_1_1_mapper.SetInputConnection(line_1_1.GetOutputPort())
+line_1_1_actor = vtkActor()
+line_1_1_actor.SetMapper(line_1_1_mapper)
+line_1_1_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_1_1_actor.GetProperty().SetRepresentationToWireframe()
+line_1_1_actor.GetProperty().SetLineWidth(3)
+renderer_1.AddActor(line_1_1_actor)
+
+# Renderer 1 line 2: c = -0.5556, i=2 → (2+1)%2=1 → width=1
+line_1_2 = vtkLineSource()
+line_1_2.SetPoint1(-1, -0.5555555555555556, 0.0)
+line_1_2.SetPoint2(1, 0.5555555555555556, 0.0)
+line_1_2_mapper = vtkPolyDataMapper()
+line_1_2_mapper.SetInputConnection(line_1_2.GetOutputPort())
+line_1_2_actor = vtkActor()
+line_1_2_actor.SetMapper(line_1_2_mapper)
+line_1_2_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_1_2_actor.GetProperty().SetRepresentationToWireframe()
+line_1_2_actor.GetProperty().SetLineWidth(1)
+renderer_1.AddActor(line_1_2_actor)
+
+# Renderer 1 line 3: c = -0.3333, i=3 → (3+1)%2=0 → width=3
+line_1_3 = vtkLineSource()
+line_1_3.SetPoint1(-1, -0.3333333333333333, 0.0)
+line_1_3.SetPoint2(1, 0.3333333333333333, 0.0)
+line_1_3_mapper = vtkPolyDataMapper()
+line_1_3_mapper.SetInputConnection(line_1_3.GetOutputPort())
+line_1_3_actor = vtkActor()
+line_1_3_actor.SetMapper(line_1_3_mapper)
+line_1_3_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_1_3_actor.GetProperty().SetRepresentationToWireframe()
+line_1_3_actor.GetProperty().SetLineWidth(3)
+renderer_1.AddActor(line_1_3_actor)
+
+# Renderer 1 line 4: c = -0.1111, i=4 → (4+1)%2=1 → width=1
+line_1_4 = vtkLineSource()
+line_1_4.SetPoint1(-1, -0.1111111111111111, 0.0)
+line_1_4.SetPoint2(1, 0.1111111111111111, 0.0)
+line_1_4_mapper = vtkPolyDataMapper()
+line_1_4_mapper.SetInputConnection(line_1_4.GetOutputPort())
+line_1_4_actor = vtkActor()
+line_1_4_actor.SetMapper(line_1_4_mapper)
+line_1_4_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_1_4_actor.GetProperty().SetRepresentationToWireframe()
+line_1_4_actor.GetProperty().SetLineWidth(1)
+renderer_1.AddActor(line_1_4_actor)
+
+# Renderer 1 line 5: c = 0.1111, i=5 → (5+1)%2=0 → width=3
+line_1_5 = vtkLineSource()
+line_1_5.SetPoint1(-1, 0.1111111111111111, 0.0)
+line_1_5.SetPoint2(1, -0.1111111111111111, 0.0)
+line_1_5_mapper = vtkPolyDataMapper()
+line_1_5_mapper.SetInputConnection(line_1_5.GetOutputPort())
+line_1_5_actor = vtkActor()
+line_1_5_actor.SetMapper(line_1_5_mapper)
+line_1_5_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_1_5_actor.GetProperty().SetRepresentationToWireframe()
+line_1_5_actor.GetProperty().SetLineWidth(3)
+renderer_1.AddActor(line_1_5_actor)
+
+# Renderer 1 line 6: c = 0.3333, i=6 → (6+1)%2=1 → width=1
+line_1_6 = vtkLineSource()
+line_1_6.SetPoint1(-1, 0.3333333333333333, 0.0)
+line_1_6.SetPoint2(1, -0.3333333333333333, 0.0)
+line_1_6_mapper = vtkPolyDataMapper()
+line_1_6_mapper.SetInputConnection(line_1_6.GetOutputPort())
+line_1_6_actor = vtkActor()
+line_1_6_actor.SetMapper(line_1_6_mapper)
+line_1_6_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_1_6_actor.GetProperty().SetRepresentationToWireframe()
+line_1_6_actor.GetProperty().SetLineWidth(1)
+renderer_1.AddActor(line_1_6_actor)
+
+# Renderer 1 line 7: c = 0.5556, i=7 → (7+1)%2=0 → width=3
+line_1_7 = vtkLineSource()
+line_1_7.SetPoint1(-1, 0.5555555555555556, 0.0)
+line_1_7.SetPoint2(1, -0.5555555555555556, 0.0)
+line_1_7_mapper = vtkPolyDataMapper()
+line_1_7_mapper.SetInputConnection(line_1_7.GetOutputPort())
+line_1_7_actor = vtkActor()
+line_1_7_actor.SetMapper(line_1_7_mapper)
+line_1_7_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_1_7_actor.GetProperty().SetRepresentationToWireframe()
+line_1_7_actor.GetProperty().SetLineWidth(3)
+renderer_1.AddActor(line_1_7_actor)
+
+# Renderer 1 line 8: c = 0.7778, i=8 → (8+1)%2=1 → width=1
+line_1_8 = vtkLineSource()
+line_1_8.SetPoint1(-1, 0.7777777777777778, 0.0)
+line_1_8.SetPoint2(1, -0.7777777777777778, 0.0)
+line_1_8_mapper = vtkPolyDataMapper()
+line_1_8_mapper.SetInputConnection(line_1_8.GetOutputPort())
+line_1_8_actor = vtkActor()
+line_1_8_actor.SetMapper(line_1_8_mapper)
+line_1_8_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_1_8_actor.GetProperty().SetRepresentationToWireframe()
+line_1_8_actor.GetProperty().SetLineWidth(1)
+renderer_1.AddActor(line_1_8_actor)
+
+# Renderer 1 line 9: c = 1.0, i=9 → (9+1)%2=0 → width=3
+line_1_9 = vtkLineSource()
+line_1_9.SetPoint1(-1, 1.0, 0.0)
+line_1_9.SetPoint2(1, -1.0, 0.0)
+line_1_9_mapper = vtkPolyDataMapper()
+line_1_9_mapper.SetInputConnection(line_1_9.GetOutputPort())
+line_1_9_actor = vtkActor()
+line_1_9_actor.SetMapper(line_1_9_mapper)
+line_1_9_actor.GetProperty().SetColor(0.0, 1.0, 0.0)
+line_1_9_actor.GetProperty().SetRepresentationToWireframe()
+line_1_9_actor.GetProperty().SetLineWidth(3)
+renderer_1.AddActor(line_1_9_actor)
+
+# Renderer 1 sphere
+sphere_1 = vtkSphereSource()
+sphere_1.SetCenter(0.0, 0.6, 0.0)
+sphere_1.SetThetaResolution(80)
+sphere_1.SetPhiResolution(80)
+sphere_1.SetRadius(0.4)
+sphere_1_mapper = vtkPolyDataMapper()
+sphere_1_mapper.SetInputConnection(sphere_1.GetOutputPort())
+sphere_1_actor = vtkActor()
+sphere_1_actor.SetMapper(sphere_1_mapper)
+sphere_1_actor.GetProperty().SetColor(0.9, 0.4, 0.2)
+sphere_1_actor.GetProperty().SetAmbient(0.6)
+sphere_1_actor.GetProperty().SetDiffuse(0.4)
+renderer_1.AddActor(sphere_1_actor)
+
+# Renderer 1 cone
+cone_1 = vtkConeSource()
+cone_1.SetCenter(0.0, 0.5, -0.5)
+cone_1.SetResolution(160)
+cone_1.SetRadius(0.9)
+cone_1.SetHeight(0.9)
+cone_1.SetDirection(0.0, -1.0, 0.0)
+cone_1_mapper = vtkPolyDataMapper()
+cone_1_mapper.SetInputConnection(cone_1.GetOutputPort())
+cone_1_actor = vtkActor()
+cone_1_actor.SetMapper(cone_1_mapper)
+cone_1_actor.GetProperty().SetColor(0.9, 0.6, 0.8)
+cone_1_actor.GetProperty().SetAmbient(0.6)
+cone_1_actor.GetProperty().SetDiffuse(0.4)
+renderer_1.AddActor(cone_1_actor)
+
+# Renderer 1 disk
+disk_1 = vtkDiskSource()
+disk_1.SetCircumferentialResolution(80)
+disk_1.SetInnerRadius(0)
+disk_1.SetOuterRadius(0.5)
+disk_1_mapper = vtkPolyDataMapper()
+disk_1_mapper.SetInputConnection(disk_1.GetOutputPort())
+disk_1_actor = vtkActor()
+disk_1_actor.SetPosition(0.0, -0.5, -0.5)
+disk_1_actor.SetMapper(disk_1_mapper)
+disk_1_actor.GetProperty().SetColor(0.3, 0.1, 0.4)
+disk_1_actor.GetProperty().SetAmbient(0.6)
+disk_1_actor.GetProperty().SetDiffuse(0.4)
+renderer_1.AddActor(disk_1_actor)
+
+# Renderer 1 cylinder
+cyl_1 = vtkCylinderSource()
+cyl_1.SetCenter(0.0, -0.5, 0.0)
+cyl_1.SetHeight(0.6)
+cyl_1.SetRadius(0.2)
+cyl_1.SetResolution(80)
+cyl_1_mapper = vtkPolyDataMapper()
+cyl_1_mapper.SetInputConnection(cyl_1.GetOutputPort())
+cyl_1_actor = vtkActor()
+cyl_1_actor.SetOrigin(cyl_1.GetCenter())
+cyl_1_actor.RotateWXYZ(35, -0.2, 0.0, 1.0)
+cyl_1_actor.SetMapper(cyl_1_mapper)
+cyl_1_actor.GetProperty().SetColor(0.3, 0.9, 0.4)
+cyl_1_actor.GetProperty().SetAmbient(0.6)
+cyl_1_actor.GetProperty().SetDiffuse(0.4)
+renderer_1.AddActor(cyl_1_actor)
+
+# FXAA render pass for renderer 1
+camera_pass = vtkCameraPass()
+seq = vtkSequencePass()
+default_pass = vtkDefaultPass()
+lights = vtkLightsPass()
+fxaa = vtkOpenGLFXAAPass()
+fxaa.SetFXAAOptions(renderer_1.GetFXAAOptions())
+
+passes = vtkRenderPassCollection()
+passes.AddItem(lights)
+passes.AddItem(default_pass)
+seq.SetPasses(passes)
+camera_pass.SetDelegatePass(seq)
+fxaa.SetDelegatePass(camera_pass)
+renderer_1.SetPass(fxaa)
+
+label = vtkTextActor()
+label.SetInput("No FXAA")
+label.GetTextProperty().SetFontSize(20)
+label.GetTextProperty().SetJustificationToCentered()
+label.GetTextProperty().SetVerticalJustificationToBottom()
+label.SetPosition(85, 10)
+renderer_0.AddViewProp(label)
+
+label_fxaa = vtkTextActor()
+label_fxaa.SetInput("FXAA")
+label_fxaa.GetTextProperty().SetFontSize(20)
+label_fxaa.GetTextProperty().SetJustificationToCentered()
+label_fxaa.GetTextProperty().SetVerticalJustificationToBottom()
+label_fxaa.SetPosition(85, 10)
+renderer_1.AddViewProp(label_fxaa)
+
+# Render window
+render_window = vtkRenderWindow()
+render_window.SetMultiSamples(0)
+render_window.SetSize(1000, 500)
+render_window.AddRenderer(renderer_0)
+render_window.AddRenderer(renderer_1)
+render_window.SetWindowName("fxaa pass")
+
+interactor = vtkRenderWindowInteractor()
+interactor.SetRenderWindow(render_window)
+
+# Scene
+renderer_0.GetActiveCamera().ParallelProjectionOn()
+renderer_0.ResetCamera()
+renderer_0.ResetCameraClippingRange()
+renderer_0.GetActiveCamera().SetParallelScale(0.9)
+
+renderer_1.GetActiveCamera().ParallelProjectionOn()
+renderer_1.ResetCamera()
+renderer_1.ResetCameraClippingRange()
+renderer_1.GetActiveCamera().SetParallelScale(0.9)
+
+interactor.Initialize()
+interactor.Start()

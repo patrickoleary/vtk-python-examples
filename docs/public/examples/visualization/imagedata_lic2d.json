@@ -1,0 +1,28 @@
+{
+  "title": "imagedata lic2d",
+  "source_type": "examples",
+  "tag": "visualization",
+  "explanation": "### Description\n\nTest vtkImageDataLIC2D with probed vector data and a noise texture.\n\n**dataset → input → filter → infrastructure**\n\n- [vtkFloatArray](https://www.vtk.org/doc/nightly/html/classvtkFloatArray.html) — stores an array of floating-point values.\n- [vtkGenericDataObjectReader](https://www.vtk.org/doc/nightly/html/classvtkGenericDataObjectReader.html) — generic data object reader.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageData](https://www.vtk.org/doc/nightly/html/classvtkImageData.html) — represents a regular grid of points (image/volume).\n- [vtkImageDataLIC2D](https://www.vtk.org/doc/nightly/html/classvtkImageDataLIC2D.html) — image data lic2d.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkProbeFilter](https://www.vtk.org/doc/nightly/html/classvtkProbeFilter.html) — samples source data at the point locations of the input.\n- [vtkTrivialProducer](https://www.vtk.org/doc/nightly/html/classvtkTrivialProducer.html) — trivial producer.\n- [vtkUnsignedCharArray](https://www.vtk.org/doc/nightly/html/classvtkUnsignedCharArray.html) — unsigned char array.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkFloatArray",
+    "vtkGenericDataObjectReader",
+    "vtkImageActor",
+    "vtkImageData",
+    "vtkImageDataLIC2D",
+    "vtkPNGReader",
+    "vtkProbeFilter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTrivialProducer",
+    "vtkUnsignedCharArray"
+  ],
+  "data_files": [
+    "data/SurfaceVectors.vtk",
+    "data/noise.png"
+  ],
+  "py_filename": "imagedata_lic2d.py",
+  "image": "imagedata_lic2d.png",
+  "metadata_filename": "imagedata_lic2d.json",
+  "topology": "standard"
+}

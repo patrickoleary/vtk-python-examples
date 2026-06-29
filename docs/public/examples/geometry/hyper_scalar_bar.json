@@ -1,0 +1,26 @@
+{
+  "title": "hyper scalar bar",
+  "source_type": "examples",
+  "tag": "geometry",
+  "explanation": "### Description\n\nDemonstrate vtkHyperStreamline with a vtkScalarBarActor by generating a point-load tensor field, creating four hyperstreamlines, and rendering them with a logarithmic scalar bar, context plane, outline, and load cone.\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkCamera](https://www.vtk.org/doc/nightly/html/classvtkCamera.html) — camera.\n- [vtkConeSource](https://www.vtk.org/doc/nightly/html/classvtkConeSource.html) — generates a polygonal cone.\n- [vtkHyperStreamline](https://www.vtk.org/doc/nightly/html/classvtkHyperStreamline.html) — hyper streamline.\n- [vtkImageDataGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkImageDataGeometryFilter.html) — converts image data to polygonal geometry.\n- [vtkLogLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLogLookupTable.html) — log lookup table.\n- [vtkOutlineFilter](https://www.vtk.org/doc/nightly/html/classvtkOutlineFilter.html) — generates a bounding box outline of the input data.\n- [vtkPointLoad](https://www.vtk.org/doc/nightly/html/classvtkPointLoad.html) — point load.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkScalarBarActor](https://www.vtk.org/doc/nightly/html/classvtkScalarBarActor.html) — scalar bar actor.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkCamera",
+    "vtkConeSource",
+    "vtkHyperStreamline",
+    "vtkImageDataGeometryFilter",
+    "vtkLogLookupTable",
+    "vtkOutlineFilter",
+    "vtkPointLoad",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkScalarBarActor"
+  ],
+  "data_files": null,
+  "py_filename": "hyper_scalar_bar.py",
+  "image": "hyper_scalar_bar.png",
+  "metadata_filename": "hyper_scalar_bar.json",
+  "topology": "standard"
+}

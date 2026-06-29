@@ -1,0 +1,19 @@
+{
+  "title": "light widget",
+  "source_type": "examples",
+  "tag": "interaction",
+  "explanation": "### Description\n\nDemonstrate vtkLightWidget with two light widgets showing positional and default configurations.\n\n**renderer → infrastructure → scene → interaction → output**\n\n- [vtkInteractorStyleTrackballCamera](https://www.vtk.org/doc/nightly/html/classvtkInteractorStyleTrackballCamera.html) — interactor style trackball camera.\n- [vtkLightRepresentation](https://www.vtk.org/doc/nightly/html/classvtkLightRepresentation.html) — light representation.\n- [vtkLightWidget](https://www.vtk.org/doc/nightly/html/classvtkLightWidget.html) — light widget.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkInteractorStyleTrackballCamera",
+    "vtkLightRepresentation",
+    "vtkLightWidget",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "light_widget.py",
+  "image": "light_widget.png",
+  "metadata_filename": "light_widget.json",
+  "topology": "standard"
+}

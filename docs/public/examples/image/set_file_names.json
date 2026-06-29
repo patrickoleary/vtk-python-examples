@@ -1,0 +1,20 @@
+{
+  "title": "set file names",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nRead image slices using glob/sort file names and display with vtkImageActor.\n\n**input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkGlobFileNames](https://www.vtk.org/doc/nightly/html/classvtkGlobFileNames.html) — glob file names.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageReader2](https://www.vtk.org/doc/nightly/html/classvtkImageReader2.html) — image reader2.\n- [vtkSortFileNames](https://www.vtk.org/doc/nightly/html/classvtkSortFileNames.html) — sort file names.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkGlobFileNames",
+    "vtkImageActor",
+    "vtkImageReader2",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkSortFileNames"
+  ],
+  "data_files": null,
+  "py_filename": "set_file_names.py",
+  "image": "set_file_names.png",
+  "metadata_filename": "set_file_names.json",
+  "topology": "standard"
+}

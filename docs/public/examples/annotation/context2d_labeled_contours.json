@@ -1,0 +1,32 @@
+{
+  "title": "context2d labeled contours",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nDisplay labeled contours in a 2D context using vtkLabeledContourPolyDataItem.\n\n**dataset → input → filter → plot → item → context_asset → renderer → infrastructure → output**\n\n- [vtkAxis](https://www.vtk.org/doc/nightly/html/classvtkAxis.html) — axis.\n- [vtkContextActor](https://www.vtk.org/doc/nightly/html/classvtkContextActor.html) — context actor.\n- [vtkContourFilter](https://www.vtk.org/doc/nightly/html/classvtkContourFilter.html) — extracts iso-surfaces at specified scalar values.\n- [vtkCutter](https://www.vtk.org/doc/nightly/html/classvtkCutter.html) — cutter.\n- [vtkDoubleArray](https://www.vtk.org/doc/nightly/html/classvtkDoubleArray.html) — double array.\n- [vtkInteractiveArea](https://www.vtk.org/doc/nightly/html/classvtkInteractiveArea.html) — interactive area.\n- [vtkLabeledContourPolyDataItem](https://www.vtk.org/doc/nightly/html/classvtkLabeledContourPolyDataItem.html) — labeled contour poly data item.\n- [vtkLookupTable](https://www.vtk.org/doc/nightly/html/classvtkLookupTable.html) — maps scalar values to colors.\n- [vtkPlane](https://www.vtk.org/doc/nightly/html/classvtkPlane.html) — defines an implicit plane function.\n- [vtkRTAnalyticSource](https://www.vtk.org/doc/nightly/html/classvtkRTAnalyticSource.html) — generates a synthetic wavelet image volume.\n- [vtkRectd](https://www.vtk.org/doc/nightly/html/classvtkRectd.html) — rectd.\n- [vtkRecti](https://www.vtk.org/doc/nightly/html/classvtkRecti.html) — recti.\n- [vtkStripper](https://www.vtk.org/doc/nightly/html/classvtkStripper.html) — creates triangle strips and/or polylines from polygonal data.\n- [vtkTextProperty](https://www.vtk.org/doc/nightly/html/classvtkTextProperty.html) — text property.\n- [vtkTextPropertyCollection](https://www.vtk.org/doc/nightly/html/classvtkTextPropertyCollection.html) — text property collection.\n- [vtkUnsignedCharArray](https://www.vtk.org/doc/nightly/html/classvtkUnsignedCharArray.html) — unsigned char array.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkAxis",
+    "vtkContextActor",
+    "vtkContourFilter",
+    "vtkCutter",
+    "vtkDoubleArray",
+    "vtkInteractiveArea",
+    "vtkLabeledContourPolyDataItem",
+    "vtkLookupTable",
+    "vtkPlane",
+    "vtkRTAnalyticSource",
+    "vtkRectd",
+    "vtkRecti",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkStripper",
+    "vtkTextProperty",
+    "vtkTextPropertyCollection",
+    "vtkUnsignedCharArray"
+  ],
+  "data_files": null,
+  "py_filename": "context2d_labeled_contours.py",
+  "image": "context2d_labeled_contours.png",
+  "metadata_filename": "context2d_labeled_contours.json",
+  "topology": "chart"
+}

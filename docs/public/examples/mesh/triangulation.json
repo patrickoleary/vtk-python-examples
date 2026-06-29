@@ -1,0 +1,22 @@
+{
+  "title": "triangulation",
+  "source_type": "examples",
+  "tag": "mesh",
+  "explanation": "### Description\n\nThis example triangulates a set of 50 randomly scattered 2D points using vtkDelaunay2D and displays the resulting triangulation with visible edges. The Delaunay triangulation connects the points such that no point lies inside the circumcircle of any triangle, producing a well-conditioned mesh. It follows the VTK pipeline structure:\n\n**dataset → input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) displays the triangulation with alice-blue faces and steel-blue edges.\n- [vtkDelaunay2D](https://www.vtk.org/doc/nightly/html/classvtkDelaunay2D.html) computes the 2D Delaunay triangulation of the scattered point set, producing a triangle mesh.\n- [vtkMinimalStandardRandomSequence](https://www.vtk.org/doc/nightly/html/classvtkMinimalStandardRandomSequence.html) generates 50 reproducible random 2D points (z = 0) in the range [−5, 5].\n- [vtkPoints](https://www.vtk.org/doc/nightly/html/classvtkPoints.html) stores 3D point coordinates.\n- [vtkPolyData](https://www.vtk.org/doc/nightly/html/classvtkPolyData.html) represents polygonal geometry.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) maps the triangulated surface to graphics primitives.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) assembles the scene.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) captures mouse and keyboard events.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkDelaunay2D",
+    "vtkMinimalStandardRandomSequence",
+    "vtkPoints",
+    "vtkPolyData",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "triangulation.py",
+  "image": "triangulation.png",
+  "metadata_filename": "triangulation.json",
+  "topology": "standard"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "ideal low pass",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nIdeal low-pass filter applied to an image in frequency domain.\n\n**input → filter → visual_asset → renderer → infrastructure → output**\n\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageFFT](https://www.vtk.org/doc/nightly/html/classvtkImageFFT.html) — image fft.\n- [vtkImageIdealLowPass](https://www.vtk.org/doc/nightly/html/classvtkImageIdealLowPass.html) — image ideal low pass.\n- [vtkPNGReader](https://www.vtk.org/doc/nightly/html/classvtkPNGReader.html) — png reader.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkImageActor",
+    "vtkImageFFT",
+    "vtkImageIdealLowPass",
+    "vtkPNGReader",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/fullhead15.png"
+  ],
+  "py_filename": "ideal_low_pass.py",
+  "image": "ideal_low_pass.png",
+  "metadata_filename": "ideal_low_pass.json",
+  "topology": "standard"
+}

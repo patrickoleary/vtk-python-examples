@@ -1,0 +1,20 @@
+{
+  "title": "radial grid2d",
+  "source_type": "examples",
+  "tag": "annotation",
+  "explanation": "### Description\n\nTest vtkRadialGridActor2D with custom axes, ticks, angles, and text properties.\n\n**dataset → input → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkOutlineSource](https://www.vtk.org/doc/nightly/html/classvtkOutlineSource.html) — outline source.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkRadialGridActor2D](https://www.vtk.org/doc/nightly/html/classvtkRadialGridActor2D.html) — radial grid actor2d.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkOutlineSource",
+    "vtkPolyDataMapper",
+    "vtkRadialGridActor2D",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": null,
+  "py_filename": "radial_grid2d.py",
+  "image": "radial_grid2d.png",
+  "metadata_filename": "radial_grid2d.json",
+  "topology": "standard"
+}

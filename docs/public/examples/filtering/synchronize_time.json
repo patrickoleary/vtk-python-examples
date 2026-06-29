@@ -1,0 +1,23 @@
+{
+  "title": "synchronize time",
+  "source_type": "examples",
+  "tag": "filtering",
+  "explanation": "### Description\n\nVisualize the Exodus can.ex2 dataset used by vtkSynchronizeTimeFilter, showing the mesh at the first time step with element block coloring.\n\n**input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkActor](https://www.vtk.org/doc/nightly/html/classvtkActor.html) — assigns the mapped geometry to the scene.\n- [vtkArrayCalculator](https://www.vtk.org/doc/nightly/html/classvtkArrayCalculator.html) — computes derived arrays from existing data using expressions.\n- [vtkCompositeDataGeometryFilter](https://www.vtk.org/doc/nightly/html/classvtkCompositeDataGeometryFilter.html) — extracts the outer surface from a composite dataset.\n- [vtkExodusIIReader](https://www.vtk.org/doc/nightly/html/classvtkExodusIIReader.html) — reads Exodus II finite element data files.\n- [vtkPolyDataMapper](https://www.vtk.org/doc/nightly/html/classvtkPolyDataMapper.html) — maps polygonal data to graphics primitives.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkActor",
+    "vtkArrayCalculator",
+    "vtkCompositeDataGeometryFilter",
+    "vtkExodusIIReader",
+    "vtkPolyDataMapper",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer"
+  ],
+  "data_files": [
+    "data/can.ex2"
+  ],
+  "py_filename": "synchronize_time.py",
+  "image": "synchronize_time.png",
+  "metadata_filename": "synchronize_time.json",
+  "topology": "standard"
+}

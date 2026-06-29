@@ -1,0 +1,27 @@
+{
+  "title": "writers",
+  "source_type": "examples",
+  "tag": "image",
+  "explanation": "### Description\n\nTest image writers by reading TIFF, writing in multiple formats, and displaying luminance.\n\n**input → filter → visual_asset → renderer → infrastructure → scene → output**\n\n- [vtkBMPWriter](https://www.vtk.org/doc/nightly/html/classvtkBMPWriter.html) — bmp writer.\n- [vtkImageActor](https://www.vtk.org/doc/nightly/html/classvtkImageActor.html) — image actor.\n- [vtkImageLuminance](https://www.vtk.org/doc/nightly/html/classvtkImageLuminance.html) — image luminance.\n- [vtkJPEGWriter](https://www.vtk.org/doc/nightly/html/classvtkJPEGWriter.html) — jpeg writer.\n- [vtkPNGWriter](https://www.vtk.org/doc/nightly/html/classvtkPNGWriter.html) — png writer.\n- [vtkPNMWriter](https://www.vtk.org/doc/nightly/html/classvtkPNMWriter.html) — pnm writer.\n- [vtkPostScriptWriter](https://www.vtk.org/doc/nightly/html/classvtkPostScriptWriter.html) — post script writer.\n- [vtkTIFFReader](https://www.vtk.org/doc/nightly/html/classvtkTIFFReader.html) — reads TIFF image files.\n- [vtkTIFFWriter](https://www.vtk.org/doc/nightly/html/classvtkTIFFWriter.html) — tiff writer.\n- [vtkRenderWindow](https://www.vtk.org/doc/nightly/html/classvtkRenderWindow.html) — displays the rendered scene in a window on screen.\n- [vtkRenderWindowInteractor](https://www.vtk.org/doc/nightly/html/classvtkRenderWindowInteractor.html) — captures mouse and keyboard events.\n- [vtkRenderer](https://www.vtk.org/doc/nightly/html/classvtkRenderer.html) — assembles the scene and configures the camera.\n- `Initialize()` and `Start()` launch the interactive visualization — `Initialize()` prepares the interactor and `Start()` begins the event loop.",
+  "uses_symbols": [
+    "vtkBMPWriter",
+    "vtkImageActor",
+    "vtkImageLuminance",
+    "vtkJPEGWriter",
+    "vtkPNGWriter",
+    "vtkPNMWriter",
+    "vtkPostScriptWriter",
+    "vtkRenderWindow",
+    "vtkRenderWindowInteractor",
+    "vtkRenderer",
+    "vtkTIFFReader",
+    "vtkTIFFWriter"
+  ],
+  "data_files": [
+    "data/beach.tif"
+  ],
+  "py_filename": "writers.py",
+  "image": "writers.png",
+  "metadata_filename": "writers.json",
+  "topology": "standard"
+}
