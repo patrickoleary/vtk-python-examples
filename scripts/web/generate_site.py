@@ -147,7 +147,7 @@ def build_listing_md(section_label: str, results: list[dict]) -> str:
             link = f"./{r['tag']}/{r['base']}"
             if _image_exists(r["tag"], r.get("image")):
                 thumb = (
-                    f'<a href="{link}"><img src="{_with_base(_image_path(r["tag"], r["image"]))}" '
+                    f'<a href="{link}"><img src="{_image_path(r["tag"], r["image"])}" '
                     f'alt="{r["title"]}" '
                     'style="width:44px;height:44px;min-width:44px;object-fit:cover;'
                     'border-radius:4px;vertical-align:middle;display:inline-block" /></a>'
