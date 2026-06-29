@@ -121,3 +121,137 @@
   color: var(--vp-c-text-3);
   margin-top: 0.5rem;
 }
+
+/* ── Trapezoid Gallery ──────────────────────────────── */
+
+.trapezoid-wrapper {
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+.trapezoid-container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.trapezoid-count {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--vp-c-text-3);
+  margin: 1rem 0 0;
+}
+
+.trapezoid-thumb {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+  border-radius: 6px;
+  overflow: visible;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.trapezoid-thumb img {
+  width: 44px;
+  height: 44px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  pointer-events: none;
+}
+
+.trapezoid-thumb.is-hovered {
+  transform: translate(-50%, -50%) scale(2);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.trapezoid-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.5);
+  transform-origin: top center;
+  margin-top: 4px;
+  padding: 3px 8px;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  white-space: nowrap;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ── Trapezoid Hero Section ─────────────────────────── */
+
+.trapezoid-hero {
+  text-align: center;
+  padding: 2rem 1.5rem 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.trapezoid-hero-text {
+  max-width: 640px;
+  margin: 0 auto 1rem;
+}
+
+.trapezoid-hero-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0 0 1rem 0;
+  background: linear-gradient(135deg, var(--vp-c-brand-1), var(--vp-c-brand-2, var(--vp-c-brand-1)));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.trapezoid-hero-tagline {
+  font-size: 1.15rem;
+  color: var(--vp-c-text-2);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+}
+
+.trapezoid-hero-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.trapezoid-btn {
+  display: inline-block;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.trapezoid-btn-brand {
+  background: var(--vp-c-brand-1);
+  color: var(--vp-c-white, #fff);
+}
+
+.trapezoid-btn-brand:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.trapezoid-btn-alt {
+  border: 1px solid var(--vp-c-divider);
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg-soft);
+}
+
+.trapezoid-btn-alt:hover {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+}
