@@ -46,6 +46,15 @@ jobs:
           name: data-latest
           files: data/data.jsonl
 
+      # 3. Upload data files to GitHub release for documentation links
+      - name: Upload data files to release
+        if: github.ref == 'refs/heads/main'
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: data-v1
+          name: Data Files v1
+          files: docs/public/examples/data/**/*
+
       # NOTE: The fetch step (scripts.artifacts.fetch_artifacts) is intentionally
       # skipped while vtk-ontology is not yet on GitHub. We use the committed
       # vendor/experiments.jsonl instead. Re-enable fetch once the upstream

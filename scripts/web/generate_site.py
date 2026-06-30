@@ -276,9 +276,11 @@ def build_example_detail_data(r: dict) -> dict:
     data_files = []
     for df in r.get("data_files", []):
         name = df.rstrip("/").split("/")[-1]
+        # Use GitHub release URL for data files
+        release_url = f"https://github.com/patrickoleary/vtk-python-examples/releases/download/data-v1/{name}"
         data_files.append({
             "name": name,
-            "path": f"/examples/{df}",
+            "path": release_url,
         })
     entry["dataFiles"] = data_files
     

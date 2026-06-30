@@ -1,3 +1,0 @@
-# All shared datasets under examples/data/ (vtk, vtu, vtp, dcm, case, gltf,
-# bin, stl, geo, and extensionless data files) go to LFS
-docs/public/examples/data/** filter=lfs diff=lfs merge=lfs -text
