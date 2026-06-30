@@ -276,8 +276,10 @@ def build_example_detail_data(r: dict) -> dict:
     data_files = []
     for df in r.get("data_files", []):
         name = df.rstrip("/").split("/")[-1]
-        # Use GitHub release URL for data files
-        release_url = f"https://github.com/patrickoleary/vtk-python-examples/releases/download/data-v1/{name}"
+        # Use GitHub release URL for data files with preserved directory structure
+        # df is like "data/AMR/file.vtk", we need "AMR/file.vtk" for the release URL
+        rel_path = df.replace("data/", "", 1) if df.startswith("data/") else df
+        release_url = f"https://github.com/patrickoleary/vtk-python-examples/releases/download/data-v1/{rel_path}"
         data_files.append({
             "name": name,
             "path": release_url,

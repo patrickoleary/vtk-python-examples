@@ -58,7 +58,8 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          find docs/public/examples/data -type f -exec gh release upload data-v1 {} --clobber \;
+          cd docs/public/examples/data
+          find . -type f -exec gh release upload data-v1 {} --clobber \;
 
       # NOTE: The fetch step (scripts.artifacts.fetch_artifacts) is intentionally
       # skipped while vtk-ontology is not yet on GitHub. We use the committed
