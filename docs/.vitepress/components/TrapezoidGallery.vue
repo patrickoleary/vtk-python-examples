@@ -114,7 +114,7 @@ onUnmounted(() => {
         :title="ex.title + ' — ' + ex.category"
       >
         <img
-          :src="withBase(ex.image)"
+          :src="withBase(ex.imageSmall || ex.image)"
           :alt="ex.title"
           loading="lazy"
         />

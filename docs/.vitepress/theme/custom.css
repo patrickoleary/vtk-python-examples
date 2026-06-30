@@ -9,6 +9,17 @@
   margin-bottom: 0.5rem;
 }
 
+.examples-page {
+  max-width: 100%;
+  padding: 2rem 2rem 4rem;
+  margin: 0 auto;
+}
+
+.examples-page h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));

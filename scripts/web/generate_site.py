@@ -52,7 +52,14 @@ def _with_base(path: str) -> str:
     return BASE.rstrip("/") + path
 
 
-def _image_path(tag: str, image: str) -> str:
+def _image_path(tag: str, image: str, size: str = "180") -> str:
+    """Return path to pre-generated thumbnail or original image."""
+    if not image:
+        return ""
+    base = image.replace(".png", "")
+    thumb_path = PUBLIC_EXAMPLES_DIR / tag / f"{base}.thumb{size}.jpg"
+    if thumb_path.exists():
+        return f"/examples/{tag}/{base}.thumb{size}.jpg"
     return f"/examples/{tag}/{image}"
 
 
@@ -97,6 +104,20 @@ def _esc_pipe(s: str) -> str:
     return _esc_html(s).replace("|", "\\|").replace("\n", " ")
 
 
+# Cap pathologically long single-line values (e.g. PointsDefinition coordinate
+# arrays with thousands of entries). Emitting them verbatim produces multi-KB
+# single lines that, after syntax highlighting, become AST expressions deep
+# enough to overflow Rollup's call stack during the production build.
+_MAX_VALUE_LEN = 2000
+
+
+def _truncate(s: str, limit: int = _MAX_VALUE_LEN) -> str:
+    s = str(s)
+    if len(s) <= limit:
+        return s
+    return s[:limit] + f" … [truncated {len(s) - limit} chars]"
+
+
 _NO_BREAK_AFTER = {
     "called", "with", "the", "from", "to",
     "create", "define", "add", "apply", "fashion", "forge", "launch",
@@ -132,34 +153,28 @@ def _word_wrap(text: str, width: int = 80) -> list[str]:
 # ── Listing (examples/index.md) ──────────────────────────────────────
 
 def build_listing_md(section_label: str, results: list[dict]) -> str:
-    lines = ["---", f"title: {section_label}", "---", "", f"# {section_label}", ""]
+    lines = ["---", f"title: {section_label}", "layout: page", "---", ""]
+    lines.append("<script setup>")
+    lines.append("import examplesByCategory from '/.vitepress/generated/examples.mjs'")
+    lines.append("</script>")
+    lines.append("")
+    lines.append("<div class=\"examples-page\">")
+    lines.append("")
+    lines.append(f"# {section_label}")
+    lines.append("")
+    lines.append("Browse all VTK Python examples by category. Click any title to view the DSL, source code, and event details.")
+    lines.append("")
+    
+    # Get sorted categories
     by_cat: dict[str, list] = defaultdict(list)
     for r in results:
         by_cat[r["tag"]].append(r)
-
+    
     for cat in sorted(by_cat.keys()):
-        items = sorted(by_cat[cat], key=lambda x: x["title"])
-        lines.append(f"## {cat} ({len(items)})")
+        lines.append(f"<ExamplesTable category=\"{cat}\" :examples=\"examplesByCategory['{cat}']\" />")
         lines.append("")
-        lines.append("| Title | Events | Phrases | Topology |")
-        lines.append("| --- | ---: | ---: | --- |")
-        for r in items:
-            link = f"./{r['tag']}/{r['base']}"
-            if _image_exists(r["tag"], r.get("image")):
-                thumb = (
-                    f'<a href="{link}"><img src="{_image_path(r["tag"], r["image"])}" '
-                    f'alt="{r["title"]}" '
-                    'style="width:44px;height:44px;min-width:44px;object-fit:cover;'
-                    'border-radius:4px;vertical-align:middle;display:inline-block" /></a>'
-                )
-            else:
-                thumb = "—"
-            lines.append(
-                f"| {thumb} [{r['title']}]({link}) | {r['n_events']} | "
-                f"{r['n_phrases']} | {r.get('topology', '?')} |"
-            )
-        lines.append("")
-
+    
+    lines.append("</div>")
     return "\n".join(lines)
 
 
@@ -168,91 +183,20 @@ def build_listing_md(section_label: str, results: list[dict]) -> str:
 def build_detail_md(r: dict) -> str:
     title = r["title"]
     tag = r["tag"]
-    topology = r.get("topology", "?")
-
+    base = r["base"]
+    
     lines = [
         "---",
         f'title: "{title}"',
+        "layout: page",
         "---",
         "",
-        f"# {title}",
+        "<script setup>",
+        f"import example from '/.vitepress/generated/examples/{tag}/{base}.mjs'",
+        "</script>",
         "",
-        f"> Tag: {tag} · Topology: **{topology}** · "
-        f"{r.get('n_events', 0)} events · {r.get('n_phrases', 0)} phrases",
-        "",
+        "<ExampleDetail :example=\"example\" />",
     ]
-
-    image = r.get("image")
-    if _image_exists(tag, image):
-        lines += [f"![{title}]({_image_path(tag, image)})", ""]
-
-    explanation = r.get("explanation", "")
-    if explanation:
-        lines += [explanation.strip(), ""]
-
-    data_files = r.get("data_files") or []
-    if data_files:
-        lines += ["### Data files", ""]
-        for df in data_files:
-            name = df.rstrip("/").split("/")[-1]
-            lines.append(f'- <a href="{_with_base(f"/examples/{df}")}" target="_blank">{name}</a>')
-        lines.append("")
-
-    py = r.get("py_filename")
-    if py:
-        lines += [f'**Source:** <a href="{_with_base(f"/examples/{tag}/{py}")}" target="_blank">{py}</a>', ""]
-
-    # DSL (collapsible)
-    phrases = r.get("phrases", [])
-    lines += ["### DSL", "", "<details>", ""]
-    if phrases:
-        joined = " and ".join(phrases)
-        lines.append("```vtk-dsl")
-        lines.extend(_word_wrap(joined, 75))
-        lines.append("```")
-    else:
-        lines.append("*No DSL phrases generated.*")
-    lines += ["", "</details>", ""]
-
-    # Source code (collapsible)
-    code = r.get("code", "")
-    if code:
-        lines += ["### Source Code", "", "<details>", "", "```python", code, "```", "", "</details>", ""]
-
-    # Event actions (collapsible)
-    events = r.get("events", [])
-    lines += [f"### Event Actions ({len(events)})", "", "<details>", ""]
-    for i, ev in enumerate(events, 1):
-        phase = ev["phase"]
-        class_name = ev["class_name"]
-        label = ev.get("label", "")
-        dsl = ev.get("dsl_phrase", "")
-        props = ev.get("properties", {})
-        label_str = f' "{_esc_html(label)}"' if label else ""
-        lines.append("<details>")
-        lines.append(f"<summary>#{i} · {_esc_html(phase)} · <b>{_esc_html(class_name)}</b>{label_str}</summary>")
-        lines.append("")
-        if dsl:
-            lines += ["```vtk-dsl", dsl, "```", ""]
-        if ev.get("line") not in (None, ""):
-            lines.append(f"- **line:** {ev['line']}")
-        if ev.get("vtk_objects"):
-            lines.append(f"- **vtk class:** {_esc_html(', '.join(ev['vtk_objects']))}")
-        lines.append(f"- **verb:** {_esc_html(ev.get('verb', ''))}")
-        lines.append(f"- **noun:** {_esc_html(ev.get('noun', ''))}")
-        if ev.get("sources"):
-            lines.append(f"- **source:** {_esc_html(', '.join(ev['sources']))}")
-        if label:
-            lines.append(f"- **label:** {_esc_html(label)}")
-        lines.append("")
-        if props:
-            lines += ["| Property | Value |", "| --- | --- |"]
-            for k, v in props.items():
-                lines.append(f"| {_esc_pipe(k)} | {_esc_pipe(str(v))} |")
-            lines.append("")
-        lines += ["</details>", ""]
-    lines += ["</details>", ""]
-
     return "\n".join(lines)
 
 
@@ -267,9 +211,108 @@ def build_gallery_data(results: list[dict]) -> list[dict]:
             "link": f"/examples/{r['tag']}/{r['base']}",
         }
         if _image_exists(r["tag"], r.get("image")):
-            entry["image"] = _image_path(r["tag"], r["image"])
+            entry["image"] = _image_path(r["tag"], r["image"], size="180")
+            entry["imageSmall"] = _image_path(r["tag"], r["image"], size="44")
         gallery.append(entry)
     return gallery
+
+
+def build_examples_data(results: list[dict]) -> dict:
+    """Build examples data grouped by category."""
+    by_cat: dict[str, list] = defaultdict(list)
+    for r in results:
+        entry: dict = {
+            "title": r["title"],
+            "category": r["tag"],
+            "link": f"/examples/{r['tag']}/{r['base']}",
+            "n_events": r.get("n_events", 0),
+            "n_phrases": r.get("n_phrases", 0),
+            "topology": r.get("topology", "?"),
+        }
+        if _image_exists(r["tag"], r.get("image")):
+            entry["imageSmall"] = _image_path(r["tag"], r["image"], size="44")
+        by_cat[r["tag"]].append(entry)
+    
+    # Sort examples within each category
+    for cat in by_cat:
+        by_cat[cat] = sorted(by_cat[cat], key=lambda x: x["title"])
+    
+    return dict(by_cat)
+
+
+def build_example_detail_data(r: dict) -> dict:
+    """Build detailed data for a single example."""
+    tag = r["tag"]
+    base = r["base"]
+    
+    entry: dict = {
+        "title": r["title"],
+        "tag": tag,
+        "base": base,
+        "topology": r.get("topology", "?"),
+        "n_events": r.get("n_events", 0),
+        "n_phrases": r.get("n_phrases", 0),
+        "description": r.get("explanation", "").strip().replace("Description\n", "").replace("Description:", ""),
+    }
+    
+    # Image
+    if _image_exists(tag, r.get("image")):
+        entry["image"] = _image_path(tag, r["image"], size="180")
+    
+    # VTK classes
+    vtk_classes = []
+    for cls in r.get("vtk_classes", []):
+        vtk_classes.append({
+            "name": cls,
+            "link": f"https://www.vtk.org/doc/nightly/html/class{cls}.html",
+            "description": "",  # Could add descriptions if available
+        })
+    entry["vtkClasses"] = vtk_classes
+    
+    # Pipeline description
+    entry["pipeline"] = r.get("pipeline", "")
+    
+    # Data files
+    data_files = []
+    for df in r.get("data_files", []):
+        name = df.rstrip("/").split("/")[-1]
+        data_files.append({
+            "name": name,
+            "path": f"/examples/{df}",
+        })
+    entry["dataFiles"] = data_files
+    
+    # Source
+    py = r.get("py_filename")
+    if py:
+        entry["sourcePath"] = f"/examples/{tag}/{py}"
+        entry["sourceFile"] = py
+        entry["sourceCode"] = r.get("code", "")
+    
+    # DSL
+    phrases = r.get("phrases", [])
+    if phrases:
+        entry["dsl"] = " and ".join(phrases)
+    
+    # Event actions
+    event_actions = []
+    for i, ev in enumerate(r.get("events", []), 1):
+        action: dict = {
+            "index": i,
+            "phase": ev.get("phase", ""),
+            "type": ev.get("class_name", ""),
+            "label": ev.get("label", ""),
+            "dsl": ev.get("dsl_phrase", ""),
+            "line": ev.get("line", ""),
+            "vtkClass": ", ".join(ev.get("vtk_objects", [])),
+            "verb": ev.get("verb", ""),
+            "noun": ev.get("noun", ""),
+            "properties": ev.get("properties", {}),
+        }
+        event_actions.append(action)
+    entry["eventActions"] = event_actions
+    
+    return entry
 
 
 def build_sidebar(results: list[dict]) -> dict:
@@ -281,11 +324,7 @@ def build_sidebar(results: list[dict]) -> dict:
         cat_items = sorted(by_cat[cat], key=lambda x: x["title"])
         items.append({
             "text": f"{cat} ({len(cat_items)})",
-            "collapsed": True,
-            "items": [
-                {"text": r["title"], "link": f"/examples/{r['tag']}/{r['base']}"}
-                for r in cat_items
-            ],
+            "link": f"/examples/#{cat}",
         })
     return {
         "/examples/": [{
@@ -426,6 +465,23 @@ def main() -> None:
     (gen_dir / "gallery.mjs").write_text(
         "export default " + json.dumps(gallery_data, indent=2) + "\n", encoding="utf-8"
     )
+    examples_data = build_examples_data(results)
+    (gen_dir / "examples.mjs").write_text(
+        "export default " + json.dumps(examples_data, indent=2) + "\n", encoding="utf-8"
+    )
+    
+    # Individual example detail data files
+    examples_gen_dir = gen_dir / "examples"
+    examples_gen_dir.mkdir(parents=True, exist_ok=True)
+    for r in results:
+        tag = r["tag"]
+        base = r["base"]
+        tag_dir = examples_gen_dir / tag
+        tag_dir.mkdir(parents=True, exist_ok=True)
+        detail_data = build_example_detail_data(r)
+        (tag_dir / f"{base}.mjs").write_text(
+            "export default " + json.dumps(detail_data, indent=2) + "\n", encoding="utf-8"
+        )
 
     print(f"  Landing: docs/index.md")
     print(f"  Examples: {len(results)} detail pages")
