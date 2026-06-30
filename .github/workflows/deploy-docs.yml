@@ -47,25 +47,14 @@ jobs:
           files: data/data.jsonl
 
       # 3. Upload data files to GitHub release for documentation links
-      - name: Delete existing release
-        if: github.ref == 'refs/heads/main'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh release delete data-v1 --yes || true
-      - name: Create new release
-        if: github.ref == 'refs/heads/main'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          gh release create data-v1 --title "Data Files v1" --notes "Data files for VTK Python Examples"
       - name: Upload data files to release
         if: github.ref == 'refs/heads/main'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          cd docs/public/examples/data
-          find . -type f -exec gh release upload data-v1 {} \;
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: data-v1
+          name: Data Files v1
+          files: docs/public/examples/data/**/*
+          fail_on_unmatched_files: false
 
       # NOTE: The fetch step (scripts.artifacts.fetch_artifacts) is intentionally
       # skipped while vtk-ontology is not yet on GitHub. We use the committed
