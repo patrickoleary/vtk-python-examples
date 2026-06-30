@@ -59,8 +59,8 @@ def _image_path(tag: str, image: str, size: str = "180") -> str:
     base = image.replace(".png", "")
     thumb_path = PUBLIC_EXAMPLES_DIR / tag / f"{base}.thumb{size}.jpg"
     if thumb_path.exists():
-        return _with_base(f"/examples/{tag}/{base}.thumb{size}.jpg")
-    return _with_base(f"/examples/{tag}/{image}")
+        return f"/examples/{tag}/{base}.thumb{size}.jpg"
+    return f"/examples/{tag}/{image}"
 
 
 def _image_exists(tag: str, image: str) -> bool:
